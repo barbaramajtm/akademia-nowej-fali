@@ -62,7 +62,8 @@ const ICONS = {
   kosmykBig: '<svg width="24" height="24" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#C4543A"/></svg>',
   slotFilled: '<svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 12 Q9 8 12 12 T18 12" fill="none" stroke="#7A3344" stroke-width="2.2" stroke-linecap="round"/></svg>',
   slotNew: '<svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="#D2A900" stroke-width="2"/><path d="M9 12l2 2 4-4" fill="none" stroke="#D2A900" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-  lock: '<svg width="26" height="26" viewBox="0 0 26 26" style="flex-shrink:0;"><rect x="4" y="6" width="18" height="16" rx="3" fill="none" stroke="#E5DACE" stroke-width="2"/><path d="M10 6V4a3 3 0 0 1 6 0v2" fill="none" stroke="#E5DACE" stroke-width="2"/><circle cx="13" cy="14" r="2.4" fill="#E5DACE"/></svg>'
+  lock: '<svg width="26" height="26" viewBox="0 0 26 26" style="flex-shrink:0;"><rect x="4" y="6" width="18" height="16" rx="3" fill="none" stroke="#E5DACE" stroke-width="2"/><path d="M10 6V4a3 3 0 0 1 6 0v2" fill="none" stroke="#E5DACE" stroke-width="2"/><circle cx="13" cy="14" r="2.4" fill="#E5DACE"/></svg>',
+  unlock: '<svg width="26" height="26" viewBox="0 0 26 26" style="flex-shrink:0;"><rect x="4" y="11" width="18" height="11" rx="3" fill="none" stroke="#E5DACE" stroke-width="2"/><path d="M10 11V8a3 3 0 0 1 6 0" fill="none" stroke="#E5DACE" stroke-width="2"/><circle cx="13" cy="16" r="2.4" fill="#E5DACE"/></svg>'
 };
 function iconEl(name){
   const span = document.createElement('span');
@@ -837,15 +838,30 @@ function showDone(){
     }
   }
 
+  if (!state.isRepeat && window.AppShell && window.AppShell.onLessonComplete){
+    const payload = {
+      lessonId: L.id,
+      earnedKosmyki: state.earnedKosmyki
+    };
+    if (col && collectionId){
+      const earnedAfter = collectionFull ? col.total : col.earnedBefore + 1;
+      payload.collectionId = collectionId;
+      payload.earnedAfter = earnedAfter;
+      payload.badgeName = C.badge && C.badge.name;
+    }
+    window.AppShell.onLessonComplete(payload);
+  }
+
+  const helpers = window.LessonsCatalogHelpers;
+  const nextLessonEntry = helpers && helpers.getNextAfter ? helpers.getNextAfter(L.id) : null;
+
   const r4 = el('div', 'reveal hook');
-  r4.appendChild(iconEl('lock'));
+  r4.appendChild(iconEl(nextLessonEntry ? 'unlock' : 'lock'));
   const hookTxt = el('div');
   hookTxt.appendChild(el('div', 'ht', C.nextLesson.label));
   hookTxt.appendChild(el('div', 'hn', C.nextLesson.teaser));
   r4.appendChild(hookTxt);
 
-  const helpers = window.LessonsCatalogHelpers;
-  const nextLessonEntry = helpers && helpers.getNextAfter ? helpers.getNextAfter(L.id) : null;
   if (nextLessonEntry && window.AppShell){
     r4.setAttribute('role', 'button');
     r4.setAttribute('tabindex', '0');
@@ -893,20 +909,6 @@ function showDone(){
     }, 22);
     if (perfect) setTimeout(() => perfectEl.classList.add('on'), target * 13);
   }, 800);
-
-  if (!state.isRepeat && window.AppShell && window.AppShell.onLessonComplete){
-    const payload = {
-      lessonId: L.id,
-      earnedKosmyki: state.earnedKosmyki
-    };
-    if (col && collectionId){
-      const earnedAfter = collectionFull ? col.total : col.earnedBefore + 1;
-      payload.collectionId = collectionId;
-      payload.earnedAfter = earnedAfter;
-      payload.badgeName = C.badge && C.badge.name;
-    }
-    window.AppShell.onLessonComplete(payload);
-  }
 }
 
 /* ---------- restart / start ---------- */

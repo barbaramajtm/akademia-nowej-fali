@@ -156,11 +156,19 @@ function getNextAvailableLesson(){
 
 function getNextLessonAfter(completedLessonId){
   var list = window.LessonsCatalog || [];
+  var completed = window.AppState && window.AppState.get
+    ? window.AppState.get().completedLessons : {};
   var start = 0;
   for (var i = 0; i < list.length; i++){
     if (list[i].id === completedLessonId){
       start = i + 1;
       break;
+    }
+  }
+  if (start > 0 && start < list.length){
+    var immediate = list[start];
+    if (immediate.requiresLessonId === completedLessonId && completed[completedLessonId]){
+      return immediate;
     }
   }
   for (var j = start; j < list.length; j++){
