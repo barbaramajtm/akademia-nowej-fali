@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "id": "ph-rozjasnianie",
+  "title": "pH podczas rozjaśniania",
+  "category": "pH we fryzjerstwie",
+  "levelLabel": "Zabiegi",
+
+  "intro": {
+    "narratorText": "Rozjaśnianie to jeden z najbardziej wymagających zabiegów dla włosa. Silnie zasadowe środowisko i wysokie stężenie nadtlenku wodoru otwierają drogę do jaśniejszego koloru — ale też zwiększają ryzyko uszkodzeń.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+  },
+
+  "tasks": [
+    {
+      "id": "ph6-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Silniejsze środowisko",
+      "question": "Dlaczego rozjaśniacz zwykle pracuje w jeszcze bardziej wymagającym środowisku niż zwykła farba?",
+      "options": [
+        { "id": "a", "text": "Bo musi rozbić naturalny pigment we włosie — to wymaga silniejszego działania chemicznego." },
+        { "id": "b", "text": "Bo rozjaśniacz nie zawiera żadnych składników chemicznych." },
+        { "id": "c", "text": "Bo pH rozjaśniacza zawsze wynosi dokładnie 7." }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Rozjaśnianie polega na rozbijaniu naturalnego pigmentu (melaniny) we włosie. To intensywniejszy proces niż typowa koloryzacja ton w ton."
+      }
+    },
+    {
+      "id": "ph6-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Stężenie nadtlenku",
+      "question": "Stężenia nadtlenku wodoru powyżej 12% są zalecane, gdy klientka chce maksymalnie szybki efekt.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To mit.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Stężenia powyżej 12% mogą mocno uszkodzić włosy i skórę głowy. Szybkość nie powinna kosztować zdrowia włosa — dobiera się produkt i technikę do celu oraz kondycji."
+      }
+    },
+    {
+      "id": "ph6-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Chłonność włosa",
+      "question": "Połącz typ włosa z jego zachowaniem podczas rozjaśniania.",
+      "leftTitle": "Typ włosa",
+      "rightTitle": "Zachowanie",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "Włosy zniszczone lub porowate" },
+        { "id": "l2", "pairId": "b", "text": "Włosy zdrowe, niepoddane wcześniejszym zabiegom" },
+        { "id": "l3", "pairId": "c", "text": "Włosy po wcześniejszym rozjaśnianiu" }
+      ],
+      "right": [
+        { "id": "r1", "pairId": "a", "text": "Przyjmują preparat nierównomiernie — ryzyko plam" },
+        { "id": "r2", "pairId": "b", "text": "Zwykle bardziej przewidywalne wchłanianie" },
+        { "id": "r3", "pairId": "c", "text": "Wymagają szczególnej ostrożności — włos jest już osłabiony" }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze dopasowane.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Nie każdy włos reaguje tak samo na rozjaśniacz. Włosy zniszczone i porowate chłoną preparat inaczej, a wielokrotne rozjaśnianie zwiększa ryzyko uszkodzeń."
+      }
+    },
+    {
+      "id": "ph6-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Po rozjaśnianiu",
+      "question": "Co jest szczególnie ważne tuż po zakończeniu rozjaśniania?",
+      "options": [
+        { "id": "a", "text": "Dokładne domywanie i przywrócenie równowagi pH — rozjaśnianie zostawia włos w silnie zasadowym stanie." },
+        { "id": "b", "text": "Pozostawienie resztek rozjaśniacza, żeby „dokończył pracę”." },
+        { "id": "c", "text": "Suszenie na najwyższej temperaturze bez pielęgnacji." }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Właściwy finisz.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Po rozjaśnianiu włos jest szczególnie wrażliwy. Domywanie i produkt końcowy przywracają równowagę i wspierają kondycję — to nie opcjonalny dodatek."
+      }
+    },
+    {
+      "id": "ph6-z5",
+      "type": "trueFalse",
+      "kicker": "Krok 5 · Najważniejsza zasada",
+      "question": "Im jaśniejszy efekt, tym mniejsze ryzyko uszkodzenia włosa — bo produkt „pracuje krócej”.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To mit.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Jaśniejszy efekt zwykle wymaga silniejszego działania chemicznego lub wielu etapów. To zwiększa, a nie zmniejsza, ryzyko uszkodzeń. Planowanie i ocena włosa są kluczowe.",
+        "funFact": {
+          "text": "W salonie często jaśniejszy kolor osiąga się etapami — z przerwami na regenerację włosa."
+        }
+      }
+    }
+  ],
+
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozumiesz pH w rozjaśnianiu",
+    "subtitle": "Wiesz, że rozjaśnianie to intensywny zabieg w silnie zasadowym środowisku, wymaga ostrożności ze stężeniem nadtlenku i koniecznego finiszu po zabiegu.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Jakie pH mają szampony?"
+    }
+  }
+}
