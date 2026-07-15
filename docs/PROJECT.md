@@ -6,20 +6,21 @@ Główny dokument opisujący wizję, założenia pedagogiczne, mechanizmy produk
 
 1. [Wizja projektu](#1-wizja-projektu)
 2. [Cel projektu](#2-cel-projektu)
-3. [Grupa docelowa](#3-grupa-docelowa)
-4. [Filozofia nauczania](#4-filozofia-nauczania)
-5. [Psychologia uczenia się](#5-psychologia-uczenia-się)
-6. [Mechanizmy motywacyjne](#6-mechanizmy-motywacyjne)
-7. [Powiadomienia push](#7-powiadomienia-push)
-8. [Spiralny model nauki](#8-spiralny-model-nauki)
-9. [System powtórek](#9-system-powtórek)
-10. [Standard lekcji](#10-standard-lekcji)
-11. [Standard ilustracji](#11-standard-ilustracji)
-12. [Standard merytoryczny](#12-standard-merytoryczny)
-13. [Workflow tworzenia treści](#13-workflow-tworzenia-treści)
-14. [Zasady rozwoju projektu](#14-zasady-rozwoju-projektu)
-15. [Roadmapa](#15-roadmapa)
-16. [Zasady podejmowania decyzji projektowych](#16-zasady-podejmowania-decyzji-projektowych)
+3. [Definicja sukcesu projektu](#3-definicja-sukcesu-projektu)
+4. [Grupa docelowa](#4-grupa-docelowa)
+5. [Filozofia nauczania](#5-filozofia-nauczania)
+6. [Psychologia uczenia się](#6-psychologia-uczenia-się)
+7. [Mechanizmy motywacyjne](#7-mechanizmy-motywacyjne)
+8. [Powiadomienia push](#8-powiadomienia-push)
+9. [Spiralny model nauki](#9-spiralny-model-nauki)
+10. [System powtórek](#10-system-powtórek)
+11. [Standard lekcji](#11-standard-lekcji)
+12. [Standard ilustracji](#12-standard-ilustracji)
+13. [Standard merytoryczny](#13-standard-merytoryczny)
+14. [Workflow tworzenia treści](#14-workflow-tworzenia-treści)
+15. [Zasady rozwoju projektu](#15-zasady-rozwoju-projektu)
+16. [Roadmapa](#16-roadmapa)
+17. [Zasady podejmowania decyzji projektowych](#17-zasady-podejmowania-decyzji-projektowych)
 
 ---
 
@@ -48,11 +49,48 @@ Projekt realizuje ten cel poprzez:
 - mechanizmy motywacyjne wspierające regularność;
 - treści oparte na materiałach egzaminacyjnych i zweryfikowanych źródłach branżowych.
 
-Nie wszystkie tematy w programie kursu mają jednakowy priorytet w pracy zawodowej. Część zagadnień obowiązuje przede wszystkim ze względu na wymogi egzaminu — jest to świadomy wybór programowy, opisany w [Standardzie merytorycznym](#12-standard-merytoryczny).
+Nie wszystkie tematy w programie kursu mają jednakowy priorytet w pracy zawodowej. Część zagadnień obowiązuje przede wszystkim ze względu na wymogi egzaminu — jest to świadomy wybór programowy, opisany w [Standardzie merytorycznym](#13-standard-merytoryczny).
 
 ---
 
-## 3. Grupa docelowa
+## 3. Definicja sukcesu projektu
+
+Sukces Akademii Nowej Fali **nie jest mierzony wyłącznie** liczbą lekcji, funkcji, punktów, użytkowniczek ani szybkością rozbudowy aplikacji. Te wskaźniki opisują skalę produktu — nie skuteczność nauki.
+
+### Sukces oznacza, że uczennica
+
+- regularnie wraca do aplikacji;
+- przechodzi kolejne etapy kursu;
+- zdaje egzamin czeladniczy;
+- rozumie procesy fryzjerskie;
+- potrafi wykorzystać wiedzę w pracy z klientką;
+- pamięta kluczowe informacje po dłuższym czasie;
+- potrafi odtworzyć fakty wymagane na egzaminie;
+- łączy wiedzę z różnych działów;
+- potrafi rozpoznać błąd i przewidzieć jego konsekwencje;
+- nie rezygnuje po kilku pierwszych lekcjach.
+
+### Zasada nadrzędna projektowania treści
+
+**Nie projektujemy lekcji po to, aby przekazać jak najwięcej informacji.**
+
+Projektujemy je po to, aby uczennica możliwie dużo **zrozumiała**, **zapamiętała** i **potrafiła wykorzystać**.
+
+Jeżeli ilość materiału jest sprzeczna ze skutecznością nauki, wybieramy skuteczność nauki.
+
+### Kryterium oceny każdej decyzji
+
+Każdą nową funkcję, mechanikę i element treści należy oceniać pytaniem:
+
+> „Czy zwiększa to szansę, że uczennica zrozumie, zapamięta i wykorzysta wiedzę także po dłuższym czasie?”
+
+Jeżeli odpowiedź brzmi „nie” — element wymaga uzasadnienia lub nie powinien trafić do produktu.
+
+Szczegółowy proces tworzenia treści: [CONTENT_GUIDE.md](CONTENT_GUIDE.md).
+
+---
+
+## 4. Grupa docelowa
 
 **Profil:** uczennice szkół fryzjerskich w wieku około 14–18 lat, przygotowujące się do egzaminu czeladniczego.
 
@@ -74,7 +112,7 @@ Projekt nie jest skierowany do doświadczonych fryzjerów ani instruktorów — 
 
 ---
 
-## 4. Filozofia nauczania
+## 5. Filozofia nauczania
 
 Filozofia nauczania w Akademii Nowej Fali opiera się na następujących zasadach:
 
@@ -94,7 +132,7 @@ Filozofia nauczania w Akademii Nowej Fali opiera się na następujących zasadac
 
 ---
 
-## 5. Psychologia uczenia się
+## 6. Psychologia uczenia się
 
 Projekt opiera się na metodach potwierdzonych badaniami nad skutecznością uczenia się. Poniżej opisano, dlaczego każda z nich została uwzględniona w założeniach produktu.
 
@@ -160,7 +198,7 @@ Poprawne odpowiedzi, ukończenie lekcji, serie poprawnych odpowiedzi i bonusy na
 
 ---
 
-## 6. Mechanizmy motywacyjne
+## 7. Mechanizmy motywacyjne
 
 Projekt wykorzystuje elementy gamifikacji — nie jako cel sam w sobie, lecz jako wsparcie regularności i poczucia postępu.
 
@@ -194,7 +232,7 @@ Pasek postępu modułu, lista lekcji ze statusami (ukończona / dostępna / zabl
 
 ### Humorystyczne powiadomienia push
 
-Przypomnienia w lekkim, fryzjerskim tonie — bez moralizowania. Szczegóły w [rozdziale 7](#7-powiadomienia-push).
+Przypomnienia w lekkim, fryzjerskim tonie — bez moralizowania. Szczegóły w [rozdziale 8](#8-powiadomienia-push).
 
 ### Pozytywne wzmocnienia
 
@@ -202,7 +240,7 @@ Komunikaty po poprawnej odpowiedzi, bonus za serię poprawnych odpowiedzi z rzę
 
 ---
 
-## 7. Powiadomienia push
+## 8. Powiadomienia push
 
 Powiadomienia push mają budować nawyk codziennej nauki — nie wywoływać poczucia winy.
 
@@ -220,7 +258,7 @@ Powiadomienia push mają budować nawyk codziennej nauki — nie wywoływać poc
 
 ---
 
-## 8. Spiralny model nauki
+## 9. Spiralny model nauki
 
 Kurs jest zorganizowany spiralnie: najważniejsze zagadnienia wracają wielokrotnie w nowych kontekstach, z rosnącą głębią.
 
@@ -236,7 +274,7 @@ Spiralny model wspiera Spaced Repetition i Interleaving — uczennica utrwala wi
 
 ---
 
-## 9. System powtórek
+## 10. System powtórek
 
 Projekt nie powtarza całych lekcji — powtarza **wiedzę**.
 
@@ -257,7 +295,7 @@ Projekt nie powtarza całych lekcji — powtarza **wiedzę**.
 
 ---
 
-## 10. Standard lekcji
+## 11. Standard lekcji
 
 Każda lekcja w projekcie jest plikiem JSON ładowanym przez uniwersalny silnik aplikacji. Lekcja składa się z intro, serii zadań i ekranu ukończenia.
 
@@ -267,7 +305,7 @@ Szczegółowe zasady dotyczące struktury JSON, typów zadań, feedbacku, nagró
 
 ---
 
-## 11. Standard ilustracji
+## 12. Standard ilustracji
 
 Ilustracje, diagramy i zasoby graficzne stosowane w lekcjach podlegają wspólnym zasadom: lokalizacja plików, formaty, nazewnictwo, dostępność i użycie w JSON lekcji.
 
@@ -277,7 +315,7 @@ Szczegółowe wytyczne znajdują się w dokumencie:
 
 ---
 
-## 12. Standard merytoryczny
+## 13. Standard merytoryczny
 
 ### Źródła wiedzy
 
@@ -309,25 +347,29 @@ Oba typy są w programie kursu. Różnica polega na sposobie prezentacji: tematy
 
 ---
 
-## 13. Workflow tworzenia treści
+## 14. Workflow tworzenia treści
 
-Proces tworzenia nowej lekcji lub modułu:
+Pełny proces tworzenia modułów i treści edukacyjnych — od audytu źródeł po testy po implementacji — opisano w:
 
-1. **Analiza materiałów źródłowych** — przegląd `source-materials/`, audyt faktów, identyfikacja zakresu.
-2. **Projekt lekcji** — wybór tematu, struktury zadań, powiązań z poprzednimi lekcjami (spirala).
-3. **Pisanie JSON** — zgodnie ze [Standardem lekcji](LESSON_STANDARD.md).
-4. **Ilustracje** — zgodnie ze [Standardem ilustracji](ILLUSTRATION_GUIDE.md), jeśli wymagane.
-5. **Audyt merytoryczny** — weryfikacja faktów względem źródeł.
+**→ [docs/CONTENT_GUIDE.md](CONTENT_GUIDE.md)**
+
+Skrócony workflow pojedynczej lekcji:
+
+1. **Analiza materiałów źródłowych** — audyt faktów, identyfikacja zakresu.
+2. **Masterplan modułu i scenariusz lekcji** — zgodnie z [CONTENT_GUIDE.md](CONTENT_GUIDE.md).
+3. **Review** — merytoryczny, dydaktyczny, językowy.
+4. **Pisanie JSON** — zgodnie ze [Standardem lekcji](LESSON_STANDARD.md).
+5. **Ilustracje** — zgodnie ze [Standardem ilustracji](ILLUSTRATION_GUIDE.md), jeśli wymagane.
 6. **Wpisanie do katalogu** — wpis w `js/lessons-catalog.js` z `requiresLessonId`.
-7. **Test lokalny** — uruchomienie lekcji w aplikacji, sprawdzenie przepływu i odblokowywania.
-8. **Commit i push** — zapis w repozytorium z opisowym komunikatem.
-9. **Aktualizacja dokumentacji** — `CHANGELOG.md` i ewentualnie sekcja stanu w niniejszym dokumencie.
+7. **Test lokalny** — przepływ lekcji, odblokowywanie, punktacja, telefon.
+8. **Commit i push** — opisowy komunikat.
+9. **Aktualizacja dokumentacji** — `CHANGELOG.md`.
 
 Nowa lekcja = nowy plik JSON + wpis w katalogu. Silnik aplikacji nie wymaga zmian, o ile używane są istniejące typy zadań.
 
 ---
 
-## 14. Zasady rozwoju projektu
+## 15. Zasady rozwoju projektu
 
 - **Nie dodajemy funkcji bez potrzeby** — każda zmiana musi odpowiadać na konkretny problem użytkowniczki lub bloker rozwoju treści.
 - **Nie zmieniamy wyglądu bez uzasadnienia** — spójność UI jest priorytetem.
@@ -340,7 +382,7 @@ Nowa lekcja = nowy plik JSON + wpis w katalogu. Silnik aplikacji nie wymaga zmia
 
 ---
 
-## 15. Roadmapa
+## 16. Roadmapa
 
 ### Zrealizowane
 
@@ -349,12 +391,11 @@ Nowa lekcja = nowy plik JSON + wpis w katalogu. Silnik aplikacji nie wymaga zmia
 - System postępu (localStorage, odblokowywanie lekcji)
 - Moduł **pH we fryzjerstwie** — 10 lekcji (kompletny)
 - Publikacja na GitHub Pages
-- Dokumentacja projektu (struktura `docs/`)
+- Dokumentacja projektu (struktura `docs/`, w tym CONTENT_GUIDE, LESSON_STANDARD, WRITING_STYLE, ILLUSTRATION_GUIDE)
 
 ### W toku / najbliższe
 
 - Kolejne moduły merytoryczne (np. włos i skóra głowy, koloryzacja)
-- Uzupełnienie [LESSON_STANDARD.md](LESSON_STANDARD.md) i [ILLUSTRATION_GUIDE.md](ILLUSTRATION_GUIDE.md)
 - Moduły formalne egzaminu (rachunkowość, BHP, prawo pracy itd.)
 
 ### Planowane
@@ -372,7 +413,7 @@ Roadmapa jest aktualizowana po każdym ukończonym module. Szczegółowy plan tr
 
 ---
 
-## 16. Zasady podejmowania decyzji projektowych
+## 17. Zasady podejmowania decyzji projektowych
 
 Przy każdej decyzii produktowej lub technicznej obowiązują następujące reguły:
 
