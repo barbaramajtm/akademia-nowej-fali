@@ -51,11 +51,11 @@ function renderHomeLessons(moduleId, host){
     var ill = document.createElement('div');
     ill.className = 'ill';
     if (status === 'completed'){
-      ill.innerHTML = '<svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="11" fill="none" stroke="#5F7449" stroke-width="2"/><path d="M8 13l3 3 6-6" fill="none" stroke="#5F7449" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      ill.innerHTML = '<svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="11" fill="none" stroke="#7F8A63" stroke-width="2"/><path d="M8 13l3 3 6-6" fill="none" stroke="#7F8A63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     } else if (status === 'locked'){
-      ill.innerHTML = '<svg width="26" height="26" viewBox="0 0 26 26"><rect x="5" y="11" width="16" height="12" rx="2" fill="none" stroke="#B9AEC4" stroke-width="2"/><path d="M9 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="#B9AEC4" stroke-width="2"/></svg>';
+      ill.innerHTML = '<svg width="26" height="26" viewBox="0 0 26 26"><rect x="5" y="11" width="16" height="12" rx="2" fill="none" stroke="#A7B69A" stroke-width="2"/><path d="M9 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="#A7B69A" stroke-width="2"/></svg>';
     } else {
-      ill.innerHTML = '<svg width="26" height="26" viewBox="0 0 26 26"><rect x="9" y="3" width="8" height="13" rx="2.5" fill="#D86A3C"/><rect x="10.5" y="16" width="5" height="6" rx="1.5" fill="#C55B30"/></svg>';
+      ill.innerHTML = '<svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="9" fill="none" stroke="#D06A4E" stroke-width="2"/><circle cx="13" cy="13" r="3" fill="#D06A4E"/></svg>';
     }
 
     var txt = document.createElement('div');
@@ -368,6 +368,9 @@ window.AppShell = {
   },
 
   goHome: function(){
+    if (window.UIEffects && window.UIEffects.onReturnHome){
+      window.UIEffects.onReturnHome();
+    }
     showView('home');
   },
 
@@ -421,6 +424,9 @@ window.AppShell = {
 
   onLessonComplete: function(payload){
     window.AppState.completeLesson(payload);
+    if (window.UIEffects && window.UIEffects.afterLessonComplete){
+      window.UIEffects.afterLessonComplete(payload.lessonId);
+    }
     refreshUI();
   },
 

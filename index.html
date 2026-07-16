@@ -17,6 +17,11 @@
     <!-- HOME -->
     <div id="view-home" class="view view-shell active">
       <div class="view-scroll">
+        <div class="ambient-shape ambient-shape--home" aria-hidden="true"></div>
+        <div class="ambient-shape ambient-shape--home-2" aria-hidden="true"></div>
+        <div class="eye-watermark eye-watermark--home eye-motif" aria-hidden="true">
+          <svg viewBox="0 0 80 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 30 Q40 6 74 30" fill="#E8C3B9"/><ellipse cx="40" cy="30" rx="26" ry="15" fill="#F1E9DE"/><circle cx="40" cy="30" r="9" fill="#1E2A44"/></svg>
+        </div>
         <div class="status">
           <span>9:41</span>
           <div class="icons"><span>5G</span>
@@ -27,16 +32,16 @@
         <div class="content">
           <div class="header">
             <div class="greet">
-              <div class="hello">Cześć, <span id="homeUserLabel">Uczennica</span> <span class="wave">✦</span></div>
+              <div class="hello">Cześć, <span id="homeUserLabel">Uczennica</span></div>
               <div class="sub">Gotowa na dzisiejszą falę?</div>
             </div>
             <div class="header-side">
               <div class="kosmyk-pill">
-                <svg width="19" height="19" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#C4543A"/></svg>
+                <svg width="19" height="19" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#D06A4E"/></svg>
                 <div><div class="num" id="homeKosmyki">1 240</div><div class="lbl">Kosmyków</div></div>
               </div>
               <button class="avatar" id="homeAvatarBtn" type="button" aria-label="Profil">
-                <svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#7A3344"/><path d="M4 27 Q15 17 26 27 Z" fill="#7A3344"/><path d="M9 8 Q15 2 21 8 Q22 12 19 13 Q15 9 11 13 Q8 12 9 8Z" fill="#5A1F2B"/></svg>
+                <svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#2E3D5C"/><path d="M4 27 Q15 17 26 27 Z" fill="#1E2A44"/></svg>
               </button>
             </div>
           </div>
@@ -143,7 +148,7 @@
         <div class="content content-tight">
           <div class="profile-card">
             <div class="profile-avatar">
-              <svg width="54" height="54" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#6E5391"/><path d="M4 27 Q15 17 26 27 Z" fill="#6E5391"/><path d="M9 8 Q15 2 21 8 Q22 12 19 13 Q15 9 11 13 Q8 12 9 8Z" fill="#4A2C6B"/></svg>
+              <svg width="54" height="54" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#2E3D5C"/><path d="M4 27 Q15 17 26 27 Z" fill="#1E2A44"/></svg>
             </div>
             <div class="profile-name" id="profileName">Uczennica</div>
             <div class="profile-meta" id="profileMeta">Fala 7 · 1 240 Kosmyków</div>
@@ -189,7 +194,7 @@
         <div class="fwhy" id="fwhy"></div>
         <div class="bonus" id="fbonus" hidden></div>
         <div class="aha" id="faha" hidden>
-          <div class="at">✦ Warto wiedzieć</div>
+          <div class="at"><span class="eye-motif eye-motif--hint" aria-hidden="true"><svg viewBox="0 0 80 48" fill="none"><path d="M6 30 Q40 6 74 30" fill="#E8C3B9"/><ellipse cx="40" cy="30" rx="26" ry="15" fill="#F1E9DE"/><circle cx="40" cy="30" r="9" fill="#1E2A44"/></svg></span>Wskazówka eksperta</div>
           <div class="ab" id="fahab"></div>
         </div>
         <button class="btn btn-primary" id="fnext" type="button">Dalej</button>
@@ -233,6 +238,7 @@
 
 <script src="js/state.js"></script>
 <script src="js/lessons-catalog.js"></script>
+<script src="js/ui-effects.js"></script>
 <script src="js/shell.js"></script>
 <script src="js/app.js"></script>
 </body>

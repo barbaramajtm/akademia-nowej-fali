@@ -11,7 +11,7 @@ const CONFIG = {
   startKosmyki: 240,
   ui: {
     incorrectFallbackTitle: 'Prawie — spójrz jeszcze raz',
-    ahaLabel: '✦ Warto wiedzieć',
+    ahaLabel: 'Wskazówka eksperta',
     continueLabel: 'Kontynuuj naukę',
     galleryLabel: 'Zobacz gablotkę',
     nextLabel: 'Dalej',
@@ -52,14 +52,14 @@ function isLessonAlreadyCompleted(lessonId){
    Jedyne miejsce, w którym używamy innerHTML: statyczne, zaufane
    stałe SVG należące do silnika. Żadne dane z JSON-u nigdy tu nie trafiają. */
 const ICONS = {
-  kosmyk: '<svg width="19" height="19" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#C4543A"/></svg>',
-  kosmykSm: '<svg width="13" height="13" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#A3442E"/></svg>',
+  kosmyk: '<svg width="19" height="19" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#D06A4E"/></svg>',
+  kosmykSm: '<svg width="13" height="13" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#B85A42"/></svg>',
   close: '<svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="#7A3344" stroke-width="2" stroke-linecap="round"/></svg>',
   check: '<svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="#434F2A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   info: '<svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 5v8m0 4v.5" stroke="#B83A52" stroke-width="2.6" stroke-linecap="round"/></svg>',
   face: '<svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="13" r="7" fill="#B83A52"/><path d="M4 30 Q16 19 28 30 Z" fill="#B83A52"/><path d="M8 11 Q16 2 24 11 Q25 17 21 18 Q16 11 11 18 Q7 17 8 11Z" fill="#7A3344"/></svg>',
   faceHappy: '<svg width="54" height="54" viewBox="0 0 32 32"><circle cx="16" cy="13" r="7" fill="#B83A52"/><path d="M4 30 Q16 19 28 30 Z" fill="#B83A52"/><path d="M8 11 Q16 2 24 11 Q25 17 21 18 Q16 11 11 18 Q7 17 8 11Z" fill="#7A3344"/><path d="M12.5 15.5 Q16 18.5 19.5 15.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>',
-  kosmykBig: '<svg width="24" height="24" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#C4543A"/></svg>',
+  kosmykBig: '<svg width="24" height="24" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#D06A4E"/></svg>',
   slotFilled: '<svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 12 Q9 8 12 12 T18 12" fill="none" stroke="#7A3344" stroke-width="2.2" stroke-linecap="round"/></svg>',
   slotNew: '<svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="#D2A900" stroke-width="2"/><path d="M9 12l2 2 4-4" fill="none" stroke="#D2A900" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   lock: '<svg width="26" height="26" viewBox="0 0 26 26" style="flex-shrink:0;"><rect x="4" y="6" width="18" height="16" rx="3" fill="none" stroke="#E5DACE" stroke-width="2"/><path d="M10 6V4a3 3 0 0 1 6 0v2" fill="none" stroke="#E5DACE" stroke-width="2"/><circle cx="13" cy="14" r="2.4" fill="#E5DACE"/></svg>',
@@ -735,6 +735,9 @@ function awardKosmyki(n){
   dom.floatK.classList.remove('go');
   void dom.floatK.offsetWidth;
   dom.floatK.classList.add('go');
+  if (window.UIEffects && window.UIEffects.kosmykBurst){
+    window.UIEffects.kosmykBurst(dom.kwrap, n);
+  }
   setTimeout(() => {
     dom.kNum.textContent = String(state.kosmyki);
     dom.kwrap.classList.add('pulse');
@@ -896,6 +899,9 @@ function showDone(){
   revealBlocks.push(r4, r5);
   revealBlocks.forEach(r => step.appendChild(r));
   mountStep(step);
+  if (!state.isRepeat && window.UIEffects && window.UIEffects.markCompletionReward){
+    window.UIEffects.markCompletionReward(step);
+  }
 
   /* sekwencja odsłon */
   revealBlocks.forEach((r, i) => setTimeout(() => r.classList.add('in'), 250 + i * 450));

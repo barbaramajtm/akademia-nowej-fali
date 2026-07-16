@@ -19,7 +19,8 @@ Ilustracja w lekcji to **element nauki**, nie dekoracja. Maksymalnie **jedna ilu
 11. [Formaty i wymiary](#11-formaty-i-wymiary)
 12. [Użycie w lekcjach](#12-użycie-w-lekcjach)
 13. [Dostępność](#13-dostępność)
-14. [Checklist przed dodaniem grafiki](#14-checklist-przed-dodaniem-grafiki)
+14. [Motyw UI — oko](#14-motyw-ui--oko)
+15. [Checklist przed dodaniem grafiki](#15-checklist-przed-dodaniem-grafiki)
 
 ---
 
@@ -368,7 +369,20 @@ Każda ilustracja wymaga:
 
 ---
 
-## 14. Checklist przed dodaniem grafiki
+## 14. Motyw UI — oko
+
+W warstwie aplikacji (nie w planszach lekcji) występuje geometryczne **oko** — motyw obserwacji i diagnozy. Ilustracje lekcji **nie** muszą zawierać oka; pozostają dydaktyczne i zgodne z sekcją 2.
+
+Oko w UI:
+- płaskie, wektorowe, trzy kolory (cream, dusty pink, navy);
+- nie realistyczne;
+- nie dominuje kompozycji.
+
+Szczegóły użycia w interfejsie: [UI_COMPONENTS.md](UI_COMPONENTS.md).
+
+---
+
+## 15. Checklist przed dodaniem grafiki
 
 Każda ilustracja przechodzi poniższą checklistę przed dodaniem do repozytorium. Wszystkie punkty muszą być spełnione.
 

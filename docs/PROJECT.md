@@ -16,11 +16,12 @@ Główny dokument opisujący wizję, założenia pedagogiczne, mechanizmy produk
 10. [System powtórek](#10-system-powtórek)
 11. [Standard lekcji](#11-standard-lekcji)
 12. [Standard ilustracji](#12-standard-ilustracji)
-13. [Standard merytoryczny](#13-standard-merytoryczny)
-14. [Workflow tworzenia treści](#14-workflow-tworzenia-treści)
-15. [Zasady rozwoju projektu](#15-zasady-rozwoju-projektu)
-16. [Roadmapa](#16-roadmapa)
-17. [Zasady podejmowania decyzji projektowych](#17-zasady-podejmowania-decyzji-projektowych)
+13. [Warstwa wizualna aplikacji](#13-warstwa-wizualna-aplikacji)
+14. [Standard merytoryczny](#14-standard-merytoryczny)
+15. [Workflow tworzenia treści](#15-workflow-tworzenia-treści)
+16. [Zasady rozwoju projektu](#16-zasady-rozwoju-projektu)
+17. [Roadmapa](#17-roadmapa)
+18. [Zasady podejmowania decyzji projektowych](#18-zasady-podejmowania-decyzji-projektowych)
 
 ---
 
@@ -315,7 +316,28 @@ Szczegółowe wytyczne znajdują się w dokumencie:
 
 ---
 
-## 13. Standard merytoryczny
+## 13. Warstwa wizualna aplikacji
+
+Interfejs aplikacji podlega kierunkowi **Minimal Mid-Century Editorial Design** — nowoczesna aplikacja edukacyjna premium z subtelną gamifikacją, bez stylu gry ani szkolnego e-learningu.
+
+**Motyw przewodni UI:** geometryczne oko (obserwacja, diagnoza, uważność) — subtelny watermark, nie logo ani maskotka.
+
+**Kluczowe zasady:**
+- kremowe tło, duże marginesy, cienkie paski postępu;
+- paleta ivory / cream / navy / terracotta / sage (max. 2–3 kolory na ekran);
+- brak ornamentów, liści, confetti i efektów kasynowych;
+- mikroanimacje wyłącznie jako nagroda (Kosmyki, ukończenie lekcji, odblokowanie);
+- respektowanie `prefers-reduced-motion`.
+
+Szczegóły komponentów, animacji i systemu nagród:
+
+**→ [docs/UI_COMPONENTS.md](UI_COMPONENTS.md)**
+
+Ilustracje w lekcjach pozostają zgodne z [ILLUSTRATION_GUIDE.md](ILLUSTRATION_GUIDE.md). Zmiany wizualne nie modyfikują logiki silnika, JSON lekcji ani mechaniki postępu.
+
+---
+
+## 14. Standard merytoryczny
 
 ### Źródła wiedzy
 
@@ -347,7 +369,7 @@ Oba typy są w programie kursu. Różnica polega na sposobie prezentacji: tematy
 
 ---
 
-## 14. Workflow tworzenia treści
+## 15. Workflow tworzenia treści
 
 Pełny proces tworzenia modułów i treści edukacyjnych — od audytu źródeł po testy po implementacji — opisano w:
 
@@ -369,10 +391,10 @@ Nowa lekcja = nowy plik JSON + wpis w katalogu. Silnik aplikacji nie wymaga zmia
 
 ---
 
-## 15. Zasady rozwoju projektu
+## 16. Zasady rozwoju projektu
 
 - **Nie dodajemy funkcji bez potrzeby** — każda zmiana musi odpowiadać na konkretny problem użytkowniczki lub bloker rozwoju treści.
-- **Nie zmieniamy wyglądu bez uzasadnienia** — spójność UI jest priorytetem.
+- **Nie zmieniamy wyglądu bez uzasadnienia** — spójność UI jest priorytetem (patrz [UI_COMPONENTS.md](UI_COMPONENTS.md)).
 - **Treści wyłącznie ze źródeł** — brak wymyślonych faktów merytorycznych.
 - **Uniwersalny silnik lekcji** — nowe lekcje to nowe pliki JSON, nie zmiany w `app.js`.
 - **Prostota ponad rozbudowę** — statyczna aplikacja webowa bez zbędnego stacku technologicznego.
@@ -382,7 +404,7 @@ Nowa lekcja = nowy plik JSON + wpis w katalogu. Silnik aplikacji nie wymaga zmia
 
 ---
 
-## 16. Roadmapa
+## 17. Roadmapa
 
 ### Zrealizowane
 
@@ -391,7 +413,8 @@ Nowa lekcja = nowy plik JSON + wpis w katalogu. Silnik aplikacji nie wymaga zmia
 - System postępu (localStorage, odblokowywanie lekcji)
 - Moduł **pH we fryzjerstwie** — 10 lekcji (kompletny)
 - Publikacja na GitHub Pages
-- Dokumentacja projektu (struktura `docs/`, w tym CONTENT_GUIDE, LESSON_STANDARD, WRITING_STYLE, ILLUSTRATION_GUIDE)
+- Dokumentacja projektu (struktura `docs/`, w tym CONTENT_GUIDE, LESSON_STANDARD, WRITING_STYLE, ILLUSTRATION_GUIDE, UI_COMPONENTS)
+- Redesign warstwy wizualnej — Minimal Mid-Century Editorial Design, motyw oka, mikroanimacje nagród
 
 ### W toku / najbliższe
 
@@ -413,7 +436,7 @@ Roadmapa jest aktualizowana po każdym ukończonym module. Szczegółowy plan tr
 
 ---
 
-## 17. Zasady podejmowania decyzji projektowych
+## 18. Zasady podejmowania decyzji projektowych
 
 Przy każdej decyzii produktowej lub technicznej obowiązują następujące reguły:
 
