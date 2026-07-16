@@ -107,13 +107,46 @@ window.LessonsCatalog = [
     moduleId: 'ph',
     title: 'Podsumowanie modułu pH',
     moduleTitle: 'pH we fryzjerstwie',
-    moduleSubtitle: 'Podsumowanie',
+    moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
     requiresLessonId: 'ph-produkty-zakwaszajace',
     lockedReason: 'Najpierw ukończ: pH produktów zakwaszających'
+  },
+  {
+    id: 'wlos-z-czego-sklada-sie',
+    moduleId: 'wlos-kolor',
+    title: 'Z czego składa się włos?',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false
+  },
+  {
+    id: 'wlos-oslonka-kora-rdzen',
+    moduleId: 'wlos-kolor',
+    title: 'Osłonka, kora i rdzeń',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-z-czego-sklada-sie',
+    lockedReason: 'Najpierw ukończ: Z czego składa się włos?'
+  },
+  {
+    id: 'wlos-keratyna-rusztowanie',
+    moduleId: 'wlos-kolor',
+    title: 'Keratyna — rusztowanie włosa',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-oslonka-kora-rdzen',
+    lockedReason: 'Najpierw ukończ: Osłonka, kora i rdzeń'
   }
 ];
+
+window.LessonsModuleOrder = ['ph', 'wlos-kolor'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];
@@ -137,8 +170,36 @@ function getLessonDisplayStatus(entry){
   return 'available';
 }
 
-function getModuleProgress(){
+function getLessonsForModule(moduleId){
   var list = window.LessonsCatalog || [];
+  var out = [];
+  for (var i = 0; i < list.length; i++){
+    if (list[i].moduleId === moduleId) out.push(list[i]);
+  }
+  return out;
+}
+
+function getModuleIds(){
+  var order = window.LessonsModuleOrder || [];
+  var seen = {};
+  var ids = [];
+  order.forEach(function(id){
+    if (!seen[id]){
+      seen[id] = true;
+      ids.push(id);
+    }
+  });
+  (window.LessonsCatalog || []).forEach(function(entry){
+    if (!seen[entry.moduleId]){
+      seen[entry.moduleId] = true;
+      ids.push(entry.moduleId);
+    }
+  });
+  return ids;
+}
+
+function getModuleProgress(moduleId){
+  var list = moduleId ? getLessonsForModule(moduleId) : (window.LessonsCatalog || []);
   var completed = 0;
   for (var i = 0; i < list.length; i++){
     if (getLessonDisplayStatus(list[i]) === 'completed') completed++;
@@ -146,8 +207,8 @@ function getModuleProgress(){
   return { completed: completed, total: list.length };
 }
 
-function getNextAvailableLesson(){
-  var list = window.LessonsCatalog || [];
+function getNextAvailableLesson(moduleId){
+  var list = moduleId ? getLessonsForModule(moduleId) : (window.LessonsCatalog || []);
   for (var i = 0; i < list.length; i++){
     if (getLessonDisplayStatus(list[i]) === 'available') return list[i];
   }
@@ -155,7 +216,9 @@ function getNextAvailableLesson(){
 }
 
 function getNextLessonAfter(completedLessonId){
-  var list = window.LessonsCatalog || [];
+  var entry = getCatalogEntry(completedLessonId);
+  if (!entry) return null;
+  var list = getLessonsForModule(entry.moduleId);
   var completed = window.AppState && window.AppState.get
     ? window.AppState.get().completedLessons : {};
   var start = 0;
@@ -174,19 +237,17 @@ function getNextLessonAfter(completedLessonId){
   for (var j = start; j < list.length; j++){
     if (getLessonDisplayStatus(list[j]) === 'available') return list[j];
   }
-  for (var k = 0; k < list.length; k++){
-    if (list[k].id !== completedLessonId && getLessonDisplayStatus(list[k]) === 'available') return list[k];
-  }
   return null;
 }
 
-function areAllModuleLessonsComplete(){
-  var p = getModuleProgress();
+function areAllModuleLessonsComplete(moduleId){
+  var p = getModuleProgress(moduleId);
   return p.total > 0 && p.completed >= p.total;
 }
 
-function getModuleMeta(){
-  var first = window.LessonsCatalog && window.LessonsCatalog[0];
+function getModuleMeta(moduleId){
+  var list = moduleId ? getLessonsForModule(moduleId) : (window.LessonsCatalog || []);
+  var first = list[0] || (window.LessonsCatalog && window.LessonsCatalog[0]);
   return {
     title: (first && first.moduleTitle) || 'Moduł',
     subtitle: (first && first.moduleSubtitle) || ''
@@ -197,6 +258,8 @@ window.LessonsCatalogHelpers = {
   getEntry: getCatalogEntry,
   isLocked: isCatalogLessonLocked,
   getStatus: getLessonDisplayStatus,
+  getModuleIds: getModuleIds,
+  getLessonsForModule: getLessonsForModule,
   getModuleProgress: getModuleProgress,
   getNextAvailable: getNextAvailableLesson,
   getNextAfter: getNextLessonAfter,
