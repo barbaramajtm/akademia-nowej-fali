@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "lesson-n16-rozjasnione-strefy",
+  "title": "Rozjaśnienia i różne poziomy na jednej głowie",
+  "category": "Numeracja farb i diagnoza koloru",
+  "levelLabel": "Diagnoza koloru",
+  "intro": {
+    "narratorText": "Na jednej głowie mogą być różne poziomy. Rozdzielisz strefy w opisie. Gdy naturalny odrost i rozjaśnione partie wyglądają inaczej, nie szukasz jednej „średniej”. Za chwilę przypiszesz, co należy do której strefy.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "n16-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Case",
+      "question": "Odrost ok. poziomu 5, końce wyraźnie jaśniejsze po pasemkach. Co wymaga osobnego opisu w diagnozie koloru?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tylko średni poziom całej głowy"
+        },
+        {
+          "id": "b",
+          "text": "Odrost oraz rozjaśnione partie"
+        },
+        {
+          "id": "c",
+          "text": "Tylko życzenie kolorystyczne klientki"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Przy naturalnym odroście i rozjaśnionych partiach opisujesz te strefy osobno — bez jednej uśrednionej liczby."
+      }
+    },
+    {
+      "id": "n16-z2",
+      "type": "matching",
+      "kicker": "Krok 2 · Co do której strefy",
+      "question": "Połącz strefę z elementami, które do niej należą.",
+      "leftTitle": "Strefa",
+      "rightTitle": "Elementy",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "naturalny odrost"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "rozjaśnione partie"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "poziom rozjaśnienia, równość, uwrażliwienie"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "poziom, długość, % i rozmieszczenie siwizny"
+        }
+      ],
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Przy odroście zbierasz poziom, długość i siwiznę. Przy rozjaśnieniach — poziom, czy są równe, oraz uwrażliwienie."
+      }
+    },
+    {
+      "id": "n16-z3",
+      "type": "trueFalse",
+      "kicker": "Krok 3 · Równość",
+      "question": "Przy rozjaśnionych końcach wystarczy podać poziom — równości rozjaśnienia nie trzeba oceniać.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Określasz poziom rozjaśnień, czy są równe, oraz poziom uwrażliwienia."
+      }
+    },
+    {
+      "id": "n16-z4",
+      "type": "findError",
+      "kicker": "Krok 4 · Braki",
+      "question": "W którym opisie jest błąd?",
+      "cardTitle": "Opisy stref",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Odrost poziom 4, ok. 2 cm; końce rozjaśniane do ok. poziomu 8, nierówno, wyraźnie uwrażliwione."
+        },
+        {
+          "id": "s2",
+          "text": "Odrost poziom 5; końce jaśniejsze."
+        },
+        {
+          "id": "s3",
+          "text": "Odrost poziom 6, 1 cm, bez siwizny; pasemka ok. poziomu 9, dość równe, lekkie uwrażliwienie."
+        }
+      ],
+      "correctOptionIds": [
+        "s2"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Znalazłaś brak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "„Końce jaśniejsze” bez poziomu, równości i uwrażliwienia to za mało."
+      }
+    },
+    {
+      "id": "n16-z5",
+      "type": "singleChoice",
+      "kicker": "Krok 5 · Co robić w diagnozie",
+      "question": "Odrost poziom 5, końce rozjaśniane nierównomiernie i mocno przesuszone. Jaki jest poprawny kolejny krok w diagnozie koloru?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Od razu dobrać oksydant 9%"
+        },
+        {
+          "id": "b",
+          "text": "Zanotować osobno poziomy stref, równość rozjaśnienia i uwrażliwienie"
+        },
+        {
+          "id": "c",
+          "text": "Wpisać jeden poziom „7” jako kompromis"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Właśnie tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Na tym etapie zbierasz opis stref. Dobór farby i oksydantu nie należy do tej lekcji.",
+        "funFact": {
+          "text": "Różne strefy na jednej głowie opisujesz osobno — zwłaszcza odrost i rozjaśnienia."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozdzielasz strefy koloru",
+    "subtitle": "Odrost i rozjaśnienia opisujesz osobno.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Jak orientacyjnie opisać siwiznę?"
+    }
+  }
+}

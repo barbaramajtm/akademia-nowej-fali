@@ -114,6 +114,224 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: pH produktów zakwaszających'
   },
   {
+    id: 'lesson-n1-numer-farby',
+    moduleId: 'numeracja-farb',
+    title: 'Co widać w numerze farby',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false
+  },
+  {
+    id: 'lesson-n2-liczba-przed-separatorem',
+    moduleId: 'numeracja-farb',
+    title: 'Liczba przed separatorem',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n1-numer-farby',
+    lockedReason: 'Najpierw ukończ: Co widać w numerze farby'
+  },
+  {
+    id: 'lesson-n3-skala-poziomow',
+    moduleId: 'numeracja-farb',
+    title: 'Skala poziomów 1–10',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n2-liczba-przed-separatorem',
+    lockedReason: 'Najpierw ukończ: Liczba przed separatorem'
+  },
+  {
+    id: 'lesson-n4-refleks-glowny',
+    moduleId: 'numeracja-farb',
+    title: 'Pierwsza cyfra po separatorze',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n3-skala-poziomow',
+    lockedReason: 'Najpierw ukończ: Skala poziomów 1–10'
+  },
+  {
+    id: 'lesson-n5-refleks-dodatkowy',
+    moduleId: 'numeracja-farb',
+    title: 'Druga cyfra po separatorze',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n4-refleks-glowny',
+    lockedReason: 'Najpierw ukończ: Pierwsza cyfra po separatorze'
+  },
+  {
+    id: 'lesson-n6-kolejnosc-refleksow',
+    moduleId: 'numeracja-farb',
+    title: 'Dlaczego 7.13 i 7.31 to nie to samo',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n5-refleks-dodatkowy',
+    lockedReason: 'Najpierw ukończ: Druga cyfra po separatorze'
+  },
+  {
+    id: 'lesson-n7-podwojny-refleks',
+    moduleId: 'numeracja-farb',
+    title: 'Co oznacza 7.11',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n6-kolejnosc-refleksow',
+    lockedReason: 'Najpierw ukończ: Dlaczego 7.13 i 7.31 to nie to samo'
+  },
+  {
+    id: 'lesson-n8-czytanie-numeru',
+    moduleId: 'numeracja-farb',
+    title: 'Czytanie całego numeru krok po kroku',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n7-podwojny-refleks',
+    lockedReason: 'Najpierw ukończ: Co oznacza 7.11'
+  },
+  {
+    id: 'lesson-n9-separatory',
+    moduleId: 'numeracja-farb',
+    title: 'Separatory i nazwy stosowane przez marki',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n8-czytanie-numeru',
+    lockedReason: 'Najpierw ukończ: Czytanie całego numeru krok po kroku'
+  },
+  {
+    id: 'lesson-n10-legenda-producenta',
+    moduleId: 'numeracja-farb',
+    title: 'Legenda producenta',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Odczyt numeru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n9-separatory',
+    lockedReason: 'Najpierw ukończ: Separatory i nazwy stosowane przez marki'
+  },
+  {
+    id: 'lesson-n11-rozpoznawanie-poziomow',
+    moduleId: 'numeracja-farb',
+    title: 'Rozpoznawanie poziomów 1–10',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Diagnoza koloru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n10-legenda-producenta',
+    lockedReason: 'Najpierw ukończ: Legenda producenta'
+  },
+  {
+    id: 'lesson-n12-poziom-a-refleks',
+    moduleId: 'numeracja-farb',
+    title: 'Poziom to nie refleks',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Diagnoza koloru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n11-rozpoznawanie-poziomow',
+    lockedReason: 'Najpierw ukończ: Rozpoznawanie poziomów 1–10'
+  },
+  {
+    id: 'lesson-n13-sytuacje-kolorystyczne',
+    moduleId: 'numeracja-farb',
+    title: 'Co właściwie oceniamy na włosach klientki',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Diagnoza koloru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n12-poziom-a-refleks',
+    lockedReason: 'Najpierw ukończ: Poziom to nie refleks'
+  },
+  {
+    id: 'lesson-n14-naturalny-odrost',
+    moduleId: 'numeracja-farb',
+    title: 'Naturalny odrost',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Diagnoza koloru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n13-sytuacje-kolorystyczne',
+    lockedReason: 'Najpierw ukończ: Co właściwie oceniamy na włosach klientki'
+  },
+  {
+    id: 'lesson-n15-kolor-kosmetyczny',
+    moduleId: 'numeracja-farb',
+    title: 'Kolor kosmetyczny a stan faktyczny',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Diagnoza koloru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n14-naturalny-odrost',
+    lockedReason: 'Najpierw ukończ: Naturalny odrost'
+  },
+  {
+    id: 'lesson-n16-rozjasnione-strefy',
+    moduleId: 'numeracja-farb',
+    title: 'Rozjaśnienia i różne poziomy na jednej głowie',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Diagnoza koloru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n15-kolor-kosmetyczny',
+    lockedReason: 'Najpierw ukończ: Kolor kosmetyczny a stan faktyczny'
+  },
+  {
+    id: 'lesson-n17-procent-siwizny',
+    moduleId: 'numeracja-farb',
+    title: 'Ocena procentu siwizny',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Diagnoza koloru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n16-rozjasnione-strefy',
+    lockedReason: 'Najpierw ukończ: Rozjaśnienia i różne poziomy na jednej głowie'
+  },
+  {
+    id: 'lesson-n18-pelna-diagnoza-koloru',
+    moduleId: 'numeracja-farb',
+    title: 'Pełna diagnoza koloru',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Diagnoza koloru',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n17-procent-siwizny',
+    lockedReason: 'Najpierw ukończ: Ocena procentu siwizny'
+  },
+  {
+    id: 'lesson-n19-powtorka-mieszana',
+    moduleId: 'numeracja-farb',
+    title: 'Powtórka mieszana',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Podsumowanie',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n18-pelna-diagnoza-koloru',
+    lockedReason: 'Najpierw ukończ: Pełna diagnoza koloru'
+  },
+  {
+    id: 'lesson-n20-sprawdzian-modulu',
+    moduleId: 'numeracja-farb',
+    title: 'Sprawdzian modułu',
+    moduleTitle: 'Numeracja farb i diagnoza koloru',
+    moduleSubtitle: 'Podsumowanie',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n19-powtorka-mieszana',
+    lockedReason: 'Najpierw ukończ: Powtórka mieszana'
+  },
+  {
     id: 'wlos-z-czego-sklada-sie',
     moduleId: 'wlos-kolor',
     title: 'Z czego składa się włos?',
@@ -146,7 +364,7 @@ window.LessonsCatalog = [
   }
 ];
 
-window.LessonsModuleOrder = ['ph', 'wlos-kolor'];
+window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];
@@ -156,8 +374,13 @@ function getCatalogEntry(lessonId){
   return null;
 }
 
+function isAdminMode(){
+  return !!(window.AdminMode && window.AdminMode.isActive());
+}
+
 function isCatalogLessonLocked(entry){
   if (!entry) return true;
+  if (isAdminMode()) return false;
   if (entry.locked) return true;
   if (entry.requiresLessonId && !window.AppState.get().completedLessons[entry.requiresLessonId]) return true;
   return false;
@@ -165,6 +388,10 @@ function isCatalogLessonLocked(entry){
 
 function getLessonDisplayStatus(entry){
   if (!entry) return 'locked';
+  if (isAdminMode()){
+    if (window.AppState.get().completedLessons[entry.id]) return 'completed';
+    return 'available';
+  }
   if (window.AppState.get().completedLessons[entry.id]) return 'completed';
   if (isCatalogLessonLocked(entry)) return 'locked';
   return 'available';

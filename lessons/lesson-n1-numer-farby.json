@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "id": "lesson-n1-numer-farby",
+  "title": "Co widać w numerze farby",
+  "category": "Numeracja farb i diagnoza koloru",
+  "levelLabel": "Odczyt numeru",
+  "intro": {
+    "narratorText": "Numer farby to nie jedna tajemnicza liczba. Najpierw zobaczysz, z jakich części się składa. Spójrz na 7.13, 7/1 i 7-1. Znaki między cyframi wyglądają inaczej, ale układ części jest podobny. Za chwilę wskażesz, co jest separatorem, a co stoi przed nim i po nim.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "n1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Separator",
+      "question": "W zapisie 7.13 który znak oddziela pierwszą cyfrę od kolejnych?",
+      "options": [
+        {
+          "id": "a",
+          "text": "kropka ."
+        },
+        {
+          "id": "b",
+          "text": "cyfra 1"
+        },
+        {
+          "id": "c",
+          "text": "cyfra 3"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Separatorem jest znak między częściami numeru — tu kropka. Cyfry po separatorze to osobna część zapisu."
+      }
+    },
+    {
+      "id": "n1-z2",
+      "type": "singleChoice",
+      "kicker": "Krok 2 · Przed separatorem",
+      "question": "W 7/1 która część stoi przed separatorem?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "/"
+        },
+        {
+          "id": "c",
+          "text": "1"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dokładnie.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Przed separatorem stoi pierwsza liczba zapisu — tu 7. Sam separator i to, co po nim, to kolejne części."
+      }
+    },
+    {
+      "id": "n1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Części zapisu",
+      "question": "Połącz element z miejscem w numerze 7-1.",
+      "leftTitle": "Element",
+      "rightTitle": "Miejsce",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "7"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "-"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "1"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "separator"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "przed separatorem"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "po separatorze"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "W 7-1 liczba 7 jest przed separatorem, myślnik jest separatorem, a 1 stoi po separatorze."
+      }
+    },
+    {
+      "id": "n1-z4",
+      "type": "trueFalse",
+      "kicker": "Krok 4 · Dwie cyfry po",
+      "question": "W zapisie 7.13 po separatorze stoją dwie cyfry: 1 i 3.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Po kropce w 7.13 widać dwie cyfry — najpierw 1, potem 3."
+      }
+    },
+    {
+      "id": "n1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Znajdź błąd",
+      "question": "W którym stwierdzeniu jest błąd?",
+      "cardTitle": "Opisy konstrukcji",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "W 7.13 przed separatorem stoi 7."
+        },
+        {
+          "id": "s2",
+          "text": "Separator może być kropką, ukośnikiem lub myślnikiem."
+        },
+        {
+          "id": "s3",
+          "text": "W 7.13 całość 713 to jedna nierozdzielna liczba bez części."
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Znalazłaś błąd.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Numer składa się z części: liczba przed separatorem, separator i cyfry po nim — nie jest jedną nierozdzielną liczbą 713.",
+        "funFact": {
+          "text": "Numer farby rozkładasz na części: przed separatorem, separator i cyfry po nim."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Widzisz części numeru farby",
+    "subtitle": "Rozpoznajesz, co stoi przed separatorem, czym jest separator i co po nim następuje.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Jaką informację niesie liczba przed separatorem?"
+    }
+  }
+}

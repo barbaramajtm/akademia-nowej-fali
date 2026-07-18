@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "id": "lesson-n8-czytanie-numeru",
+  "title": "Czytanie całego numeru krok po kroku",
+  "category": "Numeracja farb i diagnoza koloru",
+  "levelLabel": "Odczyt numeru",
+  "intro": {
+    "narratorText": "Masz już części. Teraz złożysz je w jeden odczyt. Spójrz na 7.13. Nie podpowiadamy jeszcze kolejności pytań — najpierw sama wskażesz, od czego zacząć i co oznaczają kolejne części.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "n8-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Od czego zacząć",
+      "question": "Chcesz odczytać jasność w 7.13. Od której części zaczynasz?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Od 7"
+        },
+        {
+          "id": "b",
+          "text": "Od 1"
+        },
+        {
+          "id": "c",
+          "text": "Od 3"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Jasność (poziom) odczytujesz z liczby przed separatorem. Potem patrzysz na refleks główny i ewentualnie dodatkowy."
+      }
+    },
+    {
+      "id": "n8-z2",
+      "type": "ordering",
+      "kicker": "Krok 2 · Kolejność odczytu",
+      "question": "Ułóż sensowną kolejność odczytu numeru z dwiema cyframi po separatorze.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "odczytać poziom"
+        },
+        {
+          "id": "s2",
+          "text": "odczytać refleks główny"
+        },
+        {
+          "id": "s3",
+          "text": "odczytać refleks dodatkowy"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Najpierw poziom, potem refleks główny, na końcu dodatkowy — zgodnie z budową zapisu w materiale."
+      }
+    },
+    {
+      "id": "n8-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Rozłóż 7.13",
+      "question": "Połącz część z rolą.",
+      "leftTitle": "Część",
+      "rightTitle": "Rola",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "7"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "1"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "3"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "refleks główny"
+        },
+        {
+          "id": "r2",
+          "pairId": "c",
+          "text": "refleks dodatkowy"
+        },
+        {
+          "id": "r3",
+          "pairId": "a",
+          "text": "poziom"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dokładnie.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Z materiału: 7.13 = poziom 7 + główny refleks 1 + dodatkowy refleks 3."
+      }
+    },
+    {
+      "id": "n8-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Inny zapis",
+      "question": "Który odczyt 7.31 jest zgodny z materiałem?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Poziom 7; głównie złoty, dodatkowo popielaty"
+        },
+        {
+          "id": "b",
+          "text": "Poziom 3; tylko popiel"
+        },
+        {
+          "id": "c",
+          "text": "Poziom 7; głównie popielaty, dodatkowo złoty"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "7.31 w materiale: poziom 7, głównie złoty, dodatkowo popielaty. Opcja z „głównie popielaty” dotyczy 7.13."
+      }
+    },
+    {
+      "id": "n8-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Znajdź błąd",
+      "question": "W którym stwierdzeniu jest błąd?",
+      "cardTitle": "Odczyty",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "7.1 — poziom 7, refleks popielaty (przykład źródłowy)."
+        },
+        {
+          "id": "s2",
+          "text": "7.11 — poziom 7, intensywny lub podwójny refleks popielaty (przykład źródłowy)."
+        },
+        {
+          "id": "s3",
+          "text": "7.13 — poziom odczytujesz z cyfry 3."
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Znalazłaś błąd.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Poziom zawsze stoi przed separatorem. W 7.13 poziom to 7, nie 3.",
+        "funFact": {
+          "text": "Numer czytasz tak: poziom, potem refleks główny, potem dodatkowy — jeśli jest."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Odczytujesz numer krok po kroku",
+    "subtitle": "Poziom, refleks główny i dodatkowy — w tej kolejności analizy.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Czy kropka, ukośnik i myślnik zmieniają sens poziomu?"
+    }
+  }
+}
