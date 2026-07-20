@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "lesson-n15-kolor-kosmetyczny",
+  "title": "Kolor kosmetyczny a stan faktyczny",
+  "category": "Numeracja farb i diagnoza koloru",
+  "levelLabel": "Diagnoza koloru",
+  "intro": {
+    "narratorText": "W karcie bywa historia zabiegu. Na włosach — to, co widać teraz. Masz zapis z poprzedniej wizyty i to, co widzisz po rozczesaniu. Za chwilę rozstrzygniesz, która informacja jest dzisiejszą diagnozą koloru.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "n15-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Co wpisać jako diagnozę",
+      "question": "Co jest diagnozą koloru kosmetycznego „na dziś”?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Numer farby z poprzedniej wizyty przepisany 1:1"
+        },
+        {
+          "id": "b",
+          "text": "Aktualny wizualny poziom i refleks oraz to, czy kolor jest jednolity na długości"
+        },
+        {
+          "id": "c",
+          "text": "Tylko życzenie klientki co do nowego koloru"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Przy kolorze kosmetycznym opisujesz stan faktyczny wizualnie — poziom, refleks i jednolitość. Numer z poprzedniej wizyty należy do historii, nie zastępuje dzisiejszego opisu."
+      }
+    },
+    {
+      "id": "n15-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Mit",
+      "question": "Skoro ostatnio nałożono 5.43, w diagnozie wystarczy wpisać 5.43 bez oglądania włosów.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Chodzi o to, co widać dziś, nie o to, co było nakładane wcześniej. Numer z historii możesz zanotować osobno."
+      }
+    },
+    {
+      "id": "n15-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Dwie szuflady",
+      "question": "Połącz informację z właściwą szufladą.",
+      "leftTitle": "Informacja",
+      "rightTitle": "Szuflada",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Dziś widać ok. poziom 6, cieplejszy refleks, lekkie różnice na długości"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Poprzednia receptura: 6.1"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "historia zabiegu"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "diagnoza aktualna"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Jedna szuflada to wygląd „na dziś”, druga — historia receptury."
+      }
+    },
+    {
+      "id": "n15-z4",
+      "type": "findError",
+      "kicker": "Krok 4 · Wpis w karcie",
+      "question": "W którym wpisie jest błąd?",
+      "cardTitle": "Diagnoza koloru",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Kolor kosmetyczny: wizualnie ok. poziom 5, refleks ciepły; na długości nierównomierny."
+        },
+        {
+          "id": "s2",
+          "text": "Jak ostatnio."
+        },
+        {
+          "id": "s3",
+          "text": "100% kosmetyczny; poziom i refleks zgodne z wyglądem dziś; jednolity."
+        }
+      ],
+      "correctOptionIds": [
+        "s2"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Znalazłaś lukę.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "„Jak ostatnio” nie opisuje stanu faktycznego ani jednolitości koloru."
+      }
+    },
+    {
+      "id": "n15-z5",
+      "type": "singleChoice",
+      "kicker": "Krok 5 · Podsumowanie",
+      "question": "Które zdanie najlepiej podsumowuje tę lekcję?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Diagnoza opisuje to, co faktycznie widać dziś; poprzedni numer farby należy do historii."
+        },
+        {
+          "id": "b",
+          "text": "Diagnoza zawsze równa się ostatniej recepturze."
+        },
+        {
+          "id": "c",
+          "text": "Jednolitość koloru nie ma znaczenia w opisie."
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To najważniejsza zasada.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "To, co wcześniej nałożono, nie musi odpowiadać temu, co dziś wizualnie widać na włosach.",
+        "funFact": {
+          "text": "Diagnoza mówi, co widać dziś — historia receptury stoi osobno."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Opisujesz stan faktyczny",
+    "subtitle": "Oddzielasz dzisiejszy wygląd od historii receptury.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Gdy końce są jaśniejsze od odrostu — jak to opisać?"
+    }
+  }
+}

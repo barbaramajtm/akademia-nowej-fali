@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "lesson-n10-legenda-producenta",
+  "title": "Legenda producenta",
+  "category": "Numeracja farb i diagnoza koloru",
+  "levelLabel": "Odczyt numeru",
+  "intro": {
+    "narratorText": "Znasz budowę numeru i przykłady ze źródła. Teraz sytuacja z dwiema markami. Na jednej palecie .1 opisano jako popiel. Na stanowisku pojawia się farba innego producenta. Czy można bez sprawdzania uznać, że .1 oznacza dokładnie to samo?",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "n10-z1",
+      "type": "trueFalse",
+      "kicker": "Krok 1 · Mit",
+      "question": ".1 zawsze oznacza popiel — u każdej marki, bez sprawdzania legendy.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Nie. W materiale egzaminacyjnym .1 oznacza popiel, ale znaczenie oznaczeń trzeba sprawdzać w legendzie konkretnego producenta. Oznaczeń nie przenosisz automatycznie między markami."
+      }
+    },
+    {
+      "id": "n10-z2",
+      "type": "singleChoice",
+      "kicker": "Krok 2 · Co robić",
+      "question": "Sięgasz po tubkę nieznanej Ci marki. Co robisz z oznaczeniem refleksu?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sprawdzasz legendę tego producenta"
+        },
+        {
+          "id": "b",
+          "text": "Kopiujesz znaczenie z przykładu 7.1 i kończysz temat"
+        },
+        {
+          "id": "c",
+          "text": "Ignorujesz cyfry po separatorze"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Przykłady z materiału pomagają zrozumieć budowę zapisu. Znaczenie cyfr w pracy salonowej bierzesz z legendy marki, którą masz w ręku."
+      }
+    },
+    {
+      "id": "n10-z3",
+      "type": "findError",
+      "kicker": "Krok 3 · Znajdź błąd",
+      "question": "W którym stwierdzeniu jest błąd?",
+      "cardTitle": "Zdania",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "W przykładzie źródłowym 7.1 ma refleks popielaty."
+        },
+        {
+          "id": "s2",
+          "text": "Numerów refleksów nie przenosisz automatycznie między markami."
+        },
+        {
+          "id": "s3",
+          "text": "Skoro 1 bywa popielem w przykładzie, 4 zawsze jest miedzią u wszystkich."
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Znalazłaś błąd.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Nawet jeśli materiał wspomina, że pewne cyfry „często” coś oznaczają, nie budujesz z tego uniwersalnej legendy bez sprawdzenia producenta."
+      }
+    },
+    {
+      "id": "n10-z4",
+      "type": "matching",
+      "kicker": "Krok 4 · Dwie szuflady",
+      "question": "Połącz stwierdzenie z właściwą szufladą.",
+      "leftTitle": "Stwierdzenie",
+      "rightTitle": "Szuflada",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "W przykładzie E3 .1 = popiel"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Przed zabiegiem otwieram legendę marki X"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "obowiązek przy konkretnym produkcie"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "przykład szkoleniowy ze źródła"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dokładnie.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Jedna szuflada to przykład do nauki budowy numeru. Druga — realna praca z tubką i legendą producenta."
+      }
+    },
+    {
+      "id": "n10-z5",
+      "type": "singleChoice",
+      "kicker": "Krok 5 · Podsumowanie modułu odczytu",
+      "question": "Które zdanie najlepiej zamyka naukę odczytu numeru?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Znam budowę numeru i przykłady ze źródła; znaczenia cyfr w salonie sprawdzam w legendzie marki."
+        },
+        {
+          "id": "b",
+          "text": "Znam już pełną legendę wszystkich producentów na pamięć."
+        },
+        {
+          "id": "c",
+          "text": "Wystarczy zapamiętać, że .1 zawsze jest popielem."
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To właściwe domknięcie.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Odczytujesz poziom i refleksy według budowy zapisu. Przykłady ze źródła nie zastępują legendy producenta.",
+        "funFact": {
+          "text": "Oznaczeń refleksów nie przenosisz automatycznie między markami — sprawdzasz legendę producenta."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, kiedy otworzyć legendę",
+    "subtitle": "Przykład ze źródła nie jest automatyczną regułą wszystkich marek.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Znasz już części numeru i wiesz, dlaczego legenda producenta ma znaczenie. Teraz czas utrwalić samą skalę poziomów i nauczyć się sprawnie porównywać ich jasność."
+    }
+  }
+}

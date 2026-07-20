@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "lesson-n2-liczba-przed-separatorem",
+  "title": "Liczba przed separatorem",
+  "category": "Numeracja farb i diagnoza koloru",
+  "levelLabel": "Odczyt numeru",
+  "intro": {
+    "narratorText": "Już rozróżniasz części numeru. Teraz skupisz się na tym, co stoi przed separatorem. Spójrz na 5.1, 7.1 i 9.1. Po separatorze widać tę samą cyfrę. Zmienia się tylko liczba przed separatorem. Za chwilę wskażesz, która część mówi o jasności albo ciemności koloru.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "n2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Porównanie",
+      "question": "W zapisach 5.1, 7.1 i 9.1 która część się zmienia, gdy porównujesz je ze sobą?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Liczba przed separatorem"
+        },
+        {
+          "id": "b",
+          "text": "Cyfra zaraz po separatorze"
+        },
+        {
+          "id": "c",
+          "text": "Sam znak separatora"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "We wszystkich trzech zapisach po separatorze stoi 1. Zmienia się liczba przed separatorem — to właśnie ona opisuje poziom jasności lub ciemności."
+      }
+    },
+    {
+      "id": "n2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Mit",
+      "question": "Liczba przed separatorem mówi wyłącznie o kierunku kolorystycznym, np. o popielu.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Liczba przed separatorem oznacza poziom koloru — jego jasność lub ciemność. Kierunek kolorystyczny odczytujesz z cyfr po separatorze."
+      }
+    },
+    {
+      "id": "n2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Co do czego",
+      "question": "Połącz część numeru z rodzajem informacji.",
+      "leftTitle": "Część numeru",
+      "rightTitle": "Informacja",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "liczba przed separatorem"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "cyfry po separatorze"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "kierunek kolorystyczny (refleksy)"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "jasność lub ciemność (poziom)"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dokładnie.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Przed separatorem stoi poziom. Po separatorze — oznaczenia refleksów, czyli kierunku."
+      }
+    },
+    {
+      "id": "n2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Ten sam zapis",
+      "question": "W 7.13 która cyfra opisuje poziom (jasność/ciemność)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "1"
+        },
+        {
+          "id": "c",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Poziom odczytujesz z liczby przed separatorem — tu z 7."
+      }
+    },
+    {
+      "id": "n2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Znajdź błąd",
+      "question": "W którym stwierdzeniu jest błąd?",
+      "cardTitle": "Zdania",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Liczba przed separatorem oznacza poziom koloru."
+        },
+        {
+          "id": "s2",
+          "text": "Poziom mówi o jasności lub ciemności."
+        },
+        {
+          "id": "s3",
+          "text": "W 9.1 poziom odczytujesz z cyfry 1."
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Znalazłaś błąd.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "W 9.1 poziom to 9 — liczba przed separatorem. Cyfra po separatorze nie jest poziomem.",
+        "funFact": {
+          "text": "Liczba przed separatorem to poziom — jasność lub ciemność."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, co mówi liczba przed separatorem",
+    "subtitle": "To poziom — jasność lub ciemność koloru.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Jak wygląda cała skala poziomów od 1 do 10?"
+    }
+  }
+}

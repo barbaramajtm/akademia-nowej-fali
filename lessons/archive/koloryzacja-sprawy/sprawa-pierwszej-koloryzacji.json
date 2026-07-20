@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "sprawa-pierwszej-koloryzacji",
+  "title": "Sprawa pierwszej koloryzacji",
+  "caseNumber": 6,
+  "category": "Koloryzacja",
+
+  "intro": {
+    "clientQuote": [
+      { "text": "„Nigdy nie farbowałam włosów w salonie. " },
+      { "text": "Boję się, że coś mnie ugryzie albo kolor wyjdzie inaczej niż na próbce.", "bold": true },
+      { "text": " Ale chcę delikatnie odświeżyć odcień — po prostu poczuć się lepiej we własnych włosach.\"" }
+    ],
+    "clientName": "Laura",
+    "narratorText": "Laura oddaje Ci pierwszą wizytę kolorystyczną. To duże zaufanie — dziś poprowadzisz ją spokojnie, krok po kroku.",
+    "stakeText": "do zdobycia 100 Kosmyków · element kolekcji",
+    "startButtonLabel": "Przyjmij klientkę"
+  },
+
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "Pewna ręka — 3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 20, "label": "Perfekcyjna wizyta" }
+  },
+
+  "tasks": [
+    {
+      "id": "z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Konsultacja",
+      "question": "Laura mówi, że boi się reakcji na farbę, a od kilku dni lekko swędzi ją skóra przy uchu. Od czego zaczniesz?",
+      "options": [
+        { "id": "a", "text": "Od razu pokazujesz katalog — niech wybierze kolor, reszta później" },
+        { "id": "b", "text": "Oglądasz skórę głowy i pytasz o swędzenie, mycie i wcześniejsze zabiegi" },
+        { "id": "c", "text": "Uspokajasz ją: u większości nic się nie dzieje, można farbować od razu" }
+      ],
+      "correctOptionId": "b",
+      "reward": 10,
+      "checkButtonLabel": "Zapytaj",
+      "feedback": {
+        "correctTitle": "Dobre oko",
+        "incorrectTitle": "Prawie — spójrz jeszcze raz",
+        "clientQuote": "„Nikt mi wcześniej tak nie pytał… Trochę mniej się boję, jak widzę, że naprawdę mnie słuchasz.\"",
+        "explanation": [
+          { "text": "Przy oglądzie skóry głowy dziś " },
+          { "text": "nie widzisz niepokojących zmian", "bold": true },
+          { "text": " — Laura może odetchnąć. Ale skoro to jej " },
+          { "text": "pierwsza koloryzacja w salonie", "bold": true },
+          { "text": ", nie spieszysz się z farbą. Najpierw dbasz o bezpieczeństwo." }
+        ],
+        "funFact": {
+          "text": "Ewa: Zanim dotkniesz farby — zawsze obejrzyj skórę głowy. Gdy zobaczysz ropne zmiany albo podejrzenie infekcji, tego dnia nie farbujesz — kierujesz do lekarza."
+        }
+      }
+    },
+
+    {
+      "id": "z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Mit czy prawda?",
+      "clientIntro": "„Skoro skóra wygląda dobrze… to możemy już farbować? Boję się czekać — mam tremę przed pierwszym razem w salonie.\"",
+      "question": "Przed pierwszą koloryzacją w salonie można pominąć próbę uczuleniową.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Laura może odetchnąć — zrobisz to dobrze",
+        "incorrectTitle": "Prawie — spójrz jeszcze raz",
+        "clientQuote": "„Czyli najpierw sprawdzicie, czy mi nie zaszkodzi? To właśnie mnie uspokaja.\"",
+        "explanation": [
+          { "text": "Przy farbowaniu po raz pierwszy " },
+          { "text": "wykonuje się próbę uczuleniową", "bold": true },
+          { "text": " — zanim dotkniesz całej głowy. Laura nie musi się tego wstydzić: to standard w profesjonalnym salonie, nie „nadgorliwość\"." }
+        ],
+        "funFact": {
+          "text": "Ewa: Dobrze, że tłumaczysz klientce, co robisz i po co. Kiedy wie, że dbasz o jej bezpieczeństwo, przestaje się bać i zaczyna Ci ufać."
+        }
+      }
+    },
+
+    {
+      "id": "z3",
+      "type": "findError",
+      "kicker": "Krok 3 · Znajdź błędy",
+      "question": [
+        { "text": "Laura czeka przy myciu. Na stanowisku leży kartka od popołudniowej stażystki. Zaznacz " },
+        { "text": "2 błędy", "bold": true },
+        { "text": ", które mogłyby zepsuć jej pierwszą wizytę." }
+      ],
+      "cardTitle": "Notatka · koloryzacja Laura",
+      "rows": [
+        { "id": "r1", "text": "Cel: koloryzacja ton w ton, włosy naturalne" },
+        { "id": "r2", "text": [ { "text": "Próba uczuleniowa: " }, { "text": "pominięta — klientka się spieszy", "bold": true } ] },
+        { "id": "r3", "text": [ { "text": "Utleniacz: " }, { "text": "12%", "bold": true } ] },
+        { "id": "r4", "text": "Dobór koloru: wspólnie z katalogiem" }
+      ],
+      "correctOptionIds": [ "r2", "r3" ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Uratowałaś jej wizytę",
+        "incorrectTitle": "Prawie — spójrz jeszcze raz",
+        "clientQuote": "„Dobrze, że to sprawdziłaś… Bałam się, ale wolę poczekać, niż coś źle poczuć na skórze.\"",
+        "explanation": [
+          { "text": "Próba uczuleniowa to pierwszy krok " },
+          { "text": "pierwszej koloryzacji", "bold": true },
+          { "text": " — nie skracasz go nawet, gdy klientka się spieszy. Do ton w ton dobierasz utleniacz " },
+          { "text": "6%", "bold": true },
+          { "text": ", nie 12% — ten służy do mocniejszego rozjaśniania." }
+        ],
+        "funFact": {
+          "text": "Ewa: Presja „zróbmy szybko\" w salonie się zdarza. Dobrze, że stoisz po stronie klientki — to też jest profesjonalizm."
+        }
+      }
+    },
+
+    {
+      "id": "z4",
+      "type": "matching",
+      "kicker": "Krok 4 · Dobierz plan",
+      "question": "Próba wyszła bez reakcji. Laura wybiera odcień z katalogu — połącz elementy wizyty z ich sensem.",
+      "leftTitle": "Co robisz",
+      "rightTitle": "Po co",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "Pokazujesz katalog kolorów" },
+        { "id": "l2", "pairId": "b", "text": "Dobierasz utleniacz 6%" },
+        { "id": "l3", "pairId": "c", "text": "Kontrolujesz czas działania farby" }
+      ],
+      "right": [
+        { "id": "p1", "pairId": "c", "text": "Pełne wywołanie barwnika następuje po ok. 30–50 min" },
+        { "id": "p2", "pairId": "a", "text": "Ułatwia rozmowę i wspólny wybór koloru" },
+        { "id": "p3", "pairId": "b", "text": "Delikatna koloryzacja ton w ton bez mocnego rozjaśniania" }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dokładnie tak",
+        "incorrectTitle": "Prawie — spójrz jeszcze raz",
+        "clientQuote": "„Ten odcień z katalogu — dokładnie o to mi chodziło. Cieszę się, że wybieramy go razem.\"",
+        "explanation": [
+          { "text": "Laura widzi, co dostanie — katalog " },
+          { "text": "ułatwia rozmowę", "bold": true },
+          { "text": " i wybór. Ton w ton to " },
+          { "text": "delikatna koloryzacja bez mocnego rozjaśniania", "bold": true },
+          { "text": ", stąd utleniacz 6%. Farba pracuje stopniowo — pełne wywołanie następuje po ok. " },
+          { "text": "30–50 minut", "bold": true },
+          { "text": ", więc nie zostawiasz jej samej w tym czasie." }
+        ],
+        "funFact": {
+          "text": "Ewa: Dobry kolor zaczyna się od rozmowy, nie od tubki. Kiedy klientka widzi odcień w katalogu, mniej boi się niespodzianki."
+        }
+      }
+    },
+
+    {
+      "id": "z5",
+      "type": "ordering",
+      "kicker": "Krok 5 · Zaplanuj zabieg",
+      "question": [
+        { "text": "Laura siada przy myciu. Ułóż kolejne etapy " },
+        { "text": "pierwszej koloryzacji", "bold": true },
+        { "text": " we właściwej kolejności." }
+      ],
+      "steps": [
+        { "id": "s3", "text": "Nałożenie farby najpierw na długości" },
+        { "id": "s1", "text": "Podział włosów" },
+        { "id": "s5", "text": "Spłukanie i pielęgnacja" },
+        { "id": "s2", "text": "Później na odrosty" },
+        { "id": "s4", "text": "Kontrola czasu działania" }
+      ],
+      "correctOrder": [ "s1", "s3", "s2", "s4", "s5" ],
+      "resetLabel": "Zacznij układanie od nowa",
+      "reward": 25,
+      "checkButtonLabel": "Zatwierdź plan",
+      "feedback": {
+        "correctTitle": "Plan idealny",
+        "incorrectTitle": "Prawie — spójrz jeszcze raz",
+        "clientQuote": "„To moja pierwsza farba w salonie… i po raz pierwszy czuję, że ktoś naprawdę pilnuje, żeby wyszło dobrze.\"",
+        "explanation": [
+          { "text": "Po podziale włosów nakładasz farbę " },
+          { "text": "najpierw na długości, później na odrosty", "bold": true },
+          { "text": ", kontrolujesz czas działania, a na końcu " },
+          { "text": "spłukujesz i pielęgnujesz", "bold": true },
+          { "text": " włosy — w tym dbasz o skórę głowy po zabiegu chemicznym." }
+        ],
+        "funFact": {
+          "text": "Ewa: Dobry plan to spokój klientki. Kiedy wie, co robisz i w jakiej kolejności, przestaje się bać i zaczyna Ci wierzyć."
+        }
+      }
+    }
+  ],
+
+  "completion": {
+    "solvedLabel": "Sprawa rozwiązana",
+    "title": "Laura patrzy w lustro",
+    "subtitle": "„Pierwszy raz farbowałam się w salonie — i kolor jest dokładnie taki, jak w katalogu. Dziękuję, że mnie nie spieszyłaś.\"",
+    "kosmykiLabel": "Kosmyków za tę wizytę",
+    "badge": { "name": "Detektyw koloru" },
+    "collection": { "name": "Mistrzyni koloru", "total": 5, "earnedBefore": 4 },
+    "nextLesson": {
+      "label": "Następna sprawa",
+      "teaser": "Klientka, u której farba łapie się nierówno w jednym miejscu…"
+    }
+  }
+}

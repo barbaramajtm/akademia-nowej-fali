@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-oslonka-kora-rdzen",
+  "title": "Osłonka, kora i rdzeń",
+  "category": "Budowa i skład włosa",
+  "levelLabel": "Podstawy",
+
+  "intro": {
+    "narratorText": "Wiesz już, z czego chemicznie zbudowany jest włos. Teraz zobaczysz jego przekrój — trzy warstwy łodygi i to, dlaczego każda ma inne znaczenie w salonie.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Trzy warstwy łodygi",
+      "text": "Łodyga to część włosa nad skórą. Od zewnątrz: osłonka z łusek — jak dachówki na powierzchni. Pod nią kora — najgrubsza warstwa, w niej m.in. pigment. W środku bywa rdzeń — u cienkich włosów bywa słabo widoczny lub go brak.",
+      "note": "W module pH uczyłaś się o zachowaniu osłonki. Tu chodzi o to, gdzie leży każda warstwa.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-layers.png",
+      "imageAlt": "Schemat przekroju włosa pokazujący osłonkę, korę i rdzeń",
+      "imageCaption": "Od zewnątrz: osłonka, kora z pigmentem, wewnątrz rdzeń — nie w każdym włosie."
+    }
+  },
+
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+  },
+
+  "tasks": [
+    {
+      "id": "wlos2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Co to jest łodyga?",
+      "question": "Które stwierdzenie o łodydze włosa jest poprawne?",
+      "options": [
+        { "id": "a", "text": "To część włosa wystająca ponad skórę" },
+        { "id": "b", "text": "To wyłącznie cebulka w skórze głowy" },
+        { "id": "c", "text": "To warstwa pigmentu na powierzchni skóry" }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Łodyga to część włosa nad skórą. Korzeń i cebulka leżą w skórze — poznasz je w dalszej części modułu."
+      }
+    },
+    {
+      "id": "wlos2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Gdzie jest pigment?",
+      "question": "Naturalny pigment włosa znajduje się w korze włosa.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Prawda.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Pigment leży w korze włosa. Osłonka chroni powierzchnię, ale kolor „siedzi” głębiej — w korze."
+      }
+    },
+    {
+      "id": "wlos2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Warstwa i rola",
+      "question": "Dopasuj warstwę łodygi do opisu.",
+      "leftTitle": "Warstwa",
+      "rightTitle": "Opis",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "Osłonka (łuski)" },
+        { "id": "l2", "pairId": "b", "text": "Kora" },
+        { "id": "l3", "pairId": "c", "text": "Rdzeń" }
+      ],
+      "right": [
+        { "id": "r1", "pairId": "b", "text": "Najgrubsza warstwa; pigment" },
+        { "id": "r2", "pairId": "c", "text": "Warstwa środkowa; bywa słabo widoczna" },
+        { "id": "r3", "pairId": "a", "text": "Zewnętrzna warstwa z łusek" }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Od zewnątrz: osłonka, potem kora z pigmentem, wewnątrz rdzeń. Rdzeń nie występuje w każdym włosie — szczególnie u cienkich."
+      }
+    },
+    {
+      "id": "wlos2-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Od środka na zewnątrz",
+      "question": "Ułóż warstwy łodygi od środka na zewnątrz.",
+      "resetLabel": "Od początku",
+      "steps": [
+        { "id": "s1", "text": "Rdzeń" },
+        { "id": "s2", "text": "Kora" },
+        { "id": "s3", "text": "Osłonka" }
+      ],
+      "correctOrder": ["s1", "s2", "s3"],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Właściwa kolejność.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "W środku rdzeń, wokół niego kora, na zewnątrz osłonka z łusek. Ten układ warto zapamiętać — często pada w zadaniach."
+      }
+    },
+    {
+      "id": "wlos2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Co jest nie tak?",
+      "question": "W którym stwierdzeniu jest błąd?",
+      "cardTitle": "Warstwy łodygi",
+      "rows": [
+        { "id": "s1", "text": "Osłonka składa się z łusek na powierzchni włosa" },
+        { "id": "s2", "text": "Pigment naturalny gromadzi się głównie w osłonce włosa" },
+        { "id": "s3", "text": "Kora to warstwa między osłonką a rdzeniem" }
+      ],
+      "correctOptionIds": ["s2"],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Znalazłaś błąd.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Pigment leży w korze, nie w osłonce. Osłonka wpływa na połysk i to, jak preparaty wnikają do włosa — stąd łączenie z pH w poprzednim module."
+      }
+    }
+  ],
+
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz trzy warstwy łodygi",
+    "subtitle": "Wiesz, gdzie leży pigment i dlaczego osłonka ma znaczenie przy zabiegach chemicznych.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Z czego zbudowane są włókna keratynowe?"
+    }
+  }
+}

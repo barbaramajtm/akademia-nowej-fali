@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akademia Nowej Fali — Lekcja MVP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F1EA; --card:#FFFFFF;
+    --ink:#3B2F45; --muted:#9A8FA6; --line:#EDE6DD;
+    --plum:#4A2C6B; --plum-soft:#6E5391; --plum-tint:#EFE9F5;
+    --coral:#D86A3C; --coral-deep:#C55B30; --coral-tint:#FBE9DE;
+    --sage:#7E9268; --sage-deep:#5F7449; --sage-tint:#EAF0E2;
+    --gold:#D9982C; --gold-deep:#B07E15; --gold-tint:#FBF1DC;
+    --pink:#CF7392; --pink-tint:#FBECF1;
+    --red:#C6544F; --red-tint:#FBEBEA;
+    --r-lg:24px; --r:18px; --r-sm:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+  body{font-family:'Inter',sans-serif;background:#E7DED2;color:var(--ink);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px;}
+
+  .device{width:390px;height:844px;background:var(--bg);border-radius:46px;padding:12px;position:relative;
+    box-shadow:0 30px 70px -20px rgba(59,47,69,.45),0 0 0 12px #111014,0 0 0 13px #2a2730;}
+  .notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:120px;height:30px;background:#111014;border-radius:0 0 18px 18px;z-index:60;}
+  .screen{width:100%;height:100%;background:var(--bg);border-radius:34px;overflow:hidden;position:relative;}
+
+  .topbar{position:absolute;top:0;left:0;right:0;padding:52px 20px 14px;display:flex;align-items:center;gap:14px;z-index:30;background:var(--bg);}
+  .close{width:30px;height:30px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;}
+  .progress{flex:1;display:flex;gap:5px;}
+  .progress .seg{flex:1;height:8px;border-radius:5px;background:var(--plum-tint);overflow:hidden;}
+  .progress .seg > i{display:block;height:100%;width:0;background:var(--sage);border-radius:5px;transition:width .5s cubic-bezier(.3,.9,.3,1);}
+  .kwrap{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+  .kwrap .num{font-family:'Poppins';font-weight:700;font-size:15px;color:var(--coral);transition:transform .18s ease;}
+  .kwrap.pulse .num{transform:scale(1.3);}
+
+  .stage{position:absolute;top:96px;bottom:0;left:0;right:0;overflow:hidden;}
+  .step{position:absolute;inset:0;padding:8px 20px 24px;display:flex;flex-direction:column;
+    opacity:0;visibility:hidden;transform:translateX(36px);transition:opacity .32s ease,transform .32s cubic-bezier(.25,.8,.3,1);}
+  .step.active{opacity:1;visibility:visible;transform:translateX(0);}
+  .step.exit{opacity:0;transform:translateX(-36px);}
+
+  .kicker{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--plum-soft);margin-bottom:10px;}
+  .qtext{font-family:'Poppins';font-weight:600;font-size:18px;line-height:1.35;margin-bottom:8px;}
+  .spacer{flex:1;}
+
+  /* klientka bubble */
+  .client{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;}
+  .client .face{width:52px;height:52px;border-radius:50%;background:var(--pink-tint);border:2px solid #fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px -8px rgba(207,115,146,.6);}
+  .client .bubble{background:var(--card);border:1px solid var(--line);border-radius:4px 18px 18px 18px;padding:13px 15px;font-size:14px;line-height:1.5;color:var(--ink);}
+  .client .bubble b{color:var(--plum);}
+
+  /* intro */
+  .intro{align-items:center;text-align:center;justify-content:center;}
+  .intro .case-tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--coral);margin-bottom:12px;}
+  .intro h1{font-family:'Poppins';font-weight:600;font-size:22px;line-height:1.3;margin-bottom:12px;}
+  .intro .client{margin:4px 0 14px;text-align:left;}
+  .intro p{font-size:14px;color:var(--muted);line-height:1.55;max-width:290px;margin-bottom:14px;}
+  .stake{display:inline-flex;align-items:center;gap:6px;background:var(--coral-tint);color:var(--coral-deep);font-weight:600;font-size:12px;padding:7px 14px;border-radius:20px;}
+
+  /* options */
+  .options{display:flex;flex-direction:column;gap:11px;}
+  .opt{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);padding:15px 17px;font-size:14.5px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:13px;transition:border-color .15s,background .15s,transform .1s;}
+  .opt:active{transform:scale(.99);}
+  .opt .mark{width:23px;height:23px;border-radius:50%;border:2px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+  .opt.sel{border-color:var(--plum-soft);background:var(--plum-tint);}
+  .opt.sel .mark{border-color:var(--plum-soft);}
+  .opt.good{border-color:var(--sage);background:var(--sage-tint);}
+  .opt.good .mark{border-color:var(--sage-deep);background:var(--sage-deep);}
+  .opt.bad{border-color:var(--red);background:var(--red-tint);}
+  .opt.locked{pointer-events:none;}
+
+  .tf{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .tf .opt{flex-direction:column;justify-content:center;text-align:center;padding:24px 12px;gap:8px;font-family:'Poppins';font-weight:600;font-size:15px;}
+
+  /* karta zabiegu — znajdź błąd */
+  .cardnote{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;}
+  .cardnote .chead{background:var(--plum-tint);padding:11px 16px;font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--plum-soft);}
+  .row{padding:14px 16px;border-top:1px solid var(--line);font-size:14px;display:flex;align-items:center;gap:11px;cursor:pointer;transition:background .15s;}
+  .row .dot{width:9px;height:9px;border-radius:50%;background:var(--line);flex-shrink:0;transition:background .15s;}
+  .row.sel{background:var(--plum-tint);}
+  .row.sel .dot{background:var(--plum-soft);}
+  .row.good{background:var(--sage-tint);} .row.good .dot{background:var(--sage-deep);}
+  .row.miss{background:var(--red-tint);} .row.miss .dot{background:var(--red);}
+  .row.locked{pointer-events:none;}
+  .hint{font-size:12px;color:var(--muted);margin-top:10px;text-align:center;}
+
+  /* kolejność — tap w kolejności */
+  .order{display:flex;flex-direction:column;gap:10px;}
+  .ostep{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-sm);padding:13px 15px;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .18s;}
+  .ostep .n{width:26px;height:26px;border-radius:50%;border:2px dashed #DCD3C7;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:600;font-size:13px;color:transparent;transition:all .18s;}
+  .ostep.num{border-color:var(--plum-soft);background:var(--plum-tint);}
+  .ostep.num .n{border:none;background:var(--plum-soft);color:#fff;}
+  .ostep.good{border-color:var(--sage);background:var(--sage-tint);}
+  .ostep.good .n{background:var(--sage-deep);color:#fff;border:none;}
+  .ostep.shake{animation:shake .35s;}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+  .order-reset{margin-top:10px;text-align:center;font-size:12px;color:var(--plum-soft);font-weight:600;cursor:pointer;}
+
+  /* dopasowanie */
+  .match{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .mcol{display:flex;flex-direction:column;gap:10px;}
+  .mcol .ttl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);text-align:center;}
+  .chip{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-sm);padding:13px 8px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;}
+  .chip.sel{border-color:var(--plum-soft);background:var(--plum-tint);}
+  .chip.done{border-color:var(--sage);background:var(--sage-tint);color:var(--sage-deep);pointer-events:none;}
+  .chip.shake{animation:shake .35s;}
+
+  .btn{width:100%;border:none;cursor:pointer;font-family:'Poppins';font-weight:600;font-size:16px;padding:16px;border-radius:16px;transition:transform .12s,background .12s;}
+  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 18px -8px rgba(216,106,60,.9);}
+  .btn-primary:active{transform:scale(.98);background:var(--coral-deep);}
+  .btn-primary:disabled{background:#E4D9CC;color:#B3A79A;box-shadow:none;cursor:default;}
+  .btn-ghost{background:transparent;color:var(--plum-soft);}
+
+  /* feedback sheet */
+  .feedback{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:26px 26px 34px 34px;padding:20px 22px 26px;transform:translateY(112%);transition:transform .38s cubic-bezier(.2,.85,.25,1);box-shadow:0 -14px 34px -18px rgba(59,47,69,.35);z-index:40;max-height:78%;overflow-y:auto;}
+  .feedback::-webkit-scrollbar{display:none;}
+  .feedback.show{transform:translateY(0);}
+  .fhead{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+  .fic{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .ftitle{font-family:'Poppins';font-weight:600;font-size:17px;}
+  .kchip{margin-left:auto;display:inline-flex;align-items:center;gap:5px;background:var(--coral-tint);color:var(--coral-deep);font-weight:700;font-size:13px;padding:6px 11px;border-radius:16px;opacity:0;transform:scale(.6);transition:all .3s cubic-bezier(.2,1.4,.4,1) .25s;}
+  .feedback.show .kchip{opacity:1;transform:scale(1);}
+  .fclient{font-size:13.5px;line-height:1.5;color:var(--plum);background:var(--pink-tint);border-radius:12px;padding:11px 13px;margin-bottom:10px;font-style:italic;}
+  .fwhy{font-size:13.5px;line-height:1.55;margin-bottom:12px;}
+  .fwhy b{color:var(--plum);font-weight:600;}
+  .feedback.ok .fic{background:var(--sage-tint);} .feedback.ok .ftitle{color:var(--sage-deep);}
+  .feedback.no .fic{background:var(--red-tint);} .feedback.no .ftitle{color:var(--red);}
+
+  .aha{background:var(--gold-tint);border:1px solid #F1E2C0;border-radius:14px;padding:12px 14px;margin-bottom:12px;display:none;opacity:0;transform:translateY(8px);transition:all .35s ease .4s;}
+  .feedback.show .aha.on{display:block;opacity:1;transform:translateY(0);}
+  .aha .at{font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold-deep);margin-bottom:4px;display:flex;align-items:center;gap:5px;}
+  .aha .ab{font-size:13px;line-height:1.5;color:#7A5A14;}
+
+  .bonus{display:none;align-items:center;gap:8px;background:var(--plum-tint);color:var(--plum);font-weight:600;font-size:12.5px;padding:9px 13px;border-radius:12px;margin-bottom:12px;}
+  .bonus.on{display:flex;}
+
+  /* floating kosmyk */
+  .float-k{position:absolute;right:20px;top:66px;display:flex;align-items:center;gap:4px;font-family:'Poppins';font-weight:700;font-size:15px;color:var(--coral);opacity:0;z-index:55;pointer-events:none;}
+  .float-k.go{animation:floatUp 1s ease forwards;}
+  @keyframes floatUp{0%{opacity:0;transform:translateY(14px) scale(.8)}25%{opacity:1;transform:translateY(4px) scale(1.05)}100%{opacity:0;transform:translateY(-30px) scale(1)}}
+
+  /* done */
+  .done-step{align-items:center;text-align:center;padding-top:14px;overflow-y:auto;}
+  .done-step::-webkit-scrollbar{display:none;}
+  .reveal{opacity:0;transform:translateY(14px);transition:all .45s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .solved{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sage-deep);margin-bottom:10px;}
+  .done-face{width:96px;height:96px;border-radius:50%;background:var(--pink-tint);border:3px solid #fff;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 14px 30px -14px rgba(207,115,146,.7);}
+  .done-step h1{font-family:'Poppins';font-weight:600;font-size:21px;margin-bottom:4px;}
+  .done-step .sub{font-size:13.5px;color:var(--muted);margin-bottom:18px;}
+
+  .ktotal{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;width:100%;margin-bottom:12px;}
+  .ktotal .kv{font-family:'Poppins';font-weight:700;font-size:30px;color:var(--coral);display:flex;align-items:center;justify-content:center;gap:8px;}
+  .ktotal .kl{font-size:12px;color:var(--muted);margin-top:2px;}
+  .perfect{display:none;margin-top:8px;font-size:12.5px;font-weight:600;color:var(--gold-deep);background:var(--gold-tint);border-radius:10px;padding:7px 12px;}
+  .perfect.on{display:inline-block;}
+
+  .collection{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;width:100%;margin-bottom:12px;}
+  .chead2{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px;}
+  .cname{font-family:'Poppins';font-weight:600;font-size:14px;}
+  .ccount{font-size:12px;color:var(--muted);font-weight:600;}
+  .slots{display:flex;justify-content:center;gap:11px;margin-bottom:13px;}
+  .slot{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+  .slot.filled{background:var(--plum-tint);}
+  .slot.newb{background:var(--gold-tint);transform:scale(0);}
+  .slot.newb.pop{animation:pop .55s cubic-bezier(.2,1.35,.4,1) forwards;}
+  @keyframes pop{to{transform:scale(1)}}
+  .slot.empty{border:2px dashed #DCD3C7;}
+  .cprog{height:8px;background:var(--plum-tint);border-radius:5px;overflow:hidden;margin-bottom:8px;}
+  .cprog > i{display:block;height:100%;width:60%;background:var(--gold);border-radius:5px;transition:width .7s ease .5s;}
+  .cfoot{font-size:12px;color:var(--muted);}
+  .cfoot b{color:var(--plum);font-weight:600;}
+
+  .hook{width:100%;background:var(--plum);border-radius:var(--r);padding:15px 17px;color:#fff;text-align:left;display:flex;align-items:center;gap:13px;margin-bottom:14px;}
+  .hook .ht{font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#D9C7EE;margin-bottom:3px;}
+  .hook .hn{font-family:'Poppins';font-weight:600;font-size:14px;line-height:1.35;}
+  .done-btns{width:100%;display:flex;flex-direction:column;gap:8px;padding-bottom:10px;}
+</style>
+</head>
+<body>
+<div class="device">
+  <div class="notch"></div>
+  <div class="screen">
+
+    <div class="topbar">
+      <div class="close" onclick="restart()"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="#6E5391" stroke-width="2" stroke-linecap="round"/></svg></div>
+      <div class="progress" id="progress">
+        <div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div>
+      </div>
+      <div class="kwrap" id="kwrap">
+        <svg width="19" height="19" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#D86A3C"/></svg>
+        <span class="num" id="kNum">240</span>
+      </div>
+    </div>
+
+    <div class="float-k" id="floatK">+10</div>
+
+    <div class="stage">
+
+      <!-- INTRO -->
+      <div class="step intro active" data-step="intro">
+        <div class="case-tag">Sprawa nr 4 · Koloryzacja</div>
+        <h1>Sprawa znikającego koloru</h1>
+        <div class="client">
+          <div class="face"><svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="13" r="7" fill="#CF7392"/><path d="M4 30 Q16 19 28 30 Z" fill="#CF7392"/><path d="M8 11 Q16 2 24 11 Q25 17 21 18 Q16 11 11 18 Q7 17 8 11Z" fill="#A94F6E"/></svg></div>
+          <div class="bubble">„Farbowałam włosy trzy tygodnie temu… i znowu to samo. <b>Kolor wypłukuje się po dwóch tygodniach.</b> Może ja już taka jestem?"<br><span style="font-size:11.5px;color:var(--muted);font-style:normal;">— pani Marta, 34 lata</span></div>
+        </div>
+        <p>Nie jest „taka". Coś poszło nie tak — i dziś odkryjesz co. Poprowadzisz tę wizytę.</p>
+        <div class="stake">
+          <svg width="13" height="13" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#C55B30"/></svg>
+          do zdobycia 100 Kosmyków · element kolekcji
+        </div>
+        <div class="spacer"></div>
+        <button class="btn btn-primary" onclick="next()">Przyjmij klientkę</button>
+      </div>
+
+      <!-- Z1: wybór jednej odpowiedzi (wywiad) -->
+      <div class="step" data-step="z1">
+        <div class="kicker">Krok 1 · Wywiad</div>
+        <div class="qtext">Od czego zaczniesz? Zapytaj panią Martę o jedną rzecz, która najwięcej Ci powie.</div>
+        <div class="options" data-z="z1">
+          <div class="opt" data-c="0"><span class="mark"></span>„Czy lubi pani swój obecny kolor?"</div>
+          <div class="opt" data-c="1"><span class="mark"></span>„Jak i czym myje pani włosy na co dzień?"</div>
+          <div class="opt" data-c="0"><span class="mark"></span>„Czy chce pani dziś coś zmienić we fryzurze?"</div>
+        </div>
+        <div class="spacer"></div>
+        <button class="btn btn-primary" disabled onclick="check('z1')">Zapytaj</button>
+      </div>
+
+      <!-- Z2: prawda/fałsz (mit z salonu) -->
+      <div class="step" data-step="z2">
+        <div class="kicker">Krok 2 · Mit czy prawda?</div>
+        <div class="client" style="margin-bottom:14px;">
+          <div class="face"><svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="13" r="7" fill="#CF7392"/><path d="M4 30 Q16 19 28 30 Z" fill="#CF7392"/><path d="M8 11 Q16 2 24 11 Q25 17 21 18 Q16 11 11 18 Q7 17 8 11Z" fill="#A94F6E"/></svg></div>
+          <div class="bubble">„Myję włosy codziennie, byle jakim szamponem. Ale to chyba nie ma nic do koloru… prawda?"</div>
+        </div>
+        <div class="qtext" style="font-size:16.5px;">Sposób mycia włosów w domu nie ma wpływu na trwałość koloru.</div>
+        <div class="tf options" data-z="z2">
+          <div class="opt" data-c="0"><span style="font-size:22px;color:var(--sage-deep);">✓</span>Prawda</div>
+          <div class="opt" data-c="1"><span style="font-size:22px;color:var(--pink);">✕</span>Mit</div>
+        </div>
+        <div class="spacer"></div>
+        <button class="btn btn-primary" disabled onclick="check('z2')">Sprawdź</button>
+      </div>
+
+      <!-- Z3: znajdź błąd -->
+      <div class="step" data-step="z3">
+        <div class="kicker">Krok 3 · Znajdź błędy</div>
+        <div class="qtext">W torebce pani Marty jest opis poprzedniego zabiegu z innego salonu. Zaznacz <b>2 błędy</b>, które zniszczyły kolor.</div>
+        <div class="cardnote" id="z3card">
+          <div class="chead">Karta zabiegu · 3 tygodnie temu</div>
+          <div class="row" data-c="0"><span class="dot"></span>Kolor docelowy: ton w ton, bez rozjaśniania</div>
+          <div class="row" data-c="1"><span class="dot"></span>Utleniacz: <b>&nbsp;12%</b></div>
+          <div class="row" data-c="0"><span class="dot"></span>Czas wywołania: 35 minut</div>
+          <div class="row" data-c="1"><span class="dot"></span>Po zabiegu: szampon głęboko oczyszczający</div>
+        </div>
+        <div class="hint" id="z3hint">Zaznaczono 0 z 2</div>
+        <div class="spacer"></div>
+        <button class="btn btn-primary" disabled onclick="check('z3')">Sprawdź</button>
+      </div>
+
+      <!-- Z4: dopasowanie -->
+      <div class="step" data-step="z4">
+        <div class="kicker">Krok 4 · Dobierz utleniacz</div>
+        <div class="qtext">Zanim naprawisz kolor — połącz stężenia z ich zastosowaniem.</div>
+        <div class="match">
+          <div class="mcol" id="mLeft">
+            <div class="ttl">Stężenie</div>
+            <div class="chip" data-k="a">6%</div>
+            <div class="chip" data-k="b">9%</div>
+            <div class="chip" data-k="c">12%</div>
+          </div>
+          <div class="mcol" id="mRight">
+            <div class="ttl">Zastosowanie</div>
+            <div class="chip" data-k="c">rozjaśnianie 4–5 poziomów</div>
+            <div class="chip" data-k="a">ton w ton</div>
+            <div class="chip" data-k="b">rozjaśnienie 1–3 tony</div>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <button class="btn btn-primary" disabled onclick="check('z4')">Sprawdź</button>
+      </div>
+
+      <!-- Z5: ułóż kolejność -->
+      <div class="step" data-step="z5">
+        <div class="kicker">Krok 5 · Zaplanuj zabieg</div>
+        <div class="qtext">Czas naprawić kolor pani Marty. Dotykaj etapów <b>we właściwej kolejności</b>.</div>
+        <div class="order" id="z5order">
+          <div class="ostep" data-o="2"><span class="n">·</span>Nałożenie farby z utleniaczem 6%</div>
+          <div class="ostep" data-o="1"><span class="n">·</span>Diagnoza włosa i skóry głowy</div>
+          <div class="ostep" data-o="5"><span class="n">·</span>Zakwaszenie — neutralizacja odczynu</div>
+          <div class="ostep" data-o="3"><span class="n">·</span>Pełny czas wywołania koloru</div>
+          <div class="ostep" data-o="4"><span class="n">·</span>Zmycie farby, mycie lekko kwaśnym szamponem</div>
+        </div>
+        <div class="order-reset" onclick="resetOrder()">Zacznij układanie od nowa</div>
+        <div class="spacer"></div>
+        <button class="btn btn-primary" disabled onclick="check('z5')">Zatwierdź plan</button>
+      </div>
+
+      <!-- DONE -->
+      <div class="step done-step" data-step="done">
+        <div class="reveal" id="r1">
+          <div class="solved">Sprawa rozwiązana</div>
+          <div class="done-face"><svg width="54" height="54" viewBox="0 0 32 32"><circle cx="16" cy="13" r="7" fill="#CF7392"/><path d="M4 30 Q16 19 28 30 Z" fill="#CF7392"/><path d="M8 11 Q16 2 24 11 Q25 17 21 18 Q16 11 11 18 Q7 17 8 11Z" fill="#A94F6E"/><path d="M12.5 15.5 Q16 18.5 19.5 15.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h1>Pani Marta wraca po 6 tygodniach</h1>
+          <div class="sub">„Kolor wciąż trzyma. Pierwszy raz od lat!"</div>
+        </div>
+
+        <div class="reveal ktotal" id="r2">
+          <div class="kv">
+            <svg width="24" height="24" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#D86A3C"/></svg>
+            <span id="doneK">+0</span>
+          </div>
+          <div class="kl">Kosmyków za tę wizytę</div>
+          <div class="perfect" id="perfect">✦ Perfekcyjna wizyta +20</div>
+        </div>
+
+        <div class="reveal collection" id="r3">
+          <div class="chead2"><span class="cname">Kolekcja: Mistrzyni koloru</span><span class="ccount">4 / 5</span></div>
+          <div class="slots">
+            <div class="slot filled"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 12 Q9 8 12 12 T18 12" fill="none" stroke="#6E5391" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+            <div class="slot filled"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M7 12l3 3 6-6" fill="none" stroke="#6E5391" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="slot filled"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 13 Q9 8 12 13 T19 13" fill="none" stroke="#6E5391" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+            <div class="slot newb" id="newSlot"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="#D9982C" stroke-width="2"/><path d="M9 12l2 2 4-4" fill="none" stroke="#D9982C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="slot empty"></div>
+          </div>
+          <div class="cprog"><i id="cbar"></i></div>
+          <div class="cfoot">Nowa odznaka: <b>„Detektyw koloru"</b> · jeszcze <b>1</b> do trofeum kolekcji</div>
+        </div>
+
+        <div class="reveal hook" id="r4">
+          <svg width="26" height="26" viewBox="0 0 26 26" style="flex-shrink:0;"><rect x="4" y="6" width="18" height="16" rx="3" fill="none" stroke="#D9C7EE" stroke-width="2"/><path d="M10 6V4a3 3 0 0 1 6 0v2" fill="none" stroke="#D9C7EE" stroke-width="2"/><circle cx="13" cy="14" r="2.4" fill="#D9C7EE"/></svg>
+          <div>
+            <div class="ht">Następna sprawa</div>
+            <div class="hn">Klientka, która rozjaśniała włosy sama w domu…</div>
+          </div>
+        </div>
+
+        <div class="reveal done-btns" id="r5">
+          <button class="btn btn-primary" onclick="restart()">Kontynuuj naukę</button>
+          <button class="btn btn-ghost" onclick="restart()">Zobacz gablotkę</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FEEDBACK SHEET -->
+    <div class="feedback" id="fb">
+      <div class="fhead">
+        <div class="fic" id="fic"></div>
+        <div class="ftitle" id="ftitle"></div>
+        <div class="kchip" id="fkchip">
+          <svg width="13" height="13" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#C55B30"/></svg>
+          <span id="fkval">+10</span>
+        </div>
+      </div>
+      <div class="fclient" id="fclient" style="display:none;"></div>
+      <div class="fwhy" id="fwhy"></div>
+      <div class="bonus" id="fbonus">✦ Pewna ręka — 3 poprawne z rzędu <b style="color:var(--coral);">+5</b></div>
+      <div class="aha" id="faha"><div class="at">✦ Warto wiedzieć</div><div class="ab" id="fahab"></div></div>
+      <button class="btn btn-primary" onclick="advance()">Dalej</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const order = ['intro','z1','z2','z3','z4','z5','done'];
+  const segIdx = {z1:0,z2:1,z3:2,z4:3,z5:4};
+  const reward = {z1:10,z2:10,z3:15,z4:15,z5:25};
+  let cur='intro', kos=240, earned=0, streak=0, mistakes=0, bonusGiven=false;
+
+  const FB = {
+    z1:{t:'Dobre oko',client:'„Myję codziennie, bardzo gorącą wodą… taki mam nawyk."',
+        w:'Na włosach <b>porowatych i uszkodzonych</b> barwnik wypłukuje się szybciej przy każdym myciu — a codzienne mycie i nieodpowiednie kosmetyki przyspieszają ten proces. Ale to zwykle nie jedyna przyczyna. Sprawdźmy głębiej.'},
+    z2:{t:'To mit — i go rozbroiłaś',client:null,
+        w:'Po koloryzacji zaleca się szampony <b>bezalkaliczne lub lekko kwaśne</b> — zasadowe środowisko rozchyla łuskę i sprzyja wypłukiwaniu pigmentu. A woda do mycia powinna mieć <b>38–40°C</b>, do spłukiwania nieco chłodniejsza.'},
+    z3:{t:'Rozwiązałaś to',client:null,
+        w:'Do farbowania ton w ton używa się <b>6%</b> — utleniacz 12% służy do rozjaśniania o 4–5 poziomów i niepotrzebnie zniszczył łuskę. A szampon głęboko oczyszczający tuż po koloryzacji dosłownie <b>wypłukał świeży pigment</b>.',
+        aha:'Dobór stężenia utleniacza to jedno z najczęściej sprawdzanych zagadnień na egzaminie czeladniczym — i częsty błąd początkujących stylistek. Ty już go nie popełnisz.'},
+    z4:{t:'Dokładnie tak',client:null,
+        w:'<b>6% — ton w ton</b>, <b>9% — rozjaśnienie o 1–3 tony</b> (i krycie siwych), <b>12% — rozjaśnianie 4–5 poziomów</b>. Ta tabela wraca na egzaminie w różnych formach.'},
+    z5:{t:'Plan idealny',client:'„Co mam robić, żeby TYM RAZEM się utrzymał?" — pyta na koniec pani Marta. Ty już wiesz: łagodne, lekko kwaśne szampony i woda ok. 38–40°C.',
+        w:'Po farbowaniu najpierw <b>zmywa się nadmiar barwnika</b>, potem myje szamponem <b>bezalkalicznym lub lekko kwaśnym</b>, a na końcu <b>zakwasza</b> — kwasy działają ściągająco i domykają łuskę po zabiegu, który ją rozchylił.',
+        aha:'Pytania „jakimi środkami myjemy włosy po zabiegu chemicznym?" oraz „po co zakwaszamy włos?" padają na egzaminie czeladniczym wprost — właśnie odpowiedziałaś na oba w praktyce.'}
+  };
+
+  /* transitions */
+  function show(step){
+    const from=document.querySelector('.step.active');
+    if(from){ from.classList.add('exit'); from.classList.remove('active');
+      setTimeout(()=>from.classList.remove('exit'),340); }
+    setTimeout(()=>{
+      document.querySelector('[data-step="'+step+'"]').classList.add('active');
+      cur=step;
+      if(step==='done') runDone();
+    },120);
+  }
+  function next(){ show(order[order.indexOf(cur)+1]); }
+
+  /* Z1/Z2 single select */
+  document.querySelectorAll('.options').forEach(box=>{
+    box.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{
+      if(o.classList.contains('locked'))return;
+      box.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));
+      o.classList.add('sel');
+      o.closest('.step').querySelector('.btn-primary').disabled=false;
+    }));
+  });
+
+  /* Z3 znajdź błąd */
+  const z3rows=[...document.querySelectorAll('#z3card .row')];
+  z3rows.forEach(r=>r.addEventListener('click',()=>{
+    if(r.classList.contains('locked'))return;
+    r.classList.toggle('sel');
+    const n=z3rows.filter(x=>x.classList.contains('sel')).length;
+    document.getElementById('z3hint').textContent='Zaznaczono '+n+' z 2';
+    document.querySelector('[data-step="z3"] .btn-primary').disabled=(n!==2);
+  }));
+
+  /* Z4 matching */
+  let mSel=null,mDone=0;
+  document.querySelectorAll('#mLeft .chip').forEach(c=>c.addEventListener('click',()=>{
+    if(c.classList.contains('done'))return;
+    document.querySelectorAll('#mLeft .chip').forEach(x=>x.classList.remove('sel'));
+    c.classList.add('sel');mSel=c;
+  }));
+  document.querySelectorAll('#mRight .chip').forEach(c=>c.addEventListener('click',()=>{
+    if(c.classList.contains('done')||!mSel)return;
+    if(c.dataset.k===mSel.dataset.k){
+      c.classList.add('done');mSel.classList.add('done');mSel.classList.remove('sel');mSel=null;mDone++;
+      if(mDone===3)document.querySelector('[data-step="z4"] .btn-primary').disabled=false;
+    }else{
+      mistakes++; c.classList.add('shake');setTimeout(()=>c.classList.remove('shake'),350);
+    }
+  }));
+
+  /* Z5 tap-order */
+  let oNext=1;
+  const oSteps=[...document.querySelectorAll('#z5order .ostep')];
+  oSteps.forEach(s=>s.addEventListener('click',()=>{
+    if(s.classList.contains('num'))return;
+    if(parseInt(s.dataset.o)===oNext){
+      s.classList.add('num');s.querySelector('.n').textContent=oNext;oNext++;
+      if(oNext===6)document.querySelector('[data-step="z5"] .btn-primary').disabled=false;
+    }else{
+      mistakes++; s.classList.add('shake');setTimeout(()=>s.classList.remove('shake'),350);
+    }
+  }));
+  function resetOrder(){
+    oNext=1;
+    oSteps.forEach(s=>{s.classList.remove('num','good');s.querySelector('.n').textContent='·';});
+    document.querySelector('[data-step="z5"] .btn-primary').disabled=true;
+  }
+
+  /* check + feedback */
+  function check(z){
+    let ok=true;
+    if(z==='z1'||z==='z2'){
+      const box=document.querySelector('.options[data-z="'+z+'"]');
+      const sel=box.querySelector('.opt.sel');
+      ok = sel && sel.dataset.c==='1';
+      box.querySelectorAll('.opt').forEach(o=>{
+        o.classList.add('locked');
+        if(o.dataset.c==='1')o.classList.add('good');
+        else if(o.classList.contains('sel'))o.classList.add('bad');
+      });
+    } else if(z==='z3'){
+      ok = z3rows.every(r=> (r.dataset.c==='1')===r.classList.contains('sel'));
+      z3rows.forEach(r=>{
+        r.classList.add('locked');r.classList.remove('sel');
+        if(r.dataset.c==='1')r.classList.add(ok?'good':(r.classList.contains('sel')?'good':'miss'));
+      });
+      if(ok) z3rows.forEach(r=>{if(r.dataset.c==='1'){r.classList.remove('miss');r.classList.add('good');}});
+    } else if(z==='z4'||z==='z5'){
+      ok=true;
+      if(z==='z5')oSteps.forEach(s=>s.classList.add('good'));
+    }
+    if(!ok)mistakes++;
+    openFB(z,ok);
+  }
+
+  function openFB(z,ok){
+    const d=FB[z];
+    const fb=document.getElementById('fb');
+    fb.classList.remove('ok','no');fb.classList.add(ok?'ok':'no');
+    document.getElementById('ftitle').textContent= ok?d.t:'Prawie — spójrz jeszcze raz';
+    document.getElementById('fic').innerHTML= ok
+      ?'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="#5F7449" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      :'<svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 5v8m0 4v.5" stroke="#C6544F" stroke-width="2.6" stroke-linecap="round"/></svg>';
+    const fc=document.getElementById('fclient');
+    if(ok&&d.client){fc.style.display='block';fc.textContent=d.client;}else{fc.style.display='none';}
+    document.getElementById('fwhy').innerHTML=d.w;
+    document.getElementById('fkchip').style.display= ok?'inline-flex':'none';
+    document.getElementById('fkval').textContent='+'+reward[z];
+
+    /* streak bonus */
+    if(ok){streak++;}else{streak=0;}
+    const showBonus= ok && streak===3 && !bonusGiven;
+    document.getElementById('fbonus').classList.toggle('on',showBonus);
+    if(showBonus)bonusGiven=true;
+
+    /* aha */
+    const aha=document.getElementById('faha');
+    if(ok&&d.aha){aha.classList.add('on');document.getElementById('fahab').textContent=d.aha;}
+    else aha.classList.remove('on');
+
+    fb.dataset.z=z; fb.dataset.ok=ok?'1':'0'; fb.dataset.bonus=showBonus?'1':'0';
+    fb.classList.add('show');
+  }
+
+  function advance(){
+    const fb=document.getElementById('fb');
+    fb.classList.remove('show');
+    const z=fb.dataset.z;
+    if(fb.dataset.ok==='1'){
+      let n=reward[z]+(fb.dataset.bonus==='1'?5:0);
+      award(n);
+    }
+    document.querySelectorAll('#progress .seg')[segIdx[z]].querySelector('i').style.width='100%';
+    setTimeout(next,300);
+  }
+
+  function award(n){
+    earned+=n;kos+=n;
+    const fk=document.getElementById('floatK');
+    fk.textContent='+'+n;fk.classList.remove('go');void fk.offsetWidth;fk.classList.add('go');
+    setTimeout(()=>{
+      document.getElementById('kNum').textContent=kos;
+      const kw=document.getElementById('kwrap');
+      kw.classList.add('pulse');setTimeout(()=>kw.classList.remove('pulse'),240);
+    },380);
+  }
+
+  /* done sequence — staged reveals */
+  function runDone(){
+    const perfect = mistakes===0;
+    if(perfect){earned+=20;kos+=20;document.getElementById('kNum').textContent=kos;}
+    ['r1','r2','r3','r4','r5'].forEach((id,i)=>{
+      setTimeout(()=>document.getElementById(id).classList.add('in'), 250+i*450);
+    });
+    setTimeout(()=>{
+      let c=0;const el=document.getElementById('doneK');
+      const iv=setInterval(()=>{c+=2;if(c>=earned){c=earned;clearInterval(iv);}el.textContent='+'+c;},22);
+      if(perfect)setTimeout(()=>document.getElementById('perfect').classList.add('on'),earned*13);
+    },800);
+    setTimeout(()=>document.getElementById('newSlot').classList.add('pop'),1650);
+    setTimeout(()=>{document.getElementById('cbar').style.width='80%';},1900);
+  }
+
+  function restart(){
+    kos=240;earned=0;streak=0;mistakes=0;bonusGiven=false;
+    document.getElementById('kNum').textContent=240;
+    document.querySelectorAll('#progress .seg i').forEach(i=>i.style.width='0');
+    document.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel','good','bad','locked'));
+    document.querySelectorAll('.row').forEach(r=>{r.classList.remove('sel','good','miss','locked');});
+    document.getElementById('z3hint').textContent='Zaznaczono 0 z 2';
+    document.querySelectorAll('.chip').forEach(c=>c.classList.remove('sel','done'));
+    mSel=null;mDone=0;resetOrder();
+    document.querySelectorAll('.step .btn-primary').forEach(b=>{if(!b.closest('.intro')&&!b.closest('.done-step'))b.disabled=true;});
+    document.querySelectorAll('.reveal').forEach(r=>r.classList.remove('in'));
+    document.getElementById('newSlot').classList.remove('pop');
+    document.getElementById('cbar').style.width='60%';
+    document.getElementById('doneK').textContent='+0';
+    document.getElementById('perfect').classList.remove('on');
+    document.getElementById('fb').classList.remove('show');
+    show('intro');
+  }
+</script>
+</body>
+</html>

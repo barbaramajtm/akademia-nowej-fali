@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "id": "lesson-n13-sytuacje-kolorystyczne",
+  "title": "Co właściwie oceniamy na włosach klientki",
+  "category": "Numeracja farb i diagnoza koloru",
+  "levelLabel": "Diagnoza koloru",
+  "intro": {
+    "narratorText": "Nie zawsze wystarczy jedna liczba na całą głowę. Najpierw rozpoznaj, z czym masz do czynienia. Na włosach klientki możesz spotkać różne starty kolorystyczne. Za chwilę dopasujesz opisy do sytuacji i wskażesz, kiedy trzeba rozdzielić partie.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "n13-z1",
+      "type": "matching",
+      "kicker": "Krok 1 · Dopasuj sytuację",
+      "question": "Połącz opis włosów z nazwą sytuacji.",
+      "leftTitle": "Opis",
+      "rightTitle": "Sytuacja",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Farbowana cała długość, bez odrostu"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Farba + widoczny odrost"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Cały włos naturalny"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "kosmetyczny + odrost"
+        },
+        {
+          "id": "r2",
+          "pairId": "c",
+          "text": "100% naturalny"
+        },
+        {
+          "id": "r3",
+          "pairId": "a",
+          "text": "100% kosmetyczny"
+        }
+      ],
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "To trzy z typowych startów: sam kosmetyczny, kosmetyczny z odrostem oraz w pełni naturalny kolor."
+      }
+    },
+    {
+      "id": "n13-z2",
+      "type": "singleChoice",
+      "kicker": "Krok 2 · Czwarta sytuacja",
+      "question": "Naturalny kolor + pasemka, refleksy albo rozjaśnione końce. Co oceniasz dodatkowo poza naturalnym odrostem?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tylko długość fryzury w cm"
+        },
+        {
+          "id": "b",
+          "text": "Poziom rozjaśnień, czy są równe, oraz poziom uwrażliwienia"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie numer farby z poprzedniej wizyty"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dokładnie.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Przy naturalnym kolorze z rozjaśnionymi partiami oceniasz odrost oraz osobno poziom rozjaśnień, ich równość i uwrażliwienie."
+      }
+    },
+    {
+      "id": "n13-z3",
+      "type": "trueFalse",
+      "kicker": "Krok 3 · Jedna liczba?",
+      "question": "Przy kosmetycznym kolorze i naturalnym odroście wystarczy podać jeden poziom dla całej głowy.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "W tej sytuacji oceniasz kolor kosmetyczny oraz dokładnie naturalny odrost — jako osobne informacje."
+      }
+    },
+    {
+      "id": "n13-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Partie",
+      "question": "Widzisz naturalny odrost i wyraźnie jaśniejsze, rozjaśniane końce. Które partie wymagają osobnego opisu?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tylko końce — odrost można pominąć"
+        },
+        {
+          "id": "b",
+          "text": "Naturalny odrost oraz rozjaśnione partie"
+        },
+        {
+          "id": "c",
+          "text": "Tylko średnia z obu stref"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Odrost i rozjaśnienia opisujesz osobno. Przy rozjaśnieniach dodajesz też równość i uwrażliwienie."
+      }
+    },
+    {
+      "id": "n13-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Brakujący element",
+      "question": "W którym wpisie jest błąd?",
+      "cardTitle": "Wpisy w karcie",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "100% kosmetyczny — poziom i refleks jak dziś; kolor dość jednolity."
+        },
+        {
+          "id": "s2",
+          "text": "Kosmetyczny + odrost: długości + poziom, długość i siwizna odrostu."
+        },
+        {
+          "id": "s3",
+          "text": "Naturalny + rozjaśnione końce: tylko odrost, bez poziomu rozjaśnień."
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Znalazłaś brak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Przy rozjaśnionych partiach trzeba też określić ich poziom, równość i uwrażliwienie — nie wystarczy sam odrost.",
+        "funFact": {
+          "text": "Najpierw rozpoznaj sytuację koloru — potem zdecyduj, które partie opisać osobno."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozpoznajesz sytuację kolorystyczną",
+    "subtitle": "Wiesz, kiedy rozdzielić odrost i rozjaśnienia w opisie.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Co musi znaleźć się w opisie samego odrostu?"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "lesson-n7-podwojny-refleks",
+  "title": "Co oznacza 7.11",
+  "category": "Numeracja farb i diagnoza koloru",
+  "levelLabel": "Odczyt numeru",
+  "intro": {
+    "narratorText": "Czasem po separatorze ta sama cyfra pojawia się dwa razy. Porównaj 7.1 i 7.11. Po separatorze coś się zmienia. Za chwilę wskażesz różnicę w zapisie i wybierzesz opis 7.11 z materiału egzaminacyjnego.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "n7-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Różnica zapisu",
+      "question": "Co widać w 7.11, a nie w 7.1?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Powtórzoną cyfrę po separatorze"
+        },
+        {
+          "id": "b",
+          "text": "Inny poziom"
+        },
+        {
+          "id": "c",
+          "text": "Brak separatora"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Oba mają poziom 7. W 7.11 po separatorze cyfra pojawia się dwa razy."
+      }
+    },
+    {
+      "id": "n7-z2",
+      "type": "singleChoice",
+      "kicker": "Krok 2 · Opis ze źródła",
+      "question": "Jak materiał egzaminacyjny opisuje 7.11?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Poziom 7, intensywny lub podwójny refleks popielaty"
+        },
+        {
+          "id": "b",
+          "text": "Poziom 11 bez refleksu"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie złoty kierunek"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Zgodnie ze źródłem.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "W materiale: 7.11 — poziom 7, intensywny lub podwójny refleks popielaty. To opis tego przykładu, nie automatyczna reguła wszystkich marek."
+      }
+    },
+    {
+      "id": "n7-z3",
+      "type": "trueFalse",
+      "kicker": "Krok 3 · Mit",
+      "question": "Każda powtórzona cyfra po separatorze zawsze oznacza podwójny refleks u każdego producenta.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Uczysz się przykładu 7.11 ze źródła. Zasady konkretnej marki zawsze sprawdzasz w jej legendzie."
+      }
+    },
+    {
+      "id": "n7-z4",
+      "type": "matching",
+      "kicker": "Krok 4 · Porównanie zapisów",
+      "question": "Połącz zapis z opisem z materiału (przykłady źródłowe).",
+      "leftTitle": "Zapis",
+      "rightTitle": "Opis",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "7.1"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "7.11"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "poziom 7, intensywny lub podwójny refleks popielaty"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "poziom 7, refleks popielaty"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "7.1 i 7.11 różnią się intensywnością / podwojeniem refleksu w opisie materiału — przy tym samym poziomie."
+      }
+    },
+    {
+      "id": "n7-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Znajdź błąd",
+      "question": "W którym stwierdzeniu jest błąd?",
+      "cardTitle": "Zdania",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "W przykładzie źródłowym 7.11 to intensywny lub podwójny refleks popielaty."
+        },
+        {
+          "id": "s2",
+          "text": "Przed pracą z marką sprawdzasz jej legendę."
+        },
+        {
+          "id": "s3",
+          "text": "Skoro znasz 7.11, nie musisz sprawdzać legendy żadnej marki."
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Znalazłaś błąd.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Przykład z materiału pomaga zrozumieć zapis, ale nie zastępuje legendy producenta.",
+        "funFact": {
+          "text": "W przykładzie źródłowym 7.11 to intensywny lub podwójny refleks popielaty — legendę marki i tak sprawdzasz."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozpoznajesz przykład 7.11",
+    "subtitle": "Wiesz, jak źródło opisuje intensywny lub podwójny refleks — i że marka wymaga legendy.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Czas złożyć cały odczyt numeru krok po kroku."
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "id": "ph-szampony",
+  "title": "pH szamponów",
+  "category": "pH we fryzjerstwie",
+  "levelLabel": "Pielęgnacja",
+
+  "intro": {
+    "narratorText": "Szampon to pierwszy produkt, z którym włosy spotykają się najczęściej. Brzmi prosto — ale szampony nie mają jednego, wspólnego pH. Dobór zależy od tego, czego potrzebuje włos i skóra głowy.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+  },
+
+  "tasks": [
+    {
+      "id": "ph7-z1",
+      "type": "trueFalse",
+      "kicker": "Krok 1 · Mit o jednym pH",
+      "question": "Wszystkie szampony mają identyczne, kwaśne pH — wystarczy wybrać dowolny.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To mit.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Szampony różnią się recepturą i pH. Są łagodne, oczyszczające, do skóry tłustej, po zabiegach chemicznych — każdy ma inne przeznaczenie."
+      }
+    },
+    {
+      "id": "ph7-z2",
+      "type": "singleChoice",
+      "kicker": "Krok 2 · Dobór szamponu",
+      "question": "Co powinna uwzględnić fryzjerka przy doborze szamponu dla klientki?",
+      "options": [
+        { "id": "a", "text": "Rodzaj włosów, stan skóry głowy, częstotliwość mycia i historię zabiegów chemicznych." },
+        { "id": "b", "text": "Wyłącznie kolor opakowania — im bardziej różowy, tym lepszy." },
+        { "id": "c", "text": "Tylko cenę — pH szamponów jest zawsze takie samo." }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Kompletny dobór.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Szampon powinien pasować do włosa i skóry głowy. Włosy po koloryzacji lub rozjaśnianiu mogą wymagać innej pielęgnacji niż włosy naturalne."
+      }
+    },
+    {
+      "id": "ph7-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Dopasuj sytuację",
+      "question": "Połącz sytuację z rozsądnym podejściem do szamponu.",
+      "leftTitle": "Sytuacja",
+      "rightTitle": "Podejście",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "Włosy po koloryzacji" },
+        { "id": "l2", "pairId": "b", "text": "Skóra głowy z łupieżem" },
+        { "id": "l3", "pairId": "c", "text": "Codzienne mycie włosów tłustych" }
+      ],
+      "right": [
+        { "id": "r1", "pairId": "b", "text": "Szampon specjalistyczny do problemu skóry — nie dowolny łagodny" },
+        { "id": "r2", "pairId": "a", "text": "Delikatny szampon wspierający kolor i kondycję po zabiegu" },
+        { "id": "r3", "pairId": "c", "text": "Szampon regulujący sebum — dopasowany do codziennej rutyny" }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Sensowny dobór.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Ten sam szampon nie sprawdzi się w każdej sytuacji. Po zabiegu chemicznym liczy się ochrona koloru i kondycji, a przy problemach skóry — produkt do problemu, nie „uniwersalny”."
+      }
+    },
+    {
+      "id": "ph7-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Szampon a zabiegi",
+      "question": "Czy szampon może zastąpić produkt końcowy po koloryzacji lub rozjaśnianiu?",
+      "options": [
+        { "id": "a", "text": "Nie — szampon myje, ale nie zastępuje finiszu zabiegu chemicznego." },
+        { "id": "b", "text": "Tak — każdy szampon domyka łuskę tak samo jak produkt zakwaszający." },
+        { "id": "c", "text": "Tak, o ile jest droższy od farby." }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Właściwe rozróżnienie.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Szampon służy do mycia na co dzień. Po zabiegu chemicznym stosuje się dedykowany finisz — produkt końcowy dobrane do rodzaju usługi, zgodnie z procedurą."
+      }
+    },
+    {
+      "id": "ph7-z5",
+      "type": "trueFalse",
+      "kicker": "Krok 5 · Najważniejsza zasada",
+      "question": "Informacja o pH szamponu jest zawsze widoczna na opakowaniu — wystarczy ją odczytać.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To mit.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Na opakowaniu znajdziesz przeznaczenie i skład, ale nie zawsze dokładne pH. W pracy opierasz się na wiedzy o produkcie, szkoleniach producenta i doświadczeniu — nie na zgadywaniu po nazwie „szampon”.",
+        "funFact": {
+          "text": "Profesjonalne linie salonowe często mają osobne szampony do włosów farbowanych, zniszczonych i do skóry problematycznej."
+        }
+      }
+    }
+  ],
+
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozumiesz pH szamponów",
+    "subtitle": "Wiesz, że szampony różnią się pH i przeznaczeniem, dobór zależy od włosa, skóry i historii zabiegów — a szampon nie zastępuje finiszu po koloryzacji.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Jak pH odżywek i masek wspiera włos?"
+    }
+  }
+}

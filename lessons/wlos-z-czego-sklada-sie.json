@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-z-czego-sklada-sie",
+  "title": "Z czego składa się włos?",
+  "category": "Budowa i skład włosa",
+  "levelLabel": "Podstawy",
+
+  "intro": {
+    "narratorText": "W salonie wiesz już, że środowisko wpływa na powierzchnię włosa. Teraz zajrzysz głębiej — z czego włos jest zbudowany i dlaczego to ma znaczenie przy zabiegach.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Z czego składa się włos?",
+      "text": "Włos wygląda jak jedna gładka nitka, ale to złożona struktura. Główną masę stanowi keratyna — białko, z którego zbudowane są włókna. We włosie jest też woda oraz niewielka ilość lipidów. Ich udział zmienia się wraz ze stanem włosa i wilgotnością powietrza.",
+      "note": "W składzie włosa występują też m.in. melanina, aminokwasy i pierwiastki — wrócimy do nich w kolejnych lekcjach.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-composition.png",
+      "imageAlt": "Plansza przedstawiająca główne składniki włosa: keratynę, wodę i lipidy",
+      "imageCaption": "Keratyna to główny białkowy budulec włosa. Zawartość wody i lipidów zależy od stanu włosa i warunków otoczenia."
+    }
+  },
+
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+  },
+
+  "tasks": [
+    {
+      "id": "wlos1-z1",
+      "type": "trueFalse",
+      "kicker": "Krok 1 · Główny składnik",
+      "question": "Keratyna stanowi główną masę włosa.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Keratyna to białko budujące włókna włosa. To główny budulec, obok wody, lipidów i pozostałych składników."
+      }
+    },
+    {
+      "id": "wlos1-z2",
+      "type": "singleChoice",
+      "kicker": "Krok 2 · Woda we włosie",
+      "question": "Co wiemy o wodzie we włosie?",
+      "options": [
+        { "id": "a", "text": "Jej dokładny procent jest zawsze taki sam u każdego włosa" },
+        { "id": "b", "text": "W składzie włosa występuje woda, a wilgotność suchego włosa może się różnić" },
+        { "id": "c", "text": "Woda występuje wyłącznie na powierzchni osłonki" }
+      ],
+      "correctOptionId": "b",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "W włosie jest woda, ale jej zawartość zależy od stanu włosa i warunków otoczenia. Wilgotność suchiego włosa też bywa różna."
+      }
+    },
+    {
+      "id": "wlos1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Dopasuj składnik",
+      "question": "Połącz składnik z jego rolą.",
+      "leftTitle": "Składnik",
+      "rightTitle": "Rola",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "Keratyna" },
+        { "id": "l2", "pairId": "b", "text": "Woda" },
+        { "id": "l3", "pairId": "c", "text": "Lipidy" }
+      ],
+      "right": [
+        { "id": "r1", "pairId": "c", "text": "Niewielka ilość; bariera i powierzchnia włosa" },
+        { "id": "r2", "pairId": "a", "text": "Główny białkowy budulec włókien" },
+        { "id": "r3", "pairId": "b", "text": "Wpływ na właściwości mechaniczne" }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Pasuje.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Keratyna buduje włókna, woda wpływa na właściwości mechaniczne, lipidy występują w niewielkiej ilości i dotyczą m.in. powierzchni oraz bariery włosa."
+      }
+    },
+    {
+      "id": "wlos1-z4",
+      "type": "findError",
+      "kicker": "Krok 4 · Znajdź błąd",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Skład włosa",
+      "rows": [
+        { "id": "s1", "text": "W skład włosa wchodzą m.in. keratyna i woda" },
+        { "id": "s2", "text": "Zawartość wody we włosie może zależeć od jego stanu" },
+        { "id": "s3", "text": "Włos składa się wyłącznie z keratyny, wody i lipidów — innych składników nie ma" }
+      ],
+      "correctOptionIds": ["s3"],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trafione.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "We włosie występują też m.in. aminokwasy, melanina i mikroelementy. Keratyna, woda i lipidy to trzy główne składniki — uproszczenie dydaktyczne, nie pełny opis."
+      }
+    },
+    {
+      "id": "wlos1-z5",
+      "type": "singleChoice",
+      "kicker": "Krok 5 · Co zapamiętać?",
+      "question": "Które podsumowanie lekcji jest najtrafniejsze?",
+      "options": [
+        { "id": "a", "text": "Włos to niemal wyłącznie woda — keratyna ma drugorzędne znaczenie" },
+        { "id": "b", "text": "Keratyna to główny budulec, ale właściwości włosa zależą też od wody, lipidów i pozostałych składników" },
+        { "id": "c", "text": "Lipidy stanowią około połowy masy włosa i decydują o jego kolorze" }
+      ],
+      "correctOptionId": "b",
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dokładnie.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Keratyna buduje włókna, ale włos reaguje na zabiegi także przez wodę, lipidy i inne składniki. Kolor wiąże się z pigmentem w korze — poznasz to w dalszej części kursu."
+      }
+    }
+  ],
+
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, z czego zbudowany jest włos",
+    "subtitle": "Rozróżniasz keratynę, wodę i lipidy oraz rozumiesz, że ich udział nie jest stały w każdych warunkach.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Następna lekcja",
+      "teaser": "Co kryje przekrój łodygi włosa?"
+    }
+  }
+}
