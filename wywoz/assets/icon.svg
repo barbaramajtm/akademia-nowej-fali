@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Wywóz">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14635d"/>
+      <stop offset="100%" stop-color="#0b3d3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <circle cx="256" cy="256" r="148" fill="none" stroke="#c8f54a" stroke-width="28"/>
+  <path d="M170 278c28-72 144-72 172 0" fill="none" stroke="#e8f2ef" stroke-width="28" stroke-linecap="round"/>
+  <path d="M190 318h132" fill="none" stroke="#e8f2ef" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="256" cy="214" r="22" fill="#c8f54a"/>
+</svg>
