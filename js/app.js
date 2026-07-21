@@ -871,6 +871,10 @@ function renderMatching(task, ctx){
   let leftSel = null, matched = 0;
   const total = task.left.length;
 
+  function syncPickingState(){
+    grid.classList.toggle('is-picking', !!leftSel);
+  }
+
   function makeCol(title, items, isLeft){
     const col = el('div', 'mcol');
     col.appendChild(el('div', 'ttl', title));
@@ -881,13 +885,22 @@ function renderMatching(task, ctx){
       chip.addEventListener('click', () => {
         if (chip.classList.contains('done')) return;
         if (isLeft){
+          // Drugie kliknięcie w ten sam chip zdejmuje zaznaczenie.
+          if (leftSel === chip){
+            chip.classList.remove('sel');
+            leftSel = null;
+            syncPickingState();
+            return;
+          }
           col.querySelectorAll('.chip').forEach(x => x.classList.remove('sel'));
           chip.classList.add('sel'); leftSel = chip;
+          syncPickingState();
         } else {
           if (!leftSel) return;
           if (chip.dataset.pair === leftSel.dataset.pair){
             chip.classList.add('done'); leftSel.classList.add('done'); leftSel.classList.remove('sel');
             leftSel = null; matched++;
+            syncPickingState();
             if (matched === total) ctx.setReady(true);
           } else {
             ctx.countMistake();
