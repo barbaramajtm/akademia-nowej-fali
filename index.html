@@ -12,33 +12,46 @@
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
   OneSignalDeferred.push(async function (OneSignal) {
-    await OneSignal.init({
-      appId: 'f9ab3b3e-9ff5-4d38-a955-3f979846f350',
-      safari_web_id: 'web.onesignal.auto.09714a24-a3bb-414f-8109-d75a4f07e6fa',
-      /* GitHub Pages: strona w /akademia-nowej-fali/ */
-      serviceWorkerPath: 'akademia-nowej-fali/OneSignalSDKWorker.js',
-      serviceWorkerParam: { scope: '/akademia-nowej-fali/' },
-      notifyButton: {
-        enable: true,
-        size: 'medium',
-        position: 'bottom-left',
-        showCredit: false,
-        text: {
-          'tip.state.unsubscribed': 'Włącz powiadomienia o nauce',
-          'tip.state.subscribed': 'Powiadomienia włączone',
-          'tip.state.blocked': 'Powiadomienia zablokowane',
-          'message.prenotify': 'Kliknij, aby włączyć powiadomienia',
-          'message.action.subscribed': 'Dziękujemy! Klątwa włosowa na razie odwołana.',
-          'message.action.resubscribed': 'Znów jesteś zapisana na przypomnienia',
-          'message.action.unsubscribed': 'Nie będziesz dostawać powiadomień',
-          'dialog.main.title': 'Powiadomienia Akademii',
-          'dialog.main.button.subscribe': 'Włącz',
-          'dialog.main.button.unsubscribe': 'Wyłącz',
-          'dialog.blocked.title': 'Odblokuj powiadomienia',
-          'dialog.blocked.message': 'Pozwól na powiadomienia w ustawieniach przeglądarki, żeby wracać do nauki.'
+    try {
+      var path = location.pathname || '/';
+      var base = path.replace(/\/index\.html$/i, '').replace(/\/$/, '') || '';
+      /* Na GitHub Pages base = "/akademia-nowej-fali"; lokalnie może być "". */
+      var swFile = (base ? base.slice(1) + '/' : '') + 'OneSignalSDKWorker.js';
+      var swScope = (base || '') + '/';
+
+      await OneSignal.init({
+        appId: 'f9ab3b3e-9ff5-4d38-a955-3f979846f350',
+        safari_web_id: 'web.onesignal.auto.09714a24-a3bb-414f-8109-d75a4f07e6fa',
+        serviceWorkerPath: swFile,
+        serviceWorkerParam: { scope: swScope },
+        notifyButton: {
+          enable: true,
+          size: 'medium',
+          position: 'bottom-right',
+          offset: { bottom: '96px', right: '16px' },
+          showCredit: false,
+          text: {
+            'tip.state.unsubscribed': 'Włącz powiadomienia o nauce',
+            'tip.state.subscribed': 'Powiadomienia włączone',
+            'tip.state.blocked': 'Powiadomienia zablokowane',
+            'message.prenotify': 'Kliknij, aby włączyć powiadomienia',
+            'message.action.subscribed': 'Dziękujemy! Klątwa włosowa na razie odwołana.',
+            'message.action.resubscribed': 'Znów jesteś zapisana na przypomnienia',
+            'message.action.unsubscribed': 'Nie będziesz dostawać powiadomień',
+            'dialog.main.title': 'Powiadomienia Akademii',
+            'dialog.main.button.subscribe': 'Włącz',
+            'dialog.main.button.unsubscribe': 'Wyłącz',
+            'dialog.blocked.title': 'Odblokuj powiadomienia',
+            'dialog.blocked.message': 'Pozwól na powiadomienia w ustawieniach przeglądarki, żeby wracać do nauki.'
+          }
         }
-      }
-    });
+      });
+
+      window.AnfOneSignal = OneSignal;
+      document.dispatchEvent(new CustomEvent('anf-onesignal-ready'));
+    } catch (err) {
+      console.error('[ANF OneSignal] init failed', err);
+    }
   });
 </script>
 </head>
@@ -259,6 +272,12 @@
           <section class="profile-rhythm" aria-labelledby="profileRhythmTitle">
             <h3 id="profileRhythmTitle">Twój rytm nauki</h3>
             <p id="profileRhythmVal">Ukończ pierwszą lekcję, aby zobaczyć swój rytm</p>
+          </section>
+          <section class="profile-push" aria-labelledby="profilePushTitle">
+            <h3 id="profilePushTitle">Powiadomienia push</h3>
+            <p class="profile-push-note">Włącz przypomnienia o nauce (OneSignal). Możesz też użyć dzwonka na ekranie.</p>
+            <button type="button" class="btn btn-primary" id="profilePushEnable">Włącz powiadomienia</button>
+            <p class="profile-push-status" id="profilePushStatus" hidden></p>
           </section>
           <section class="profile-admin" id="profileAdminSection" aria-labelledby="profileAdminTitle" hidden>
             <h3 id="profileAdminTitle">Administrator / QA</h3>
@@ -501,6 +520,7 @@
 <script src="js/lessons-catalog.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/ui-effects.js"></script>
+<script src="js/onesignal-ui.js"></script>
 <script src="js/shell.js"></script>
 <script src="js/app.js"></script>
 </body>
