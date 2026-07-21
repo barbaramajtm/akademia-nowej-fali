@@ -62,20 +62,20 @@ Geometryczne, płaskie oko Mid-Century — **nie** logo, **nie** maskotka.
 
 **Znaczenie:** obserwacja, diagnoza, uważność, świadome patrzenie.
 
-**Budowa (inspo-07):**
+**Budowa (brand PNG):**
 - dwa koła: mustard (góra) + magenta (dół);
-- migdał oka / tło greige;
-- tęczówka magenta, źrenica mustard;
-- asset: `assets/images/eye-motif-brand.png`.
+- migdał oka / sclera cream;
+- tęczówka magenta, źrenica mustard, rzęsy radialne;
+- asset: `assets/images/eye-motif-brand.png` (RGBA, tło przezroczyste — bez czarnego boxa).
 
 **Gdzie występuje:**
-- Home (hero, PNG z inspo);
-- Profil (ten sam motyw, półprzezroczysty);
-- brama logowania / rejestracji.
-- „Wskazówka eksperta” w feedbacku lekcji;
-- ekran ukończenia lekcji;
-- karta modułu budowy włosa;
-- Profil (hero).
+- Home (hero);
+- Profil (hero, półprzezroczysty);
+- Gablotka (hero);
+- brama logowania / rejestracji;
+- ekran ukończenia lekcji (PNG);
+- „Wskazówka eksperta” (kompaktowy SVG);
+- karta / motyw modułu (SVG dekoracyjny).
 
 **Zasady:** rozpoznawalny branding, nie dominuje ekranu; animacja mrugnięcia wyłącznie przy nagrodzie.
 

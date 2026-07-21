@@ -76,9 +76,9 @@ body{font-family:'Inter',sans-serif;background:#B8AFA0;color:var(--ink);min-heig
 
 /* ---- motyw oka ---- */
 .eye-motif{display:inline-block;vertical-align:middle;flex-shrink:0;}
-.eye-motif svg{display:block;}
+.eye-motif svg,.eye-motif img{display:block;width:100%;height:auto;}
 .eye-motif--hint{width:26px;height:16px;margin-right:6px;opacity:.95;}
-.eye-motif--done{width:64px;height:38px;margin:0 auto 14px;opacity:.96;}
+.eye-motif--done{width:72px;height:auto;margin:0 auto 14px;opacity:.96;}
 
 /* ---- HOME: ekran edytorialowy ---- */
 .home-editorial{
@@ -262,11 +262,11 @@ body{font-family:'Inter',sans-serif;background:#B8AFA0;color:var(--ink);min-heig
 .gab-hero{
   position:relative;padding:44px 20px 14px;overflow:hidden;
 }
-.gab-hero-motif{
-  position:absolute;right:-12px;top:12px;width:88px;height:88px;border-radius:50%;
-  background:rgba(232,178,62,.28);pointer-events:none;
-  box-shadow:-36px 28px 0 8px rgba(217,123,148,.22);
+.gab-hero-motif{display:none;}
+.gab-hero-eye{
+  position:absolute;right:-10px;top:8px;width:78px;opacity:.42;pointer-events:none;z-index:0;
 }
+.gab-hero-eye img{width:100%;height:auto;display:block;}
 .gab-hero h2{font-family:'Poppins';font-weight:700;font-size:26px;line-height:1.15;color:var(--navy);letter-spacing:-.02em;position:relative;}
 .gab-hero-sub{font-size:14px;line-height:1.45;color:var(--ink-muted);margin-top:6px;font-weight:500;max-width:32ch;position:relative;}
 .gab-hero-aside{font-size:12px;line-height:1.4;color:var(--olive);margin-top:8px;font-style:italic;font-weight:500;position:relative;}

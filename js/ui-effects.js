@@ -5,6 +5,7 @@
 
 var SPRING_MS = 780;
 
+var EYE_BRAND_SRC = 'assets/images/eye-motif-brand.png';
 var EYE_SVG =
   '<svg viewBox="0 0 80 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
     '<ellipse cx="40" cy="18" rx="28" ry="14" fill="#E8B23E" opacity="0.55"/>' +
@@ -49,7 +50,14 @@ function prefersReducedMotion(){
 function createEyeElement(className){
   var span = document.createElement('span');
   span.className = className || 'eye-motif';
-  span.innerHTML = EYE_SVG;
+  span.setAttribute('aria-hidden', 'true');
+  var img = document.createElement('img');
+  img.src = EYE_BRAND_SRC;
+  img.alt = '';
+  img.width = 72;
+  img.height = 108;
+  img.decoding = 'async';
+  span.appendChild(img);
   return span;
 }
 
