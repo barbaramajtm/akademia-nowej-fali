@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akademia Nowej Fali</title>
-<meta name="theme-color" content="#2E2A26">
-<link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -229,19 +227,9 @@
             <h3 id="profileRhythmTitle">Twój rytm nauki</h3>
             <p id="profileRhythmVal">Ukończ pierwszą lekcję, aby zobaczyć swój rytm</p>
           </section>
-          <section class="profile-reminders" aria-labelledby="profileRemindersTitle">
-            <h3 id="profileRemindersTitle">Codzienne przypomnienia</h3>
-            <p class="profile-reminders-note">Raz dziennie — w przesadny, absurdalny, fryzjerski sposób. Np. klątwa włosowa na całą rodzinę.</p>
-            <label class="profile-reminder-toggle" for="profileReminderToggle">
-              <input type="checkbox" id="profileReminderToggle">
-              <span>Włącz powiadomienia (ok. 10:00)</span>
-            </label>
-            <p class="profile-reminders-status" id="profileReminderStatus" hidden></p>
-            <button type="button" class="btn btn-ghost profile-reminder-test" id="profileReminderTest" hidden>Wyślij testowe powiadomienie</button>
-          </section>
-          <section class="profile-admin" aria-labelledby="profileAdminTitle">
+          <section class="profile-admin" id="profileAdminSection" aria-labelledby="profileAdminTitle" hidden>
             <h3 id="profileAdminTitle">Administrator / QA</h3>
-            <p class="profile-admin-note">Tryb piaskownicy: przeglądaj wszystkie lekcje bez zmiany postępu uczennicy.</p>
+            <p class="profile-admin-note">Tryb piaskownicy: przeglądaj wszystkie lekcje bez zmiany postępu uczennicy. Widoczne tylko po wejściu z <code>?admin=1</code> i haśle.</p>
             <button type="button" class="btn btn-primary profile-admin-btn" id="profileAdminToggle">Włącz tryb administratora</button>
             <button type="button" class="btn btn-ghost profile-admin-btn" id="profileAdminUsers" hidden>Lista kont uczennic</button>
             <button type="button" class="btn btn-ghost profile-admin-btn" id="profileResetProgress">Reset postępu użytkownika</button>
@@ -480,7 +468,6 @@
 <script src="js/lessons-catalog.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/ui-effects.js"></script>
-<script src="js/reminders.js"></script>
 <script src="js/shell.js"></script>
 <script src="js/app.js"></script>
 </body>
