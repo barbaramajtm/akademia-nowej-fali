@@ -230,7 +230,7 @@ Zgodnie z `LESSON_STANDARD.md` każda lekcja ma **maksymalnie jedną** główną
 
 | Plik | Temat | Proponowana lekcja | Uwagi |
 |------|-------|-------------------|-------|
-| `assets/images/hair-composition.png` | Skład włosa: keratyna, woda, lipidy | L1 | **ready** — poprawiona treść (15 lip 2026) |
+| `assets/images/hair-composition.png` | Skład włosa: keratyna, woda, lipidy | L1 | **removed** — lekcja L1 bez grafiki (Q&A) |
 | `assets/images/hair-layers.png` | Osłonka, kora, rdzeń | L2 | **ready** — poprawiony wygląd + dopisek o rdzeniu |
 | `assets/images/hair-fibrous-keratin.png` | Łańcuchy białkowe → włókna keratynowe | L3 | **ready** — poprawiona treść i wygląd |
 | `assets/images/hair-keratin-formation.png` | Spirale → „keratyna płaska” | reference-only | Nie używać w lekcjach |
