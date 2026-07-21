@@ -1,13 +1,13 @@
 /* ============================================================
    Akademia Nowej Fali — paleta z nowego oka + wzornika
-   pink + cream + orange + yellow (matte, flat)
+   off-white bg + pink / orange / yellow accents (matte, flat)
    ============================================================ */
 @import url('animations.css');
 
 :root{
-  /* Próbkowane (Pillow): pink #E880B0 / eye #FF4794, cream #F1E9D7,
-     orange #F7A527, yellow #FFD40A */
-  --color-background:#E86BA8;
+  /* Tło off-white pod złote logo NF; akcenty z oka bez zmian
+     (pink #E86BA8 / hot #FF4794, orange #F7A527, yellow #FFD40A) */
+  --color-background:#F7F4EE;
   --color-pink:#E86BA8;
   --color-pink-hot:#FF4794;
   --color-mustard:#FFD40A;
@@ -93,10 +93,16 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
   border-bottom:1px solid var(--line);
 }
 .home-editorial-blobs{display:none;}
-/* Oko brandowe z inspo — prawa strefa hero, czytelne od ~360px */
+/* Złote logo NF — główny znak marki; oko zostaje jako delikatny akcent */
+.home-brand-logo{
+  margin:6px 0 2px;width:76px;max-width:28%;
+}
+.home-brand-logo img{
+  width:100%;height:auto;display:block;
+}
 .home-editorial-eye{
-  position:absolute;top:108px;right:-8px;width:148px;height:auto;
-  pointer-events:none;z-index:1;
+  position:absolute;top:120px;right:-14px;width:108px;height:auto;
+  pointer-events:none;z-index:1;opacity:.38;
 }
 .home-editorial-eye img{
   width:100%;height:auto;display:block;
@@ -424,14 +430,18 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
   position:relative;overflow:hidden;padding-bottom:8px;border-bottom:1px solid var(--line);
   background:linear-gradient(160deg,var(--peach) 0%,var(--pink-soft) 48%,var(--cream) 100%);
 }
-.profile-hero-eye{position:absolute;top:28px;right:-8px;width:120px;opacity:.55;pointer-events:none;}
+.profile-hero-logo{
+  position:absolute;top:44px;right:18px;width:56px;z-index:1;pointer-events:none;
+}
+.profile-hero-logo img{width:100%;height:auto;display:block;}
+.profile-hero-eye{position:absolute;top:28px;right:-8px;width:96px;opacity:.28;pointer-events:none;}
 .profile-hero-eye img,.profile-hero-eye svg{width:100%;height:auto;display:block;}
 .profile-hero-arc{position:absolute;bottom:-36px;left:-10%;width:120%;height:72px;background:var(--bg);border-radius:50% 50% 0 0;}
 .profile-hero::before{
   content:'';position:absolute;width:120px;height:120px;border-radius:50%;
   top:-30px;left:-40px;background:var(--mustard);opacity:.22;pointer-events:none;
 }
-.profile-head{position:relative;z-index:1;}
+.profile-head{position:relative;z-index:1;padding-right:78px;}
 .subpage-head{padding:52px 20px 16px;position:relative;}
 .subpage-head h2{font-family:'Poppins';font-weight:700;font-size:26px;color:var(--navy);letter-spacing:-.02em;}
 .subpage-head p{font-size:14px;color:var(--ink-muted);margin-top:4px;font-weight:500;}
@@ -699,6 +709,28 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
 .continue-surface::before{z-index:0;}
 
 /* ---- tryb administratora / QA ---- */
+.admin-pass-gate{
+  position:absolute;inset:0;z-index:120;display:flex;align-items:center;justify-content:center;
+  background:rgba(42,31,36,.5);padding:16px;box-sizing:border-box;
+}
+.admin-pass-sheet{
+  width:100%;max-width:300px;background:var(--card);border:1.5px solid var(--line);
+  border-radius:18px;padding:20px 18px 16px;box-shadow:var(--shadow-card);
+}
+.admin-pass-sheet h2{
+  font-family:'Poppins';font-weight:700;font-size:17px;color:var(--navy);margin:0 0 6px;
+}
+.admin-pass-note{font-size:13px;line-height:1.45;color:var(--ink-muted);margin:0 0 14px;}
+.admin-pass-label{display:block;font-size:12px;font-weight:600;color:var(--olive);margin-bottom:5px;}
+.admin-pass-input{
+  width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;
+  font-family:'Inter';background:#fff;color:var(--ink);min-height:44px;box-sizing:border-box;margin-bottom:8px;
+}
+.admin-pass-input:focus{outline:2px solid var(--mustard);outline-offset:1px;border-color:var(--mustard);}
+.admin-pass-error{font-size:13px;color:#B83A52;font-weight:600;margin:0 0 10px;}
+.admin-pass-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px;}
+.admin-pass-actions .btn{flex:1;min-height:44px;}
+
 .admin-bar{
   position:absolute;top:max(8px,env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:95;
   display:flex;align-items:center;gap:8px;padding:5px 10px 5px 8px;
@@ -790,7 +822,7 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
   border:1.5px solid var(--line);box-shadow:var(--shadow-card);
 }
 .auth-brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:14px;text-align:center;}
-.auth-brand img{width:88px;height:auto;display:block;}
+.auth-brand img,.auth-brand .nf-logo{width:104px;height:auto;display:block;}
 .auth-brand h2{font-family:'Poppins';font-weight:700;font-size:20px;color:var(--navy);line-height:1.2;}
 .auth-brand p{font-size:13px;color:var(--ink-muted);line-height:1.45;max-width:280px;}
 .auth-tabs{display:flex;gap:6px;margin-bottom:14px;}
