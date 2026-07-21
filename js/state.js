@@ -25,7 +25,8 @@ function createDefaultState(){
       kosmyki: 0,
       fala: 1,
       falaProgress: { current: 0, goal: 1000 },
-      streakDays: 0
+      streakDays: 0,
+      avatarId: 'wave'
     },
     completedLessons: {},
     totalBadges: 0,
@@ -149,7 +150,8 @@ function normalizeState(raw){
         current: typeof falaProgress.current === 'number' ? falaProgress.current : def.user.falaProgress.current,
         goal: typeof falaProgress.goal === 'number' ? falaProgress.goal : def.user.falaProgress.goal
       },
-      streakDays: typeof user.streakDays === 'number' ? user.streakDays : def.user.streakDays
+      streakDays: typeof user.streakDays === 'number' ? user.streakDays : def.user.streakDays,
+      avatarId: typeof user.avatarId === 'string' ? user.avatarId : def.user.avatarId
     },
     completedLessons: raw.completedLessons && typeof raw.completedLessons === 'object'
       ? raw.completedLessons : {},
@@ -393,6 +395,12 @@ window.AppState = {
     return n;
   },
   get: getAppState,
+  setAvatarId: function(id){
+    if (!appState) appState = loadState();
+    if (!appState.user) appState.user = createDefaultState().user;
+    appState.user.avatarId = String(id || 'wave');
+    saveState();
+  },
   isCollectionBadgeEarned: function(collectionId, badgeName){
     var col = getCollectionFromState(getAppState(), collectionId);
     return hasCollectionBadge(col, badgeName);

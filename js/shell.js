@@ -850,6 +850,9 @@ function refreshUI(){
   renderCourseProgress();
   syncProfileAccountUi();
   syncProfileAdminUi();
+  if (window.AnfAvatars && window.AnfAvatars.paint){
+    window.AnfAvatars.paint();
+  }
 }
 
 function setNavActive(view){
@@ -1339,6 +1342,9 @@ function bindChrome(){
   if (window.AnfPushUi && window.AnfPushUi.bind){
     window.AnfPushUi.bind();
   }
+  if (window.AnfAvatars && window.AnfAvatars.bind){
+    window.AnfAvatars.bind();
+  }
 }
 
 window.AppShell = {
@@ -1371,6 +1377,9 @@ window.AppShell = {
     syncProfileAdminUi();
     if (window.AnfPushUi && window.AnfPushUi.sync){
       window.AnfPushUi.sync();
+    }
+    if (window.AnfAvatars && window.AnfAvatars.paint){
+      window.AnfAvatars.paint();
     }
   },
 
