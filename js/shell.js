@@ -850,6 +850,7 @@ function refreshUI(){
   renderCourseProgress();
   syncProfileAccountUi();
   syncProfileAdminUi();
+  syncProfileRemindersUi();
 }
 
 function setNavActive(view){
@@ -904,6 +905,48 @@ function syncProfileAdminUi(){
   toggle.classList.toggle('is-admin-on', !!active);
   var usersBtn = document.getElementById('profileAdminUsers');
   if (usersBtn) usersBtn.hidden = !active;
+}
+
+function syncProfileRemindersUi(){
+  var toggle = document.getElementById('profileReminderToggle');
+  var status = document.getElementById('profileReminderStatus');
+  var testBtn = document.getElementById('profileReminderTest');
+  var R = window.ReminderPrefs;
+  if (!toggle) return;
+
+  if (!R || !R.supported()){
+    toggle.disabled = true;
+    toggle.checked = false;
+    if (status){
+      status.hidden = false;
+      status.textContent = 'Ta przeglądarka nie obsługuje powiadomień webowych.';
+    }
+    if (testBtn) testBtn.hidden = true;
+    return;
+  }
+
+  var prefs = R.load();
+  toggle.disabled = false;
+  toggle.checked = !!prefs.enabled;
+  if (testBtn) testBtn.hidden = !prefs.enabled || R.permission() !== 'granted';
+
+  if (!status) return;
+  var perm = R.permission();
+  if (prefs.enabled && perm === 'granted'){
+    status.hidden = false;
+    status.textContent = prefs.lastSentDate
+      ? 'Włączone. Ostatnie przypomnienie: ' + prefs.lastSentDate + '.'
+      : 'Włączone. Absurdalne przypomnienie przyjdzie raz dziennie (ok. 10:00), jeśli nie zrobisz lekcji.';
+  } else if (prefs.enabled && perm === 'denied'){
+    status.hidden = false;
+    status.textContent = 'Zablokowane w ustawieniach przeglądarki — odblokuj powiadomienia dla tej strony.';
+  } else if (prefs.enabled){
+    status.hidden = false;
+    status.textContent = 'Czeka na zgodę na powiadomienia.';
+  } else {
+    status.hidden = true;
+    status.textContent = '';
+  }
 }
 
 function syncProfileAccountUi(){
@@ -1298,6 +1341,60 @@ function bindChrome(){
     });
   }
 
+  var reminderToggle = document.getElementById('profileReminderToggle');
+  if (reminderToggle){
+    reminderToggle.addEventListener('change', function(){
+      var R = window.ReminderPrefs;
+      if (!R) return;
+      if (reminderToggle.checked){
+        R.enable().then(function(res){
+          if (!res || !res.ok){
+            reminderToggle.checked = false;
+            var status = document.getElementById('profileReminderStatus');
+            if (status){
+              status.hidden = false;
+              if (res && res.permission === 'denied'){
+                status.textContent = 'Brak zgody — włącz powiadomienia w ustawieniach przeglądarki.';
+              } else if (res && res.permission === 'unsupported'){
+                status.textContent = 'Ta przeglądarka nie obsługuje powiadomień.';
+              } else {
+                status.textContent = 'Nie udało się włączyć powiadomień.';
+              }
+            }
+          }
+          syncProfileRemindersUi();
+        }).catch(function(){
+          reminderToggle.checked = false;
+          syncProfileRemindersUi();
+        });
+      } else {
+        R.disable();
+        syncProfileRemindersUi();
+      }
+    });
+  }
+  var reminderTest = document.getElementById('profileReminderTest');
+  if (reminderTest){
+    reminderTest.addEventListener('click', function(){
+      var R = window.ReminderPrefs;
+      if (!R) return;
+      R.notifyNow(true).then(function(res){
+        var status = document.getElementById('profileReminderStatus');
+        if (status && res && res.body){
+          status.hidden = false;
+          status.textContent = 'Wysłano test: „' + res.body + '”';
+        }
+        syncProfileRemindersUi();
+      }).catch(function(err){
+        var status = document.getElementById('profileReminderStatus');
+        if (status){
+          status.hidden = false;
+          status.textContent = (err && err.message) ? err.message : 'Nie udało się wysłać powiadomienia.';
+        }
+      });
+    });
+  }
+
   document.getElementById('exitStayBtn').addEventListener('click', function(){
     window.AppShell.hideExitConfirm();
   });
@@ -1326,6 +1423,7 @@ function bindChrome(){
   bindAuthUi();
   syncProfileAdminUi();
   syncProfileAccountUi();
+  syncProfileRemindersUi();
 }
 
 window.AppShell = {
@@ -1469,6 +1567,9 @@ document.addEventListener('DOMContentLoaded', function(){
     window.AdminMode.syncFromUrl();
   }
   bindChrome();
+  if (window.ReminderPrefs && window.ReminderPrefs.init){
+    try { window.ReminderPrefs.init(); } catch (e){ /* ignore */ }
+  }
   if (window.AppState && window.AppState.syncAchievements){
     try { window.AppState.syncAchievements(); } catch (e){ /* ignore */ }
   }

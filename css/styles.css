@@ -457,6 +457,14 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
 .profile-rhythm h3{font-family:'Poppins';font-weight:700;font-size:15px;color:var(--navy);margin-bottom:6px;}
 .profile-rhythm p{font-size:13px;line-height:1.5;color:var(--ink-muted);font-weight:500;}
 
+.profile-reminders{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-top:16px;box-shadow:var(--shadow-soft);}
+.profile-reminders h3{font-family:'Poppins';font-weight:700;font-size:15px;color:var(--navy);margin-bottom:6px;}
+.profile-reminders-note{font-size:13px;line-height:1.5;color:var(--ink-muted);font-weight:500;margin-bottom:12px;}
+.profile-reminder-toggle{display:flex;align-items:flex-start;gap:10px;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer;line-height:1.35;}
+.profile-reminder-toggle input{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:var(--coral);}
+.profile-reminders-status{font-size:12px;line-height:1.45;color:var(--ink-muted);margin-top:10px;}
+.profile-reminder-test{margin-top:10px;width:100%;}
+
 .shell-nav{position:absolute;bottom:0;left:0;right:0;background:var(--color-surface);border-top:1.5px solid var(--line);display:flex;justify-content:space-around;align-items:stretch;padding:8px 8px max(12px,env(safe-area-inset-bottom,0px));border-radius:0 0 34px 34px;z-index:50;}
 .shell-nav[hidden]{display:none;}
 .shell-nav .nav-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--muted);cursor:pointer;font-size:11px;font-weight:600;font-family:'Inter';background:none;border:none;padding:6px 8px;min-height:44px;min-width:64px;flex:1;}
