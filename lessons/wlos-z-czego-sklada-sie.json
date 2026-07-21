@@ -6,18 +6,9 @@
   "levelLabel": "Podstawy",
 
   "intro": {
-    "narratorText": "W salonie wiesz już, że środowisko wpływa na powierzchnię włosa. Teraz zajrzysz głębiej — z czego włos jest zbudowany i dlaczego to ma znaczenie przy zabiegach.",
+    "narratorText": "W salonie wiesz już, że środowisko wpływa na powierzchnię włosa. Teraz sprawdzisz, z czego włos jest zbudowany — przez krótkie pytania, bez planszy.",
     "stakeText": "do 75 Kosmyków",
-    "startButtonLabel": "Zacznij lekcję",
-    "hairGuide": {
-      "title": "Z czego składa się włos?",
-      "text": "Włos wygląda jak jedna gładka nitka, ale to złożona struktura. Główną masę stanowi keratyna — białko, z którego zbudowane są włókna. We włosie jest też woda oraz niewielka ilość lipidów. Ich udział zmienia się wraz ze stanem włosa i wilgotnością powietrza.",
-      "note": "W składzie włosa występują też m.in. melanina, aminokwasy i pierwiastki — wrócimy do nich w kolejnych lekcjach.",
-      "continueLabel": "Dalej",
-      "imageSrc": "assets/images/hair-composition.png?v=20260721b",
-      "imageAlt": "Plansza: keratyna, woda i lipidy jako główne składniki włosa",
-      "imageCaption": "Keratyna to główny budulec włosa. Zawartość wody jest zmienna; lipidy pomagają chronić włos."
-    }
+    "startButtonLabel": "Zacznij lekcję"
   },
 
   "rewards": {
@@ -28,44 +19,44 @@
   "tasks": [
     {
       "id": "wlos1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Główny budulec",
+      "question": "Co stanowi główną masę włosa?",
+      "options": [
+        { "id": "a", "text": "Woda" },
+        { "id": "b", "text": "Keratyna" },
+        { "id": "c", "text": "Lipidy" }
+      ],
+      "correctOptionId": "b",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Głównym budulcem włosa jest keratyna — białko, z którego zbudowane są włókna. Woda i lipidy też są ważne, ale nie tworzą największej części masy włosa."
+      }
+    },
+    {
+      "id": "wlos1-z2",
       "type": "trueFalse",
-      "kicker": "Krok 1 · Główny składnik",
-      "question": "Keratyna stanowi główną masę włosa.",
+      "kicker": "Krok 2 · Czym jest keratyna?",
+      "question": "Keratyna to białko — główny budulec włókien włosa.",
       "trueLabel": "Prawda",
       "falseLabel": "Mit",
       "correctValue": true,
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Tak.",
-        "incorrectTitle": "Sprawdź jeszcze raz.",
-        "explanation": "Keratyna to białko budujące włókna włosa. To główny budulec, obok wody, lipidów i pozostałych składników."
-      }
-    },
-    {
-      "id": "wlos1-z2",
-      "type": "singleChoice",
-      "kicker": "Krok 2 · Woda we włosie",
-      "question": "Co wiemy o wodzie we włosie?",
-      "options": [
-        { "id": "a", "text": "Jej dokładny procent jest zawsze taki sam u każdego włosa" },
-        { "id": "b", "text": "W składzie włosa występuje woda, a wilgotność suchego włosa może się różnić" },
-        { "id": "c", "text": "Woda występuje wyłącznie na powierzchni osłonki" }
-      ],
-      "correctOptionId": "b",
-      "reward": 10,
-      "checkButtonLabel": "Sprawdź",
-      "feedback": {
         "correctTitle": "Dobrze.",
         "incorrectTitle": "Sprawdź jeszcze raz.",
-        "explanation": "W włosie jest woda, ale jej zawartość zależy od stanu włosa i warunków otoczenia. Wilgotność suchiego włosa też bywa różna."
+        "explanation": "Keratyna to białko. To właśnie ona buduje włókna włosa i odpowiada za jego podstawową strukturę."
       }
     },
     {
       "id": "wlos1-z3",
       "type": "matching",
       "kicker": "Krok 3 · Dopasuj składnik",
-      "question": "Połącz składnik z jego rolą.",
+      "question": "Połącz trzy główne budulce włosa z ich rolą.",
       "leftTitle": "Składnik",
       "rightTitle": "Rola",
       "left": [
@@ -74,46 +65,46 @@
         { "id": "l3", "pairId": "c", "text": "Lipidy" }
       ],
       "right": [
-        { "id": "r1", "pairId": "c", "text": "Niewielka ilość; bariera i powierzchnia włosa" },
+        { "id": "r1", "pairId": "c", "text": "Niewielka ilość; pomaga chronić włos" },
         { "id": "r2", "pairId": "a", "text": "Główny białkowy budulec włókien" },
-        { "id": "r3", "pairId": "b", "text": "Wpływ na właściwości mechaniczne" }
+        { "id": "r3", "pairId": "b", "text": "Zawartość zmienna; wpływa na elastyczność" }
       ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Pasuje.",
         "incorrectTitle": "Sprawdź jeszcze raz.",
-        "explanation": "Keratyna buduje włókna, woda wpływa na właściwości mechaniczne, lipidy występują w niewielkiej ilości i dotyczą m.in. powierzchni oraz bariery włosa."
+        "explanation": "Zapamiętaj trio: keratyna buduje, woda wpływa na elastyczność (jej ilość się zmienia), lipidy występują w małej ilości i wspierają ochronę włosa."
       }
     },
     {
       "id": "wlos1-z4",
       "type": "findError",
       "kicker": "Krok 4 · Znajdź błąd",
-      "question": "Które stwierdzenie jest błędne?",
+      "question": "Które stwierdzenie o składzie włosa jest błędne?",
       "cardTitle": "Skład włosa",
       "rows": [
-        { "id": "s1", "text": "W skład włosa wchodzą m.in. keratyna i woda" },
-        { "id": "s2", "text": "Zawartość wody we włosie może zależeć od jego stanu" },
-        { "id": "s3", "text": "Włos składa się wyłącznie z keratyny, wody i lipidów — innych składników nie ma" }
+        { "id": "s1", "text": "Keratyna to główny budulec włosa" },
+        { "id": "s2", "text": "Zawartość wody we włosie jest zawsze taka sama u każdej klientki" },
+        { "id": "s3", "text": "Lipidy występują w niewielkiej ilości i pomagają chronić włos" }
       ],
-      "correctOptionIds": ["s3"],
+      "correctOptionIds": ["s2"],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Trafione.",
         "incorrectTitle": "Sprawdź jeszcze raz.",
-        "explanation": "We włosie występują też m.in. aminokwasy, melanina i mikroelementy. Keratyna, woda i lipidy to trzy główne składniki — uproszczenie dydaktyczne, nie pełny opis."
+        "explanation": "Zawartość wody nie jest stała — zależy od stanu włosa i warunków otoczenia. Dlatego włosy różnie reagują na zabiegi i pielęgnację."
       }
     },
     {
       "id": "wlos1-z5",
       "type": "singleChoice",
       "kicker": "Krok 5 · Co zapamiętać?",
-      "question": "Które podsumowanie lekcji jest najtrafniejsze?",
+      "question": "Które podsumowanie jest najtrafniejsze?",
       "options": [
         { "id": "a", "text": "Włos to niemal wyłącznie woda — keratyna ma drugorzędne znaczenie" },
-        { "id": "b", "text": "Keratyna to główny budulec, ale właściwości włosa zależą też od wody, lipidów i pozostałych składników" },
+        { "id": "b", "text": "Trzy główne budulce to keratyna, woda i lipidy; keratyna buduje, woda i lipidy wpływają na właściwości i ochronę" },
         { "id": "c", "text": "Lipidy stanowią około połowy masy włosa i decydują o jego kolorze" }
       ],
       "correctOptionId": "b",
@@ -122,15 +113,15 @@
       "feedback": {
         "correctTitle": "Dokładnie.",
         "incorrectTitle": "Sprawdź jeszcze raz.",
-        "explanation": "Keratyna buduje włókna, ale włos reaguje na zabiegi także przez wodę, lipidy i inne składniki. Kolor wiąże się z pigmentem w korze — poznasz to w dalszej części kursu."
+        "explanation": "Na start wystarczy: keratyna = główny budulec; woda = zmienna, wpływa na elastyczność; lipidy = niewielka ilość, ochrona. W kolejnych lekcjach dojdziesz też do melaniny i innych składników."
       }
     }
   ],
 
   "completion": {
     "solvedLabel": "Lekcja ukończona",
-    "title": "Wiesz, z czego zbudowany jest włos",
-    "subtitle": "Rozróżniasz keratynę, wodę i lipidy oraz rozumiesz, że ich udział nie jest stały w każdych warunkach.",
+    "title": "Znasz główne budulce włosa",
+    "subtitle": "Keratyna, woda i lipidy — wiesz, co robi każde z nich i że udział wody nie jest stały.",
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
       "label": "Następna lekcja",

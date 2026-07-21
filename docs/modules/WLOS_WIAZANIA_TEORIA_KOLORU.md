@@ -212,7 +212,7 @@ Plik `assets/images/wlos-ph.jpg` (JPEG) — moduł pH, bez zmian.
 
 | Lekcja | Ilustracja preferowana | Alternatywy | Uzasadnienie |
 |--------|------------------------|-------------|--------------|
-| **L1** `wlos-z-czego-sklada-sie` | `hair-composition.png` | — | Plansza z realistycznym włosem + karty 1–3 (KERATYNA / WODA / LIPIDY). Wstawiona 21 lipca 2026. |
+| **L1** `wlos-z-czego-sklada-sie` | — *(bez grafiki)* | — | Lekcja Q&A: keratyna / woda / lipidy przez pytania i feedback. Plansza usunięta 21 lipca 2026. |
 | **L2** `wlos-oslonka-kora-rdzen` | `hair-layers.png` | — | Schemat trzech warstw łodygi. **Poprawiona 15 lipca 2026** — usunięto dekoracje; dopisano brak rdzenia u każdego włosa. |
 | **L3** `wlos-keratyna-rusztowanie` | `hair-fibrous-keratin.png` | — | **Poprawiona 15 lipca 2026** — spiralne łańcuchy → włókna keratynowe; białka towarzyszące; model uproszczony. |
 
@@ -230,7 +230,7 @@ Zgodnie z `LESSON_STANDARD.md` każda lekcja ma **maksymalnie jedną** główną
 
 | Plik | Temat | Proponowana lekcja | Uwagi |
 |------|-------|-------------------|-------|
-| `assets/images/hair-composition.png` | Skład włosa: keratyna, woda, lipidy | L1 | **ready** — poprawiona treść (15 lip 2026) |
+| `assets/images/hair-composition.png` | Skład włosa: keratyna, woda, lipidy | L1 | **removed** — lekcja L1 bez grafiki (Q&A) |
 | `assets/images/hair-layers.png` | Osłonka, kora, rdzeń | L2 | **ready** — poprawiony wygląd + dopisek o rdzeniu |
 | `assets/images/hair-fibrous-keratin.png` | Łańcuchy białkowe → włókna keratynowe | L3 | **ready** — poprawiona treść i wygląd |
 | `assets/images/hair-keratin-formation.png` | Spirale → „keratyna płaska” | reference-only | Nie używać w lekcjach |
