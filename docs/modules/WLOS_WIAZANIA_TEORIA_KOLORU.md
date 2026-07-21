@@ -212,7 +212,7 @@ Plik `assets/images/wlos-ph.jpg` (JPEG) — moduł pH, bez zmian.
 
 | Lekcja | Ilustracja preferowana | Alternatywy | Uzasadnienie |
 |--------|------------------------|-------------|--------------|
-| **L1** `wlos-z-czego-sklada-sie` | `hair-composition.png` *(do wstawienia)* | — | Plik usunięty 21 lipca 2026 — wstawić nową planszę od właścicielki (włos + karty 1–3 KERATYNA/WODA/LIPIDY). |
+| **L1** `wlos-z-czego-sklada-sie` | `hair-composition.png` | — | Plansza z realistycznym włosem + karty 1–3 (KERATYNA / WODA / LIPIDY). Wstawiona 21 lipca 2026. |
 | **L2** `wlos-oslonka-kora-rdzen` | `hair-layers.png` | — | Schemat trzech warstw łodygi. **Poprawiona 15 lipca 2026** — usunięto dekoracje; dopisano brak rdzenia u każdego włosa. |
 | **L3** `wlos-keratyna-rusztowanie` | `hair-fibrous-keratin.png` | — | **Poprawiona 15 lipca 2026** — spiralne łańcuchy → włókna keratynowe; białka towarzyszące; model uproszczony. |
 
