@@ -7,7 +7,7 @@
 'use strict';
 
 /** SHA-256 (hex) hasła administratora — bez plaintextu w repo. */
-var ADMIN_PASS_HASH = 'ad9dba5898e0c1a3c96fa5bc8534a01890dbc1e159c865473ed6e8533b590846';
+var ADMIN_PASS_HASH = '1f718039c971b4000fc547af3bfea0139e406a04d296df6738a4fee142786656';
 var ADMIN_SESSION_KEY = 'anf_admin_unlock_v1';
 
 var adminActive = false;
