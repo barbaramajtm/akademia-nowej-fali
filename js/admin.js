@@ -173,7 +173,7 @@ function showAdminPasswordPrompt(opts){
   gate.innerHTML =
     '<form class="admin-pass-sheet" id="adminPassForm" autocomplete="off">' +
       '<h2 id="adminPassTitle">Hasło administratora</h2>' +
-      '<p class="admin-pass-note">Dostęp tylko dla właścicielki Akademii.</p>' +
+      '<p class="admin-pass-note">Dostęp tylko dla trenerek Akademii.</p>' +
       '<label class="admin-pass-label" for="adminPassInput">Hasło</label>' +
       '<input id="adminPassInput" class="admin-pass-input" type="password" name="admin-pass" autocomplete="current-password" required>' +
       '<p class="admin-pass-error" id="adminPassError" hidden></p>' +
