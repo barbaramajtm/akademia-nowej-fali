@@ -562,10 +562,9 @@ function isLoggedIn(){
 }
 
 function needsAuthGate(){
-  /* ?admin=1 zawsze omija bramkę — także gdy sesja konta już istnieje. */
+  /* Tylko odblokowany tryb admina omija bramkę auth — samo ?admin=1 już nie. */
   try {
     if (window.AdminMode && window.AdminMode.isActive()) return false;
-    if (new URLSearchParams(window.location.search).get('admin') === '1') return false;
   } catch (e){ /* ignore */ }
   if (isLoggedIn()) return false;
   if (isGuestMode()) return false;

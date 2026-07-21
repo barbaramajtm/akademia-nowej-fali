@@ -1,29 +1,86 @@
 /* ============================================================
-   Akademia Nowej Fali — tryb administratora / QA (?admin=1)
-   Aktywacja tylko z URL (?admin=1) na czas sesji/karty.
-   Nie zapisuje flagi admina w localStorage postępu uczennicy.
+   Akademia Nowej Fali — tryb administratora / QA
+   Wejście: ?admin=1 lub przycisk w profilu — wymaga hasła.
+   Odblokowanie tylko w sessionStorage (nie w localStorage uczennicy).
+   W kodzie jest wyłącznie hash SHA-256 hasła, nigdy plaintext.
    ============================================================ */
 'use strict';
 
+/** SHA-256 (hex) hasła administratora — bez plaintextu w repo. */
+var ADMIN_PASS_HASH = 'ad9dba5898e0c1a3c96fa5bc8534a01890dbc1e159c865473ed6e8533b590846';
+var ADMIN_SESSION_KEY = 'anf_admin_unlock_v1';
+
 var adminActive = false;
 var panelCollapsed = false;
+var promptBusy = false;
 
-function initAdminFromUrl(){
-  var params = new URLSearchParams(window.location.search);
-  adminActive = params.get('admin') === '1';
+function wantsAdminFromUrl(){
+  try {
+    return new URLSearchParams(window.location.search).get('admin') === '1';
+  } catch (e){
+    return false;
+  }
 }
 
-/** Ponowne odczytanie ?admin=1 (np. po logowaniu bez pełnego reloadu ścieżki). */
+function isSessionUnlocked(){
+  try {
+    return sessionStorage.getItem(ADMIN_SESSION_KEY) === '1';
+  } catch (e){
+    return false;
+  }
+}
+
+function setSessionUnlocked(on){
+  try {
+    if (on) sessionStorage.setItem(ADMIN_SESSION_KEY, '1');
+    else sessionStorage.removeItem(ADMIN_SESSION_KEY);
+  } catch (e){ /* private mode / blocked storage */ }
+}
+
+function sha256Hex(text){
+  var enc = new TextEncoder();
+  return crypto.subtle.digest('SHA-256', enc.encode(String(text || ''))).then(function(buf){
+    var bytes = new Uint8Array(buf);
+    var hex = '';
+    for (var i = 0; i < bytes.length; i++){
+      hex += bytes[i].toString(16).padStart(2, '0');
+    }
+    return hex;
+  });
+}
+
+function initAdminFromUrl(){
+  adminActive = wantsAdminFromUrl() && isSessionUnlocked();
+}
+
+function activateAdminUi(){
+  adminActive = true;
+  document.documentElement.classList.add('is-admin');
+  renderAdminBar();
+}
+
+function deactivateAdminUi(){
+  adminActive = false;
+  document.documentElement.classList.remove('is-admin');
+  var bar = document.getElementById('adminBar');
+  if (bar && bar.parentNode) bar.parentNode.removeChild(bar);
+  var panel = document.getElementById('adminPanel');
+  if (panel && panel.parentNode) panel.parentNode.removeChild(panel);
+  var gate = document.getElementById('adminPassGate');
+  if (gate && gate.parentNode) gate.parentNode.removeChild(gate);
+}
+
+/** Ponowne odczytanie ?admin=1 + sesji (np. po logowaniu). */
 function syncAdminFromUrl(){
   var was = adminActive;
   initAdminFromUrl();
   if (adminActive){
-    document.documentElement.classList.add('is-admin');
-    renderAdminBar();
+    activateAdminUi();
   } else if (was && !adminActive){
-    document.documentElement.classList.remove('is-admin');
-    var bar = document.getElementById('adminBar');
-    if (bar && bar.parentNode) bar.parentNode.removeChild(bar);
+    deactivateAdminUi();
+  }
+  if (wantsAdminFromUrl() && !isSessionUnlocked() && !adminActive){
+    showAdminPasswordPrompt({ stripUrlOnCancel: true });
   }
   return adminActive;
 }
@@ -50,6 +107,130 @@ function renderAdminBar(){
   });
   document.getElementById('adminUsersBtn').addEventListener('click', function(){
     if (window.AppShell && window.AppShell.showAdminUsers) window.AppShell.showAdminUsers();
+  });
+}
+
+function hideAdminPasswordPrompt(){
+  var gate = document.getElementById('adminPassGate');
+  if (gate && gate.parentNode) gate.parentNode.removeChild(gate);
+  promptBusy = false;
+}
+
+function stripAdminFromUrl(){
+  try {
+    var url = new URL(window.location.href);
+    if (!url.searchParams.has('admin')) return;
+    url.searchParams.delete('admin');
+    var next = url.pathname + url.search + url.hash;
+    if (window.history && window.history.replaceState){
+      window.history.replaceState({}, '', next);
+    }
+  } catch (e){ /* ignore */ }
+}
+
+function setAdminInUrl(on){
+  try {
+    var url = new URL(window.location.href);
+    if (on) url.searchParams.set('admin', '1');
+    else url.searchParams.delete('admin');
+    var next = url.pathname + url.search + url.hash;
+    if (window.history && window.history.replaceState){
+      window.history.replaceState({}, '', next);
+    }
+  } catch (e){ /* ignore */ }
+}
+
+/**
+ * Modal hasła — tylko gdy ktoś celowo wchodzi w admin (?admin=1 / przycisk).
+ * opts.stripUrlOnCancel — po Anuluj usuń ?admin=1 z paska adresu
+ * opts.onSuccess — callback po poprawnym haśle
+ */
+function showAdminPasswordPrompt(opts){
+  opts = opts || {};
+  if (document.getElementById('adminPassGate')) return;
+  if (typeof crypto === 'undefined' || !crypto.subtle){
+    window.alert('Ta przeglądarka nie obsługuje bezpiecznego sprawdzania hasła administratora.');
+    if (opts.stripUrlOnCancel) stripAdminFromUrl();
+    return;
+  }
+
+  var gate = document.createElement('div');
+  gate.id = 'adminPassGate';
+  gate.className = 'admin-pass-gate';
+  gate.setAttribute('role', 'dialog');
+  gate.setAttribute('aria-modal', 'true');
+  gate.setAttribute('aria-labelledby', 'adminPassTitle');
+  gate.innerHTML =
+    '<form class="admin-pass-sheet" id="adminPassForm" autocomplete="off">' +
+      '<h2 id="adminPassTitle">Hasło administratora</h2>' +
+      '<p class="admin-pass-note">Dostęp tylko dla właścicielki Akademii.</p>' +
+      '<label class="admin-pass-label" for="adminPassInput">Hasło</label>' +
+      '<input id="adminPassInput" class="admin-pass-input" type="password" name="admin-pass" autocomplete="current-password" required>' +
+      '<p class="admin-pass-error" id="adminPassError" hidden></p>' +
+      '<div class="admin-pass-actions">' +
+        '<button type="button" class="btn btn-ghost" id="adminPassCancel">Anuluj</button>' +
+        '<button type="submit" class="btn btn-primary" id="adminPassSubmit">Odblokuj</button>' +
+      '</div>' +
+    '</form>';
+
+  adminBarHost().appendChild(gate);
+
+  var input = document.getElementById('adminPassInput');
+  var errEl = document.getElementById('adminPassError');
+  var form = document.getElementById('adminPassForm');
+
+  function cancel(){
+    hideAdminPasswordPrompt();
+    if (opts.stripUrlOnCancel) stripAdminFromUrl();
+  }
+
+  document.getElementById('adminPassCancel').addEventListener('click', cancel);
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if (promptBusy) return;
+    promptBusy = true;
+    errEl.hidden = true;
+    errEl.textContent = '';
+    var pass = input.value;
+    sha256Hex(pass).then(function(hash){
+      if (hash !== ADMIN_PASS_HASH){
+        promptBusy = false;
+        input.value = '';
+        errEl.textContent = 'Nieprawidłowe hasło.';
+        errEl.hidden = false;
+        input.focus();
+        return;
+      }
+      setSessionUnlocked(true);
+      setAdminInUrl(true);
+      hideAdminPasswordPrompt();
+      activateAdminUi();
+      if (typeof opts.onSuccess === 'function') opts.onSuccess();
+      if (window.AppShell && window.AppShell.refreshAdminChrome){
+        try { window.AppShell.refreshAdminChrome(); } catch (e){ /* ignore */ }
+      }
+    }).catch(function(){
+      promptBusy = false;
+      errEl.textContent = 'Nie udało się sprawdzić hasła. Spróbuj ponownie.';
+      errEl.hidden = false;
+    });
+  });
+
+  setTimeout(function(){ try { input.focus(); } catch (e){} }, 30);
+}
+
+function requestAdminUnlock(opts){
+  opts = opts || {};
+  if (isSessionUnlocked()){
+    setAdminInUrl(true);
+    activateAdminUi();
+    if (typeof opts.onSuccess === 'function') opts.onSuccess();
+    return;
+  }
+  showAdminPasswordPrompt({
+    stripUrlOnCancel: !!opts.stripUrlOnCancel,
+    onSuccess: opts.onSuccess
   });
 }
 
@@ -223,12 +404,18 @@ function onLessonViewChange(isLesson){
   if (panel) panel.hidden = !isLesson;
 }
 
-function reloadWithAdmin(on){
-  var url = new URL(window.location.href);
-  if (on) url.searchParams.set('admin', '1');
-  else url.searchParams.delete('admin');
-  // Keep other params (e.g. lesson) when useful
-  window.location.href = url.pathname + url.search + url.hash;
+function enableAdmin(){
+  requestAdminUnlock({ stripUrlOnCancel: false });
+}
+
+function disableAdmin(){
+  setSessionUnlocked(false);
+  hideAdminPasswordPrompt();
+  deactivateAdminUi();
+  stripAdminFromUrl();
+  if (window.AppShell && window.AppShell.refreshAdminChrome){
+    try { window.AppShell.refreshAdminChrome(); } catch (e){ /* ignore */ }
+  }
 }
 
 initAdminFromUrl();
@@ -239,13 +426,21 @@ if (adminActive){
   } else {
     renderAdminBar();
   }
+} else if (wantsAdminFromUrl()){
+  var bootPrompt = function(){ showAdminPasswordPrompt({ stripUrlOnCancel: true }); };
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', bootPrompt);
+  } else {
+    bootPrompt();
+  }
 }
 
 window.AdminMode = {
   isActive: function(){ return adminActive; },
+  isUnlocked: isSessionUnlocked,
   syncFromUrl: syncAdminFromUrl,
-  enable: function(){ reloadWithAdmin(true); },
-  disable: function(){ reloadWithAdmin(false); },
+  enable: enableAdmin,
+  disable: disableAdmin,
   refreshPanel: refreshAdminPanel,
   onLessonViewChange: onLessonViewChange,
   ensurePanel: ensureAdminPanel,

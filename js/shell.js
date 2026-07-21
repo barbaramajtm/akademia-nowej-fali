@@ -1023,7 +1023,7 @@ function hideAuthGate(){
 
 function afterAuthSuccess(){
   hideAuthGate();
-  /* Auth nie może wyłączyć admina — ?admin=1 nadal obowiązuje po logowaniu. */
+  /* Auth nie wyłącza admina — odblokowana sesja admina nadal obowiązuje po logowaniu. */
   if (window.AdminMode && window.AdminMode.syncFromUrl){
     window.AdminMode.syncFromUrl();
   }
@@ -1272,8 +1272,12 @@ function bindChrome(){
   if (adminToggle){
     adminToggle.addEventListener('click', function(){
       if (!window.AdminMode) return;
-      if (window.AdminMode.isActive()) window.AdminMode.disable();
-      else window.AdminMode.enable();
+      if (window.AdminMode.isActive()){
+        window.AdminMode.disable();
+        syncProfileAdminUi();
+      } else {
+        window.AdminMode.enable();
+      }
     });
   }
   var adminUsersBtn = document.getElementById('profileAdminUsers');
@@ -1449,6 +1453,10 @@ window.AppShell = {
   showAdminUsers: function(){
     if (!(window.AdminMode && window.AdminMode.isActive())) return;
     renderAdminUsersList();
+  },
+
+  refreshAdminChrome: function(){
+    syncProfileAdminUi();
   },
 
   showAuth: function(){
