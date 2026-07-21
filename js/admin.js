@@ -53,8 +53,6 @@ function ensureAdminPanel(){
       '</button>' +
       '<div class="admin-panel-body" id="adminPanelBody">' +
         '<p class="admin-sandbox-note">Przeglądanie w piaskownicy — bez Kosmyków, streaku i odblokowań.</p>' +
-        '<dl class="admin-meta" id="adminMeta"></dl>' +
-        '<div class="admin-image-block" id="adminImageBlock" hidden></div>' +
         '<div class="admin-actions">' +
           '<button type="button" class="admin-btn" id="adminPrevStep">← Poprzedni krok</button>' +
           '<button type="button" class="admin-btn" id="adminNextStep">Następny krok →</button>' +
@@ -65,6 +63,8 @@ function ensureAdminPanel(){
           '<button type="button" class="admin-btn" id="adminPrevLesson">← Poprzednia lekcja</button>' +
           '<button type="button" class="admin-btn" id="adminNextLesson">Następna lekcja →</button>' +
         '</div>' +
+        '<dl class="admin-meta" id="adminMeta"></dl>' +
+        '<div class="admin-image-block" id="adminImageBlock" hidden></div>' +
       '</div>';
     host.appendChild(panel);
 
@@ -167,13 +167,16 @@ function refreshAdminPanel(ctx){
 
   renderImageBlock(ctx.image);
 
-  var skipBtn = document.getElementById('adminSkipTask');
-  if (skipBtn) skipBtn.disabled = ctx.screenKind !== 'task';
-
   var prevStep = document.getElementById('adminPrevStep');
   var nextStep = document.getElementById('adminNextStep');
   if (prevStep) prevStep.disabled = !ctx.canPrevStep;
   if (nextStep) nextStep.disabled = !ctx.canNextStep;
+
+  /* Pomiń: na zadaniu omija pytanie; na intro/guide działa jak „następny krok”. */
+  var skipBtn = document.getElementById('adminSkipTask');
+  if (skipBtn){
+    skipBtn.disabled = ctx.screenKind === 'done' || ctx.screenKind === 'error' || !ctx.canNextStep;
+  }
 
   var prevLes = document.getElementById('adminPrevLesson');
   var nextLes = document.getElementById('adminNextLesson');

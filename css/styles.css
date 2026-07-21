@@ -4,7 +4,8 @@
 @import url('animations.css');
 
 :root{
-  --color-background:#F7F0E6;
+  /* przytłumiony brudny musztardowy — matowe tło aplikacji */
+  --color-background:#C5B07A;
   --color-surface:#FFFBF5;
   --color-navy:#1A2744;
   --color-rose:#D97B94;
@@ -716,10 +717,10 @@ body{font-family:'Inter',sans-serif;background:#E8DFD2;color:var(--ink);min-heig
 .admin-bar-off:hover{background:rgba(255,255,255,.12);}
 
 .admin-panel{
-  position:absolute;left:8px;right:8px;bottom:max(8px,env(safe-area-inset-bottom,0px));z-index:55;
+  position:absolute;left:8px;right:8px;bottom:max(8px,env(safe-area-inset-bottom,0px));z-index:70;
   background:rgba(255,253,249,.97);border:1.5px solid var(--line);border-radius:14px;
   box-shadow:0 -4px 28px -10px rgba(30,42,68,.28);
-  backdrop-filter:blur(6px);max-height:min(42vh,300px);display:flex;flex-direction:column;
+  backdrop-filter:blur(6px);max-height:min(48vh,340px);display:flex;flex-direction:column;
 }
 .admin-panel[hidden]{display:none!important;}
 .admin-panel.is-collapsed{max-height:none;}
@@ -750,13 +751,14 @@ body{font-family:'Inter',sans-serif;background:#E8DFD2;color:var(--ink);min-heig
 .admin-img-status--loading,.admin-img-status--pending{color:var(--muted);}
 .admin-img-path code{font-size:10px;word-break:break-all;color:var(--ink-muted);}
 .admin-img-alt,.admin-img-dim{color:var(--muted);margin-top:3px;}
-.admin-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.admin-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px;}
 .admin-btn{
   border:1.5px solid var(--line);background:var(--card);color:var(--navy);
   font-family:'Inter';font-weight:600;font-size:11px;padding:10px 6px;border-radius:10px;cursor:pointer;min-height:40px;
 }
 .admin-btn:disabled{opacity:.45;cursor:default;}
 .admin-btn--accent{grid-column:1 / -1;background:var(--navy);color:#fff;border-color:var(--navy);}
+.admin-btn--accent:disabled{background:var(--navy);color:#fff;}
 .is-admin .view-shell .view-scroll{padding-top:42px;}
 .is-admin .view-lesson .topbar{padding-top:max(52px, calc(36px + env(safe-area-inset-top,0px)));}
 .is-admin .stage{padding-bottom:56px;}

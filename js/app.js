@@ -15,8 +15,10 @@ const CONFIG = {
     continueLabel: 'Kontynuuj naukę',
     galleryLabel: 'Zobacz gablotkę',
     nextLabel: 'Dalej',
-    errorTitle: 'Ups, coś poszło nie tak',
-    errorBody: 'Nie udało się wczytać lekcji. Spróbuj odświeżyć stronę lub wróć później.',
+    errorTitle: 'Nie udało się otworzyć lekcji.',
+    errorBody: 'Coś przerwało wczytywanie tej lekcji. Możesz spróbować ponownie albo wrócić do Akademii.',
+    retryLabel: 'Spróbuj ponownie',
+    backHomeLabel: 'Wróć do Akademii',
     lessonUnavailable: 'Ta lekcja nie jest już dostępna w głównej ścieżce.',
     lessonTasksPending: 'Zadania lekcji są w przygotowaniu.'
   }
@@ -30,10 +32,15 @@ const state = {
   kosmyki: CONFIG.startKosmyki,
   earnedKosmyki: 0,
   isRepeat: false,
+  isAdminSandbox: false,
   correctStreak: 0,
   mistakes: 0,
   bonusGiven: false,
-  answers: []
+  answers: [],
+  /* punktacja: pierwsze podejście do zadania */
+  taskHadMistake: false,
+  scoredCorrect: 0,
+  pendingCheckBtn: null
 };
 
 function getGlobalKosmyki(){
@@ -46,6 +53,28 @@ function getGlobalKosmyki(){
 function isLessonAlreadyCompleted(lessonId){
   if (!window.AppState || !window.AppState.get) return false;
   return !!window.AppState.get().completedLessons[lessonId];
+}
+
+/* Typy zadań punktowanych — intro/guide nie wchodzą do wyniku */
+var SCORED_TASK_TYPES = {
+  singleChoice: true,
+  trueFalse: true,
+  findError: true,
+  matching: true,
+  ordering: true
+};
+
+function isScoredTask(task){
+  return !!(task && SCORED_TASK_TYPES[task.type]);
+}
+
+function countScoredTasks(lesson){
+  if (!lesson || !Array.isArray(lesson.tasks)) return 0;
+  var n = 0;
+  for (var i = 0; i < lesson.tasks.length; i++){
+    if (isScoredTask(lesson.tasks[i])) n++;
+  }
+  return n;
 }
 
 /* ---------- ikony ----------
@@ -219,30 +248,313 @@ async function loadLesson(id){
 }
 
 /* ---------- ekran błędu ---------- */
-function showFatal(technicalDetail){
+let lastErrorLessonId = null;
+let mountActivationTimer = null;
+let adminScreenKind = 'intro';
+let adminTaskIndex = -1;
+let adminImageInfo = null;
+
+function isAdminMode(){
+  return !!(window.AdminMode && window.AdminMode.isActive());
+}
+
+function buildAdminFlow(){
+  const flow = ['intro'];
+  const L = state.lesson;
+  if (!L) return flow;
+  const intro = L.intro || {};
+  if (intro.scaleGuide) flow.push('scaleGuide');
+  if (intro.hairGuide) flow.push('hairGuide');
+  for (let i = 0; i < (L.tasks || []).length; i++) flow.push('task:' + i);
+  flow.push('done');
+  return flow;
+}
+
+function getAdminFlowIndex(){
+  const flow = buildAdminFlow();
+  if (adminScreenKind === 'intro') return flow.indexOf('intro');
+  if (adminScreenKind === 'scaleGuide') return flow.indexOf('scaleGuide');
+  if (adminScreenKind === 'hairGuide') return flow.indexOf('hairGuide');
+  if (adminScreenKind === 'task') return flow.indexOf('task:' + adminTaskIndex);
+  if (adminScreenKind === 'done') return flow.indexOf('done');
+  return 0;
+}
+
+function getHairGuideImageMeta(){
+  const hg = state.lesson && state.lesson.intro && state.lesson.intro.hairGuide;
+  if (!hg || !hg.imageSrc) return null;
+  const resolved = resolveAppPath(hg.imageSrc);
+  return {
+    src: hg.imageSrc,
+    resolvedSrc: resolved,
+    alt: hg.imageAlt || '',
+    status: adminImageInfo && adminImageInfo.src === hg.imageSrc ? adminImageInfo.status : 'pending',
+    naturalWidth: adminImageInfo && adminImageInfo.src === hg.imageSrc ? adminImageInfo.naturalWidth : null,
+    naturalHeight: adminImageInfo && adminImageInfo.src === hg.imageSrc ? adminImageInfo.naturalHeight : null
+  };
+}
+
+function notifyAdminContext(){
+  if (!isAdminMode() || !window.AdminMode || !window.AdminMode.refreshPanel) return;
+  if (!state.lesson){
+    window.AdminMode.refreshPanel({ loading: true, lessonId: state.lessonId || '—' });
+    return;
+  }
+
+  const flow = buildAdminFlow();
+  const flowIdx = getAdminFlowIndex();
+  const catalog = window.LessonsCatalog || [];
+  let catIdx = -1;
+  for (let i = 0; i < catalog.length; i++){
+    if (catalog[i].id === state.lessonId){ catIdx = i; break; }
+  }
+
+  let stepLabel = '';
+  let taskType = '';
+  const taskCount = (state.lesson.tasks || []).length;
+  if (adminScreenKind === 'intro') stepLabel = 'Intro';
+  else if (adminScreenKind === 'scaleGuide') stepLabel = 'Część edukacyjna (skala)';
+  else if (adminScreenKind === 'hairGuide') stepLabel = 'Część edukacyjna (grafika)';
+  else if (adminScreenKind === 'task') {
+    stepLabel = 'Zadanie ' + (adminTaskIndex + 1) + ' / ' + taskCount;
+    const task = state.lesson.tasks[adminTaskIndex];
+    taskType = task ? task.type : '';
+  } else if (adminScreenKind === 'done') stepLabel = 'Zakończenie';
+  else if (adminScreenKind === 'error') stepLabel = 'Błąd';
+
+  /* Blok grafiki tylko na kroku hairGuide — inaczej wypycha przyciski QA poza viewport. */
+  const image = adminScreenKind === 'hairGuide' ? getHairGuideImageMeta() : null;
+
+  window.AdminMode.refreshPanel({
+    lessonId: state.lessonId,
+    stepLabel: stepLabel,
+    screenKind: adminScreenKind,
+    taskType: taskType,
+    image: image,
+    canPrevStep: flowIdx > 0,
+    canNextStep: flowIdx >= 0 && flowIdx < flow.length - 1,
+    canPrevLesson: catIdx > 0,
+    canNextLesson: catIdx >= 0 && catIdx < catalog.length - 1
+  });
+}
+
+function setAdminScreen(kind, taskIndex){
+  adminScreenKind = kind;
+  adminTaskIndex = typeof taskIndex === 'number' ? taskIndex : -1;
+  notifyAdminContext();
+}
+
+function bindHairGuideImage(img, hg){
+  if (!hg || !hg.imageSrc) return;
+  adminImageInfo = {
+    src: hg.imageSrc,
+    status: 'loading',
+    naturalWidth: null,
+    naturalHeight: null
+  };
+  function syncLoaded(){
+    if (img.naturalWidth){
+      adminImageInfo.naturalWidth = img.naturalWidth;
+      adminImageInfo.naturalHeight = img.naturalHeight;
+    }
+    adminImageInfo.status = 'loaded';
+    notifyAdminContext();
+  }
+  img.addEventListener('load', syncLoaded);
+  img.addEventListener('error', function(){
+    adminImageInfo.status = 'missing';
+    notifyAdminContext();
+  });
+  if (img.complete){
+    if (img.naturalWidth) syncLoaded();
+    else adminImageInfo.status = 'missing';
+  }
+}
+
+function renderAdminStep(targetIndex){
+  if (!state.lesson) return false;
+  const flow = buildAdminFlow();
+  if (targetIndex < 0 || targetIndex >= flow.length) return false;
+  dom.fb.classList.remove('show');
+  const target = flow[targetIndex];
+  if (target === 'intro'){ setAdminScreen('intro', -1); renderIntro(); return true; }
+  if (target === 'scaleGuide'){ setAdminScreen('scaleGuide', -1); renderScaleGuide(); return true; }
+  if (target === 'hairGuide'){ setAdminScreen('hairGuide', -1); renderHairGuide(); return true; }
+  if (target === 'done'){ setAdminScreen('done', -1); showDone(); return true; }
+  if (target.indexOf('task:') === 0){
+    const ti = Number(target.split(':')[1]);
+    setAdminScreen('task', ti);
+    showTask(ti);
+    return true;
+  }
+  return false;
+}
+
+function adminNavigateFlow(delta){
+  if (!state.lesson) return;
+  const flow = buildAdminFlow();
+  let idx = getAdminFlowIndex();
+  if (idx < 0) idx = 0;
+  renderAdminStep(idx + delta);
+}
+
+function adminSkipTask(){
+  if (!state.lesson) return;
+  if (adminScreenKind === 'done' || adminScreenKind === 'error') return;
+  /* Poza zadaniem: to samo co „Następny krok” — szybki przegląd bez odpowiedzi. */
+  if (adminScreenKind !== 'task'){
+    adminNavigateFlow(1);
+    return;
+  }
+  dom.fb.classList.remove('show');
+  /* pominięcie = niezaliczone pierwsze podejście (tylko w sesji QA, bez zapisu) */
+  state.taskHadMistake = true;
+  state.mistakes++;
+  state.answers.push({ taskId: state.lesson.tasks[adminTaskIndex].id, correct: false, skipped: true });
+  const next = adminTaskIndex + 1;
+  if (next >= state.lesson.tasks.length){
+    setAdminScreen('done', -1);
+    showDone();
+  } else {
+    setAdminScreen('task', next);
+    showTask(next);
+  }
+}
+
+function adminGoDone(){
+  if (!state.lesson) return;
+  dom.fb.classList.remove('show');
+  setAdminScreen('done', -1);
+  showDone();
+}
+
+function adminRestartLesson(){
+  if (!state.lessonId) return;
+  dom.fb.classList.remove('show');
+  if (window.LessonEngine && window.LessonEngine.start){
+    window.LessonEngine.start(state.lessonId);
+  }
+}
+
+function adminBackToList(){
+  dom.fb.classList.remove('show');
+  if (window.LessonEngine && window.LessonEngine.abort) window.LessonEngine.abort();
+  if (window.AppShell && window.AppShell.goHome) window.AppShell.goHome();
+}
+
+function adminChangeLesson(delta){
+  const catalog = window.LessonsCatalog || [];
+  let idx = -1;
+  for (let i = 0; i < catalog.length; i++){
+    if (catalog[i].id === state.lessonId){ idx = i; break; }
+  }
+  const next = idx + delta;
+  if (next < 0 || next >= catalog.length) return;
+  if (window.AppShell && window.AppShell.startLesson){
+    window.AppShell.startLesson(catalog[next].id);
+  }
+}
+
+function clearStage(){
+  if (mountActivationTimer){
+    clearTimeout(mountActivationTimer);
+    mountActivationTimer = null;
+  }
+  dom.stage.textContent = '';
+  activeStep = null;
+}
+
+function showLessonError(technicalDetail, lessonId){
   console.error('[Akademia Nowej Fali] ' + technicalDetail);
+  lastErrorLessonId = lessonId || state.lessonId || null;
   dom.progress.textContent = '';
+  dom.fb.classList.remove('show');
+  clearStage();
+
   const step = el('div', 'step fatal active');
   step.appendChild(el('div', 'fico', '!'));
-  step.appendChild(el('h1', null, CONFIG.ui.errorTitle));
+  const title = isAdminMode() ? 'Nie udało się otworzyć podglądu lekcji.' : CONFIG.ui.errorTitle;
+  step.appendChild(el('h1', null, title));
   step.appendChild(el('p', null, CONFIG.ui.errorBody));
-  dom.stage.textContent = '';
+
+  if (isAdminMode()){
+    const adminInfo = el('div', 'admin-error-meta');
+    adminInfo.appendChild(el('p', null, 'ID lekcji: ' + (lastErrorLessonId || '—')));
+    adminInfo.appendChild(el('p', null, 'Krok: ' + (adminScreenKind || '—')));
+    if (adminScreenKind === 'task' && adminTaskIndex >= 0){
+      const task = state.lesson && state.lesson.tasks ? state.lesson.tasks[adminTaskIndex] : null;
+      adminInfo.appendChild(el('p', null, 'Typ kroku: ' + (task ? task.type : 'task')));
+    } else {
+      adminInfo.appendChild(el('p', null, 'Typ kroku: ' + (adminScreenKind || '—')));
+    }
+    adminInfo.appendChild(el('p', null, 'Błąd: ' + technicalDetail));
+    step.appendChild(adminInfo);
+  }
+
+  const actions = el('div', 'fatal-actions');
+  const retryBtn = primaryButton(CONFIG.ui.retryLabel);
+  retryBtn.addEventListener('click', function(){
+    if (lastErrorLessonId) startLessonEngine(lastErrorLessonId);
+  });
+  const homeBtn = el('button', 'btn btn-ghost', isAdminMode() ? 'Wróć do listy lekcji' : CONFIG.ui.backHomeLabel);
+  homeBtn.type = 'button';
+  homeBtn.addEventListener('click', function(){
+    if (window.AppShell) window.AppShell.goHome();
+  });
+  actions.appendChild(retryBtn);
+  actions.appendChild(homeBtn);
+  step.appendChild(actions);
   dom.stage.appendChild(step);
+  activeStep = step;
+
+  if (isAdminMode() && window.AdminMode && window.AdminMode.refreshPanel){
+    window.AdminMode.refreshPanel({
+      lessonId: lastErrorLessonId,
+      stepLabel: 'Błąd',
+      screenKind: 'error',
+      taskType: '—',
+      image: null,
+      canPrevStep: false,
+      canNextStep: false,
+      canPrevLesson: false,
+      canNextLesson: false
+    });
+  }
+}
+
+function showFatal(technicalDetail){
+  showLessonError(technicalDetail, state.lessonId);
 }
 
 /* ---------- nawigacja między krokami ---------- */
 let activeStep = null;
 function mountStep(stepEl){
+  if (mountActivationTimer){
+    clearTimeout(mountActivationTimer);
+    mountActivationTimer = null;
+  }
   const prev = activeStep;
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const instant = prefersReduced || isAdminMode();
   if (prev){
-    prev.classList.add('exit');
-    prev.classList.remove('active');
-    setTimeout(() => prev.remove(), 340);
+    if (instant){
+      if (prev.parentNode) prev.remove();
+    } else {
+      prev.classList.add('exit');
+      prev.classList.remove('active');
+      setTimeout(() => { if (prev.parentNode) prev.remove(); }, 340);
+    }
   }
   dom.stage.appendChild(stepEl);
-  /* wymuszenie reflow, żeby animacja wejścia zadziałała */
   void stepEl.offsetWidth;
-  setTimeout(() => stepEl.classList.add('active'), 20);
+  if (instant){
+    stepEl.classList.add('active');
+  } else {
+    mountActivationTimer = setTimeout(function(){
+      stepEl.classList.add('active');
+      mountActivationTimer = null;
+    }, 16);
+  }
   activeStep = stepEl;
 }
 
@@ -367,6 +679,7 @@ function renderScaleGuide(){
   btn.addEventListener('click', continueAfterScaleGuide);
   step.appendChild(btn);
   mountStep(step);
+  setAdminScreen('scaleGuide', -1);
 }
 
 function continueAfterScaleGuide(){
@@ -396,6 +709,8 @@ function renderHairGuide(){
   img.src = resolveAppPath(hg.imageSrc);
   img.alt = hg.imageAlt || '';
   img.loading = 'lazy';
+  img.decoding = 'async';
+  bindHairGuideImage(img, hg);
   figure.appendChild(img);
   if (hg.imageCaption) figure.appendChild(el('figcaption', 'hair-guide-caption', hg.imageCaption));
   step.appendChild(figure);
@@ -407,6 +722,7 @@ function renderHairGuide(){
   btn.addEventListener('click', function(){ showTask(0); });
   step.appendChild(btn);
   mountStep(step);
+  setAdminScreen('hairGuide', -1);
 }
 
 function renderIntro(){
@@ -434,6 +750,7 @@ function renderIntro(){
   });
   step.appendChild(btn);
   mountStep(step);
+  setAdminScreen('intro', -1);
 }
 
 /* ---------- renderery zadań ----------
@@ -460,6 +777,7 @@ function renderSingleChoice(task, ctx){
   });
   return {
     el: box,
+    resetSelection(){ selected = null; },
     check(){
       const ok = selected === task.correctOptionId;
       buttons.forEach(b => {
@@ -495,6 +813,7 @@ function renderTrueFalse(task, ctx){
   });
   return {
     el: box,
+    resetSelection(){ selected = null; },
     check(){
       const ok = selected === task.correctValue;
       buttons.forEach(b => {
@@ -583,7 +902,11 @@ function renderMatching(task, ctx){
   }
   grid.appendChild(makeCol(task.leftTitle, task.left, true));
   grid.appendChild(makeCol(task.rightTitle, task.right, false));
-  return { el: grid, check(){ return true; } };
+  return {
+    el: grid,
+    /* Ukończenie puzzle ≠ pełny punkt: błędy z countMistake obniżają firstTryOk */
+    check(){ return matched === total; }
+  };
 }
 
 function renderOrdering(task, ctx){
@@ -623,7 +946,11 @@ function renderOrdering(task, ctx){
   wrap.appendChild(list); wrap.appendChild(reset);
   return {
     el: wrap,
-    check(){ rows.forEach(r => r.classList.add('good')); return true; }
+    check(){
+      const ok = nextPos === task.correctOrder.length;
+      if (ok) rows.forEach(r => r.classList.add('good'));
+      return ok;
+    }
   };
 }
 
@@ -637,47 +964,104 @@ const RENDERERS = {
 
 /* ---------- ekran zadania ---------- */
 let currentTaskApi = null;
-function showTask(index){
-  const L = state.lesson;
-  state.currentTaskIndex = index;
-  const task = L.tasks[index];
 
-  const step = el('div', 'step');
-  step.appendChild(el('div', 'kicker', task.kicker));
-  if (task.clientIntro) step.appendChild(clientBubble(task.clientIntro));
-  const q = el('div', 'qtext' + (task.clientIntro ? ' compact' : ''));
-  renderRich(q, task.question);
-  step.appendChild(q);
-
-  const checkBtn = primaryButton(task.checkButtonLabel);
-  checkBtn.disabled = true;
-  const ctx = {
-    setReady(v){ checkBtn.disabled = !v; },
-    countMistake(){ state.mistakes++; }
-  };
-
-  const renderer = RENDERERS[task.type];
-  currentTaskApi = renderer(task, ctx);
-  step.appendChild(currentTaskApi.el);
-  step.appendChild(el('div', 'spacer'));
-  checkBtn.addEventListener('click', () => {
-    const ok = currentTaskApi.check();
-    if (!ok) state.mistakes++;
-    state.answers.push({ taskId: task.id, correct: ok });
-    openFeedback(task, ok);
+function unlockTaskForRetry(){
+  const step = dom.stage && dom.stage.querySelector('.step.active');
+  if (!step) return;
+  step.querySelectorAll('.opt').forEach(function(b){
+    b.classList.remove('locked', 'sel', 'good', 'bad');
   });
-  step.appendChild(checkBtn);
-  mountStep(step);
+  step.querySelectorAll('.row').forEach(function(r){
+    r.classList.remove('locked', 'sel', 'good', 'miss');
+  });
+  if (state.pendingCheckBtn){
+    state.pendingCheckBtn.disabled = true;
+  }
+  if (currentTaskApi && typeof currentTaskApi.resetSelection === 'function'){
+    currentTaskApi.resetSelection();
+  }
+}
+
+function showTask(index){
+  try {
+    const L = state.lesson;
+    if (!L || !Array.isArray(L.tasks)){
+      showLessonError('Brak listy zadań w lekcji.', state.lessonId);
+      return;
+    }
+    state.currentTaskIndex = index;
+    state.taskHadMistake = false;
+    const task = L.tasks[index];
+    if (!task){
+      showLessonError('Zadanie #' + (index + 1) + ' nie istnieje w lekcji.', state.lessonId);
+      return;
+    }
+
+    const step = el('div', 'step');
+    if (task.kicker) step.appendChild(el('div', 'kicker', task.kicker));
+    if (task.clientIntro) step.appendChild(clientBubble(task.clientIntro));
+    const q = el('div', 'qtext' + (task.clientIntro ? ' compact' : ''));
+    renderRich(q, task.question);
+    step.appendChild(q);
+
+    const checkBtn = primaryButton(task.checkButtonLabel || 'Sprawdź');
+    checkBtn.disabled = true;
+    state.pendingCheckBtn = checkBtn;
+    const ctx = {
+      setReady(v){ checkBtn.disabled = !v; },
+      countMistake(){ state.mistakes++; state.taskHadMistake = true; }
+    };
+
+    const renderer = RENDERERS[task.type];
+    if (!renderer){
+      showLessonError('Nieobsługiwany typ zadania: "' + task.type + '".', state.lessonId);
+      return;
+    }
+    currentTaskApi = renderer(task, ctx);
+    if (!currentTaskApi || !currentTaskApi.el){
+      showLessonError('Renderer zadania nie zwrócił widoku.', state.lessonId);
+      return;
+    }
+    step.appendChild(currentTaskApi.el);
+    step.appendChild(el('div', 'spacer'));
+    checkBtn.addEventListener('click', () => {
+      const ok = currentTaskApi.check();
+      if (!ok){
+        state.mistakes++;
+        state.taskHadMistake = true;
+        openFeedback(task, false, false);
+        return;
+      }
+      /* ok: punkt tylko za poprawną odpowiedź za pierwszym razem */
+      const firstTryOk = !state.taskHadMistake;
+      if (isScoredTask(task)){
+        if (firstTryOk) state.scoredCorrect++;
+        else state.correctStreak = 0;
+        state.answers.push({ taskId: task.id, correct: firstTryOk });
+      }
+      openFeedback(task, true, firstTryOk);
+    });
+    step.appendChild(checkBtn);
+    mountStep(step);
+    setAdminScreen('task', index);
+  } catch (e){
+    showLessonError(e.message || String(e), state.lessonId);
+  }
 }
 
 /* ---------- feedback ---------- */
-function openFeedback(task, ok){
+function openFeedback(task, ok, firstTryOk){
   const f = task.feedback;
   const bonusCfg = state.lesson.rewards && state.lesson.rewards.streakBonus;
+  const awardEligible = !!(ok && firstTryOk);
 
   dom.fb.classList.remove('ok', 'no');
   dom.fb.classList.add(ok ? 'ok' : 'no');
-  dom.ftitle.textContent = ok ? f.correctTitle : (f.incorrectTitle || CONFIG.ui.incorrectFallbackTitle);
+  if (ok && !firstTryOk){
+    dom.ftitle.textContent = f.correctTitle || 'Dobrze — idziemy dalej';
+  } else {
+    dom.ftitle.textContent = ok ? f.correctTitle : (f.incorrectTitle || CONFIG.ui.incorrectFallbackTitle);
+  }
   dom.fic.textContent = '';
   dom.fic.appendChild(iconEl(ok ? 'check' : 'info'));
 
@@ -686,12 +1070,14 @@ function openFeedback(task, ok){
 
   renderRich(dom.fwhy, f.explanation);
 
-  dom.fkchip.hidden = !ok;
+  dom.fkchip.hidden = !awardEligible;
   dom.fkval.textContent = '+' + task.reward;
 
-  if (ok) state.correctStreak++; else state.correctStreak = 0;
+  if (awardEligible) state.correctStreak++;
+  else if (!ok) state.correctStreak = 0;
+
   let bonusNow = false;
-  if (ok && bonusCfg && !state.bonusGiven && state.correctStreak === bonusCfg.threshold){
+  if (awardEligible && bonusCfg && !state.bonusGiven && state.correctStreak === bonusCfg.threshold){
     bonusNow = true; state.bonusGiven = true;
     dom.fbonus.textContent = '';
     dom.fbonus.appendChild(document.createTextNode('✦ ' + bonusCfg.label + ' '));
@@ -699,34 +1085,55 @@ function openFeedback(task, ok){
   }
   dom.fbonus.hidden = !bonusNow;
 
-  const hasAha = ok && f.funFact && f.funFact.text;
+  const hasAha = awardEligible && f.funFact && f.funFact.text;
   dom.faha.hidden = !hasAha;
   if (hasAha) dom.fahab.textContent = richToPlain(f.funFact.text);
 
   dom.fb.dataset.ok = ok ? '1' : '0';
+  dom.fb.dataset.firstTry = awardEligible ? '1' : '0';
   dom.fb.dataset.bonus = bonusNow ? '1' : '0';
-  dom.fb.dataset.reward = String(task.reward);
+  dom.fb.dataset.reward = String(task.reward || 0);
+  dom.fnext.textContent = ok ? CONFIG.ui.nextLabel : 'Spróbuj ponownie';
+  if (isAdminMode() && document.getElementById('adminPanel')){
+    document.getElementById('adminPanel').classList.add('is-collapsed');
+  }
   dom.fb.classList.add('show');
 }
 
 function advance(){
+  /* błędna odpowiedź: pozwól poprawić, bez kasowania błędu */
+  if (dom.fb.dataset.ok === '0'){
+    dom.fb.classList.remove('show');
+    unlockTaskForRetry();
+    return;
+  }
+
   dom.fb.classList.remove('show');
-  const bonusCfg = state.lesson.rewards && state.lesson.rewards.streakBonus;
-  if (dom.fb.dataset.ok === '1'){
+  const bonusCfg = state.lesson && state.lesson.rewards && state.lesson.rewards.streakBonus;
+  if (dom.fb.dataset.firstTry === '1'){
     const n = Number(dom.fb.dataset.reward) + (dom.fb.dataset.bonus === '1' && bonusCfg ? bonusCfg.amount : 0);
-    awardKosmyki(n);
+    if (n > 0) awardKosmyki(n);
   }
   const seg = dom.progress.children[state.currentTaskIndex];
   if (seg) seg.firstElementChild.style.width = '100%';
 
   const nextIndex = state.currentTaskIndex + 1;
   setTimeout(() => {
-    if (nextIndex >= state.lesson.tasks.length) showDone();
-    else showTask(nextIndex);
+    try {
+      if (!state.lesson || !state.lesson.tasks){
+        showLessonError('Lekcja nie jest wczytana.', state.lessonId);
+        return;
+      }
+      if (nextIndex >= state.lesson.tasks.length) showDone();
+      else showTask(nextIndex);
+    } catch (e){
+      showLessonError(e.message || String(e), state.lessonId);
+    }
   }, 300);
 }
 
 function awardKosmyki(n){
+  if (state.isAdminSandbox) return;
   state.earnedKosmyki += n;
   if (!state.isRepeat){
     state.kosmyki += n;
@@ -736,7 +1143,8 @@ function awardKosmyki(n){
   void dom.floatK.offsetWidth;
   dom.floatK.classList.add('go');
   if (window.UIEffects && window.UIEffects.kosmykBurst){
-    window.UIEffects.kosmykBurst(dom.kwrap, n);
+    var origin = dom.fkchip && !dom.fkchip.hidden ? dom.fkchip : dom.kwrap;
+    window.UIEffects.kosmykBurst(origin);
   }
   setTimeout(() => {
     dom.kNum.textContent = String(state.kosmyki);
@@ -747,22 +1155,31 @@ function awardKosmyki(n){
 
 /* ---------- ekran końcowy ---------- */
 function showDone(){
+  try {
   const L = state.lesson;
-  const C = L.completion;
+  const C = L.completion || {};
   const perfectCfg = L.rewards && L.rewards.perfectBonus;
-  const perfect = state.mistakes === 0 && perfectCfg;
+  const scoredTotal = countScoredTasks(L);
+  const scoredCorrect = state.scoredCorrect || 0;
+  const scorePct = scoredTotal ? Math.round((scoredCorrect / scoredTotal) * 100) : 0;
+  const lessonPerfect = scoredTotal > 0 && scoredCorrect === scoredTotal && state.mistakes === 0;
+  const perfect = lessonPerfect
+    && scorePct === 100
+    && !!perfectCfg
+    && !state.isAdminSandbox
+    && !state.isRepeat;
   if (perfect){
     state.earnedKosmyki += perfectCfg.amount;
     if (!state.isRepeat){
       state.kosmyki += perfectCfg.amount;
-      dom.kNum.textContent = String(state.kosmyki);
+      if (dom.kNum) dom.kNum.textContent = String(state.kosmyki);
     }
   }
 
-  const step = el('div', 'step done-step');
+  const step = el('div', 'step done-step editorial-grain');
 
   const r1 = el('div', 'reveal');
-  r1.appendChild(el('div', 'solved', C.solvedLabel));
+  r1.appendChild(el('div', 'solved', C.solvedLabel || 'Lekcja ukończona'));
   const hasClientStory = !!(L.intro && L.intro.clientQuote);
   if (hasClientStory){
     const face = el('div', 'done-face'); face.appendChild(iconEl('faceHappy'));
@@ -771,15 +1188,22 @@ function showDone(){
   if (C.title) r1.appendChild(el('h1', null, C.title));
   if (C.subtitle) r1.appendChild(el('div', 'sub', C.subtitle));
 
+  if (scoredTotal > 0){
+    const scoreBox = el('div', 'score-summary');
+    scoreBox.appendChild(el('div', 'score-line', 'Wynik: ' + scoredCorrect + '/' + scoredTotal));
+    scoreBox.appendChild(el('div', 'score-line score-line--pct', 'Poprawność: ' + scorePct + '%'));
+    r1.appendChild(scoreBox);
+  }
+
   const r2 = el('div', 'reveal ktotal');
   const kv = el('div', 'kv');
   kv.appendChild(iconEl('kosmykBig'));
   const kvNum = el('span', null, '+0');
   kv.appendChild(kvNum);
   r2.appendChild(kv);
-  const kosLabel = state.isRepeat
-    ? 'Zdobyte w tej powt\u00f3rce'
-    : C.kosmykiLabel;
+  const kosLabel = state.isAdminSandbox
+    ? 'Tryb administratora — bez nagród'
+    : (state.isRepeat ? 'Zdobyte w tej powt\u00f3rce' : (C.kosmykiLabel || 'Kosmyków za tę lekcję'));
   r2.appendChild(el('div', 'kl', kosLabel));
   const perfectEl = el('div', 'perfect', perfect ? ('\u2726 ' + perfectCfg.label + ' +' + perfectCfg.amount) : '');
   r2.appendChild(perfectEl);
@@ -788,8 +1212,9 @@ function showDone(){
   const col = C.collection;
   const collectionFull = col && col.earnedBefore >= col.total;
   const collectionId = col && col.id;
-  const badgeAlready = col && C.badge && collectionId && window.AppState && window.AppState.isCollectionBadgeEarned
-    && window.AppState.isCollectionBadgeEarned(collectionId, C.badge.name);
+  const badgeName = C.badge && C.badge.name;
+  const badgeAlready = col && badgeName && collectionId && window.AppState && window.AppState.isCollectionBadgeEarned
+    && window.AppState.isCollectionBadgeEarned(collectionId, badgeName);
 
   if (state.isRepeat){
     const repHead = el('div', 'chead2');
@@ -822,17 +1247,19 @@ function showDone(){
     const cfoot = el('div', 'cfoot');
     if (collectionFull || badgeAlready){
       cfoot.appendChild(document.createTextNode('Kolekcja uko\u0144czona'));
-      if (C.badge && C.badge.name){
+      if (badgeName){
         cfoot.appendChild(document.createTextNode(' \u2014 odznaka '));
-        cfoot.appendChild(el('b', null, '\u201E' + C.badge.name + '\u201D'));
+        cfoot.appendChild(el('b', null, '\u201E' + badgeName + '\u201D'));
       }
-    } else {
+    } else if (badgeName){
       const remaining = col.total - earnedAfter;
       cfoot.appendChild(document.createTextNode('Nowa odznaka: '));
-      cfoot.appendChild(el('b', null, '\u201E' + C.badge.name + '\u201D'));
+      cfoot.appendChild(el('b', null, '\u201E' + badgeName + '\u201D'));
       cfoot.appendChild(document.createTextNode(' \u00b7 jeszcze '));
       cfoot.appendChild(el('b', null, String(remaining)));
       cfoot.appendChild(document.createTextNode(' do trofeum kolekcji'));
+    } else {
+      cfoot.appendChild(document.createTextNode('Postęp kolekcji zapisany.'));
     }
     r3.appendChild(cfoot);
     if (newSlot) setTimeout(() => newSlot.classList.add('pop'), 1650);
@@ -841,28 +1268,15 @@ function showDone(){
     }
   }
 
-  if (!state.isRepeat && window.AppShell && window.AppShell.onLessonComplete){
-    const payload = {
-      lessonId: L.id,
-      earnedKosmyki: state.earnedKosmyki
-    };
-    if (col && collectionId){
-      const earnedAfter = collectionFull ? col.total : col.earnedBefore + 1;
-      payload.collectionId = collectionId;
-      payload.earnedAfter = earnedAfter;
-      payload.badgeName = C.badge && C.badge.name;
-    }
-    window.AppShell.onLessonComplete(payload);
-  }
-
   const helpers = window.LessonsCatalogHelpers;
   const nextLessonEntry = helpers && helpers.getNextAfter ? helpers.getNextAfter(L.id) : null;
+  const nextMeta = C.nextLesson || {};
 
   const r4 = el('div', 'reveal hook');
   r4.appendChild(iconEl(nextLessonEntry ? 'unlock' : 'lock'));
   const hookTxt = el('div');
-  hookTxt.appendChild(el('div', 'ht', C.nextLesson.label));
-  hookTxt.appendChild(el('div', 'hn', C.nextLesson.teaser));
+  hookTxt.appendChild(el('div', 'ht', nextMeta.label || 'Kolejna lekcja'));
+  hookTxt.appendChild(el('div', 'hn', nextMeta.teaser || ''));
   r4.appendChild(hookTxt);
 
   if (nextLessonEntry && window.AppShell){
@@ -898,23 +1312,56 @@ function showDone(){
   if (col || state.isRepeat) revealBlocks.push(r3);
   revealBlocks.push(r4, r5);
   revealBlocks.forEach(r => step.appendChild(r));
+  if (revealBlocks[0]) revealBlocks[0].classList.add('in');
   mountStep(step);
-  if (!state.isRepeat && window.UIEffects && window.UIEffects.markCompletionReward){
-    window.UIEffects.markCompletionReward(step);
+  setAdminScreen('done', -1);
+  if (!state.isRepeat && !state.isAdminSandbox && window.UIEffects && window.UIEffects.markCompletionReward){
+    try { window.UIEffects.markCompletionReward(step); } catch (fxErr){ console.warn(fxErr); }
   }
 
-  /* sekwencja odsłon */
-  revealBlocks.forEach((r, i) => setTimeout(() => r.classList.add('in'), 250 + i * 450));
+  /* Persist dopiero po montażu UI — błąd w shellu nie kasuje ekranu wyniku */
+  if (!state.isRepeat && !state.isAdminSandbox && window.AppShell && window.AppShell.onLessonComplete){
+    try {
+      const payload = {
+        lessonId: L.id,
+        earnedKosmyki: state.earnedKosmyki,
+        scoredCorrect: scoredCorrect,
+        scoredTotal: scoredTotal,
+        scorePct: scorePct,
+        mistakes: state.mistakes,
+        perfect: lessonPerfect
+      };
+      if (col && collectionId){
+        const earnedAfter = collectionFull ? col.total : col.earnedBefore + 1;
+        payload.collectionId = collectionId;
+        payload.earnedAfter = earnedAfter;
+        payload.badgeName = badgeName;
+      }
+      window.AppShell.onLessonComplete(payload);
+    } catch (persistErr){
+      console.warn('[Akademia Nowej Fali] onLessonComplete', persistErr);
+    }
+  }
+
+  /* sekwencja odsłon — pierwszy blok widoczny od razu, reszta z opóźnieniem */
+  revealBlocks.forEach((r, i) => {
+    if (i === 0) return;
+    setTimeout(() => { if (r.isConnected) r.classList.add('in'); }, 200 + i * 380);
+  });
   setTimeout(() => {
+    if (!kvNum.isConnected) return;
     let c = 0;
-    const target = state.earnedKosmyki;
+    const target = state.isAdminSandbox ? 0 : state.earnedKosmyki;
     const iv = setInterval(() => {
       c += 2;
       if (c >= target){ c = target; clearInterval(iv); }
       kvNum.textContent = '+' + c;
     }, 22);
-    if (perfect) setTimeout(() => perfectEl.classList.add('on'), target * 13);
+    if (perfect) setTimeout(() => { if (perfectEl.isConnected) perfectEl.classList.add('on'); }, Math.max(200, target * 13));
   }, 800);
+  } catch (e){
+    showLessonError(e.message || String(e), state.lessonId);
+  }
 }
 
 /* ---------- restart / start ---------- */
@@ -928,17 +1375,27 @@ function buildProgress(){
 }
 function restart(){
   state.currentTaskIndex = 0;
-  state.isRepeat = isLessonAlreadyCompleted(state.lessonId);
+  state.isAdminSandbox = isAdminMode();
+  state.isRepeat = isLessonAlreadyCompleted(state.lessonId) || state.isAdminSandbox;
   state.kosmyki = getGlobalKosmyki();
   state.earnedKosmyki = 0;
   state.correctStreak = 0;
   state.mistakes = 0;
   state.bonusGiven = false;
   state.answers = [];
-  dom.kNum.textContent = String(state.kosmyki);
+  state.taskHadMistake = false;
+  state.scoredCorrect = 0;
+  state.pendingCheckBtn = null;
+  adminImageInfo = null;
+  if (dom.kNum) dom.kNum.textContent = String(state.kosmyki);
+  if (dom.kwrap) dom.kwrap.hidden = state.isAdminSandbox;
   dom.fb.classList.remove('show');
+  clearStage();
   buildProgress();
   renderIntro();
+  if (isAdminMode() && window.AdminMode.ensurePanel){
+    window.AdminMode.ensurePanel();
+  }
 }
 
 let chromeReady = false;
@@ -958,12 +1415,41 @@ function bindLessonChrome(){
 
 function abortLesson(){
   dom.fb.classList.remove('show');
-  dom.stage.textContent = '';
-  activeStep = null;
+  clearStage();
+  if (dom.kwrap) dom.kwrap.hidden = false;
+}
+
+function bindGlobalLessonSafety(){
+  if (bindGlobalLessonSafety.done) return;
+  bindGlobalLessonSafety.done = true;
+  function lessonViewActive(){
+    const v = document.getElementById('view-lesson');
+    return !!(v && v.classList.contains('active'));
+  }
+  window.addEventListener('error', function(ev){
+    if (!lessonViewActive() || !ev.message) return;
+    /* Nie nadpisuj ekranu ukończenia ani już widocznego błędu */
+    if (document.querySelector('.done-step.active') || document.querySelector('.step.fatal.active')) return;
+    console.error('[Akademia Nowej Fali]', ev.message, ev.error);
+    showLessonError(ev.message, state.lessonId);
+  });
+  window.addEventListener('unhandledrejection', function(ev){
+    if (!lessonViewActive()) return;
+    if (document.querySelector('.done-step.active') || document.querySelector('.step.fatal.active')) return;
+    const msg = ev.reason && ev.reason.message ? ev.reason.message : String(ev.reason);
+    console.error('[Akademia Nowej Fali] unhandledrejection', ev.reason);
+    showLessonError(msg, state.lessonId);
+  });
 }
 
 async function startLessonEngine(lessonId){
-  bindLessonChrome();
+  try {
+    bindLessonChrome();
+    bindGlobalLessonSafety();
+  } catch (chromeErr){
+    showLessonError(chromeErr.message || String(chromeErr), lessonId || state.lessonId);
+    return;
+  }
   const id = lessonId || CONFIG.defaultLesson;
   const helpers = window.LessonsCatalogHelpers;
   if (helpers && !helpers.getEntry(id)){
@@ -972,15 +1458,27 @@ async function startLessonEngine(lessonId){
   }
   try {
     state.lessonId = id;
+    if (isAdminMode() && window.AdminMode && window.AdminMode.setPanelLoading){
+      window.AdminMode.setPanelLoading(id);
+    }
     state.lesson = await loadLesson(id);
     restart();
   } catch (e) {
     if (e && e.code === 'LESSON_UNAVAILABLE') notifyLessonUnavailable();
-    else showFatal(e.message);
+    else showFatal(e.message || String(e));
   }
 }
 
 window.LessonEngine = {
   start: function(lessonId){ return startLessonEngine(lessonId); },
-  abort: abortLesson
+  abort: abortLesson,
+  adminPrevStep: function(){ adminNavigateFlow(-1); },
+  adminNextStep: function(){ adminNavigateFlow(1); },
+  adminSkipTask: adminSkipTask,
+  adminGoDone: adminGoDone,
+  adminPrevLesson: function(){ adminChangeLesson(-1); },
+  adminNextLesson: function(){ adminChangeLesson(1); },
+  adminRestartLesson: adminRestartLesson,
+  adminBackToList: adminBackToList,
+  renderAdminStep: renderAdminStep
 };
