@@ -8,6 +8,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function (OneSignal) {
+    await OneSignal.init({
+      appId: 'f9ab3b3e-9ff5-4d38-a955-3f979846f350',
+      safari_web_id: 'web.onesignal.auto.09714a24-a3bb-414f-8109-d75a4f07e6fa',
+      /* GitHub Pages: strona w /akademia-nowej-fali/ */
+      serviceWorkerPath: 'akademia-nowej-fali/OneSignalSDKWorker.js',
+      serviceWorkerParam: { scope: '/akademia-nowej-fali/' },
+      notifyButton: {
+        enable: true,
+        size: 'medium',
+        position: 'bottom-left',
+        showCredit: false,
+        text: {
+          'tip.state.unsubscribed': 'Włącz powiadomienia o nauce',
+          'tip.state.subscribed': 'Powiadomienia włączone',
+          'tip.state.blocked': 'Powiadomienia zablokowane',
+          'message.prenotify': 'Kliknij, aby włączyć powiadomienia',
+          'message.action.subscribed': 'Dziękujemy! Klątwa włosowa na razie odwołana.',
+          'message.action.resubscribed': 'Znów jesteś zapisana na przypomnienia',
+          'message.action.unsubscribed': 'Nie będziesz dostawać powiadomień',
+          'dialog.main.title': 'Powiadomienia Akademii',
+          'dialog.main.button.subscribe': 'Włącz',
+          'dialog.main.button.unsubscribe': 'Wyłącz',
+          'dialog.blocked.title': 'Odblokuj powiadomienia',
+          'dialog.blocked.message': 'Pozwól na powiadomienia w ustawieniach przeglądarki, żeby wracać do nauki.'
+        }
+      }
+    });
+  });
+</script>
 </head>
 <body>
 <div class="device">
