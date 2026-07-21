@@ -53,10 +53,19 @@ function initAdminFromUrl(){
   adminActive = wantsAdminFromUrl() && isSessionUnlocked();
 }
 
+function notifyAdminUiChanged(){
+  try {
+    document.dispatchEvent(new CustomEvent('anf-admin-change', {
+      detail: { active: adminActive }
+    }));
+  } catch (e){ /* ignore */ }
+}
+
 function activateAdminUi(){
   adminActive = true;
   document.documentElement.classList.add('is-admin');
   renderAdminBar();
+  notifyAdminUiChanged();
 }
 
 function deactivateAdminUi(){
@@ -68,6 +77,7 @@ function deactivateAdminUi(){
   if (panel && panel.parentNode) panel.parentNode.removeChild(panel);
   var gate = document.getElementById('adminPassGate');
   if (gate && gate.parentNode) gate.parentNode.removeChild(gate);
+  notifyAdminUiChanged();
 }
 
 /** Ponowne odczytanie ?admin=1 + sesji (np. po logowaniu). */
@@ -438,6 +448,7 @@ if (adminActive){
 window.AdminMode = {
   isActive: function(){ return adminActive; },
   isUnlocked: isSessionUnlocked,
+  wantsFromUrl: wantsAdminFromUrl,
   syncFromUrl: syncAdminFromUrl,
   enable: enableAdmin,
   disable: disableAdmin,
