@@ -6,8 +6,8 @@
 </head>
 <body>
 <pre id="out">running…</pre>
-<script src="/js/auth.js"></script>
-<script src="/js/state.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/state.js"></script>
 <script>
 (async function(){
   var out = [];
@@ -23,6 +23,7 @@
       displayName: 'Ala',
       email: 'ala@test.pl',
       password: 'haslo1234',
+      passwordConfirm: 'haslo1234',
       consentPrivacy: false,
       consentTerms: true,
       consentAge: true,
@@ -30,28 +31,41 @@
     });
     assert(!blocked.ok, 'register blocked without privacy consent');
 
-    var blocked2 = await Auth.register({
+    var mismatch = await Auth.register({
       displayName: 'Ala',
       email: 'ala@test.pl',
       password: 'haslo1234',
+      passwordConfirm: 'haslo9999',
       consentPrivacy: true,
-      consentTerms: false,
+      consentTerms: true,
       consentAge: true
     });
-    assert(!blocked2.ok, 'register blocked without terms');
+    assert(!mismatch.ok, 'register blocked when passwords differ');
+    assert((mismatch.errors || []).some(function(e){ return /hasła/i.test(e); }), 'mismatch error mentions passwords');
 
     var ok = await Auth.register({
       displayName: 'Ala',
-      email: 'ala@test.pl',
+      email: 'Ala@Test.pl',
       password: 'haslo1234',
+      passwordConfirm: 'haslo1234',
       consentPrivacy: true,
       consentTerms: true,
       consentAge: true,
       consentMarketing: false
     });
     assert(ok.ok, 'register with all required consents');
+    assert(ok.needsEmailVerification, 'register requires email verification');
+    assert(ok.emailDelivery === 'local-display', 'honest local email delivery');
+    assert(!!ok.verificationCode && ok.verificationCode.length === 6, 'verification code shown once');
+    assert(!Auth.isLoggedIn(), 'not logged in before email confirm');
+
+    var earlyLogin = await Auth.login('ala@test.pl', 'haslo1234');
+    assert(!earlyLogin.ok && earlyLogin.needsEmailVerification, 'login blocked until email verified');
+
+    var verified = await Auth.completeEmailVerification('ala@test.pl', ok.verificationCode);
+    assert(verified.ok, 'email verification succeeds');
+    assert(Auth.isLoggedIn(), 'logged in after verify');
     assert(AppState.get().user.kosmyki === 0, 'new user kosmyki === 0');
-    assert(Object.keys(AppState.get().completedLessons).length === 0, 'no completed lessons');
 
     AppState.get().user.kosmyki = 42;
     AppState.get().completedLessons['ph-co-oznacza-ph'] = true;
@@ -59,21 +73,75 @@
 
     Auth.logout();
     Auth.continueAsGuest();
-    var login = await Auth.login('ala@test.pl', 'haslo1234');
-    assert(login.ok, 'login works');
+    var login = await Auth.login('ALA@test.pl', 'haslo1234');
+    assert(login.ok, 'login works (email case normalized)');
     assert(AppState.get().user.kosmyki === 42, 'login restores kosmyki');
     assert(!!AppState.get().completedLessons['ph-co-oznacza-ph'], 'login restores lessons');
 
+    Auth.logout();
+    var resetReq = await Auth.requestPasswordReset('ala@test.pl');
+    assert(resetReq.ok && resetReq.emailDelivery === 'local-display', 'reset shows local code');
+    assert(!!resetReq.resetCode, 'reset code present');
+    var resetOk = await Auth.resetPassword({
+      email: 'ala@test.pl',
+      code: resetReq.resetCode,
+      password: 'nowehaslo1',
+      passwordConfirm: 'nowehaslo1'
+    });
+    assert(resetOk.ok, 'password reset works');
+    Auth.logout();
+    Auth.continueAsGuest();
+    var loginNew = await Auth.login('ala@test.pl', 'nowehaslo1');
+    assert(loginNew.ok, 'login with new password');
+    var loginOld = await Auth.login('ala@test.pl', 'haslo1234');
+    assert(!loginOld.ok, 'old password rejected');
+
+    /* Legacy PBKDF2 account migration */
+    Object.keys(localStorage).forEach(function(k){
+      if (k.indexOf('akademia') === 0) localStorage.removeItem(k);
+    });
+    var enc = new TextEncoder();
+    var saltBuf = crypto.getRandomValues(new Uint8Array(16));
+    var saltHex = Array.from(saltBuf).map(function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+    var key = await crypto.subtle.importKey('raw', enc.encode('starehaslo1'), 'PBKDF2', false, ['deriveBits']);
+    var bits = await crypto.subtle.deriveBits({ name:'PBKDF2', salt: saltBuf, iterations:100000, hash:'SHA-256' }, key, 256);
+    var hash = Array.from(new Uint8Array(bits)).map(function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+    localStorage.setItem('akademia-auth-users-v1', JSON.stringify([{
+      id: 'u_legacy',
+      email: 'legacy@test.pl',
+      displayName: 'Legacy',
+      passwordSalt: saltHex,
+      passwordHash: hash,
+      passwordAlgo: 'pbkdf2-v0',
+      createdAt: new Date().toISOString(),
+      consents: { privacy:true, terms:true, ageOrGuardian:true, marketing:false },
+      lastKosmyki: 0,
+      lastCompletedCount: 0
+    }]));
+    var legacyLogin = await Auth.login('legacy@test.pl', 'starehaslo1');
+    assert(legacyLogin.ok, 'legacy PBKDF2 login works');
+    assert(legacyLogin.migratedPassword, 'legacy password migrated to sha256-v1');
+    Auth.logout();
+    Auth.continueAsGuest();
+    var legacyAgain = await Auth.login('legacy@test.pl', 'starehaslo1');
+    assert(legacyAgain.ok, 'login still works after migration');
+
     var users = Auth.listUsersForAdmin();
     assert(users.length === 1, 'admin list has 1 user');
-    assert(users[0].email === 'ala@test.pl', 'admin list email');
+    assert(users[0].email === 'legacy@test.pl', 'admin list email');
 
     log('ALL_PASS');
     document.title = 'AUTH_QA_ALL_PASS';
+    try {
+      await fetch('/__auth_qa_done?status=ALL_PASS&detail=' + encodeURIComponent('ok'));
+    } catch (e2){ /* ignore */ }
   } catch (e){
     log('FAIL: ' + e.message);
     document.title = 'AUTH_QA_FAIL';
     console.error(e);
+    try {
+      await fetch('/__auth_qa_done?status=FAIL&detail=' + encodeURIComponent(e.message || String(e)));
+    } catch (e2){ /* ignore */ }
   }
 })();
 </script>

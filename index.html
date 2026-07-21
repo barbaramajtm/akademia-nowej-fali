@@ -304,11 +304,15 @@
           </div>
           <div class="auth-field">
             <label for="authLoginPassword">Hasło</label>
-            <input id="authLoginPassword" type="password" autocomplete="current-password" required>
+            <div class="auth-pass-wrap">
+              <input id="authLoginPassword" type="password" autocomplete="current-password" required>
+              <button type="button" class="auth-peek-btn" data-peek-for="authLoginPassword" aria-label="Pokaż hasło">Pokaż</button>
+            </div>
           </div>
           <p class="auth-error" id="authLoginError" role="alert"></p>
           <div class="auth-actions">
             <button type="button" class="btn btn-primary" id="authLoginSubmit">Zaloguj się</button>
+            <button type="button" class="auth-link-btn" id="authForgotOpen">Nie pamiętam hasła — zresetuj</button>
           </div>
         </div>
 
@@ -323,7 +327,17 @@
           </div>
           <div class="auth-field">
             <label for="authRegPassword">Hasło (min. 8 znaków)</label>
-            <input id="authRegPassword" type="password" autocomplete="new-password" required minlength="8">
+            <div class="auth-pass-wrap">
+              <input id="authRegPassword" type="password" autocomplete="new-password" required minlength="8">
+              <button type="button" class="auth-peek-btn" data-peek-for="authRegPassword" aria-label="Pokaż hasło">Pokaż</button>
+            </div>
+          </div>
+          <div class="auth-field">
+            <label for="authRegPassword2">Powtórz hasło</label>
+            <div class="auth-pass-wrap">
+              <input id="authRegPassword2" type="password" autocomplete="new-password" required minlength="8">
+              <button type="button" class="auth-peek-btn" data-peek-for="authRegPassword2" aria-label="Pokaż hasło">Pokaż</button>
+            </div>
           </div>
           <div class="auth-consents">
             <label class="auth-check">
@@ -349,8 +363,71 @@
           </div>
         </div>
 
+        <div class="auth-panel" id="authPanelVerify" hidden>
+          <p class="auth-panel-lead" id="authVerifyLead">Potwierdź adres e-mail, żeby aktywować konto.</p>
+          <div class="auth-code-box" id="authVerifyCodeBox" hidden>
+            <p class="auth-code-label">Twój kod potwierdzenia (tryb lokalny — <strong>nie wysyłamy e-maila</strong>):</p>
+            <p class="auth-code-value" id="authVerifyCodeValue" aria-live="polite"></p>
+            <p class="auth-code-hint">Zapisz ten kod. Bez serwera poczty nie dostaniesz go na skrzynkę.</p>
+          </div>
+          <div class="auth-field">
+            <label for="authVerifyEmail">E-mail</label>
+            <input id="authVerifyEmail" type="email" autocomplete="email" required>
+          </div>
+          <div class="auth-field">
+            <label for="authVerifyCode">Kod potwierdzenia</label>
+            <input id="authVerifyCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="8" required>
+          </div>
+          <p class="auth-error" id="authVerifyError" role="alert"></p>
+          <div class="auth-actions">
+            <button type="button" class="btn btn-primary" id="authVerifySubmit">Potwierdź e-mail</button>
+            <button type="button" class="auth-link-btn" id="authVerifyResend">Pokaż nowy kod (bez e-maila)</button>
+            <button type="button" class="auth-link-btn" id="authVerifyBack">Wróć do logowania</button>
+          </div>
+        </div>
+
+        <div class="auth-panel" id="authPanelReset" hidden>
+          <p class="auth-panel-lead">Reset hasła działa lokalnie na tym urządzeniu. <strong>Nie wysyłamy e-maili</strong> — bez Firebase / serwera poczty kod pojawi się tutaj na ekranie.</p>
+          <div class="auth-field">
+            <label for="authResetEmail">E-mail konta</label>
+            <input id="authResetEmail" type="email" autocomplete="email" required>
+          </div>
+          <div class="auth-actions" id="authResetStepRequest">
+            <button type="button" class="btn btn-primary" id="authResetRequest">Pokaż kod resetu</button>
+          </div>
+          <div id="authResetStepConfirm" hidden>
+            <div class="auth-code-box" id="authResetCodeBox" hidden>
+              <p class="auth-code-label">Kod resetu (tylko na tym ekranie):</p>
+              <p class="auth-code-value" id="authResetCodeValue" aria-live="polite"></p>
+            </div>
+            <div class="auth-field">
+              <label for="authResetCode">Kod resetu</label>
+              <input id="authResetCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="8" required>
+            </div>
+            <div class="auth-field">
+              <label for="authResetPassword">Nowe hasło (min. 8 znaków)</label>
+              <div class="auth-pass-wrap">
+                <input id="authResetPassword" type="password" autocomplete="new-password" required minlength="8">
+                <button type="button" class="auth-peek-btn" data-peek-for="authResetPassword" aria-label="Pokaż hasło">Pokaż</button>
+              </div>
+            </div>
+            <div class="auth-field">
+              <label for="authResetPassword2">Powtórz nowe hasło</label>
+              <div class="auth-pass-wrap">
+                <input id="authResetPassword2" type="password" autocomplete="new-password" required minlength="8">
+                <button type="button" class="auth-peek-btn" data-peek-for="authResetPassword2" aria-label="Pokaż hasło">Pokaż</button>
+              </div>
+            </div>
+            <div class="auth-actions">
+              <button type="button" class="btn btn-primary" id="authResetSubmit">Ustaw nowe hasło</button>
+            </div>
+          </div>
+          <p class="auth-error" id="authResetError" role="alert"></p>
+          <button type="button" class="auth-link-btn" id="authResetBack">Wróć do logowania</button>
+        </div>
+
         <button type="button" class="auth-guest" id="authGuestBtn">Kontynuuj bez konta (tylko to urządzenie)</button>
-        <p class="auth-note">Konto zapisuje postęp lokalnie w tej przeglądarce. Synchronizacja w chmurze wymaga osobnego backendu (np. Firebase).</p>
+        <p class="auth-note">Konto zapisuje postęp lokalnie w tej przeglądarce. Potwierdzenie e-maila i reset hasła bez chmury pokazują kod na ekranie (nie wysyłamy wiadomości). Docelowo: Firebase Auth.</p>
       </div>
     </div>
 

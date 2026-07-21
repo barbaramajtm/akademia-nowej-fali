@@ -929,14 +929,80 @@ function syncProfileAccountUi(){
 
 function setAuthTab(tab){
   var isLogin = tab === 'login';
+  var isReg = tab === 'register';
+  var isVerify = tab === 'verify';
+  var isReset = tab === 'reset';
   var tabLogin = document.getElementById('authTabLogin');
   var tabReg = document.getElementById('authTabRegister');
   var panelLogin = document.getElementById('authPanelLogin');
   var panelReg = document.getElementById('authPanelRegister');
-  if (tabLogin) tabLogin.classList.toggle('is-active', isLogin);
-  if (tabReg) tabReg.classList.toggle('is-active', !isLogin);
+  var panelVerify = document.getElementById('authPanelVerify');
+  var panelReset = document.getElementById('authPanelReset');
+  if (tabLogin){
+    tabLogin.classList.toggle('is-active', isLogin);
+    tabLogin.hidden = isVerify || isReset;
+  }
+  if (tabReg){
+    tabReg.classList.toggle('is-active', isReg);
+    tabReg.hidden = isVerify || isReset;
+  }
+  var tabs = document.querySelector('.auth-tabs');
+  if (tabs) tabs.hidden = isVerify || isReset;
   if (panelLogin) panelLogin.hidden = !isLogin;
-  if (panelReg) panelReg.hidden = isLogin;
+  if (panelReg) panelReg.hidden = !isReg;
+  if (panelVerify) panelVerify.hidden = !isVerify;
+  if (panelReset) panelReset.hidden = !isReset;
+}
+
+function showVerifyPanel(opts){
+  opts = opts || {};
+  setAuthTab('verify');
+  var emailEl = document.getElementById('authVerifyEmail');
+  var codeEl = document.getElementById('authVerifyCode');
+  var box = document.getElementById('authVerifyCodeBox');
+  var codeVal = document.getElementById('authVerifyCodeValue');
+  var err = document.getElementById('authVerifyError');
+  if (err) err.textContent = '';
+  if (emailEl && opts.email) emailEl.value = opts.email;
+  if (codeEl) codeEl.value = '';
+  if (opts.verificationCode && codeVal && box){
+    codeVal.textContent = opts.verificationCode;
+    box.hidden = false;
+  } else if (box && !opts.keepCodeVisible){
+    box.hidden = true;
+  }
+}
+
+function showResetPanel(opts){
+  opts = opts || {};
+  setAuthTab('reset');
+  var emailEl = document.getElementById('authResetEmail');
+  var err = document.getElementById('authResetError');
+  var stepReq = document.getElementById('authResetStepRequest');
+  var stepConf = document.getElementById('authResetStepConfirm');
+  var box = document.getElementById('authResetCodeBox');
+  if (err) err.textContent = '';
+  if (emailEl && opts.email) emailEl.value = opts.email;
+  if (stepReq) stepReq.hidden = false;
+  if (stepConf) stepConf.hidden = true;
+  if (box) box.hidden = true;
+}
+
+function bindPasswordPeek(root){
+  var scope = root || document;
+  scope.querySelectorAll('.auth-peek-btn').forEach(function(btn){
+    if (btn.dataset.peekBound === '1') return;
+    btn.dataset.peekBound = '1';
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-peek-for');
+      var input = id ? document.getElementById(id) : null;
+      if (!input) return;
+      var show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      btn.textContent = show ? 'Ukryj' : 'Pokaż';
+      btn.setAttribute('aria-label', show ? 'Ukryj hasło' : 'Pokaż hasło');
+    });
+  });
 }
 
 function showAuthGate(force){
@@ -971,8 +1037,26 @@ function bindAuthUi(){
   if (!gate || gate.dataset.bound === '1') return;
   gate.dataset.bound = '1';
 
+  bindPasswordPeek(gate);
+
   document.getElementById('authTabLogin').addEventListener('click', function(){ setAuthTab('login'); });
   document.getElementById('authTabRegister').addEventListener('click', function(){ setAuthTab('register'); });
+
+  function onEnterSubmit(inputId, buttonId){
+    var input = document.getElementById(inputId);
+    var btn = document.getElementById(buttonId);
+    if (!input || !btn) return;
+    input.addEventListener('keydown', function(e){
+      if (e.key === 'Enter'){
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  }
+  onEnterSubmit('authLoginPassword', 'authLoginSubmit');
+  onEnterSubmit('authRegPassword2', 'authRegisterSubmit');
+  onEnterSubmit('authVerifyCode', 'authVerifySubmit');
+  onEnterSubmit('authResetPassword2', 'authResetSubmit');
 
   document.getElementById('authLoginSubmit').addEventListener('click', function(){
     var err = document.getElementById('authLoginError');
@@ -980,6 +1064,11 @@ function bindAuthUi(){
     var email = document.getElementById('authLoginEmail').value;
     var pass = document.getElementById('authLoginPassword').value;
     window.Auth.login(email, pass).then(function(res){
+      if (res.needsEmailVerification){
+        if (err) err.textContent = (res.errors || []).join(' ');
+        showVerifyPanel({ email: res.email || email });
+        return;
+      }
       if (!res.ok){
         if (err) err.textContent = (res.errors || []).join(' ');
         return;
@@ -995,10 +1084,99 @@ function bindAuthUi(){
       displayName: document.getElementById('authRegName').value,
       email: document.getElementById('authRegEmail').value,
       password: document.getElementById('authRegPassword').value,
+      passwordConfirm: document.getElementById('authRegPassword2').value,
       consentPrivacy: document.getElementById('authConsentPrivacy').checked,
       consentTerms: document.getElementById('authConsentTerms').checked,
       consentAge: document.getElementById('authConsentAge').checked,
       consentMarketing: document.getElementById('authConsentMarketing').checked
+    }).then(function(res){
+      if (!res.ok){
+        if (err) err.textContent = (res.errors || []).join(' ');
+        return;
+      }
+      showVerifyPanel({
+        email: (res.user && res.user.email) || document.getElementById('authRegEmail').value,
+        verificationCode: res.verificationCode
+      });
+    });
+  });
+
+  document.getElementById('authVerifySubmit').addEventListener('click', function(){
+    var err = document.getElementById('authVerifyError');
+    if (err) err.textContent = '';
+    var email = document.getElementById('authVerifyEmail').value;
+    var code = document.getElementById('authVerifyCode').value;
+    window.Auth.completeEmailVerification(email, code).then(function(res){
+      if (!res.ok){
+        if (err) err.textContent = (res.errors || []).join(' ');
+        return;
+      }
+      afterAuthSuccess();
+    });
+  });
+
+  document.getElementById('authVerifyResend').addEventListener('click', function(){
+    var err = document.getElementById('authVerifyError');
+    if (err) err.textContent = '';
+    var email = document.getElementById('authVerifyEmail').value;
+    window.Auth.resendVerificationCode(email).then(function(res){
+      if (!res.ok){
+        if (err) err.textContent = (res.errors || []).join(' ');
+        return;
+      }
+      if (res.alreadyVerified){
+        afterAuthSuccess();
+        return;
+      }
+      showVerifyPanel({ email: email, verificationCode: res.verificationCode });
+    });
+  });
+
+  document.getElementById('authVerifyBack').addEventListener('click', function(){
+    setAuthTab('login');
+  });
+
+  document.getElementById('authForgotOpen').addEventListener('click', function(){
+    var email = document.getElementById('authLoginEmail').value;
+    showResetPanel({ email: email });
+  });
+
+  document.getElementById('authResetBack').addEventListener('click', function(){
+    setAuthTab('login');
+  });
+
+  document.getElementById('authResetRequest').addEventListener('click', function(){
+    var err = document.getElementById('authResetError');
+    if (err) err.textContent = '';
+    var email = document.getElementById('authResetEmail').value;
+    window.Auth.requestPasswordReset(email).then(function(res){
+      if (!res.ok){
+        if (err) err.textContent = (res.errors || []).join(' ');
+        return;
+      }
+      var stepReq = document.getElementById('authResetStepRequest');
+      var stepConf = document.getElementById('authResetStepConfirm');
+      var box = document.getElementById('authResetCodeBox');
+      var codeVal = document.getElementById('authResetCodeValue');
+      var codeInput = document.getElementById('authResetCode');
+      if (stepReq) stepReq.hidden = true;
+      if (stepConf) stepConf.hidden = false;
+      if (codeVal && box){
+        codeVal.textContent = res.resetCode;
+        box.hidden = false;
+      }
+      if (codeInput) codeInput.value = res.resetCode || '';
+    });
+  });
+
+  document.getElementById('authResetSubmit').addEventListener('click', function(){
+    var err = document.getElementById('authResetError');
+    if (err) err.textContent = '';
+    window.Auth.resetPassword({
+      email: document.getElementById('authResetEmail').value,
+      code: document.getElementById('authResetCode').value,
+      password: document.getElementById('authResetPassword').value,
+      passwordConfirm: document.getElementById('authResetPassword2').value
     }).then(function(res){
       if (!res.ok){
         if (err) err.textContent = (res.errors || []).join(' ');
