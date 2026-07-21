@@ -6,9 +6,18 @@
   "levelLabel": "Podstawy",
 
   "intro": {
-    "narratorText": "W salonie wiesz już, że środowisko wpływa na powierzchnię włosa. Teraz sprawdzisz, z czego włos jest zbudowany — przez krótkie pytania, bez planszy.",
+    "narratorText": "W salonie wiesz już, że środowisko wpływa na powierzchnię włosa. Teraz zajrzysz głębiej — z czego włos jest zbudowany i dlaczego to ma znaczenie przy zabiegach.",
     "stakeText": "do 75 Kosmyków",
-    "startButtonLabel": "Zacznij lekcję"
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Z czego składa się włos?",
+      "text": "Włos wygląda jak jedna gładka nitka, ale to złożona struktura. Główną masę stanowi keratyna — białko, z którego zbudowane są włókna. We włosie jest też woda oraz niewielka ilość lipidów. Ich udział zmienia się wraz ze stanem włosa i wilgotnością powietrza.",
+      "note": "W składzie włosa występują też m.in. melanina, aminokwasy i pierwiastki — wrócimy do nich w kolejnych lekcjach.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-composition.png",
+      "imageAlt": "Plansza: keratyna, woda i lipidy jako główne składniki włosa",
+      "imageCaption": "Keratyna to główny budulec włosa. Zawartość wody jest zmienna; lipidy pomagają chronić włos."
+    }
   },
 
   "rewards": {
