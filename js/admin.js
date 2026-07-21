@@ -13,6 +13,21 @@ function initAdminFromUrl(){
   adminActive = params.get('admin') === '1';
 }
 
+/** Ponowne odczytanie ?admin=1 (np. po logowaniu bez pełnego reloadu ścieżki). */
+function syncAdminFromUrl(){
+  var was = adminActive;
+  initAdminFromUrl();
+  if (adminActive){
+    document.documentElement.classList.add('is-admin');
+    renderAdminBar();
+  } else if (was && !adminActive){
+    document.documentElement.classList.remove('is-admin');
+    var bar = document.getElementById('adminBar');
+    if (bar && bar.parentNode) bar.parentNode.removeChild(bar);
+  }
+  return adminActive;
+}
+
 function adminBarHost(){
   return document.querySelector('.device') || document.body;
 }
@@ -228,6 +243,7 @@ if (adminActive){
 
 window.AdminMode = {
   isActive: function(){ return adminActive; },
+  syncFromUrl: syncAdminFromUrl,
   enable: function(){ reloadWithAdmin(true); },
   disable: function(){ reloadWithAdmin(false); },
   refreshPanel: refreshAdminPanel,

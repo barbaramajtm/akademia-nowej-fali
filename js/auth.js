@@ -213,7 +213,11 @@ function isLoggedIn(){
 }
 
 function needsAuthGate(){
-  if (window.AdminMode && window.AdminMode.isActive()) return false;
+  /* ?admin=1 zawsze omija bramkę — także gdy sesja konta już istnieje. */
+  try {
+    if (window.AdminMode && window.AdminMode.isActive()) return false;
+    if (new URLSearchParams(window.location.search).get('admin') === '1') return false;
+  } catch (e){ /* ignore */ }
   if (isLoggedIn()) return false;
   if (isGuestMode()) return false;
   return true;
