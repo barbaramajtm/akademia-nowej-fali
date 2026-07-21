@@ -822,8 +822,7 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
   border:1.5px solid var(--line);box-shadow:var(--shadow-card);
 }
 .auth-brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:14px;text-align:center;}
-/* Brama auth: motyw oka (docs/UI_COMPONENTS.md) — nie złote logo NF */
-.auth-brand img,.auth-brand .eye-motif--auth{width:88px;height:auto;display:block;}
+.auth-brand img,.auth-brand .nf-logo{width:104px;height:auto;display:block;}
 .auth-brand h2{font-family:'Poppins';font-weight:700;font-size:20px;color:var(--navy);line-height:1.2;}
 .auth-brand p{font-size:13px;color:var(--ink-muted);line-height:1.45;max-width:280px;}
 .auth-tabs{display:flex;gap:6px;margin-bottom:14px;}

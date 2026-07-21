@@ -72,12 +72,10 @@ Geometryczne, płaskie oko Mid-Century — **nie** logo, **nie** maskotka.
 - Home (hero);
 - Profil (hero, półprzezroczysty);
 - Gablotka (hero);
-- brama logowania / rejestracji (`eye-motif-brand.png` — **nie** złote logo NF);
+- brama logowania / rejestracji;
 - ekran ukończenia lekcji (PNG);
 - „Wskazówka eksperta” (kompaktowy SVG);
 - karta / motyw modułu (SVG dekoracyjny).
-
-**Logo marki (osobno):** złote `assets/images/nf-logo-gold.png` — Home i Profil jako znak „Nowa Fala”. Na bramie auth zostaje oko.
 
 **Zasady:** rozpoznawalny branding, nie dominuje ekranu; animacja mrugnięcia wyłącznie przy nagrodzie.
 

@@ -212,7 +212,7 @@ Plik `assets/images/wlos-ph.jpg` (JPEG) — moduł pH, bez zmian.
 
 | Lekcja | Ilustracja preferowana | Alternatywy | Uzasadnienie |
 |--------|------------------------|-------------|--------------|
-| **L1** `wlos-z-czego-sklada-sie` | `hair-composition.png` | — | Plansza referencyjna stylu projektu. **Poprawiona 15 lipca 2026** — bez sztywnych procentów; keratyna jako główny białkowy budulec; woda zmienna; lipidy = bariera i powierzchnia. |
+| **L1** `wlos-z-czego-sklada-sie` | `hair-composition.png` | — | Plansza referencyjna stylu projektu. **Odświeżona 21 lipca 2026** — realistyczny włos + karty 1–3; bez sztywnych procentów; keratyna = główny budulec; woda zmienna; lipidy chronią włos. |
 | **L2** `wlos-oslonka-kora-rdzen` | `hair-layers.png` | — | Schemat trzech warstw łodygi. **Poprawiona 15 lipca 2026** — usunięto dekoracje; dopisano brak rdzenia u każdego włosa. |
 | **L3** `wlos-keratyna-rusztowanie` | `hair-fibrous-keratin.png` | — | **Poprawiona 15 lipca 2026** — spiralne łańcuchy → włókna keratynowe; białka towarzyszące; model uproszczony. |
 
