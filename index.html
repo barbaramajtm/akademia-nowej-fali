@@ -25,25 +25,7 @@
         serviceWorkerPath: swFile,
         serviceWorkerParam: { scope: swScope },
         notifyButton: {
-          enable: true,
-          size: 'medium',
-          position: 'bottom-right',
-          offset: { bottom: '96px', right: '16px' },
-          showCredit: false,
-          text: {
-            'tip.state.unsubscribed': 'Włącz powiadomienia o nauce',
-            'tip.state.subscribed': 'Powiadomienia włączone',
-            'tip.state.blocked': 'Powiadomienia zablokowane',
-            'message.prenotify': 'Kliknij, aby włączyć powiadomienia',
-            'message.action.subscribed': 'Dziękujemy! Klątwa włosowa na razie odwołana.',
-            'message.action.resubscribed': 'Znów jesteś zapisana na przypomnienia',
-            'message.action.unsubscribed': 'Nie będziesz dostawać powiadomień',
-            'dialog.main.title': 'Powiadomienia Akademii',
-            'dialog.main.button.subscribe': 'Włącz',
-            'dialog.main.button.unsubscribe': 'Wyłącz',
-            'dialog.blocked.title': 'Odblokuj powiadomienia',
-            'dialog.blocked.message': 'Pozwól na powiadomienia w ustawieniach przeglądarki, żeby wracać do nauki.'
-          }
+          enable: false
         }
       });
 
@@ -89,7 +71,7 @@
                   <svg width="19" height="19" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#FF4794"/></svg>
                   <div><div class="num" id="homeKosmyki">0</div><div class="lbl">Kosmyków</div></div>
                 </div>
-                <button class="avatar" id="homeAvatarBtn" type="button" aria-label="Profil">
+                <button class="avatar" id="homeAvatarBtn" type="button" aria-label="Profil" data-avatar-host data-avatar-size="30">
                   <svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#FF4794"/><path d="M4 27 Q15 17 26 27 Z" fill="#2A1F24"/></svg>
                 </button>
               </div>
@@ -240,9 +222,10 @@
         </div>
         <div class="content content-tight">
           <div class="profile-card profile-card--main">
-            <div class="profile-avatar">
+            <button type="button" class="profile-avatar" id="profileAvatarBtn" data-avatar-host data-avatar-size="54" aria-label="Zmień avatar">
               <svg width="54" height="54" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#FF4794"/><path d="M4 27 Q15 17 26 27 Z" fill="#2A1F24"/></svg>
-            </div>
+            </button>
+            <p class="profile-avatar-hint">Dotknij, aby wybrać avatar</p>
             <div class="profile-name" id="profileName">Uczennico</div>
             <div class="profile-meta" id="profileMeta">Fala 1 · 0 Kosmyków</div>
             <div class="profile-kos-chip">
@@ -274,9 +257,9 @@
             <p id="profileRhythmVal">Ukończ pierwszą lekcję, aby zobaczyć swój rytm</p>
           </section>
           <section class="profile-push" aria-labelledby="profilePushTitle">
-            <h3 id="profilePushTitle">Powiadomienia push</h3>
-            <p class="profile-push-note">Włącz przypomnienia o nauce (OneSignal). Możesz też użyć dzwonka na ekranie.</p>
-            <button type="button" class="btn btn-primary" id="profilePushEnable">Włącz powiadomienia</button>
+            <h3 id="profilePushTitle">Powiadomienia</h3>
+            <p class="profile-push-note">Włącz przypomnienia o nauce — dostaniesz je nawet gdy aplikacja jest zamknięta.</p>
+            <button type="button" class="btn btn-ghost profile-push-btn" id="profilePushEnable">Włącz powiadomienia</button>
             <p class="profile-push-status" id="profilePushStatus" hidden></p>
           </section>
           <section class="profile-admin" id="profileAdminSection" aria-labelledby="profileAdminTitle" hidden>
@@ -499,6 +482,17 @@
       <ul class="admin-users-list" id="adminUsersList"></ul>
     </div>
 
+    <div class="avatar-picker-sheet" id="avatarPickerSheet" hidden>
+      <div class="avatar-picker-card" role="dialog" aria-labelledby="avatarPickerTitle" aria-modal="true">
+        <div class="avatar-picker-head">
+          <h3 id="avatarPickerTitle">Wybierz avatar</h3>
+          <button type="button" class="btn btn-ghost" id="avatarPickerClose">Zamknij</button>
+        </div>
+        <p class="avatar-picker-note">Zestaw gotowych awatarów — bez wgrywania zdjęć.</p>
+        <div class="avatar-picker-grid" id="avatarPickerGrid"></div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -516,6 +510,7 @@
 
 <script src="js/auth.js"></script>
 <script src="js/state.js"></script>
+<script src="js/avatars.js"></script>
 <script src="js/badges.js"></script>
 <script src="js/lessons-catalog.js"></script>
 <script src="js/admin.js"></script>

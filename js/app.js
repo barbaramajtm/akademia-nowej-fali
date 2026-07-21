@@ -1268,34 +1268,6 @@ function showDone(){
     }
   }
 
-  const helpers = window.LessonsCatalogHelpers;
-  const nextLessonEntry = helpers && helpers.getNextAfter ? helpers.getNextAfter(L.id) : null;
-  const nextMeta = C.nextLesson || {};
-
-  const r4 = el('div', 'reveal hook');
-  r4.appendChild(iconEl(nextLessonEntry ? 'unlock' : 'lock'));
-  const hookTxt = el('div');
-  hookTxt.appendChild(el('div', 'ht', nextMeta.label || 'Kolejna lekcja'));
-  hookTxt.appendChild(el('div', 'hn', nextMeta.teaser || ''));
-  r4.appendChild(hookTxt);
-
-  if (nextLessonEntry && window.AppShell){
-    r4.setAttribute('role', 'button');
-    r4.setAttribute('tabindex', '0');
-    r4.dataset.lessonId = nextLessonEntry.id;
-    r4.style.cursor = 'pointer';
-    function startNextFromHook(){
-      window.AppShell.startLesson(nextLessonEntry.id);
-    }
-    r4.addEventListener('click', startNextFromHook);
-    r4.addEventListener('keydown', function(e){
-      if (e.key === 'Enter' || e.key === ' '){
-        e.preventDefault();
-        startNextFromHook();
-      }
-    });
-  }
-
   const r5 = el('div', 'reveal done-btns');
   const bContinue = primaryButton(CONFIG.ui.continueLabel);
   bContinue.addEventListener('click', function(){
@@ -1310,7 +1282,7 @@ function showDone(){
 
   const revealBlocks = [r1, r2];
   if (col || state.isRepeat) revealBlocks.push(r3);
-  revealBlocks.push(r4, r5);
+  revealBlocks.push(r5);
   revealBlocks.forEach(r => step.appendChild(r));
   if (revealBlocks[0]) revealBlocks[0].classList.add('in');
   mountStep(step);

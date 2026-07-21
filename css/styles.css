@@ -448,7 +448,13 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
 
 .profile-card{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius-lg);padding:26px 20px;text-align:center;margin-bottom:18px;box-shadow:var(--shadow-card);}
 .profile-card--main{border-color:rgba(217,123,148,.28);background:linear-gradient(180deg,#FFFCFA 0%,#FFF3EE 100%);}
-.profile-avatar{width:92px;height:92px;border-radius:50%;background:var(--plum-tint);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;border:3px solid var(--card);box-shadow:var(--shadow-soft);}
+.profile-avatar{
+  width:92px;height:92px;border-radius:50%;background:var(--plum-tint);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 8px;
+  border:3px solid var(--card);box-shadow:var(--shadow-soft);
+  cursor:pointer;padding:0;
+}
+.profile-avatar-hint{font-size:12px;color:var(--ink-muted);margin:0 0 10px;font-weight:500;}
 .profile-name{font-family:'Poppins';font-weight:700;font-size:22px;color:var(--navy);}
 .profile-meta{font-size:14px;color:var(--muted);margin-top:5px;font-weight:500;}
 .profile-kos-chip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:8px 14px;border-radius:20px;background:var(--mint);color:var(--olive);font-weight:700;font-size:13px;border:1px solid rgba(143,168,122,.28);}
@@ -457,12 +463,36 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
 .profile-rhythm h3{font-family:'Poppins';font-weight:700;font-size:15px;color:var(--navy);margin-bottom:6px;}
 .profile-rhythm p{font-size:13px;line-height:1.5;color:var(--ink-muted);font-weight:500;}
 
-.profile-push{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-top:16px;box-shadow:var(--shadow-soft);}
+.profile-push{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-top:18px;box-shadow:var(--shadow-soft);}
 .profile-push h3{font-family:'Poppins';font-weight:700;font-size:15px;color:var(--navy);margin-bottom:6px;}
 .profile-push-note{font-size:13px;line-height:1.5;color:var(--ink-muted);font-weight:500;margin-bottom:12px;}
 .profile-push-status{font-size:12px;line-height:1.45;color:var(--ink-muted);margin-top:10px;}
+.profile-push-btn{
+  width:100%;background:#FFF8F2!important;color:var(--navy)!important;border:1.5px solid var(--line)!important;
+  font-weight:600;
+}
+.profile-push-btn:hover{background:#FFEFE3!important;}
 
-/* OneSignal bell nad nawigacją aplikacji */
+.avatar-picker-sheet{
+  position:absolute;inset:0;z-index:120;display:flex;align-items:flex-end;justify-content:center;
+  background:rgba(42,31,36,.4);padding:12px;box-sizing:border-box;
+}
+.avatar-picker-sheet[hidden]{display:none!important;}
+.avatar-picker-card{
+  width:100%;background:var(--card);border-radius:20px 20px 16px 16px;border:1.5px solid var(--line);
+  box-shadow:var(--shadow-card);padding:16px;max-height:min(70%,560px);overflow:auto;
+}
+.avatar-picker-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px;}
+.avatar-picker-head h3{font-family:'Poppins';font-weight:700;font-size:16px;color:var(--navy);margin:0;}
+.avatar-picker-note{font-size:13px;color:var(--ink-muted);margin:0 0 12px;line-height:1.4;}
+.avatar-picker-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.avatar-pick{
+  aspect-ratio:1;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-soft);
+}
+.avatar-pick.is-selected{border-color:var(--coral);box-shadow:0 0 0 3px rgba(230,82,152,.22);}
+
+/* OneSignal bell (wyłączony) — gdyby wrócił, niech będzie nad nav */
 #onesignal-bell-container,
 .onesignal-bell-launcher-button,
 .onesignal-reset{
