@@ -848,6 +848,8 @@ function refreshUI(){
   renderHomeGabBadges();
   renderGablotkaCollection();
   renderCourseProgress();
+  syncProfileAccountUi();
+  syncProfileAdminUi();
 }
 
 function setNavActive(view){
@@ -900,6 +902,167 @@ function syncProfileAdminUi(){
   var active = window.AdminMode && window.AdminMode.isActive();
   toggle.textContent = active ? 'Wyłącz tryb administratora' : 'Włącz tryb administratora';
   toggle.classList.toggle('is-admin-on', !!active);
+  var usersBtn = document.getElementById('profileAdminUsers');
+  if (usersBtn) usersBtn.hidden = !active;
+}
+
+function syncProfileAccountUi(){
+  var meta = document.getElementById('profileAccountMeta');
+  var openBtn = document.getElementById('profileAuthOpen');
+  var logoutBtn = document.getElementById('profileLogout');
+  if (!meta) return;
+  var user = window.Auth && window.Auth.currentUser ? window.Auth.currentUser() : null;
+  if (user){
+    meta.textContent = user.displayName + ' · ' + user.email;
+    if (openBtn) openBtn.hidden = true;
+    if (logoutBtn) logoutBtn.hidden = false;
+  } else if (window.Auth && window.Auth.isGuestMode && window.Auth.isGuestMode()){
+    meta.textContent = 'Tryb gościa — postęp tylko na tym urządzeniu.';
+    if (openBtn){ openBtn.hidden = false; openBtn.textContent = 'Zaloguj / Załóż konto'; }
+    if (logoutBtn) logoutBtn.hidden = true;
+  } else {
+    meta.textContent = 'Nie jesteś zalogowana.';
+    if (openBtn){ openBtn.hidden = false; openBtn.textContent = 'Zaloguj / Załóż konto'; }
+    if (logoutBtn) logoutBtn.hidden = true;
+  }
+}
+
+function setAuthTab(tab){
+  var isLogin = tab === 'login';
+  var tabLogin = document.getElementById('authTabLogin');
+  var tabReg = document.getElementById('authTabRegister');
+  var panelLogin = document.getElementById('authPanelLogin');
+  var panelReg = document.getElementById('authPanelRegister');
+  if (tabLogin) tabLogin.classList.toggle('is-active', isLogin);
+  if (tabReg) tabReg.classList.toggle('is-active', !isLogin);
+  if (panelLogin) panelLogin.hidden = !isLogin;
+  if (panelReg) panelReg.hidden = isLogin;
+}
+
+function showAuthGate(force){
+  var gate = document.getElementById('authGate');
+  if (!gate) return;
+  if (!force && window.Auth && !window.Auth.needsAuthGate()){
+    gate.hidden = true;
+    return;
+  }
+  gate.hidden = false;
+  setAuthTab('login');
+}
+
+function hideAuthGate(){
+  var gate = document.getElementById('authGate');
+  if (gate) gate.hidden = true;
+}
+
+function afterAuthSuccess(){
+  hideAuthGate();
+  syncProfileAccountUi();
+  refreshUI();
+}
+
+function bindAuthUi(){
+  var gate = document.getElementById('authGate');
+  if (!gate || gate.dataset.bound === '1') return;
+  gate.dataset.bound = '1';
+
+  document.getElementById('authTabLogin').addEventListener('click', function(){ setAuthTab('login'); });
+  document.getElementById('authTabRegister').addEventListener('click', function(){ setAuthTab('register'); });
+
+  document.getElementById('authLoginSubmit').addEventListener('click', function(){
+    var err = document.getElementById('authLoginError');
+    if (err) err.textContent = '';
+    var email = document.getElementById('authLoginEmail').value;
+    var pass = document.getElementById('authLoginPassword').value;
+    window.Auth.login(email, pass).then(function(res){
+      if (!res.ok){
+        if (err) err.textContent = (res.errors || []).join(' ');
+        return;
+      }
+      afterAuthSuccess();
+    });
+  });
+
+  document.getElementById('authRegisterSubmit').addEventListener('click', function(){
+    var err = document.getElementById('authRegisterError');
+    if (err) err.textContent = '';
+    window.Auth.register({
+      displayName: document.getElementById('authRegName').value,
+      email: document.getElementById('authRegEmail').value,
+      password: document.getElementById('authRegPassword').value,
+      consentPrivacy: document.getElementById('authConsentPrivacy').checked,
+      consentTerms: document.getElementById('authConsentTerms').checked,
+      consentAge: document.getElementById('authConsentAge').checked,
+      consentMarketing: document.getElementById('authConsentMarketing').checked
+    }).then(function(res){
+      if (!res.ok){
+        if (err) err.textContent = (res.errors || []).join(' ');
+        return;
+      }
+      afterAuthSuccess();
+    });
+  });
+
+  document.getElementById('authGuestBtn').addEventListener('click', function(){
+    window.Auth.continueAsGuest();
+    afterAuthSuccess();
+  });
+
+  var openBtn = document.getElementById('profileAuthOpen');
+  if (openBtn){
+    openBtn.addEventListener('click', function(){ showAuthGate(true); });
+  }
+  var logoutBtn = document.getElementById('profileLogout');
+  if (logoutBtn){
+    logoutBtn.addEventListener('click', function(){
+      window.Auth.logout();
+      window.Auth.continueAsGuest();
+      syncProfileAccountUi();
+      refreshUI();
+      showAuthGate(true);
+    });
+  }
+}
+
+function renderAdminUsersList(){
+  var list = document.getElementById('adminUsersList');
+  var sheet = document.getElementById('adminUsersSheet');
+  if (!list || !sheet) return;
+  if (!(window.AdminMode && window.AdminMode.isActive())){
+    sheet.hidden = true;
+    return;
+  }
+  var users = window.Auth && window.Auth.listUsersForAdmin ? window.Auth.listUsersForAdmin() : [];
+  if (!users.length){
+    list.innerHTML = '<li><div class="u-name">Brak kont</div><div class="u-meta">Nikt jeszcze nie zarejestrował się na tym urządzeniu.</div></li>';
+  } else {
+    list.innerHTML = users.map(function(u){
+      var cons = u.consents || {};
+      return '<li>' +
+        '<div class="u-name">' + escapeHtml(u.displayName || '—') + '</div>' +
+        '<div class="u-meta">' + escapeHtml(u.email || '') + '</div>' +
+        '<div class="u-meta">Kosmyki: ' + (u.kosmyki || 0) + ' · Lekcje: ' + (u.completedCount || 0) + '</div>' +
+        '<div class="u-meta">Zgody: prywatność ' + (cons.privacy ? 'tak' : 'nie') +
+          ', regulamin ' + (cons.terms ? 'tak' : 'nie') +
+          ', marketing ' + (cons.marketing ? 'tak' : 'nie') + '</div>' +
+        '<div class="u-meta">Utworzono: ' + escapeHtml(u.createdAt || '—') + '</div>' +
+      '</li>';
+    }).join('');
+  }
+  sheet.hidden = false;
+}
+
+function escapeHtml(s){
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function hideAdminUsersList(){
+  var sheet = document.getElementById('adminUsersSheet');
+  if (sheet) sheet.hidden = true;
 }
 
 function bindChrome(){
@@ -930,6 +1093,16 @@ function bindChrome(){
       else window.AdminMode.enable();
     });
   }
+  var adminUsersBtn = document.getElementById('profileAdminUsers');
+  if (adminUsersBtn){
+    adminUsersBtn.addEventListener('click', function(){
+      renderAdminUsersList();
+    });
+  }
+  var adminUsersClose = document.getElementById('adminUsersClose');
+  if (adminUsersClose){
+    adminUsersClose.addEventListener('click', hideAdminUsersList);
+  }
   var resetBtn = document.getElementById('profileResetProgress');
   if (resetBtn){
     resetBtn.addEventListener('click', function(){
@@ -957,10 +1130,15 @@ function bindChrome(){
     });
   }
   document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') closeBadgeModal();
+    if (e.key === 'Escape'){
+      closeBadgeModal();
+      hideAdminUsersList();
+    }
   });
 
+  bindAuthUi();
   syncProfileAdminUi();
+  syncProfileAccountUi();
 }
 
 window.AppShell = {
@@ -1083,6 +1261,15 @@ window.AppShell = {
     gablotkaQaPreview = null;
     window.AppState.resetProgress();
     refreshUI();
+  },
+
+  showAdminUsers: function(){
+    if (!(window.AdminMode && window.AdminMode.isActive())) return;
+    renderAdminUsersList();
+  },
+
+  showAuth: function(){
+    showAuthGate(true);
   }
 };
 
@@ -1091,6 +1278,7 @@ document.addEventListener('DOMContentLoaded', function(){
   if (window.AppState && window.AppState.syncAchievements){
     try { window.AppState.syncAchievements(); } catch (e){ /* ignore */ }
   }
+  showAuthGate(false);
   var params = new URLSearchParams(window.location.search);
   var lessonParam = params.get('lesson');
   var adminDeepLink = lessonParam && window.AdminMode && window.AdminMode.isActive() && window.LessonEngine;

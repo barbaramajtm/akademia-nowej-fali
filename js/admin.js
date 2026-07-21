@@ -26,11 +26,15 @@ function renderAdminBar(){
   bar.setAttribute('role', 'status');
   bar.innerHTML =
     '<span class="admin-bar-chip">TRYB ADMINISTRATORA</span>' +
+    '<button type="button" class="admin-bar-users" id="adminUsersBtn">Konta</button>' +
     '<button type="button" class="admin-bar-off" id="adminDisableBtn">Wyłącz</button>';
   adminBarHost().appendChild(bar);
 
   document.getElementById('adminDisableBtn').addEventListener('click', function(){
     window.AdminMode.disable();
+  });
+  document.getElementById('adminUsersBtn').addEventListener('click', function(){
+    if (window.AppShell && window.AppShell.showAdminUsers) window.AppShell.showAdminUsers();
   });
 }
 

@@ -21,9 +21,9 @@ Dokument opisuje warstwę wizualną aplikacji: kierunek graficzny, motyw przewod
 
 ## 1. Kierunek wizualny
 
-**Nazwa:** Minimal Mid-Century Editorial Design inspired by contemporary Scandinavian design.
+**Nazwa:** Retro Mid-Century Editorial — warm 70s graphic language.
 
-Aplikacja ma sprawiać wrażenie **nowoczesnej aplikacji edukacyjnej premium** z subtelną gamifikacją.
+Aplikacja ma sprawiać wrażenie **nowoczesnej aplikacji edukacyjnej premium** z ciepłą, charakterystyczną paletą i subtelną gamifikacją.
 
 **Inspiracje:** Mid-Century Modern, Scandinavian Editorial Design, Apple Human Interface, Headspace, Calm, Notion. Mechanika motywacji inspirowana Duolingo — **nie** styl graficzny Duolingo.
 
@@ -42,20 +42,15 @@ Styl **nie** jest „Organic Scandinavian” z dekoracyjnymi liśćmi, gałązka
 
 ## 2. Paleta
 
-| Token | Rola |
-|-------|------|
-| warm ivory `#F7F2EB` | tło główne |
-| cream `#F1E9DE` | karty, pola drugorzędne |
-| dusty pink `#E8C3B9` | powieka oka, akcent miękki |
-| terracotta `#D06A4E` | Kosmyki, akcent aktywny, pasek modułu |
-| muted coral `#C86B52` | stany błędu, delikatny akcent |
-| mustard `#E8B23E` | bonusy, serie |
-| sage `#A7B69A` | sukces, pasek postępu |
-| olive `#7F8A63` | etykiety, kickery |
-| soft mint `#D7E7DF` | tła podpowiedzi, karty ukończonych |
-| deep navy `#1E2A44` | tekst, przyciski primary, hook |
+Źródło: motyw oka `docs/ui-inspirations/inspo-07-eye-motif.png` (próbkowane piksele).
 
-**Zasada:** jeden ekran lub plansza — maksymalnie 2–3 kolory dominujące.
+| Token | Hex | Rola |
+|-------|-----|------|
+| greige / putty | `#CDC4B6` | tło aplikacji |
+| mustard | `#F1A520` | akcent warm, plamy, CTA aktywne |
+| magenta | `#E65298` | akcent hot, Kosmyki, tęczówka |
+| cream / surface | `#F5F0E8` | karty (rozjaśniony greige) |
+| ink | `#2E2A26` | tekst (przyciemniony greige — czytelność) |
 
 Zmienne CSS: `css/styles.css` (`:root`).
 
@@ -63,24 +58,28 @@ Zmienne CSS: `css/styles.css` (`:root`).
 
 ## 3. Motyw przewodni — oko
 
-Geometryczne, płaskie oko — **nie** logo, **nie** maskotka.
+Geometryczne, płaskie oko Mid-Century — **nie** logo, **nie** maskotka.
 
 **Znaczenie:** obserwacja, diagnoza, uważność, świadome patrzenie.
 
-**Budowa:**
-- białko: cream;
-- powieka: dusty pink;
-- źrenica: deep navy.
+**Budowa (inspo-07):**
+- dwa koła: mustard (góra) + magenta (dół);
+- migdał oka / tło greige;
+- tęczówka magenta, źrenica mustard;
+- asset: `assets/images/eye-motif-brand.png`.
 
 **Gdzie występuje:**
-- watermark na Home (półprzezroczysty);
+- Home (hero, PNG z inspo);
+- Profil (ten sam motyw, półprzezroczysty);
+- brama logowania / rejestracji.
 - „Wskazówka eksperta” w feedbacku lekcji;
 - ekran ukończenia lekcji;
-- przyszła odznaka „Sokole Oko”.
+- karta modułu budowy włosa;
+- Profil (hero).
 
-**Zasady:** nigdy nie dominuje ekranu; najczęściej opacity 10–15%; animacja mrugnięcia wyłącznie przy nagrodzie.
+**Zasady:** rozpoznawalny branding, nie dominuje ekranu; animacja mrugnięcia wyłącznie przy nagrodzie.
 
-Implementacja SVG: `js/ui-effects.js` (`EYE_SVG`).
+Implementacja SVG: `js/ui-effects.js` (`EYE_SVG`) oraz hero w `index.html`.
 
 ---
 
@@ -129,6 +128,8 @@ Nie stosujemy w UI ani ilustracjach:
 | Nawigacja dolna | `#shellNav` | 4 ikony, aktywna: navy + kropka terracotta |
 | Kosmyk pill | `.kosmyk-pill` | licznik na Home |
 | Hook następnej lekcji | `.hook` | navy, teaser białym tekstem |
+| Postęp w Akademii | `.course-progress` | segmenty tylko dla dostępnych lekcji; bez sugestii „do egzaminu” |
+| Seria (streak) | `.stat-card--streak` | Kosmyk SVG + dni tygodnia; pasek sage bez gradientu |
 
 Szczegóły ilustracji w lekcjach: [ILLUSTRATION_GUIDE.md](ILLUSTRATION_GUIDE.md).
 
@@ -148,7 +149,9 @@ Nagroda ma dawać **satysfakcję**, nie wrażenie kasyna.
 - sekwencja reveal na ekranie done;
 - oko na ekranie completion z delikatnym mrugnięciem;
 - po powrocie na Home: płynne wypełnienie paska modułu, błysk, podświetlenie nowej lekcji;
-- watermark oka mruga jednokrotnie.
+- opcjonalne mrugnięcie motywu oka na karcie modułu włosa.
+
+**Seria:** bez ciągłego pulsowania; jedno krótkie `is-today-enter` przy wejściu na Home.
 
 **Odznaka (kolekcja):** scale-in + jedno odbicie (`.slot.newb.pop`).
 

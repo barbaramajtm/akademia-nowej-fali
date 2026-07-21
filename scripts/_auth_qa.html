@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Auth QA</title>
+</head>
+<body>
+<pre id="out">running…</pre>
+<script src="/js/auth.js"></script>
+<script src="/js/state.js"></script>
+<script>
+(async function(){
+  var out = [];
+  function log(m){ out.push(m); document.getElementById('out').textContent = out.join('\n'); }
+  function assert(cond, msg){ if(!cond) throw new Error(msg); log('OK: ' + msg); }
+
+  try {
+    Object.keys(localStorage).forEach(function(k){
+      if (k.indexOf('akademia') === 0) localStorage.removeItem(k);
+    });
+
+    var blocked = await Auth.register({
+      displayName: 'Ala',
+      email: 'ala@test.pl',
+      password: 'haslo1234',
+      consentPrivacy: false,
+      consentTerms: true,
+      consentAge: true,
+      consentMarketing: false
+    });
+    assert(!blocked.ok, 'register blocked without privacy consent');
+
+    var blocked2 = await Auth.register({
+      displayName: 'Ala',
+      email: 'ala@test.pl',
+      password: 'haslo1234',
+      consentPrivacy: true,
+      consentTerms: false,
+      consentAge: true
+    });
+    assert(!blocked2.ok, 'register blocked without terms');
+
+    var ok = await Auth.register({
+      displayName: 'Ala',
+      email: 'ala@test.pl',
+      password: 'haslo1234',
+      consentPrivacy: true,
+      consentTerms: true,
+      consentAge: true,
+      consentMarketing: false
+    });
+    assert(ok.ok, 'register with all required consents');
+    assert(AppState.get().user.kosmyki === 0, 'new user kosmyki === 0');
+    assert(Object.keys(AppState.get().completedLessons).length === 0, 'no completed lessons');
+
+    AppState.get().user.kosmyki = 42;
+    AppState.get().completedLessons['ph-co-oznacza-ph'] = true;
+    AppState.saveState();
+
+    Auth.logout();
+    Auth.continueAsGuest();
+    var login = await Auth.login('ala@test.pl', 'haslo1234');
+    assert(login.ok, 'login works');
+    assert(AppState.get().user.kosmyki === 42, 'login restores kosmyki');
+    assert(!!AppState.get().completedLessons['ph-co-oznacza-ph'], 'login restores lessons');
+
+    var users = Auth.listUsersForAdmin();
+    assert(users.length === 1, 'admin list has 1 user');
+    assert(users[0].email === 'ala@test.pl', 'admin list email');
+
+    log('ALL_PASS');
+    document.title = 'AUTH_QA_ALL_PASS';
+  } catch (e){
+    log('FAIL: ' + e.message);
+    document.title = 'AUTH_QA_FAIL';
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>

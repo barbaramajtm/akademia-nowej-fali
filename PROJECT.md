@@ -115,15 +115,17 @@ Informacje przechowywane w obiekcie `appState` (moduł `state.js`, klucz localSt
 | Pole | Opis |
 |------|------|
 | `user.label` | Etykieta użytkowniczki (domyślnie „Uczennica”) |
-| `user.kosmyki` | Łączna liczba Kosmyków (start: 1240) |
-| `user.fala` | Aktualny poziom Fali (start: 7) |
+| `user.kosmyki` | Łączna liczba Kosmyków (start nowego konta: **0**) |
+| `user.fala` | Aktualny poziom Fali (start nowego konta: **1**) |
 | `user.falaProgress` | Postęp do następnej Fali (`current` / `goal`) |
-| `user.streakDays` | Dni serii (start: 12, statyczne) |
+| `user.streakDays` | Dni serii (start nowego konta: **0**) |
 | `completedLessons` | Mapa ukończonych lekcji `{ lessonId: true }` |
-| `totalBadges` | Łączna liczba zdobytych odznak (start: 11) |
+| `totalBadges` | Łączna liczba zdobytych odznak (start: **0**) |
 | `collections` | Tablica kolekcji z `id`, `name`, `total`, `earned`, `earnedBadges`, `pendingBadge` |
 
-**Postęp jest trwale zapisywany w localStorage.** Po odświeżeniu strony pozostają: Kosmyki, ukończone lekcje, stan kolekcji, liczba odznak i poziom Fali.
+**Postęp jest trwale zapisywany w localStorage.** Gość: klucz `akademia-nowefali-v1`. Zalogowana: `akademia-nowefali-user-{id}`. Konta: `js/auth.js` (MVP lokalne — bez chmury; GitHub Pages nie ma backendu).
+
+**Konta (MVP):** rejestracja z wymaganymi zgodami RODO (polityka, regulamin, wiek 16+/opiekun) + opcjonalny marketing; logowanie przywraca postęp konta; admin (`?admin=1`) widzi listę kont z urządzenia. Docelowo: Firebase Auth + Firestore lub Supabase.
 
 **Nie zapisujemy** rozpoczętej, ale niedokończonej lekcji — stan sesji lekcji (`app.js`: indeks zadania, Kosmyki w trakcie lekcji, odpowiedzi, pomyłki) jest ulotny.
 

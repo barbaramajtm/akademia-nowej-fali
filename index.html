@@ -17,50 +17,70 @@
     <!-- HOME -->
     <div id="view-home" class="view view-shell active">
       <div class="view-scroll">
-        <div class="ambient-shape ambient-shape--home" aria-hidden="true"></div>
-        <div class="ambient-shape ambient-shape--home-2" aria-hidden="true"></div>
-        <div class="eye-watermark eye-watermark--home eye-motif" aria-hidden="true">
-          <svg viewBox="0 0 80 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 30 Q40 6 74 30" fill="#E8C3B9"/><ellipse cx="40" cy="30" rx="26" ry="15" fill="#F1E9DE"/><circle cx="40" cy="30" r="9" fill="#1E2A44"/></svg>
-        </div>
-        <div class="status">
-          <span>9:41</span>
-          <div class="icons"><span>5G</span>
-            <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1" fill="#1F1A16"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#1F1A16"/><rect x="10" y="1" width="3" height="11" rx="1" fill="#1F1A16"/><rect x="15" y="1" width="3" height="11" rx="1" fill="#6B5E52"/></svg>
-            <svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#1F1A16" opacity=".5"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#1F1A16"/><rect x="21" y="4" width="2" height="4" rx="1" fill="#1F1A16"/></svg>
+        <section class="home-editorial editorial-grain" aria-label="Powitanie">
+          <div class="home-editorial-blobs" aria-hidden="true"></div>
+          <div class="home-editorial-eye" aria-hidden="true">
+            <img src="assets/images/eye-motif-brand.png" alt="" width="148" height="197" decoding="async">
           </div>
-        </div>
-        <div class="content">
-          <div class="header">
-            <div class="greet">
-              <div class="hello">Cześć, <span id="homeUserLabel">Uczennica</span></div>
-              <div class="sub">Gotowa na dzisiejszą falę?</div>
+          <div class="status">
+            <span>9:41</span>
+            <div class="icons"><span>5G</span>
+              <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1" fill="#1E2A44"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#1E2A44"/><rect x="10" y="1" width="3" height="11" rx="1" fill="#1E2A44"/><rect x="15" y="1" width="3" height="11" rx="1" fill="#6F6A70"/></svg>
+              <svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#1E2A44" opacity=".5"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#1E2A44"/><rect x="21" y="4" width="2" height="4" rx="1" fill="#1E2A44"/></svg>
             </div>
-            <div class="header-side">
-              <div class="kosmyk-pill">
-                <svg width="19" height="19" viewBox="0 0 20 20"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#D06A4E"/></svg>
-                <div><div class="num" id="homeKosmyki">1 240</div><div class="lbl">Kosmyków</div></div>
+          </div>
+          <div class="home-editorial-body">
+            <div class="header">
+              <div class="greet">
+                <div class="hello">Cześć, <span id="homeUserLabel">Uczennico</span></div>
+                <div class="sub">Gotowa na dzisiejszą falę?</div>
               </div>
-              <button class="avatar" id="homeAvatarBtn" type="button" aria-label="Profil">
-                <svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#2E3D5C"/><path d="M4 27 Q15 17 26 27 Z" fill="#1E2A44"/></svg>
-              </button>
+              <div class="header-side">
+                <div class="kosmyk-pill" aria-label="Kosmyki">
+                  <svg width="19" height="19" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#E65298"/></svg>
+                  <div><div class="num" id="homeKosmyki">0</div><div class="lbl">Kosmyków</div></div>
+                </div>
+                <button class="avatar" id="homeAvatarBtn" type="button" aria-label="Profil">
+                  <svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#E65298"/><path d="M4 27 Q15 17 26 27 Z" fill="#2E2A26"/></svg>
+                </button>
+              </div>
             </div>
+            <p class="home-tagline">
+              <span class="home-tagline-line">Zobacz więcej. Zrozum włosy.</span>
+              <span class="home-tagline-line home-tagline-line--strong">Działaj świadomie.</span>
+            </p>
           </div>
+        </section>
+        <div class="content">
           <div class="stats">
-            <div class="stat-card">
-              <div class="stat-top"><span class="stat-label">Poziom</span><span class="stat-val" id="homeFala">Fala 7</span></div>
+            <div class="stat-card stat-card--level">
+              <div class="stat-top"><span class="stat-label">TWÓJ POZIOM</span><span class="stat-val" id="homeFala">Fala 7</span></div>
               <div class="bar"><i id="homeFalaBar" style="width:64%"></i></div>
               <div class="stat-foot" id="homeFalaFoot">640 / 1000 do Fali 8</div>
             </div>
-            <div class="stat-card">
-              <div class="stat-top"><span class="stat-label">Seria</span><span class="stat-val" id="homeStreak">12 <small>dni</small></span></div>
-              <div class="streak-dots">
-                <div class="d on"></div><div class="d on"></div><div class="d on"></div>
-                <div class="d on"></div><div class="d on"></div><div class="d on"></div>
-                <div class="d today"></div>
+            <div class="stat-card stat-card--streak" id="homeStreakCard">
+              <div class="stat-top">
+                <span class="stat-label">UTRZYMAJ SERIĘ</span>
+                <span class="stat-val" id="homeStreak">12 <small>dni</small></span>
               </div>
-              <div class="stat-foot">Utrzymaj falę — jeszcze dziś</div>
+              <div class="streak-visual" id="homeStreakVisual">
+                <svg class="streak-kosmyk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                  <path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#E8B23E"/>
+                </svg>
+                <div class="streak-days" id="homeStreakDays" role="img" aria-label="Postęp serii w tym tygodniu"></div>
+              </div>
+              <div class="streak-bar" role="presentation"><i id="homeStreakBar" style="width:85%"></i></div>
+              <div class="stat-foot" id="homeStreakFoot">Zrób dziś jedną lekcję.</div>
             </div>
           </div>
+          <section class="course-progress" id="homeCourseProgress" aria-labelledby="homeCourseLabel">
+            <div class="course-progress-head">
+              <span class="course-progress-label" id="homeCourseLabel">Postęp w Akademii</span>
+              <span class="course-progress-val" id="homeCourseVal" aria-live="polite">0 z 0 dostępnych lekcji</span>
+            </div>
+            <div class="course-progress-track" id="homeCourseTrack" role="img" aria-label="Segmenty postępu w dostępnych lekcjach"></div>
+            <p class="course-progress-foot" id="homeCourseFoot">Kolejne etapy będą pojawiać się tutaj wraz z rozwojem kursu.</p>
+          </section>
           <div id="homeNotice" class="home-notice" hidden role="status"></div>
           <div id="homeModules"></div>
           <div id="homeSectionMission" class="home-section-hidden">
@@ -114,7 +134,7 @@
               <div class="s" id="homeGabHint">Osiągnięcia pojawią się wraz z kolejnymi modułami</div>
             </div>
             <div class="gab-arrow">
-              <svg width="9" height="16" viewBox="0 0 9 16"><path d="M1 1l6 7-6 7" fill="none" stroke="#7A3344" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="9" height="16" viewBox="0 0 9 16"><path d="M1 1l6 7-6 7" fill="none" stroke="#1E2A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/></svg>
             </div>
           </button>
         </div>
@@ -124,16 +144,29 @@
     <!-- GABLOTKA -->
     <div id="view-gablotka" class="view view-shell">
       <div class="view-scroll">
-        <div class="subpage-head">
-          <h2>Gablotka</h2>
-          <p id="gablotkaSummary">Twoje odznaki i kolekcje</p>
+        <header class="gab-hero editorial-grain">
+          <div class="gab-hero-motif" aria-hidden="true"></div>
+          <h2 id="gablotkaTitle">Twoja Gablotka</h2>
+          <p class="gab-hero-sub" id="gablotkaSummary">Tu trafiają rzeczy, na które naprawdę trzeba było zapracować.</p>
+          <p class="gab-hero-aside">Samo dobre światło nie wystarczy. Liczy się też wiedza.</p>
+        </header>
+        <div class="content content-tight" id="gablotkaBody">
+          <!-- wypełniane przez shell.js -->
         </div>
-        <div class="content content-tight">
-          <div class="collection gab-collection" id="gablotkaCollection"></div>
-          <div class="gab-total-card" id="gablotkaTotalCard" hidden>
-            <div class="gab-total-num" id="gablotkaTotal">11</div>
-            <div class="gab-total-lbl">zdobytych odznak łącznie</div>
-          </div>
+      </div>
+    </div>
+
+    <!-- MODAL ODZNAKI -->
+    <div class="modal-overlay" id="badgeModal" hidden>
+      <div class="modal-sheet badge-modal-sheet" role="dialog" aria-labelledby="badgeModalTitle" aria-modal="true">
+        <div class="badge-modal-symbol" id="badgeModalSymbol" aria-hidden="true"></div>
+        <h3 id="badgeModalTitle">Odznaka</h3>
+        <p class="badge-modal-status" id="badgeModalStatus"></p>
+        <p class="badge-modal-desc" id="badgeModalDesc"></p>
+        <p class="badge-modal-cond" id="badgeModalCond"></p>
+        <p class="badge-modal-date" id="badgeModalDate" hidden></p>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="badgeModalClose" type="button">Zamknij</button>
         </div>
       </div>
     </div>
@@ -141,30 +174,58 @@
     <!-- PROFIL -->
     <div id="view-profile" class="view view-shell">
       <div class="view-scroll">
-        <div class="subpage-head">
-          <h2>Profil</h2>
-          <p id="profileSub">Twoje postępy w nauce</p>
+        <div class="profile-hero editorial-grain">
+          <div class="profile-hero-eye" aria-hidden="true">
+            <img src="assets/images/eye-motif-brand.png" alt="" width="96" height="128" decoding="async">
+          </div>
+          <div class="profile-hero-arc" aria-hidden="true"></div>
+          <div class="subpage-head profile-head">
+            <h2>Profil</h2>
+            <p id="profileSub">Twoje postępy w nauce</p>
+          </div>
         </div>
         <div class="content content-tight">
-          <div class="profile-card">
+          <div class="profile-card profile-card--main">
             <div class="profile-avatar">
-              <svg width="54" height="54" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#2E3D5C"/><path d="M4 27 Q15 17 26 27 Z" fill="#1E2A44"/></svg>
+              <svg width="54" height="54" viewBox="0 0 30 30"><circle cx="15" cy="11" r="6" fill="#E65298"/><path d="M4 27 Q15 17 26 27 Z" fill="#2E2A26"/></svg>
             </div>
-            <div class="profile-name" id="profileName">Uczennica</div>
-            <div class="profile-meta" id="profileMeta">Fala 7 · 1 240 Kosmyków</div>
-          </div>
-          <div class="stats">
-            <div class="stat-card">
-              <div class="stat-top"><span class="stat-label">Poziom</span><span class="stat-val" id="profileFala">Fala 7</span></div>
-              <div class="bar"><i id="profileFalaBar" style="width:64%"></i></div>
-              <div class="stat-foot" id="profileFalaFoot">640 / 1000 do Fali 8</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-top"><span class="stat-label">Seria</span><span class="stat-val" id="profileStreak">12 <small>dni</small></span></div>
-              <div class="stat-foot">Regularność ważniejsza niż wynik</div>
+            <div class="profile-name" id="profileName">Uczennico</div>
+            <div class="profile-meta" id="profileMeta">Fala 1 · 0 Kosmyków</div>
+            <div class="profile-kos-chip">
+              <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M12 2 C7 5 6 9 8 13 C9 16 8 18 6 18 C10 18 13 15 12 11 C11.4 8.5 12.5 5.5 15 4 C14 3 13 2.4 12 2Z" fill="#E65298"/></svg>
+              <span id="profileKosmyki">0</span> Kosmyków
             </div>
           </div>
-          <div class="profile-note">Tematy do powtórki i ustawienia konta pojawią się w kolejnych wersjach.</div>
+          <section class="profile-account" aria-labelledby="profileAccountTitle">
+            <h3 id="profileAccountTitle">Konto</h3>
+            <p class="profile-account-meta" id="profileAccountMeta">Nie jesteś zalogowana.</p>
+            <div class="profile-account-actions">
+              <button type="button" class="btn btn-primary" id="profileAuthOpen">Zaloguj / Załóż konto</button>
+              <button type="button" class="btn btn-ghost" id="profileLogout" hidden>Wyloguj</button>
+            </div>
+          </section>
+          <div class="stats profile-stats">
+            <div class="stat-card stat-card--level">
+              <div class="stat-top"><span class="stat-label" id="profileLevelLabel">TWÓJ POZIOM</span><span class="stat-val" id="profileFala">Fala 1</span></div>
+              <div class="bar"><i id="profileFalaBar" style="width:0%"></i></div>
+              <div class="stat-foot" id="profileFalaFoot">0 / 1000 do Fali 2</div>
+            </div>
+            <div class="stat-card stat-card--streak">
+              <div class="stat-top"><span class="stat-label" id="profileStreakLabel">UTRZYMAJ SERIĘ</span><span class="stat-val" id="profileStreak">0 <small>dni</small></span></div>
+              <div class="stat-foot" id="profileStreakFoot">Zrób dziś jedną lekcję.</div>
+            </div>
+          </div>
+          <section class="profile-rhythm" aria-labelledby="profileRhythmTitle">
+            <h3 id="profileRhythmTitle">Twój rytm nauki</h3>
+            <p id="profileRhythmVal">Ukończ pierwszą lekcję, aby zobaczyć swój rytm</p>
+          </section>
+          <section class="profile-admin" aria-labelledby="profileAdminTitle">
+            <h3 id="profileAdminTitle">Administrator / QA</h3>
+            <p class="profile-admin-note">Tryb piaskownicy: przeglądaj wszystkie lekcje bez zmiany postępu uczennicy.</p>
+            <button type="button" class="btn btn-primary profile-admin-btn" id="profileAdminToggle">Włącz tryb administratora</button>
+            <button type="button" class="btn btn-ghost profile-admin-btn" id="profileAdminUsers" hidden>Lista kont uczennic</button>
+            <button type="button" class="btn btn-ghost profile-admin-btn" id="profileResetProgress">Reset postępu użytkownika</button>
+          </section>
         </div>
       </div>
     </div>
@@ -176,7 +237,7 @@
         <div class="progress" id="progress"></div>
         <div class="kwrap" id="kwrap">
           <span class="kicon" id="kicon"></span>
-          <span class="num" id="kNum">240</span>
+          <span class="num" id="kNum">0</span>
         </div>
       </div>
       <div class="float-k" id="floatK"></div>
@@ -194,7 +255,7 @@
         <div class="fwhy" id="fwhy"></div>
         <div class="bonus" id="fbonus" hidden></div>
         <div class="aha" id="faha" hidden>
-          <div class="at"><span class="eye-motif eye-motif--hint" aria-hidden="true"><svg viewBox="0 0 80 48" fill="none"><path d="M6 30 Q40 6 74 30" fill="#E8C3B9"/><ellipse cx="40" cy="30" rx="26" ry="15" fill="#F1E9DE"/><circle cx="40" cy="30" r="9" fill="#1E2A44"/></svg></span>Wskazówka eksperta</div>
+          <div class="at"><span class="eye-motif eye-motif--hint" aria-hidden="true"><svg viewBox="0 0 80 48" fill="none"><ellipse cx="40" cy="18" rx="28" ry="14" fill="#E8B23E" opacity=".55"/><path d="M8 30 Q40 8 72 30 Q40 44 8 30Z" fill="#E8A8B8"/><ellipse cx="40" cy="28" rx="22" ry="12" fill="#FFFBF5"/><circle cx="40" cy="28" r="9" fill="#D97B94"/><circle cx="40" cy="28" r="4.5" fill="#1A2744"/><circle cx="43" cy="25" r="1.6" fill="#FFFBF5" opacity=".7"/></svg></span>Wskazówka eksperta</div>
           <div class="ab" id="fahab"></div>
         </div>
         <button class="btn btn-primary" id="fnext" type="button">Dalej</button>
@@ -221,6 +282,86 @@
       </button>
     </nav>
 
+    <!-- AUTH GATE (wewnątrz ekranu telefonu) -->
+    <div class="auth-gate" id="authGate" hidden>
+      <div class="auth-sheet" role="dialog" aria-labelledby="authTitle" aria-modal="true">
+        <div class="auth-brand">
+          <img src="assets/images/eye-motif-brand.png" alt="" width="88" height="117" decoding="async">
+          <h2 id="authTitle">Akademia Nowej Fali</h2>
+          <p>Załóż konto, aby zapisać postęp. Nowe konto startuje z 0 Kosmykami.</p>
+        </div>
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="auth-tab is-active" id="authTabLogin" data-auth-tab="login">Logowanie</button>
+          <button type="button" class="auth-tab" id="authTabRegister" data-auth-tab="register">Rejestracja</button>
+        </div>
+
+        <div class="auth-panel" id="authPanelLogin">
+          <div class="auth-field">
+            <label for="authLoginEmail">E-mail</label>
+            <input id="authLoginEmail" type="email" autocomplete="username" required>
+          </div>
+          <div class="auth-field">
+            <label for="authLoginPassword">Hasło</label>
+            <input id="authLoginPassword" type="password" autocomplete="current-password" required>
+          </div>
+          <p class="auth-error" id="authLoginError" role="alert"></p>
+          <div class="auth-actions">
+            <button type="button" class="btn btn-primary" id="authLoginSubmit">Zaloguj się</button>
+          </div>
+        </div>
+
+        <div class="auth-panel" id="authPanelRegister" hidden>
+          <div class="auth-field">
+            <label for="authRegName">Imię</label>
+            <input id="authRegName" type="text" autocomplete="given-name" required>
+          </div>
+          <div class="auth-field">
+            <label for="authRegEmail">E-mail</label>
+            <input id="authRegEmail" type="email" autocomplete="email" required>
+          </div>
+          <div class="auth-field">
+            <label for="authRegPassword">Hasło (min. 8 znaków)</label>
+            <input id="authRegPassword" type="password" autocomplete="new-password" required minlength="8">
+          </div>
+          <div class="auth-consents">
+            <label class="auth-check">
+              <input type="checkbox" id="authConsentPrivacy">
+              <span>Akceptuję <a href="privacy.html" target="_blank" rel="noopener">Politykę prywatności</a> (RODO) — wymagane.</span>
+            </label>
+            <label class="auth-check">
+              <input type="checkbox" id="authConsentTerms">
+              <span>Akceptuję <a href="terms.html" target="_blank" rel="noopener">Regulamin</a> — wymagane.</span>
+            </label>
+            <label class="auth-check">
+              <input type="checkbox" id="authConsentAge">
+              <span>Mam ukończone 16 lat albo rejestruję się za zgodą opiekuna prawnego — wymagane.</span>
+            </label>
+            <label class="auth-check auth-check--optional">
+              <input type="checkbox" id="authConsentMarketing">
+              <span>Chcę otrzymywać informacje o nowościach Akademii (opcjonalnie).</span>
+            </label>
+          </div>
+          <p class="auth-error" id="authRegisterError" role="alert"></p>
+          <div class="auth-actions">
+            <button type="button" class="btn btn-primary" id="authRegisterSubmit">Utwórz konto</button>
+          </div>
+        </div>
+
+        <button type="button" class="auth-guest" id="authGuestBtn">Kontynuuj bez konta (tylko to urządzenie)</button>
+        <p class="auth-note">Konto zapisuje postęp lokalnie w tej przeglądarce. Synchronizacja w chmurze wymaga osobnego backendu (np. Firebase).</p>
+      </div>
+    </div>
+
+    <!-- ADMIN: lista kont -->
+    <div class="admin-users-sheet" id="adminUsersSheet" hidden>
+      <div class="admin-users-head">
+        <h3>Konta uczennic</h3>
+        <button type="button" class="btn btn-ghost" id="adminUsersClose">Zamknij</button>
+      </div>
+      <p class="auth-note" style="text-align:left;margin:0">Widoczne tylko w trybie administratora (?admin=1). Dane z tego urządzenia.</p>
+      <ul class="admin-users-list" id="adminUsersList"></ul>
+    </div>
+
   </div>
 </div>
 
@@ -236,7 +377,9 @@
   </div>
 </div>
 
+<script src="js/auth.js"></script>
 <script src="js/state.js"></script>
+<script src="js/badges.js"></script>
 <script src="js/lessons-catalog.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/ui-effects.js"></script>

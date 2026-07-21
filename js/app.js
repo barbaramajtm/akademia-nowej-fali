@@ -8,7 +8,7 @@
 /* ---------- konfiguracja silnika ---------- */
 const CONFIG = {
   defaultLesson: 'ph-co-oznacza-ph',
-  startKosmyki: 240,
+  startKosmyki: 0,
   ui: {
     incorrectFallbackTitle: 'Prawie — spójrz jeszcze raz',
     ahaLabel: 'Wskazówka eksperta',
