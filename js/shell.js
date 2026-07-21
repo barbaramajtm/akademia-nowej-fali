@@ -1336,6 +1336,9 @@ function bindChrome(){
   document.addEventListener('anf-admin-change', function(){
     syncProfileAdminUi();
   });
+  if (window.AnfPushUi && window.AnfPushUi.bind){
+    window.AnfPushUi.bind();
+  }
 }
 
 window.AppShell = {
@@ -1366,6 +1369,9 @@ window.AppShell = {
   goProfile: function(){
     showView('profile');
     syncProfileAdminUi();
+    if (window.AnfPushUi && window.AnfPushUi.sync){
+      window.AnfPushUi.sync();
+    }
   },
 
   startLesson: function(lessonId){
