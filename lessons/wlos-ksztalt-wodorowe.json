@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-ksztalt-wodorowe",
+  "title": "Wiązania wodorowe",
+  "category": "Włos, wiązania i zmiana kształtu",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Przy układaniu fryzury coś we włosie „puszcza” i układa się inaczej — a potem potrafi wrócić. Dziś przyjrzysz się jednemu rodzajowi połączeń w strukturze.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Mostki w strukturze",
+      "text": "Spójrz na planszę: widać połączenia oznaczone przy atomach w spirali keratyny. To wiązania wodorowe — nazywane też mostkami wodorowymi. Za chwilę sprawdzisz, co z czym się łączy i po co Ci ta nazwa w salonie.",
+      "note": "Plansza jest uproszczeniem dydaktycznym. Pełne zdanie o atomach domkniesz w feedbacku po pierwszej decyzji.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-hydrogen-bonds.png",
+      "imageAlt": "Schemat mostków wodorowych w strukturze włókna keratynowego.",
+      "imageCaption": "Mostki wodorowe w uproszczonym schemacie struktury."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wk2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Co to za mostki?",
+      "question": "Wiązania wodorowe we włosie to mostki w strukturze keratyny. Który opis jest zgodny z ich charakterem?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Łączą w strukturze elementy związane z tlenem i wodorem — to nie mostki „z siarki” i nie pigment"
+        },
+        {
+          "id": "b",
+          "text": "To to samo co melanina w korze"
+        },
+        {
+          "id": "c",
+          "text": "To numer farby zapisany na tubce"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — O i H w strukturze.",
+        "incorrectTitle": "To nie pigment ani numer farby.",
+        "explanation": "Mostki wodorowe powstają między atomami tlenu i wodoru w strukturze. Siarka wróci przy innym rodzaju wiązań. Pigment i numer farby to inne działy."
+      }
+    },
+    {
+      "id": "wk2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Nazwa",
+      "question": "„Wiązania wodorowe” i „mostki wodorowe” w praktyce fryzjerskiej oznaczają ten sam rodzaj połączeń istotnych przy modelowaniu.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Ta sama idea.",
+        "incorrectTitle": "Jeszcze raz.",
+        "explanation": "Źródła i plansze używają obu nazw. Ważne, żebyś wiedziała, o jaki mechanizm chodzi przy układaniu fryzury."
+      }
+    },
+    {
+      "id": "wk2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Nie pomyl",
+      "question": "Dopasuj pojęcie do opisu.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Opis",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Wiązania wodorowe"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Keratyna"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Melanina"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Białkowe rusztowanie włókien"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Mostki między tlenem a wodorem w strukturze"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Barwnik w korze (nie utrzymuje kształtu fryzury)"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Czyste rozróżnienie.",
+        "incorrectTitle": "Sprawdź pary.",
+        "explanation": "Keratyna buduje. Wiązania wodorowe łączą w tej strukturze. Melanina to kolor — inna funkcja."
+      }
+    },
+    {
+      "id": "wk2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Kontekst",
+      "question": "Po co fryzjerce w ogóle nazwa „wiązania wodorowe”?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Żeby opisać, które połączenia zmieniają się przy modelowaniu z wilgocią i ciepłem"
+        },
+        {
+          "id": "b",
+          "text": "Żeby dobrać numer farby do odrostu"
+        },
+        {
+          "id": "c",
+          "text": "Żeby zmierzyć pH szamponu bez paska"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Po to jest ta nazwa.",
+        "incorrectTitle": "Inny dział.",
+        "explanation": "Numer farby i pH to inne moduły. Tu uczysz się, które wiązania wchodzą w grę, gdy układasz włos."
+      }
+    },
+    {
+      "id": "wk2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Wiązania wodorowe",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Mostki wodorowe powstają między atomami tlenu i wodoru"
+        },
+        {
+          "id": "s2",
+          "text": "Wiązania wodorowe są tym samym, co pigment w korze"
+        },
+        {
+          "id": "s3",
+          "text": "Przy modelowaniu fryzjerka pracuje m.in. na wiązaniach wodorowych"
+        }
+      ],
+      "correctOptionIds": [
+        "s2"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mit odfiltrowany.",
+        "incorrectTitle": "Znajdź inny błąd.",
+        "explanation": "Pigment ≠ wiązania. Mostki wodorowe to połączenia w strukturze keratyny — kluczowe przy modelowaniu."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz wiązania wodorowe",
+    "subtitle": "Wiesz, że to mostki między tlenem a wodorem w strukturze keratyny.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Co dokładnie robią z nimi wilgoć i ciepło przy układaniu?"
+    }
+  }
+}

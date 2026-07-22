@@ -361,10 +361,88 @@ window.LessonsCatalog = [
     locked: false,
     requiresLessonId: 'wlos-oslonka-kora-rdzen',
     lockedReason: 'Najpierw ukończ: Osłonka, kora i rdzeń'
+  },
+  {
+    id: 'wlos-ksztalt-co-utrzymuje',
+    moduleId: 'wlos-ksztalt',
+    title: 'Co utrzymuje kształt włosa?',
+    moduleTitle: 'Włos, wiązania i zmiana kształtu',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-keratyna-rusztowanie',
+    lockedReason: 'Najpierw ukończ: Keratyna — rusztowanie włosa'
+  },
+  {
+    id: 'wlos-ksztalt-wodorowe',
+    moduleId: 'wlos-ksztalt',
+    title: 'Wiązania wodorowe',
+    moduleTitle: 'Włos, wiązania i zmiana kształtu',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-ksztalt-co-utrzymuje',
+    lockedReason: 'Najpierw ukończ: Co utrzymuje kształt włosa?'
+  },
+  {
+    id: 'wlos-ksztalt-wilgoc-cieplo',
+    moduleId: 'wlos-ksztalt',
+    title: 'Wilgoć, ciepło i modelowanie',
+    moduleTitle: 'Włos, wiązania i zmiana kształtu',
+    moduleSubtitle: 'Modelowanie',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-ksztalt-wodorowe',
+    lockedReason: 'Najpierw ukończ: Wiązania wodorowe'
+  },
+  {
+    id: 'wlos-ksztalt-skret-po-walkach',
+    moduleId: 'wlos-ksztalt',
+    title: 'Skręt po wałkach',
+    moduleTitle: 'Włos, wiązania i zmiana kształtu',
+    moduleSubtitle: 'Modelowanie',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-ksztalt-wilgoc-cieplo',
+    lockedReason: 'Najpierw ukończ: Wilgoć, ciepło i modelowanie'
+  },
+  {
+    id: 'wlos-ksztalt-siarkowe',
+    moduleId: 'wlos-ksztalt',
+    title: 'Wiązania siarkowe',
+    moduleTitle: 'Włos, wiązania i zmiana kształtu',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-ksztalt-skret-po-walkach',
+    lockedReason: 'Najpierw ukończ: Skręt po wałkach'
+  },
+  {
+    id: 'wlos-ksztalt-redukcja-utrwalenie',
+    moduleId: 'wlos-ksztalt',
+    title: 'Redukcja i utrwalenie',
+    moduleTitle: 'Włos, wiązania i zmiana kształtu',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-ksztalt-siarkowe',
+    lockedReason: 'Najpierw ukończ: Wiązania siarkowe'
+  },
+  {
+    id: 'wlos-ksztalt-czasowa-czy-chemiczna',
+    moduleId: 'wlos-ksztalt',
+    title: 'Czasowa czy chemiczna?',
+    moduleTitle: 'Włos, wiązania i zmiana kształtu',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-ksztalt-redukcja-utrwalenie',
+    lockedReason: 'Najpierw ukończ: Redukcja i utrwalenie'
   }
+
 ];
 
-window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor'];
+window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];

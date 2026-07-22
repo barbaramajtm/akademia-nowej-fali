@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-ksztalt-siarkowe",
+  "title": "Wiązania siarkowe",
+  "category": "Włos, wiązania i zmiana kształtu",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Klientka chce loki, „żeby zostały po myciu”. Wiesz już, że wałki z samą wodą i ciepłem tego nie gwarantują. Dziś wchodzisz w inny rodzaj połączeń w keratynie.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Inne mostki — inna stawka",
+      "text": "Gdy efekt ma przeżyć mycie, modelowanie na wiązaniach wodorowych przestaje wystarczać. W keratynie są też wiązania siarkowe — mostki siarczkowe. To one są kluczowe dla trwałej zmiany kształtu.",
+      "note": "Plansza pokazuje też skrót procesu trwałej — szczegóły redukcji i utrwalenia domkniesz w kolejnej lekcji.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-sulfur-bonds-permanent.png",
+      "imageAlt": "Schemat mostków siarczkowych i trzech kroków trwałej zmiany kształtu.",
+      "imageCaption": "Mostki siarczkowe — kluczowe dla trwałej zmiany kształtu."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wk5-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Rozróżnienie",
+      "question": "Które wiązania są kluczowe, gdy mówimy o trwałej chemicznej zmianie kształtu (nie o zwykłym modelowaniu)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Wiązania siarkowe (mostki siarczkowe)"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie wiązania wodorowe"
+        },
+        {
+          "id": "c",
+          "text": "Wiązania „numeru farby” na opakowaniu"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Siarkowe.",
+        "incorrectTitle": "To nie modelowanie.",
+        "explanation": "Przy trwałej w grę wchodzą wiązania siarkowe. Wodorowe ogarniasz przy wilgoci i cieple — inna liga trwałości."
+      }
+    },
+    {
+      "id": "wk5-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Siarka",
+      "question": "Siarka należy do pierwiastków składających włos i łączy się z tematem mostków siarczkowych w keratynie.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Spójne z keratyną.",
+        "incorrectTitle": "Wróć do pierwiastków.",
+        "explanation": "Już przy keratynie pojawiała się siarka. Mostki siarczkowe w keratynie łączą budowę włosa z trwałą zmianą kształtu."
+      }
+    },
+    {
+      "id": "wk5-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · H vs S",
+      "question": "Dopasuj wiązanie do typowej sytuacji.",
+      "leftTitle": "Wiązanie / środek",
+      "rightTitle": "Sytuacja",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Wiązania wodorowe"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Wiązania siarkowe"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Lakier na gotowej fryzurze"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Trwała chemiczna zmiana kształtu"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Modelowanie: wilgoć i ciepło"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Utrwalenie powierzchniowe ułożenia"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dwie ligi + powierzchnia.",
+        "incorrectTitle": "Pomyłka ligi.",
+        "explanation": "H → modelowanie. S → trwała chemiczna. Lakier → powierzchnia. Nie zamieniaj tych ról."
+      }
+    },
+    {
+      "id": "wk5-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Tioglikolowy",
+      "question": "Kwas tioglikolowy w płynach do trwałej ondulacji i prostowania włosów:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ma działanie redukujące i uwodornia mostki siarczkowe w keratynie"
+        },
+        {
+          "id": "b",
+          "text": "Służy wyłącznie do zakwaszania po koloryzacji jak kwas cytrynowy"
+        },
+        {
+          "id": "c",
+          "text": "Zastępuje melaninę w korze"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Redukcja mostków.",
+        "incorrectTitle": "Inna funkcja kwasu.",
+        "explanation": "Kwas tioglikolowy redukuje / uwodornia mostki siarczkowe; jest w płynach do trwałej i prostowania. To nie „zwykłe zakwaszanie po farbie”."
+      }
+    },
+    {
+      "id": "wk5-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Wiązania siarkowe",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Mostki siarczkowe dotyczą keratyny"
+        },
+        {
+          "id": "s2",
+          "text": "Wiązania siarkowe są tym samym co czasowa zmiana przy samym modelowaniu wilgocią i ciepłem"
+        },
+        {
+          "id": "s3",
+          "text": "Przy trwałej zmianie kształtu kluczowe są wiązania siarkowe"
+        }
+      ],
+      "correctOptionIds": [
+        "s2"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie myl H z S.",
+        "incorrectTitle": "Znajdź mylenie zabiegów.",
+        "explanation": "Modelowanie na H to zmiana czasowa. Wiązania siarkowe to mechanizm trwałej chemicznej zmiany — kolejna lekcja pokaże redukcję i utrwalenie krok po kroku."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz stawkę wiązań siarkowych",
+    "subtitle": "Po myciu zostaje to, co ruszyło mostki siarkowe — nie sam skręt z wilgoci i ciepła.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Jak wygląda kolejność: reduktor → kształt → utrwalacz?"
+    }
+  }
+}

@@ -34,6 +34,14 @@ var MODULE_MOTIFS = {
       '<circle cx="60" cy="54" r="12" fill="#D97B94" opacity="0.85"/>' +
       '<circle cx="60" cy="54" r="6" fill="#1A2744"/>' +
     '</svg>',
+  'wlos-ksztalt':
+    '<svg viewBox="0 0 120 88" fill="none" aria-hidden="true">' +
+      '<ellipse cx="72" cy="30" rx="34" ry="20" fill="#E8B23E" opacity="0.3"/>' +
+      '<path d="M10 54 Q60 16 110 54" fill="#E8A8B8" opacity="0.4"/>' +
+      '<ellipse cx="60" cy="54" rx="34" ry="18" fill="#FFFBF5" opacity="0.7"/>' +
+      '<circle cx="60" cy="54" r="12" fill="#D97B94" opacity="0.85"/>' +
+      '<circle cx="60" cy="54" r="6" fill="#1A2744"/>' +
+    '</svg>',
   'numeracja-farb':
     '<svg viewBox="0 0 120 88" fill="none" aria-hidden="true">' +
       '<ellipse cx="78" cy="28" rx="30" ry="18" fill="#E8B23E" opacity="0.32"/>' +
@@ -214,7 +222,7 @@ window.UIEffects = {
       animateUnlockedTile(id);
     }, delay);
 
-    if (moduleId === 'wlos-kolor'){
+    if (moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt'){
       setTimeout(function(){
         blinkModuleMotif(moduleId);
       }, delay + 400);

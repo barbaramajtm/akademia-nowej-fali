@@ -149,6 +149,19 @@ var BADGE_CATALOG = [
     progress: function(ctx){
       return ctx.moduleProgress['wlos-kolor'] || { current: 0, goal: 1 };
     }
+  },
+  {
+    id: 'modul-wlos-ksztalt',
+    collectionId: 'moduly',
+    name: 'Wiązania i kształt',
+    description: 'Wiesz, kiedy efekt jest czasowy, a kiedy chemiczny — mostki H i S nie mają przed tobą tajemnic.',
+    conditionLabel: 'Ukończ wszystkie lekcje modułu wiązań i zmiany kształtu',
+    symbol: 'comb',
+    accent: 'dusty',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['wlos-ksztalt']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['wlos-ksztalt'] || { current: 0, goal: 1 };
+    }
   }
 ];
 
