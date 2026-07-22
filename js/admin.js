@@ -175,7 +175,10 @@ function showAdminPasswordPrompt(opts){
       '<h2 id="adminPassTitle">Hasło administratora</h2>' +
       '<p class="admin-pass-note">Dostęp tylko dla trenerek Akademii.</p>' +
       '<label class="admin-pass-label" for="adminPassInput">Hasło</label>' +
-      '<input id="adminPassInput" class="admin-pass-input" type="password" name="admin-pass" autocomplete="current-password" required>' +
+      '<div class="admin-pass-wrap">' +
+        '<input id="adminPassInput" class="admin-pass-input" type="password" name="admin-pass" autocomplete="current-password" required>' +
+        '<button type="button" class="admin-pass-peek" id="adminPassPeek" aria-label="Pokaż hasło">Pokaż</button>' +
+      '</div>' +
       '<p class="admin-pass-error" id="adminPassError" hidden></p>' +
       '<div class="admin-pass-actions">' +
         '<button type="button" class="btn btn-ghost" id="adminPassCancel">Anuluj</button>' +
@@ -188,6 +191,17 @@ function showAdminPasswordPrompt(opts){
   var input = document.getElementById('adminPassInput');
   var errEl = document.getElementById('adminPassError');
   var form = document.getElementById('adminPassForm');
+  var peekBtn = document.getElementById('adminPassPeek');
+
+  if (peekBtn && input){
+    peekBtn.addEventListener('click', function(){
+      var show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      peekBtn.textContent = show ? 'Ukryj' : 'Pokaż';
+      peekBtn.setAttribute('aria-label', show ? 'Ukryj hasło' : 'Pokaż hasło');
+      input.focus();
+    });
+  }
 
   function cancel(){
     hideAdminPasswordPrompt();

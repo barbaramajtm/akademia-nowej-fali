@@ -2,6 +2,14 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-22 — Admin: podgląd hasła przy odblokowaniu
+
+### Zmieniono
+- `js/admin.js` — przycisk „Pokaż / Ukryj” przy polu hasła administratora
+- `css/styles.css` — układ pola z przyciskiem podglądu
+
+---
+
 ## 2026-07-22 — Auth: powrót do aplikacji z bramki logowania
 
 ### Zmieniono

@@ -789,11 +789,18 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
 }
 .admin-pass-note{font-size:13px;line-height:1.45;color:var(--ink-muted);margin:0 0 14px;}
 .admin-pass-label{display:block;font-size:12px;font-weight:600;color:var(--olive);margin-bottom:5px;}
+.admin-pass-wrap{position:relative;display:flex;align-items:center;margin-bottom:8px;}
 .admin-pass-input{
-  width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;
-  font-family:'Inter';background:#fff;color:var(--ink);min-height:44px;box-sizing:border-box;margin-bottom:8px;
+  width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 72px 12px 14px;font-size:15px;
+  font-family:'Inter';background:#fff;color:var(--ink);min-height:44px;box-sizing:border-box;margin-bottom:0;
 }
 .admin-pass-input:focus{outline:2px solid var(--mustard);outline-offset:1px;border-color:var(--mustard);}
+.admin-pass-peek{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  border:none;background:transparent;color:var(--magenta);font-size:12px;font-weight:700;
+  font-family:'Poppins',sans-serif;cursor:pointer;padding:6px 8px;min-height:36px;
+}
+.admin-pass-peek:hover{text-decoration:underline;}
 .admin-pass-error{font-size:13px;color:#B83A52;font-weight:600;margin:0 0 10px;}
 .admin-pass-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px;}
 .admin-pass-actions .btn{flex:1;min-height:44px;}
