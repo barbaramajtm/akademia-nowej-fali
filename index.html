@@ -330,6 +330,11 @@
     <!-- AUTH GATE (wewnątrz ekranu telefonu) -->
     <div class="auth-gate" id="authGate" hidden>
       <div class="auth-sheet" role="dialog" aria-labelledby="authTitle" aria-modal="true">
+        <button type="button" class="auth-close" id="authCloseBtn" aria-label="Zamknij i wróć do aplikacji">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+            <path d="M4 4l10 10M14 4L4 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
         <div class="auth-brand">
           <img class="nf-logo" src="assets/images/nf-logo-gold.png" alt="Nowa Fala" width="104" height="89" decoding="async">
           <h2 id="authTitle">Akademia Nowej Fali</h2>
@@ -470,6 +475,7 @@
         </div>
 
         <button type="button" class="auth-guest" id="authGuestBtn">Kontynuuj bez konta (tylko to urządzenie)</button>
+        <button type="button" class="auth-link-btn auth-dismiss-link" id="authDismissBtn">Wróć do aplikacji</button>
         <p class="auth-note">Konto zapisuje postęp lokalnie w tej przeglądarce. Potwierdzenie e-maila i reset hasła bez chmury pokazują kod na ekranie (nie wysyłamy wiadomości). Docelowo: Firebase Auth.</p>
       </div>
     </div>

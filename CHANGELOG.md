@@ -2,6 +2,15 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-22 — Auth: powrót do aplikacji z bramki logowania
+
+### Zmieniono
+- `index.html` — przycisk zamknięcia (X) i „Wróć do aplikacji” na bramce auth
+- `css/styles.css` — style przycisku zamknięcia
+- `js/shell.js` — zamknięcie bramki (X, link, tło, Escape) wraca na Home; przy obowiązkowej bramce włącza tryb gościa
+
+---
+
 ## 2026-07-22 — Home: Kosmyki i avatar nad okiem
 
 ### Zmieniono
