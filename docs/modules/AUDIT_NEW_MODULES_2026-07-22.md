@@ -46,3 +46,8 @@ Zakres: `trwala-procedura`, `bhp-higiena-salonu`, `strzyzenie-narzedzia` (18 lek
 - Długie `trueFalse` typu „wykład → echo” (np. BHP prąd / lista chorób).
 - Mało `hairGuide` / grafik w nowych modułach (zgodnie z decyzją „grafiki później”).
 - PDF BHP 67 (2015) — nie uczyć limitów liczbowych bez re-audytu (już w SOURCES).
+
+## Re-audit (ten sam dzień, drugi przebieg)
+
+Powtórzona walidacja JSON/katalog/UI + spot-check PDF: **PASS, 0 issues, 0 warns.**  
+Po tym potwierdzeniu ruszył kolejny moduł: `prostowanie-wlosow`.
