@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "strzyz-rodzaje-nozyczek",
+  "title": "Rodzaje nożyczek",
+  "category": "Strzyżenie — techniki i narzędzia",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Szuflada z nożycami: klasyczne, degażówki, punktujące, do ślizgu, gorące. Dziś dopasowujesz rodzaj i rozmiar do dłoni.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "sz4-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Rodzaje",
+      "question": "Do rodzajów nożyczek fryzjerskich należą m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Klasyczne, degażówki (jedno- i dwustronne), punktujące, do ślizgu, gorące"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie metalowe grzebienie"
+        },
+        {
+          "id": "c",
+          "text": "Tylko wałki spiralne"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Lista Masz. 5.",
+        "incorrectTitle": "Rodzaje nożyczek.",
+        "explanation": "Klasyczne, degażówki, punktujące, do ślizgu (wygięte końce), gorące."
+      }
+    },
+    {
+      "id": "sz4-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Rozmiar",
+      "question": "Rozmiary nożyczek mieszczą się zwykle w przedziale ok. 4,5–7 cali (~11,5–18 cm) i dobiera się je do wielkości dłoni.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cale i dłoń.",
+        "incorrectTitle": "Masz. 35.",
+        "explanation": "1 cal = 2,54 cm; rozmiar dopasowany do dłoni."
+      }
+    },
+    {
+      "id": "sz4-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Specjalne",
+      "question": "Dopasuj.",
+      "leftTitle": "Narzędzie",
+      "rightTitle": "Cecha",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Nożyce do ślizgu"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Gorące nożyczki"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Degażówki"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "System termicznego strzyżenia — uszczelnianie substancji rogowej"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Lekko wygięte końce"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Przerzedzanie / degażowanie"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Specjalizacje.",
+        "incorrectTitle": "Masz. 5 i 41.",
+        "explanation": "Ślizg = wygięte końce. Gorące = termiczne strzyżenie z kuracją/uszczelnieniem."
+      }
+    },
+    {
+      "id": "sz4-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Gorące",
+      "question": "Gorące nożyczki służą do:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Strzyżenia z jednoczesnym uszczelnianiem włosa przez stopienie substancji rogowej"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie gaszenia urządzeń wodą"
+        },
+        {
+          "id": "c",
+          "text": "Tylko nawijania trwałej"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Termiczne uszczelnienie.",
+        "incorrectTitle": "Masz. 41.",
+        "explanation": "System termicznego strzyżenia: różne techniki + uszczelnianie substancji rogowej."
+      }
+    },
+    {
+      "id": "sz4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Nożyczki",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Rozmiar nożyczek dobiera się m.in. do dłoni"
+        },
+        {
+          "id": "s2",
+          "text": "Punktujące należą do rodzajów nożyczek"
+        },
+        {
+          "id": "s3",
+          "text": "W salonie wolno używać wyłącznie zniszczonych nożyczek bez ostrzy"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Sprawny sprzęt.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Zniszczone narzędzia nie spełniają roli — i bywają niebezpieczne; konserwacja w kolejnej lekcji narzędzi."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Dobierasz nożyczki świadomie",
+    "subtitle": "Rodzaje, cale/cm, gorące = termiczne uszczelnienie.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Maszynki, nakładki, konturówka i głowica tnąca."
+    }
+  }
+}

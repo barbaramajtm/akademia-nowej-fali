@@ -678,11 +678,75 @@ window.LessonsCatalog = [
     locked: false,
     requiresLessonId: 'bhp-salon-pracownik',
     lockedReason: 'Najpierw ukończ: Bezpieczny salon i obowiązki'
+  },
+  {
+    id: 'strzyz-techniki-lista',
+    moduleId: 'strzyzenie-narzedzia',
+    title: 'Techniki strzyżenia — lista',
+    moduleTitle: 'Strzyżenie — techniki i narzędzia',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false
+  },
+  {
+    id: 'strzyz-degazowanie',
+    moduleId: 'strzyzenie-narzedzia',
+    title: 'Degażowanie',
+    moduleTitle: 'Strzyżenie — techniki i narzędzia',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'strzyz-techniki-lista',
+    lockedReason: 'Najpierw ukończ: Techniki strzyżenia — lista'
+  },
+  {
+    id: 'strzyz-cieniowanie',
+    moduleId: 'strzyzenie-narzedzia',
+    title: 'Sposoby cieniowania',
+    moduleTitle: 'Strzyżenie — techniki i narzędzia',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'strzyz-degazowanie',
+    lockedReason: 'Najpierw ukończ: Degażowanie'
+  },
+  {
+    id: 'strzyz-rodzaje-nozyczek',
+    moduleId: 'strzyzenie-narzedzia',
+    title: 'Rodzaje nożyczek',
+    moduleTitle: 'Strzyżenie — techniki i narzędzia',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'strzyz-cieniowanie',
+    lockedReason: 'Najpierw ukończ: Sposoby cieniowania'
+  },
+  {
+    id: 'strzyz-maszynki',
+    moduleId: 'strzyzenie-narzedzia',
+    title: 'Maszynki i konturówka',
+    moduleTitle: 'Strzyżenie — techniki i narzędzia',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'strzyz-rodzaje-nozyczek',
+    lockedReason: 'Najpierw ukończ: Rodzaje nożyczek'
+  },
+  {
+    id: 'strzyz-grzebienie-konserwacja',
+    moduleId: 'strzyzenie-narzedzia',
+    title: 'Grzebienie, konserwacja, brzytwa',
+    moduleTitle: 'Strzyżenie — techniki i narzędzia',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'strzyz-maszynki',
+    lockedReason: 'Najpierw ukończ: Maszynki i konturówka'
   }
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu'];
+window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];

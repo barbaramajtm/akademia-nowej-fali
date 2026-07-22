@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "strzyz-techniki-lista",
+  "title": "Techniki strzyżenia — lista",
+  "category": "Strzyżenie — techniki i narzędzia",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka prosi o „coś lżejszego”. Zanim chwycisz narzędzie, znasz nazwy technik z materiałów.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "sz1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Lista",
+      "question": "Do technik strzyżenia włosów należą m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Strzyżenie na tępo, cieniowanie, degażowanie, pikowanie, strzyżenie maszynką, ślizg"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie balejaż i ton w ton"
+        },
+        {
+          "id": "c",
+          "text": "Tylko numeracja farby 1–10"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Sześć nazw.",
+        "incorrectTitle": "Tech. 15.",
+        "explanation": "Na tępo, cieniowanie, degażowanie, pikowanie, maszynka, ślizg — lista z Tech. 15."
+      }
+    },
+    {
+      "id": "sz1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Na tępo",
+      "question": "Strzyżenie na tępo należy do technik strzyżenia włosów.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Jest na liście.",
+        "explanation": "„Na tępo” to jedna z technik wymienionych w materiałach."
+      }
+    },
+    {
+      "id": "sz1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Nie pomyl",
+      "question": "Dopasuj.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Rola w liście",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Degażowanie"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Strzyżenie maszynką"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Ślizg"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Technika strzyżenia narzędziem elektrycznym / maszynką"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Technika przerzedzania objętości (osobna lekcja)"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Technika z listy strzyżenia (ślizg)"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Techniki rozdzielone.",
+        "incorrectTitle": "Nie mieszaj z koloryzacją.",
+        "explanation": "To nazwy technik strzyżenia — nie zabiegów koloryzacji."
+      }
+    },
+    {
+      "id": "sz1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Klientka chce „odjąć objętości”, nie zmieniać długości mocno. Która nazwa z listy jest najbliższa temu celowi (na razie nazwa)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Degażowanie (przerzedzanie objętości)"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie balejaż w folii"
+        },
+        {
+          "id": "c",
+          "text": "Tylko rozjaśnianie powyżej 12%"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Objętość → degażowanie.",
+        "incorrectTitle": "Nazwa z listy.",
+        "explanation": "Degażowanie to przerzedzanie dla zmniejszenia objętości — szczegóły w kolejnej lekcji."
+      }
+    },
+    {
+      "id": "sz1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Techniki",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Pikowanie należy do technik strzyżenia"
+        },
+        {
+          "id": "s2",
+          "text": "Cieniowanie należy do technik strzyżenia"
+        },
+        {
+          "id": "s3",
+          "text": "Jedyną techniką strzyżenia jest zawsze tylko ton w ton"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Ton w ton to kolor.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Ton w ton to ścieżka koloryzacji — nie lista technik strzyżenia z Tech. 15."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz listę technik",
+    "subtitle": "Na tępo, cieniowanie, degażowanie, pikowanie, maszynka, ślizg.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Degażowanie: co to i jakimi nożycami?"
+    }
+  }
+}

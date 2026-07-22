@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "strzyz-cieniowanie",
+  "title": "Sposoby cieniowania",
+  "category": "Strzyżenie — techniki i narzędzia",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "„Chcę lżej przy twarzy / więcej ruchu”. Dziś lista sposobów cieniowania — bez wymyślania kątów, których nie ma w lokalnych odpowiedziach.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "sz3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Lista",
+      "question": "Sposoby cieniowania włosów obejmują m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cieniowanie warstwowe, stopniowanie, pikowanie, ślizg, efilowanie"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie reduktor i utrwalacz"
+        },
+        {
+          "id": "c",
+          "text": "Tylko poziomy farby 1–10"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Pięć sposobów.",
+        "incorrectTitle": "Tech. 24.",
+        "explanation": "Warstwowe, stopniowanie, pikowanie, ślizg, efilowanie."
+      }
+    },
+    {
+      "id": "sz3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Stopniowanie",
+      "question": "Stopniowanie należy do sposobów cieniowania włosów.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Jest na liście.",
+        "explanation": "Stopniowanie jest wymienione w Tech. 24."
+      }
+    },
+    {
+      "id": "sz3-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Nazwy",
+      "question": "Dopasuj.",
+      "leftTitle": "Nazwa",
+      "rightTitle": "Grupa",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Cieniowanie warstwowe"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Stopniowanie"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Ślizg"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Sposób cieniowania z listy Tech. 24 (stopniowanie)"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Sposób cieniowania oparty o warstwy"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Występuje też na liście technik strzyżenia (Tech. 15)"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nazwy z Tech. 24.",
+        "incorrectTitle": "Nie wymyślaj procedur.",
+        "explanation": "Uczymy nazw ze źródeł — bez kątów projekcji, których nie ma w lokalnych odpowiedziach."
+      }
+    },
+    {
+      "id": "sz3-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Ślizg",
+      "question": "Ślizg w tym module pojawia się jako:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Zarówno technika strzyżenia (Tech. 15), jak i sposób cieniowania (Tech. 24)"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie nazwa farby"
+        },
+        {
+          "id": "c",
+          "text": "Tylko typ gaśnicy"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Ślizg w dwóch listach.",
+        "incorrectTitle": "Spójność źródeł.",
+        "explanation": "Ślizg jest na liście technik i na liście sposobów cieniowania."
+      }
+    },
+    {
+      "id": "sz3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Cieniowanie",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Efilowanie należy do sposobów cieniowania"
+        },
+        {
+          "id": "s2",
+          "text": "Pikowanie należy do sposobów cieniowania"
+        },
+        {
+          "id": "s3",
+          "text": "Jedyne cieniowanie to zawsze wyłącznie trwała chemiczna na wałkach"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To nie trwała.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Cieniowanie to techniki strzyżenia/tekstury — nie procedura trwałej."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz sposoby cieniowania",
+    "subtitle": "Warstwowe, stopniowanie, pikowanie, ślizg, efilowanie.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Rodzaje nożyczek, długości i gorące nożyczki."
+    }
+  }
+}
