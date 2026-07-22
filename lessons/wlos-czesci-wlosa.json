@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-czesci-wlosa",
+  "title": "Łodyga, korzeń, cebulka",
+  "category": "Budowa i skład włosa",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka pyta: „Włos to tylko to, co widać nad skórą?” Nie. Dziś rozróżniasz łodygę, korzeń i cebulkę — i wiesz, gdzie zaczyna się wzrost.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Trzy podstawowe części",
+      "text": "Podstawowe części włosa to łodyga, korzeń i cebulka. Łodyga wyrasta ponad skórę. Korzeń leży w skórze i kończy się cebulką (opuszką) z brodawką — miejscem wzrostu.",
+      "note": "Warstwy łodygi (osłonka, kora, rdzeń) już znasz — tu patrzysz na cały włos: nad skórą i w skórze.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-parts-shaft-root-bulb.png",
+      "imageAlt": "Schemat: łodyga nad skórą, korzeń i cebulka w skórze.",
+      "imageCaption": "Łodyga nad skórą — korzeń i cebulka w skórze."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wb1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Lista",
+      "question": "Podstawowe części włosa to:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Łodyga, korzeń i cebulka włosa"
+        },
+        {
+          "id": "b",
+          "text": "Tylko numer farby i utleniacz"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie wałki i lakier"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Ta trójka.",
+        "incorrectTitle": "Inny dział.",
+        "explanation": "Łodyga, korzeń i cebulka — podstawowe części włosa."
+      }
+    },
+    {
+      "id": "wb1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Gdzie korzeń?",
+      "question": "Korzeń włosa znajduje się w skórze.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "W skórze.",
+        "incorrectTitle": "Sprawdź położenie.",
+        "explanation": "Korzeń leży w skórze. Nad powierzchnią widać łodygę."
+      }
+    },
+    {
+      "id": "wb1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Co do czego?",
+      "question": "Dopasuj.",
+      "leftTitle": "Część",
+      "rightTitle": "Opis",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Łodyga"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Korzeń"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Cebulka (opuszka)"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Część w skórze"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Część ponad powierzchnią skóry"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Rozszerzenie korzenia z miejscem wzrostu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mapa części.",
+        "incorrectTitle": "Sprawdź pary.",
+        "explanation": "Łodyga nad skórą, korzeń w skórze, cebulka z brodawką — miejsce wzrostu."
+      }
+    },
+    {
+      "id": "wb1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Wzrost",
+      "question": "Gdzie według materiałów zachodzi wzrost włosa?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Przy brodawce w cebulce (opuszkę korzenia)"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie na końcówce łodygi nad skórą"
+        },
+        {
+          "id": "c",
+          "text": "W numerze farby na tubce"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Przy brodawce.",
+        "incorrectTitle": "Nie na końcówce.",
+        "explanation": "Korzeń kończy się cebulką z brodawką — to miejsce wzrostu włosa."
+      }
+    },
+    {
+      "id": "wb1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Części włosa",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Łodyga wyrasta ponad powierzchnię skóry"
+        },
+        {
+          "id": "s2",
+          "text": "Korzeń leży w skórze"
+        },
+        {
+          "id": "s3",
+          "text": "Cały włos istnieje tylko nad skórą — korzenia i cebulki nie ma"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Jest korzeń.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Włos to też to, czego nie widać: korzeń i cebulka w skórze."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Widzisz włos nad skórą i w skórze",
+    "subtitle": "Łodyga, korzeń, cebulka — i wiesz, gdzie jest wzrost.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dlaczego mokry włos zachowuje się inaczej? Właściwości fizyczne."
+    }
+  }
+}

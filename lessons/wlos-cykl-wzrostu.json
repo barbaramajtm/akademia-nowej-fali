@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-cykl-wzrostu",
+  "title": "Cykl wzrostu włosa",
+  "category": "Budowa i skład włosa",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka boi się „wypadających włosów w odpływie”. Zanim straszysz łysieniem, sprawdź cykl: włos rośnie, przechodzi fazy i naturalnie wypada.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Trzy fazy cyklu",
+      "text": "Cykl włosowy dzieli się na trzy fazy: anagen (wzrost), katagen (przejście — m.in. zanik brodawki) i telogen (spoczynek — włos wysuwa się i wypada). Wzrost długich włosów trwa od 4 do 8 lat.",
+      "note": "Plansza to model edukacyjny faz. Nie odpytujemy spornych liczb spoza odpowiedzi Mat. 35.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-growth-cycle.png",
+      "imageAlt": "Schemat mieszków w fazach anagen, katagen i telogen.",
+      "imageCaption": "Anagen — wzrost; katagen — przejście; telogen — spoczynek."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wb3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Ile faz?",
+      "question": "Cykl włosowy dzieli się na:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Trzy fazy"
+        },
+        {
+          "id": "b",
+          "text": "Jeden nieprzerwany kolor"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie fazę farby na tubce"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy fazy.",
+        "incorrectTitle": "Sprawdź cykl.",
+        "explanation": "Cykl włosowy ma trzy fazy i opisuje życie włosa."
+      }
+    },
+    {
+      "id": "wb3-z2",
+      "type": "matching",
+      "kicker": "Krok 2 · Nazwy",
+      "question": "Dopasuj fazę do roli.",
+      "leftTitle": "Faza",
+      "rightTitle": "Rola",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Anagen"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Katagen"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Telogen"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Przejście — m.in. zanik brodawki"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Wzrost włosa"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Spoczynek — włos wysuwa się i wypada"
+        }
+      ],
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Role faz.",
+        "incorrectTitle": "Sprawdź nazwy.",
+        "explanation": "Anagen = wzrost, katagen = przejście, telogen = spoczynek i wypadanie z mieszka."
+      }
+    },
+    {
+      "id": "wb3-z3",
+      "type": "trueFalse",
+      "kicker": "Krok 3 · Długie włosy",
+      "question": "Wzrost długich włosów trwa od 4 do 8 lat.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "4–8 lat.",
+        "incorrectTitle": "Sprawdź zakres.",
+        "explanation": "Dla włosów długich wzrost trwa od 4 do 8 lat. Włosy szczeciniaste rosną krócej."
+      }
+    },
+    {
+      "id": "wb3-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Normalne wypadanie",
+      "question": "Wymiana naturalna to wypadanie około:",
+      "options": [
+        {
+          "id": "a",
+          "text": "100–120 włosów dziennie"
+        },
+        {
+          "id": "b",
+          "text": "0 włosów — zdrowy włos nigdy nie wypada"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie całych kosmyków po trwałej"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Naturalna wymiana.",
+        "incorrectTitle": "Nie zero.",
+        "explanation": "Około 100–120 włosów dziennie bywa wymianą naturalną. Większa utrata to już temat łysienia — inna rozmowa."
+      }
+    },
+    {
+      "id": "wb3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Cykl włosowy",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Anagen to faza wzrostu"
+        },
+        {
+          "id": "s2",
+          "text": "Telogen to faza spoczynku, po której włos może wypaść"
+        },
+        {
+          "id": "s3",
+          "text": "Wszystkie włosy na głowie są zawsze w tej samej fazie naraz"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Fazy są równoległe.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Na głowie jednocześnie trwają różne fazy — dlatego naturalne wypadanie nie oznacza, że „wszystko wypada naraz”."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozumiesz cykl włosa",
+    "subtitle": "Anagen, katagen, telogen — i spokój o naturalną wymianę.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Podsumowanie budowy: złóż skład, warstwy, części i cykl w jedną całość."
+    }
+  }
+}

@@ -4,7 +4,6 @@
   "title": "Keratyna — rusztowanie włosa",
   "category": "Budowa i skład włosa",
   "levelLabel": "Podstawy",
-
   "intro": {
     "narratorText": "Keratynę już znasz jako główny składnik włosa. Teraz zobaczysz, jak pełni rolę rusztowania — i czym różni się od wody czy lipidów.",
     "stakeText": "do 75 Kosmyków",
@@ -19,12 +18,17 @@
       "imageCaption": "Spirale peptydowe łączą się, tworząc keratynę włóknistą — budulec wytrzymałości włosa."
     }
   },
-
   "rewards": {
-    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
-    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
   },
-
   "tasks": [
     {
       "id": "wlos3-z1",
@@ -32,9 +36,18 @@
       "kicker": "Krok 1 · Czym jest keratyna?",
       "question": "Keratyna we włosie to przede wszystkim:",
       "options": [
-        { "id": "a", "text": "Białko budujące włókna włosa" },
-        { "id": "b", "text": "Płyn nawilżający w środku rdzenia" },
-        { "id": "c", "text": "Barwnik nadający kolor naturalny" }
+        {
+          "id": "a",
+          "text": "Białko budujące włókna włosa"
+        },
+        {
+          "id": "b",
+          "text": "Płyn nawilżający w środku rdzenia"
+        },
+        {
+          "id": "c",
+          "text": "Barwnik nadający kolor naturalny"
+        }
       ],
       "correctOptionId": "a",
       "reward": 10,
@@ -69,14 +82,38 @@
       "leftTitle": "Składnik",
       "rightTitle": "Rola",
       "left": [
-        { "id": "l1", "pairId": "a", "text": "Keratyna" },
-        { "id": "l2", "pairId": "b", "text": "Woda" },
-        { "id": "l3", "pairId": "c", "text": "Lipidy" }
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Keratyna"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Woda"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Lipidy"
+        }
       ],
       "right": [
-        { "id": "r1", "pairId": "b", "text": "Wilgotność i właściwości mechaniczne" },
-        { "id": "r2", "pairId": "a", "text": "Włókna rusztowujące w korze" },
-        { "id": "r3", "pairId": "c", "text": "Powierzchnia i bariera lipidowa" }
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Wilgotność i właściwości mechaniczne"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Włókna rusztowujące w korze"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Powierzchnia i bariera lipidowa"
+        }
       ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
@@ -92,9 +129,18 @@
       "kicker": "Krok 4 · Gdzie keratyna?",
       "question": "Włókna keratynowe budują przede wszystkim:",
       "options": [
-        { "id": "a", "text": "Osłonkę z pojedynczych łusek bez włókien" },
-        { "id": "b", "text": "Korę włosa" },
-        { "id": "c", "text": "Wyłącznie rdzeń, jeśli w ogóle występuje" }
+        {
+          "id": "a",
+          "text": "Osłonkę z pojedynczych łusek bez włókien"
+        },
+        {
+          "id": "b",
+          "text": "Korę włosa"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie rdzeń, jeśli w ogóle występuje"
+        }
       ],
       "correctOptionId": "b",
       "reward": 15,
@@ -112,11 +158,22 @@
       "question": "Które stwierdzenie jest błędne?",
       "cardTitle": "Keratyna we włosie",
       "rows": [
-        { "id": "s1", "text": "Keratyna stanowi główną masę włosa" },
-        { "id": "s2", "text": "Włos ma trzy odrębne rodzaje keratyny — każda warstwa z innego rodzaju" },
-        { "id": "s3", "text": "Mostki siarczkowe w keratynie mają znaczenie przy trwałej ondulacji" }
+        {
+          "id": "s1",
+          "text": "Keratyna stanowi główną masę włosa"
+        },
+        {
+          "id": "s2",
+          "text": "Włos ma trzy odrębne rodzaje keratyny — każda warstwa z innego rodzaju"
+        },
+        {
+          "id": "s3",
+          "text": "Mostki siarczkowe w keratynie mają znaczenie przy trwałej ondulacji"
+        }
       ],
-      "correctOptionIds": ["s2"],
+      "correctOptionIds": [
+        "s2"
+      ],
       "reward": 25,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
@@ -126,7 +183,6 @@
       }
     }
   ],
-
   "completion": {
     "solvedLabel": "Lekcja ukończona",
     "title": "Rozumiesz rolę keratyny",
@@ -134,7 +190,7 @@
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
       "label": "Kolejny temat",
-      "teaser": "Co utrzymuje kształt włosa — wiązania w strukturze?"
+      "teaser": "Łodyga, korzeń, cebulka — co widać, a co rośnie w skórze?"
     }
   }
 }

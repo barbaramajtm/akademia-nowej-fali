@@ -363,6 +363,50 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Osłonka, kora i rdzeń'
   },
   {
+    id: 'wlos-czesci-wlosa',
+    moduleId: 'wlos-kolor',
+    title: 'Łodyga, korzeń, cebulka',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-keratyna-rusztowanie',
+    lockedReason: 'Najpierw ukończ: Keratyna — rusztowanie włosa'
+  },
+  {
+    id: 'wlos-wlasciwosci-fizyczne',
+    moduleId: 'wlos-kolor',
+    title: 'Właściwości fizyczne włosa',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-czesci-wlosa',
+    lockedReason: 'Najpierw ukończ: Łodyga, korzeń, cebulka'
+  },
+  {
+    id: 'wlos-cykl-wzrostu',
+    moduleId: 'wlos-kolor',
+    title: 'Cykl wzrostu włosa',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-wlasciwosci-fizyczne',
+    lockedReason: 'Najpierw ukończ: Właściwości fizyczne włosa'
+  },
+  {
+    id: 'wlos-budowa-podsumowanie',
+    moduleId: 'wlos-kolor',
+    title: 'Budowa włosa — podsumowanie',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podsumowanie',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-cykl-wzrostu',
+    lockedReason: 'Najpierw ukończ: Cykl wzrostu włosa'
+  },
+  {
     id: 'wlos-ksztalt-co-utrzymuje',
     moduleId: 'wlos-ksztalt',
     title: 'Co utrzymuje kształt włosa?',
