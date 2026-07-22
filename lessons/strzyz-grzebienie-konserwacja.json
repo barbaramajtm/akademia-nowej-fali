@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "strzyz-grzebienie-konserwacja",
+  "title": "Grzebienie, konserwacja, brzytwa",
+  "category": "Strzyżenie — techniki i narzędzia",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Domknięcie zestawu: jakich grzebieni nie wolno, jak dbać o nożyczki, czym była brzytwa i tempera.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "sz6-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Grzebienie",
+      "question": "W salonie nie wolno używać grzebieni:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Metalowych, drewnianych, uszkodzonych, zanieczyszczonych, niezdezynfekowanych oraz zniszczonych (bez zębów / pościerane)"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie plastikowych zdezynfekowanych"
+        },
+        {
+          "id": "c",
+          "text": "Tylko nowych z futerału"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Zakazy Masz. 4.",
+        "incorrectTitle": "Higiena i włosy.",
+        "explanation": "Powody higieniczne; zniszczone nie spełniają roli i mogą uszkadzać włosy."
+      }
+    },
+    {
+      "id": "sz6-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Nożyczki",
+      "question": "Po użyciu nożyce czyścisz i dezynfekujesz; w razie potrzeby olejujesz; przechowujesz w futerale.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Konserwacja Masz. 10.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Czyszczenie, dezynfekcja, ewentualnie olej; futerał chroni ostrza i przed skaleczeniem."
+      }
+    },
+    {
+      "id": "sz6-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Brzytwa i pokrewne",
+      "question": "Dopasuj.",
+      "leftTitle": "Narzędzie",
+      "rightTitle": "Opis",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Brzytwa klasyczna"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Tempera"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Pazury fryzjerskie"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Konstrukcja od brzytwy; wymienne ostrza + zęby nietnące obniżające długość cięcia"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Najdłużej znane narzędzie; kiedyś golenie zarostu i kontury; odchodzi z powodów kosztów i higieny"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Nietypowe narzędzie tnące — głównie do efilacji"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Linia brzytwy.",
+        "incorrectTitle": "Masz. 17–18.",
+        "explanation": "Brzytwa historycznie; tempera/brzytwa z nakładką bardziej higieniczne; pazury do efilacji."
+      }
+    },
+    {
+      "id": "sz6-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Po strzyżeniu nożycami",
+      "question": "Ułóż opiekę nad nożycami po użyciu.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Dokładnie wyczyścić"
+        },
+        {
+          "id": "s2",
+          "text": "Zdezynfekować"
+        },
+        {
+          "id": "s3",
+          "text": "Naoliwić, jeśli potrzeba, i schować do futerału"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Czysto → dezynfekcja → olej/futerał.",
+        "incorrectTitle": "Masz. 10.",
+        "explanation": "Po użyciu: czyszczenie i dezynfekcja; olej gdy trzeba; futerał na ostrza."
+      }
+    },
+    {
+      "id": "sz6-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Narzędzia",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Metalowy grzebień nie jest dopuszczony w salonie (względy higieniczne)"
+        },
+        {
+          "id": "s2",
+          "text": "Zniszczony grzebień może uszkadzać włosy"
+        },
+        {
+          "id": "s3",
+          "text": "Wolno pracować grzebieniem zanieczyszczonym i niezdezynfekowanym „na szybko”"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł strzyżenia domknięty.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Zanieczyszczone i niezdezynfekowane grzebienie są zakazane — higiena nie jest opcją."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Domknęłaś narzędzia strzyżenia",
+    "subtitle": "Zakazy grzebieni, futerał i olej, brzytwa/tempera.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej: historia/narzędzia albo poprawki grafik."
+    }
+  }
+}

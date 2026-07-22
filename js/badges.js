@@ -201,6 +201,19 @@ var BADGE_CATALOG = [
     progress: function(ctx){
       return ctx.moduleProgress['bhp-higiena-salonu'] || { current: 0, goal: 1 };
     }
+  },
+  {
+    id: 'modul-strzyzenie-narzedzia',
+    collectionId: 'moduly',
+    name: 'Strzyżenie — narzędzia',
+    description: 'Techniki, degażowanie, nożyczki i maszynki — znasz nazwy i sprzęt.',
+    conditionLabel: 'Ukończ wszystkie lekcje strzyżenia (techniki i narzędzia)',
+    symbol: 'scissors',
+    accent: 'dusty',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['strzyzenie-narzedzia']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['strzyzenie-narzedzia'] || { current: 0, goal: 1 };
+    }
   }
 ];
 

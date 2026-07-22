@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "strzyz-degazowanie",
+  "title": "Degażowanie",
+  "category": "Strzyżenie — techniki i narzędzia",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "„Za gęste — odejmij objętości”. Dziś: definicja degażowania i nożyce do tej czynności.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "sz2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Definicja",
+      "question": "Degażowanie to:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Przerzedzanie włosów dla zmniejszenia objętości"
+        },
+        {
+          "id": "b",
+          "text": "Zawsze pełna trwała chemiczna"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie mycie przed farbą"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Objętość w dół.",
+        "incorrectTitle": "Tech. 14.",
+        "explanation": "Degażowanie = przerzedzanie włosów dla zmniejszenia objętości."
+      }
+    },
+    {
+      "id": "sz2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Narzędzia",
+      "question": "Do degażowania używa się m.in. nożyc degażówek (jedno- i dwustronnych) oraz efilatorów.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — trzy typy.",
+        "incorrectTitle": "Tech. 14.",
+        "explanation": "Jednostronne i dwustronne degażówki oraz efilatory."
+      }
+    },
+    {
+      "id": "sz2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Dopasuj",
+      "question": "Dopasuj narzędzie.",
+      "leftTitle": "Narzędzie",
+      "rightTitle": "Kontekst",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Degażówki jednostronne"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Degażówki dwustronne"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Efilatory"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "c",
+          "text": "Narzędzie wymienione przy degażowaniu (obok degażówek)"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Rodzaj nożyc do degażowania (jedna strona)"
+        },
+        {
+          "id": "r3",
+          "pairId": "b",
+          "text": "Rodzaj nożyc do degażowania (obie strony)"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Narzędzia do objętości.",
+        "incorrectTitle": "Lista Tech. 14.",
+        "explanation": "Trzy pozycje z odpowiedzi: jedno-/dwustronne degażówki i efilatory."
+      }
+    },
+    {
+      "id": "sz2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Klientka: „Chcę mniej gęstości, nie krócej o 10 cm”. Co proponujesz z materiałów?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Degażowanie odpowiednimi nożycami / efilatorem"
+        },
+        {
+          "id": "b",
+          "text": "Obietnicę trwałej bez reduktora"
+        },
+        {
+          "id": "c",
+          "text": "Tylko gaśnicę proszkową"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Przerzedzanie.",
+        "incorrectTitle": "Cel = objętość.",
+        "explanation": "Cel zmniejszenia objętości = degażowanie, nie „tylko chemia kształtu”."
+      }
+    },
+    {
+      "id": "sz2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Degażowanie",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Degażowanie zmniejsza objętość przez przerzedzanie"
+        },
+        {
+          "id": "s2",
+          "text": "Do degażowania należą m.in. degażówki"
+        },
+        {
+          "id": "s3",
+          "text": "Degażowanie to zawsze wyłącznie farbowanie ton w ton"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To nie koloryzacja.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Degażowanie to technika strzyżenia/przerzedzania — nie ścieżka farby."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, czym jest degażowanie",
+    "subtitle": "Przerzedzanie objętości + degażówki i efilatory.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Sposoby cieniowania — warstwy, stopniowanie, ślizg…"
+    }
+  }
+}
