@@ -37,7 +37,7 @@
         },
         {
           "id": "c",
-          "text": "Tylko poziomy farby 1–10"
+          "text": "Tylko mycie szamponem leczniczym"
         }
       ],
       "correctOptionId": "a",
@@ -93,17 +93,17 @@
         {
           "id": "r1",
           "pairId": "b",
-          "text": "Sposób cieniowania z listy Tech. 24 (stopniowanie)"
+          "text": "Jeden ze sposobów cieniowania (lista Tech. 24)"
         },
         {
           "id": "r2",
           "pairId": "a",
-          "text": "Sposób cieniowania oparty o warstwy"
+          "text": "Cieniowanie oparte o warstwy"
         },
         {
           "id": "r3",
           "pairId": "c",
-          "text": "Występuje też na liście technik strzyżenia (Tech. 15)"
+          "text": "Jest też na liście technik strzyżenia (Tech. 15)"
         }
       ],
       "reward": 15,
@@ -130,7 +130,7 @@
         },
         {
           "id": "c",
-          "text": "Tylko typ gaśnicy"
+          "text": "Tylko rodzaj wałka do trwałej"
         }
       ],
       "correctOptionId": "a",

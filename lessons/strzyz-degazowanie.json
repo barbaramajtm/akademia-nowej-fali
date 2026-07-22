@@ -76,12 +76,12 @@
         {
           "id": "l1",
           "pairId": "a",
-          "text": "Degażówki jednostronne"
+          "text": "Cel degażowania"
         },
         {
           "id": "l2",
           "pairId": "b",
-          "text": "Degażówki dwustronne"
+          "text": "Degażówki"
         },
         {
           "id": "l3",
@@ -92,18 +92,18 @@
       "right": [
         {
           "id": "r1",
-          "pairId": "c",
-          "text": "Narzędzie wymienione przy degażowaniu (obok degażówek)"
+          "pairId": "b",
+          "text": "Nożyce jedno- lub dwustronne do przerzedzania"
         },
         {
           "id": "r2",
           "pairId": "a",
-          "text": "Rodzaj nożyc do degażowania (jedna strona)"
+          "text": "Zmniejszenie objętości przez przerzedzanie"
         },
         {
           "id": "r3",
-          "pairId": "b",
-          "text": "Rodzaj nożyc do degażowania (obie strony)"
+          "pairId": "c",
+          "text": "Narzędzie z listy Tech. 14 obok degażówek"
         }
       ],
       "reward": 15,
@@ -130,7 +130,7 @@
         },
         {
           "id": "c",
-          "text": "Tylko gaśnicę proszkową"
+          "text": "Tylko suszenie bez żadnego cięcia"
         }
       ],
       "correctOptionId": "a",
