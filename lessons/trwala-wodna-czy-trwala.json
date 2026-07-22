@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "trwala-wodna-czy-trwala",
+  "title": "Ondulacja wodna czy trwała?",
+  "category": "Trwała ondulacja — procedura",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka chce loki. Zanim weźmiesz płyn, rozróżniasz: układanie na wilgotno (wiązania H) czy chemiczna trwała (wiązania S) — i inne wałki.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "tp1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Liga",
+      "question": "Skręt z wilgoci i ciepła na wałkach, który znika po zmoczeniu, to przede wszystkim:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Zmiana czasowa wiązań wodorowych (układanie / ondulacja wodna)"
+        },
+        {
+          "id": "b",
+          "text": "Pełna trwała bez reduktora i utrwalacza"
+        },
+        {
+          "id": "c",
+          "text": "Zawsze rozjaśnianie H₂O₂"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Czasowa liga H.",
+        "incorrectTitle": "Wróć do wiązań.",
+        "explanation": "Wilgoć i ciepło zmieniają wiązania wodorowe — skręt po wyschnięciu jest nietrwały i znika po zmoczeniu."
+      }
+    },
+    {
+      "id": "tp1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Chemia",
+      "question": "Trwała ondulacja pracuje na wiązaniach siarkowych: preparat, nawinięcie, utrwalacz.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Proces S.",
+        "incorrectTitle": "Przypomnij Tech. 10.",
+        "explanation": "Preparat rozrywa wiązania siarkowe, włosy na wałkach, utrwalacz odbudowuje je w nowym kształcie."
+      }
+    },
+    {
+      "id": "tp1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Wałki",
+      "question": "Dopasuj wałki.",
+      "leftTitle": "Zabieg",
+      "rightTitle": "Cecha z materiałów",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Wałki do trwałej"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Wałki do ondulacji wodnej"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Oba typy"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Tworzywo lub drut; mocowanie m.in. szpilkami; bywają plastikowe i rzepowe"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Tworzywo sztuczne; mocowanie gumkami / taśmą plastikową"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Różnią się też grubością i średnicą"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Inne wałki.",
+        "incorrectTitle": "Sprawdź Masz. 7.",
+        "explanation": "Do trwałej — plastik i gumki/taśma. Do wodnej — tworzywo lub metal, szpilki, bywają rzepowe. Średnice też się różnią."
+      }
+    },
+    {
+      "id": "tp1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Klientka myje głowę często i chce efekt „na jutro”. Co jest spójne?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Układanie / ondulacja wodna z jasną rozmową o myciu"
+        },
+        {
+          "id": "b",
+          "text": "Obietnica trwałej bez chemii"
+        },
+        {
+          "id": "c",
+          "text": "Pominięcie suszenia, bo i tak nie ma znaczenia"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Uczciwa liga.",
+        "incorrectTitle": "Nie obiecuj trwałej.",
+        "explanation": "Częste mycie + krótki termin = czasowe układanie. Trwałość ułożenia wspiera też dokładne wysuszenie i technika."
+      }
+    },
+    {
+      "id": "tp1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Wodna vs trwała",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Wałki do trwałej i do wodnej różnią się m.in. mocowaniem"
+        },
+        {
+          "id": "s2",
+          "text": "Trwała chemiczna domyka kształt utrwalaczem na wiązaniach siarkowych"
+        },
+        {
+          "id": "s3",
+          "text": "Każde nawinięcie na wałki bez chemii daje ten sam efekt co pełna trwała"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie to samo.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Bez chemii na mostkach S nie masz trwałej chemicznej — masz zmianę czasową."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wybierasz ligę: wodna albo trwała",
+    "subtitle": "Inne wiązania, inne wałki, inna rozmowa z klientką.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Kiedy myć przed trwałą — a kiedy przed farbą?"
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "id": "trwala-przybory-i-przebieg",
+  "title": "Przybory i przebieg trwałej",
+  "category": "Trwała ondulacja — procedura",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Zanim otworzysz płyn: checklista stanowiska. Potem przebieg, który już znasz z mostków — teraz z przyborami.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Chemia + kształt + utrwalenie",
+      "text": "Preparat (reduktor) przekształca wiązania siarkowe, włosy są na wałkach, utrwalacz odbudowuje wiązania w nowym kształcie. Na stanowisku potrzebujesz m.in. miseczek, gąbek lub buteleczek do płynu i neutralizatora oraz plastikowych wałków do trwałej.",
+      "note": "To procedura oparta o źródła — bez katalogu marek.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-sulfur-bonds-permanent.png",
+      "imageAlt": "Schemat: reduktor, nowy kształt, utrwalacz.",
+      "imageCaption": "Reduktor → wałki / kształt → utrwalacz."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "tp5-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Przybory",
+      "question": "Do wykonania trwałej ondulacji potrzebne są m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dwie miseczki plastikowe, gąbki lub buteleczki (płyn i neutralizator), plastikowe wałki, grzebień ze szpikulcem, rękawice, papierki do trwałej…"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie nożyczki degażówki i wzornik poziomów 1–10"
+        },
+        {
+          "id": "c",
+          "text": "Tylko metalowe wałki ze szpilkami jak do wodnej"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Checklista Masz. 15.",
+        "incorrectTitle": "Inny zestaw.",
+        "explanation": "Miseczki, aplikacja płynu/neutralizatora, plastikowe wałki, ochrona, papierki, czasomierz — typowy zestaw do trwałej."
+      }
+    },
+    {
+      "id": "tp5-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Reduktor",
+      "question": "Podstawą płynu do trwałej jest reduktor.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Reduktor.",
+        "incorrectTitle": "Mat. 22.",
+        "explanation": "Bez reduktora nie ma chemicznej zmiany mostków w trwałej."
+      }
+    },
+    {
+      "id": "tp5-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · We włosie",
+      "question": "Ułóż proces we włosie.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Preparat rozrywa / przekształca wiązania siarkowe"
+        },
+        {
+          "id": "s2",
+          "text": "Włosy nawinięte na wałki (nowy kształt)"
+        },
+        {
+          "id": "s3",
+          "text": "Utrwalacz odbudowuje wiązania w nowym kształcie"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Kolejność procesu.",
+        "incorrectTitle": "Nie odwracaj.",
+        "explanation": "Najpierw mostki, potem kształt, na końcu odbudowa utrwalaczem."
+      }
+    },
+    {
+      "id": "tp5-z4",
+      "type": "matching",
+      "kicker": "Krok 4 · Wodna vs trwała — przybory",
+      "question": "Dopasuj.",
+      "leftTitle": "Zabieg",
+      "rightTitle": "Przykład przyborów",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Ondulacja wodna — czesanie na wałkach"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Trwała ondulacja"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Oba"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "M.in. gąbki/buteleczki do płynu i neutralizatora, papierki do trwałej"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "M.in. wałki, szpilki, siateczka, suszarka/promiennik"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Grzebień ze szpikulcem bywa użyteczny przy nawijaniu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Inne stanowiska.",
+        "incorrectTitle": "Sprawdź Masz. 12 i 15.",
+        "explanation": "Wodna: wałki, szpilki, suszenie. Trwała: chemia w miseczkach + plastikowe wałki i ochrona."
+      }
+    },
+    {
+      "id": "tp5-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Przebieg",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Utrwalacz domyka nowy kształt mostków"
+        },
+        {
+          "id": "s2",
+          "text": "Do trwałej bierzesz m.in. plastikowe wałki i ochronę"
+        },
+        {
+          "id": "s3",
+          "text": "Wystarczy sam reduktor — utrwalacz i płukanie można pominąć zawsze"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Utrwalacz i finisz.",
+        "incorrectTitle": "Nie skracaj procesu.",
+        "explanation": "Proces ma utrwalenie; po zabiegu dokładne płukanie i dbałość o pH."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Stanowisko i przebieg ogarnięte",
+    "subtitle": "Przybory + reduktor → wałki → utrwalacz.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Co decyduje o trwałości ułożonych włosów?"
+    }
+  }
+}

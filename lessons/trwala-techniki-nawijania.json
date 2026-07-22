@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "trwala-techniki-nawijania",
+  "title": "Techniki nawijania",
+  "category": "Trwała ondulacja — procedura",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Płyn stoi, klientka na fotelu. Efekt zależy też od tego, JAK nawiniesz. Dziś zapamiętujesz nazwy technik z materiałów.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "tp3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Lista",
+      "question": "Sposoby nawijania włosów przy trwałej obejmują m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Klasyczne, spiralne, cegiełkowe, kierunkowe, mieszane"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie balejaż i degażowanie"
+        },
+        {
+          "id": "c",
+          "text": "Tylko numerację farby 1–10"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Pięć nazw.",
+        "incorrectTitle": "To nawijanie.",
+        "explanation": "Klasyczne, spiralne, cegiełkowe, kierunkowe, mieszane — techniki nawijania przy trwałej."
+      }
+    },
+    {
+      "id": "tp3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Praktyka",
+      "question": "Przy trwałej można stosować różne techniki nawijania — m.in. cegiełkową, klasyczną i spiralną.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — wybór technik.",
+        "incorrectTitle": "Są różne.",
+        "explanation": "Informator i Tech. wymieniają m.in. cegiełkową, klasyczną i spiralną jako poznane techniki nawijania."
+      }
+    },
+    {
+      "id": "tp3-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Nie pomyl",
+      "question": "Dopasuj.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Dział",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Nawijanie cegiełkowe / spiralne"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Reduktor"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Utrwalacz"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Podstawa płynu do trwałej"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Technika ułożenia włosa na wałkach"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Odbudowa wiązań w nowym kształcie"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Technika ≠ chemia.",
+        "incorrectTitle": "Rozdziel role.",
+        "explanation": "Nawijanie to geometria na głowie. Reduktor i utrwalacz to chemia mostków."
+      }
+    },
+    {
+      "id": "tp3-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Kolejność zabiegu",
+      "question": "Ułóż sensowną kolejność trwałej (uproszczenie z materiałów).",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Mycie / przygotowanie włosów"
+        },
+        {
+          "id": "s2",
+          "text": "Nawinięcie wybraną techniką + działanie preparatu (reduktor)"
+        },
+        {
+          "id": "s3",
+          "text": "Utrwalenie i domknięcie (płukanie, pH)"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Logiczny przebieg.",
+        "incorrectTitle": "Przestaw etapy.",
+        "explanation": "Najpierw przygotowanie, potem kształt na wałkach z chemią, na końcu utrwalenie i finisz."
+      }
+    },
+    {
+      "id": "tp3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Nawijanie",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Do technik należy m.in. nawijanie klasyczne i spiralne"
+        },
+        {
+          "id": "s2",
+          "text": "Cegiełkowe i kierunkowe też należą do sposobów nawijania"
+        },
+        {
+          "id": "s3",
+          "text": "Przy trwałej jedyna dopuszczalna technika to zawsze tylko balejaż"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Balejaż to inny zabieg.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Balejaż to technika koloryzacji/rozjaśniania pasm — nie lista nawijania do trwałej."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz nazwy technik nawijania",
+    "subtitle": "Klasyczne, spiralne, cegiełkowe, kierunkowe, mieszane.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Jak średnica wałka zmienia skręt — i po co spiralne?"
+    }
+  }
+}

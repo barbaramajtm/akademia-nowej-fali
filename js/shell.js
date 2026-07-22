@@ -593,7 +593,7 @@ function renderModuleHero(moduleId, section){
   }
   if (hero){
     hero.classList.toggle('continue-card--ph', moduleId === 'ph');
-    hero.classList.toggle('continue-card--hair', moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt' || moduleId === 'wlos-teoria-koloru');
+    hero.classList.toggle('continue-card--hair', moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt' || moduleId === 'wlos-teoria-koloru' || moduleId === 'trwala-procedura');
     hero.classList.toggle('continue-card--numeracja', moduleId === 'numeracja-farb');
   }
 

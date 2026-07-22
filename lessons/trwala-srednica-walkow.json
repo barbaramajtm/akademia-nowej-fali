@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "trwala-srednica-walkow",
+  "title": "Średnica wałków i spiralne",
+  "category": "Trwała ondulacja — procedura",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Ten sam płyn, inny wałek — inny skręt. Dziś: średnica, porost, włosy długie i wałki spiralne.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "tp4-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Średnica",
+      "question": "Im mniejsze wałki przy trwałej:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tym większa siła skrętu"
+        },
+        {
+          "id": "b",
+          "text": "Tym zawsze zero skrętu"
+        },
+        {
+          "id": "c",
+          "text": "Tym zamiast skrętu zawsze rozjaśnienie"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mniejsze → mocniejszy skręt.",
+        "incorrectTitle": "Sprawdź Masz. 24.",
+        "explanation": "Od średnicy zależy skręt. Im mniejsze wałki, tym większa siła skrętu."
+      }
+    },
+    {
+      "id": "tp4-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Dobór",
+      "question": "Dobór wałków przy trwałej musi być przemyślany — m.in. pod cel, grubość i długość włosów.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Przemyślany dobór.",
+        "incorrectTitle": "Nie na chybił trafił.",
+        "explanation": "Na poroście mogą być różne grubości wałków w zależności od celu oraz grubości i długości włosów."
+      }
+    },
+    {
+      "id": "tp4-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Długie włosy",
+      "question": "Dopasuj.",
+      "leftTitle": "Sytuacja",
+      "rightTitle": "Rozwiązanie z materiałów",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Wałki spiralne"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Długie włosy (opcje)"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Jedno pasmo — dwa wałki"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Wałki spiralne lub nawijanie spiralne na tradycyjnych"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Trwała na włosach długich metodą nawijania spiralnego"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Jeden od nasady, drugi od środka do końcówek"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Opcje na długość.",
+        "incorrectTitle": "Sprawdź Masz. 24/33.",
+        "explanation": "Spiralne: od jednego do drugiego końca wałka — loki równomiernie naprężone na długości."
+      }
+    },
+    {
+      "id": "tp4-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Spiralne jak",
+      "question": "Przy wałkach spiralnych pasma nawija się:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Od jednego do drugiego końca wałka"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie lakierem bez wałka"
+        },
+        {
+          "id": "c",
+          "text": "Tylko na metalowych wałkach do wodnej ze szpilkami"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Wzdłuż wałka.",
+        "incorrectTitle": "Technika spiralna.",
+        "explanation": "Pasma nawija się od jednego do drugiego końca wałka — stąd równomierne naprężenie na długości."
+      }
+    },
+    {
+      "id": "tp4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Wałki",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Mniejsze wałki dają większą siłę skrętu"
+        },
+        {
+          "id": "s2",
+          "text": "Wałki spiralne służą m.in. trwałej na włosach długich"
+        },
+        {
+          "id": "s3",
+          "text": "Średnica wałka nie ma żadnego wpływu na skręt — liczy się tylko kolor farby"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Średnica ma znaczenie.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Dobór średnicy jest częścią efektu trwałej — nie zastępuje go numer farby."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Dobierasz średnicę świadomie",
+    "subtitle": "Mniejsze wałki — mocniejszy skręt; spiralne na długość.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Co musi leżeć na stanowisku przy trwałej?"
+    }
+  }
+}
