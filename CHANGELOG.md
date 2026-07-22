@@ -2,6 +2,14 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-22 — Home: Kosmyki i avatar nad okiem
+
+### Zmieniono
+- `index.html` — licznik Kosmyków i avatar w jednym rzędzie z logo (topbar)
+- `css/styles.css` — topbar Home oraz niższy motyw oka, bez nachodzenia na licznik/avatar
+
+---
+
 ## 2026-07-15 — Moduł pH ukończony (L4–L10) + baza wiedzy kursu
 
 ### Dodano
