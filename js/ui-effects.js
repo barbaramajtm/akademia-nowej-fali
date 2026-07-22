@@ -42,6 +42,13 @@ var MODULE_MOTIFS = {
       '<circle cx="60" cy="54" r="12" fill="#D97B94" opacity="0.85"/>' +
       '<circle cx="60" cy="54" r="6" fill="#1A2744"/>' +
     '</svg>',
+  'wlos-teoria-koloru':
+    '<svg viewBox="0 0 120 88" fill="none" aria-hidden="true">' +
+      '<ellipse cx="72" cy="30" rx="34" ry="20" fill="#E8B23E" opacity="0.3"/>' +
+      '<circle cx="60" cy="52" r="22" fill="#E8A8B8" opacity="0.45"/>' +
+      '<circle cx="60" cy="52" r="12" fill="#E86A4A" opacity="0.55"/>' +
+      '<circle cx="60" cy="52" r="5" fill="#1A2744"/>' +
+    '</svg>',
   'numeracja-farb':
     '<svg viewBox="0 0 120 88" fill="none" aria-hidden="true">' +
       '<ellipse cx="78" cy="28" rx="30" ry="18" fill="#E8B23E" opacity="0.32"/>' +
@@ -222,7 +229,7 @@ window.UIEffects = {
       animateUnlockedTile(id);
     }, delay);
 
-    if (moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt'){
+    if (moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt' || moduleId === 'wlos-teoria-koloru'){
       setTimeout(function(){
         blinkModuleMotif(moduleId);
       }, delay + 400);

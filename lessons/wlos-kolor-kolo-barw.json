@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-kolor-kolo-barw",
+  "title": "Koło barw",
+  "category": "Teoria koloru włosa",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka chce „coś cieplejszego”, a na włosach widać niechciany zgaszony ton. Zanim sięgniesz po tubkę, potrzebujesz mapy zależności między kolorami.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Mapa zależności",
+      "text": "Koło barw pokazuje zależności między kolorami. Fryzjer używa go do doboru kolorów i neutralizacji niepożądanych odcieni. Kolory podstawowe to żółty, czerwony i niebieski.",
+      "note": "Plansza jest uproszczeniem dydaktycznym pod pracę w salonie i pytania egzaminowe.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-color-wheel.png",
+      "imageAlt": "Koło barw z kolorami podstawowymi i pochodnymi.",
+      "imageCaption": "Koło barw — zależności między kolorami."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wkc2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Po co?",
+      "question": "Do czego fryzjer używa koła barw?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Do doboru kolorów i neutralizacji niepożądanych odcieni"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie do pomiaru pH szamponu"
+        },
+        {
+          "id": "c",
+          "text": "Do nawijania wałków w trwałej"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobór i neutralizacja.",
+        "incorrectTitle": "Inne narzędzie.",
+        "explanation": "Koło barw pokazuje zależności między kolorami — służy do doboru i do gaszenia niepożądanych odcieni."
+      }
+    },
+    {
+      "id": "wkc2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Podstawowe",
+      "question": "Kolory podstawowe to żółty, czerwony i niebieski.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — trzy podstawowe.",
+        "incorrectTitle": "Sprawdź trójkę.",
+        "explanation": "Żółty, czerwony i niebieski to kolory podstawowe — punkt wyjścia do mieszania."
+      }
+    },
+    {
+      "id": "wkc2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Mieszanie",
+      "question": "Dopasuj.",
+      "leftTitle": "Mieszanka / pojęcie",
+      "rightTitle": "Wynik",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Czerwony + niebieski"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Kolory podstawowe"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Barwy pochodne (przykłady)"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Żółty, czerwony, niebieski"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Fiolet"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Zielona, pomarańczowa, fioletowa"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mieszanie ogarnięte.",
+        "incorrectTitle": "Sprawdź pary.",
+        "explanation": "Czerwony z niebieskim daje fiolet. Pochodne to m.in. zieleń, pomarańcz i fiolet."
+      }
+    },
+    {
+      "id": "wkc2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Ciepły",
+      "question": "Który z podanych kolorów jest kolorem ciepłym?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Czerwony"
+        },
+        {
+          "id": "b",
+          "text": "Niebieski"
+        },
+        {
+          "id": "c",
+          "text": "Zielony"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Czerwony — ciepły.",
+        "incorrectTitle": "Inny kierunek.",
+        "explanation": "W materiałach egzaminowych kolor ciepły to czerwony — nie niebieski ani zielony."
+      }
+    },
+    {
+      "id": "wkc2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Koło barw",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Koło barw pokazuje zależności między kolorami"
+        },
+        {
+          "id": "s2",
+          "text": "Fryzjer używa koła m.in. do neutralizacji niepożądanych odcieni"
+        },
+        {
+          "id": "s3",
+          "text": "Koło barw służy wyłącznie do wyboru wałków w trwałej ondulacji"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To nie do wałków.",
+        "incorrectTitle": "Znajdź mylenie działów.",
+        "explanation": "Koło barw to narzędzie kolorystyczne — dobór i neutralizacja — nie procedura trwałej."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Czytasz koło barw",
+    "subtitle": "Zależności, podstawowe i pochodne — plus po co Ci to w salonie.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Jak gasić niepożądany odcień, nie zgadując „na oko”?"
+    }
+  }
+}
