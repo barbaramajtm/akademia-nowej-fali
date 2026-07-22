@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-kolor-ton-w-ton-plukanka",
+  "title": "Ton w ton i płukanka",
+  "category": "Teoria koloru włosa",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Klientka chce „odświeżyć kolor bez dużego rozjaśniania”. Masz w głowie dwa pojęcia: ton w ton i płukanka. Dziś je rozdzielasz.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wkc5-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Ton w ton",
+      "question": "Koloryzacja ton w ton to przede wszystkim:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Delikatna koloryzacja bez mocnego rozjaśniania — daje połysk, odświeża kolor i stopniowo się wypłukuje"
+        },
+        {
+          "id": "b",
+          "text": "Zawsze dekoloryzacja do poziomu 10"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie trwała ondulacja"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Ton w ton.",
+        "incorrectTitle": "Za mocna interpretacja.",
+        "explanation": "Ton w ton = delikatnie, bez mocnego rozjaśniania; połysk, odświeżenie, stopniowe wypłukiwanie."
+      }
+    },
+    {
+      "id": "wkc5-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Płukanka",
+      "question": "Płukanka osadza pigment na powierzchni włosa.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Na powierzchni.",
+        "incorrectTitle": "Sprawdź miejsce pigmentu.",
+        "explanation": "Płukanka osadza pigment na powierzchni — odświeża kolor i może neutralizować niepożądane odcienie."
+      }
+    },
+    {
+      "id": "wkc5-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Porównanie",
+      "question": "Dopasuj.",
+      "leftTitle": "Zabieg",
+      "rightTitle": "Opis",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Ton w ton"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Płukanka"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Mocne rozjaśnianie"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Pigment na powierzchni; odświeża i może gasić niepożądane odcienie"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Delikatna koloryzacja bez mocnego rozjaśniania"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Inna liga — rozbijanie naturalnego pigmentu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy ligi.",
+        "incorrectTitle": "Nie mieszaj zabiegów.",
+        "explanation": "Ton w ton odświeża delikatnie. Płukanka pracuje na powierzchni. Mocne rozjaśnianie to osobna historia z pH/pigmentem."
+      }
+    },
+    {
+      "id": "wkc5-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Naturalne vs rozjaśnione",
+      "question": "Na włosach naturalnych płukanką można m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ożywić kolor lub pokryć małe ilości siwych włosów"
+        },
+        {
+          "id": "b",
+          "text": "Zawsze rozjaśnić o 5 tonów"
+        },
+        {
+          "id": "c",
+          "text": "Trwale przebudować mostki siarkowe"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Delikatny efekt na naturalnych.",
+        "incorrectTitle": "Za duże obietnice.",
+        "explanation": "Na naturalnych: ożywić kolor lub mała siwizna. Na porowatych/rozjaśnionych barwnik wnika mocniej i szybciej schodzi."
+      }
+    },
+    {
+      "id": "wkc5-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Ton w ton / płukanka",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Ton w ton to delikatna koloryzacja bez mocnego rozjaśniania"
+        },
+        {
+          "id": "s2",
+          "text": "Płukanka może odświeżać kolor i neutralizować niepożądane odcienie"
+        },
+        {
+          "id": "s3",
+          "text": "Płukanka i ton w ton zawsze rozjaśniają włos tak mocno jak dekoloryzacja"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To nie dekoloryzacja.",
+        "incorrectTitle": "Znajdź przesadę.",
+        "explanation": "Oba zabiegi są o odświeżeniu / powierzchni — nie o mocnym rozjaśnianiu jak dekoloryzacja."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozróżniasz ton w ton i płukankę",
+    "subtitle": "Delikatne odświeżenie vs pigment na powierzchni.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Henna, indygo, farba oksydacyjna — kiedy która liga?"
+    }
+  }
+}

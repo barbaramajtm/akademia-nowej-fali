@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-kolor-melanina",
+  "title": "Melanina — naturalny barwnik",
+  "category": "Teoria koloru włosa",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Wiesz już, że pigment siedzi w korze. Klientka pyta: „A jak nazywa się ten naturalny barwnik — i czemu po słońcu blond jest taki suchy?” Dziś łączysz nazwę z praktyką.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Barwnik ma imię",
+      "text": "W składzie włosa pojawia się melanina — naturalny barwnik. Leży w korze (to już znasz). Jasne i rozjaśniane włosy mają go mało — dlatego promienie UV są dla nich szczególnie groźne.",
+      "note": "Nie rozbijamy tu melaniny na podtypy naukowe — trzymamy się materiałów egzaminowych projektu.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-layers.png",
+      "imageAlt": "Schemat warstw łodygi — przypomnienie, że pigment jest w korze.",
+      "imageCaption": "Pigment (melanina) znajduje się w korze włosa."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wkc1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Nazwa",
+      "question": "Naturalny barwnik włosa w materiałach nazywany jest m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Melaniną"
+        },
+        {
+          "id": "b",
+          "text": "Keratyną włóknistą"
+        },
+        {
+          "id": "c",
+          "text": "Numerem farby na tubce"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Melanina.",
+        "incorrectTitle": "Inna nazwa.",
+        "explanation": "Melanina to barwnik włosa. Keratyna buduje strukturę, a numer farby to zapis kosmetyczny — nie naturalny pigment."
+      }
+    },
+    {
+      "id": "wkc1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Gdzie?",
+      "question": "Naturalny pigment włosa znajduje się w korze włosa.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — w korze.",
+        "incorrectTitle": "Wróć do warstw.",
+        "explanation": "Pigment leży w korze. To powrót z lekcji o osłonce, korze i rdzeniu — teraz łączysz to z nazwą melanina."
+      }
+    },
+    {
+      "id": "wkc1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Role",
+      "question": "Dopasuj.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Rola",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Melanina"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Keratyna"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Osłonka"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Rusztowanie włókien"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Naturalny barwnik w korze"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Zewnętrzna warstwa z łusek"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Role czyste.",
+        "incorrectTitle": "Sprawdź pary.",
+        "explanation": "Melanina barwi, keratyna buduje, osłonka chroni powierzchnię."
+      }
+    },
+    {
+      "id": "wkc1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · UV",
+      "question": "Dlaczego promienie UV są szczególnie niebezpieczne dla jasnych i rozjaśnianych włosów?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bo takie włosy zawierają niewielką ilość naturalnego barwnika — melaniny"
+        },
+        {
+          "id": "b",
+          "text": "Bo numer farby zawsze zaczyna się od 1"
+        },
+        {
+          "id": "c",
+          "text": "Bo keratyna znika po jednym dniu na słońcu"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mało melaniny — większe ryzyko.",
+        "incorrectTitle": "Inny mechanizm.",
+        "explanation": "Jasne i rozjaśniane mają mało melaniny. Zniszczone słońcem włosy stają się suche, chropowate i łamliwe."
+      }
+    },
+    {
+      "id": "wkc1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Melanina",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Melanina to naturalny barwnik włosa"
+        },
+        {
+          "id": "s2",
+          "text": "Pigment leży w korze"
+        },
+        {
+          "id": "s3",
+          "text": "UV zagraża głównie bardzo ciemnym włosom, bo mają za dużo melaniny — jasne są zawsze bezpieczne"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mit obalony.",
+        "incorrectTitle": "Znajdź błąd o UV.",
+        "explanation": "To jasne i rozjaśniane — z małą ilością melaniny — są szczególnie narażone na UV, nie odwrotnie."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz melaninę w praktyce",
+    "subtitle": "Naturalny barwnik w korze — i wiesz, czemu blond boi się słońca.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Jak koło barw pomaga dobrać kolor i zgasić niechciany odcień?"
+    }
+  }
+}

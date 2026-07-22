@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-kolor-roslinna-vs-oksydacyjna",
+  "title": "Farba roślinna czy oksydacyjna?",
+  "category": "Teoria koloru włosa",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Klientka chce „coś naturalnego” albo „żeby siwe zniknęły na 100%”. Zanim obiecasz efekt, musisz znać limity farby roślinnej i oksydacyjnej.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wkc6-z1",
+      "type": "matching",
+      "kicker": "Krok 1 · Roślinne nazwy",
+      "question": "Dopasuj barwnik roślinny do odcienia.",
+      "leftTitle": "Środek",
+      "rightTitle": "Odcień",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Indygo"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Henna"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Kampesz"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Czerwono-pomarańczowy (z liści)"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Niebieski (z liści)"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Ciemnoczerwony do granatowoczarnego (z wiór drzewa)"
+        }
+      ],
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy roślinne.",
+        "incorrectTitle": "Sprawdź źródła odcieni.",
+        "explanation": "Indygo — niebieski z liści. Henna — czerwono-pomarańcz z liści. Kampesz — ciemny odcień z wiór drzewa kampeszowego."
+      }
+    },
+    {
+      "id": "wkc6-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Roślinna",
+      "question": "Farba roślinna nie rozjaśnia włosów.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie rozjaśnia.",
+        "incorrectTitle": "To jedna z wad.",
+        "explanation": "Wśród wad farby roślinnej: nie rozjaśnia, mały wybór kolorów, zależy od struktury włosów."
+      }
+    },
+    {
+      "id": "wkc6-z3",
+      "type": "singleChoice",
+      "kicker": "Krok 3 · Oksydacyjna",
+      "question": "Która zaleta dotyczy farby oksydacyjnej (utleniającej)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "W 100% pokrywa siwe włosy, głęboko wnika, wyrównuje kolor, jest trwała"
+        },
+        {
+          "id": "b",
+          "text": "Nigdy nie uszkadza struktury i nie pachnie amoniakiem"
+        },
+        {
+          "id": "c",
+          "text": "Zawsze jest tylko płukanką powierzchniową"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Siła oksydacyjnej.",
+        "incorrectTitle": "Sprawdź zalety.",
+        "explanation": "Oksydacyjna: pełne krycie siwizny, głębokie wniknięcie, wyrównanie, trwałość. Wady: amoniak, uszkodzenia, ryzyko uczuleń."
+      }
+    },
+    {
+      "id": "wkc6-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Ułóż sensowną kolejność konsultacji przed wyborem farby.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Ustal cel: odświeżenie, krycie siwizny, rozjaśnienie, „naturalnie”…"
+        },
+        {
+          "id": "s2",
+          "text": "Oceń stan i chłonność włosów"
+        },
+        {
+          "id": "s3",
+          "text": "Wybierz ligę: roślinna / oksydacyjna / ton w ton lub płukanka"
+        },
+        {
+          "id": "s4",
+          "text": "Uczciwie nazwij limity (np. roślinna nie rozjaśnia)"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Konsultacja domknięta.",
+        "incorrectTitle": "Inna kolejność.",
+        "explanation": "Najpierw cel i stan włosa, potem liga produktu, na końcu uczciwe limity — bez obietnic poza źródłami."
+      }
+    },
+    {
+      "id": "wkc6-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Synteza",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Wybór farby",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Henna, indygo i kampesz to barwniki roślinne"
+        },
+        {
+          "id": "s2",
+          "text": "Farba oksydacyjna potrafi trwale i głęboko zmieniać kolor oraz kryć siwe"
+        },
+        {
+          "id": "s3",
+          "text": "Farba roślinna zawsze rozjaśnia włos lepiej niż oksydacyjna i w 100% kryje siwe jak oksydacyjna"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł domknięty.",
+        "incorrectTitle": "Znajdź przesadę.",
+        "explanation": "Roślinna nie rozjaśnia i nie dorównuje oksydacyjnej w pełnym kryciu siwizny. Wybierasz świadomie — pod cel klientki."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Dobierasz ligę koloru świadomie",
+    "subtitle": "Melanina, koło, chłonność, ton w ton, płukanka, roślinna vs oksydacyjna.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej w kursie możesz domykać luki budowy włosa albo iść w procedury zabiegów."
+    }
+  }
+}

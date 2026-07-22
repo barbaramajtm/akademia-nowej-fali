@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-kolor-chlonnosc",
+  "title": "Chłonność przy farbowaniu",
+  "category": "Teoria koloru włosa",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Ta sama farba, dwie klientki — efekt nierówny. Nie wszystkie włosy przyjmują farbę jednakowo. Dziś uczysz się, które są najbardziej chłonne i co z tego wynika.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wkc4-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Fakt",
+      "question": "Czy wszystkie włosy przyjmują farbę jednakowo?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nie — chłonność bywa różna"
+        },
+        {
+          "id": "b",
+          "text": "Tak — zawsze identycznie"
+        },
+        {
+          "id": "c",
+          "text": "Tylko siwe przyjmują farbę"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Różna chłonność.",
+        "incorrectTitle": "Nie zawsze tak samo.",
+        "explanation": "Nie wszystkie włosy przyjmują farbę jednakowo — to punkt wyjścia diagnozy przed koloryzacją."
+      }
+    },
+    {
+      "id": "wkc4-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Lista",
+      "question": "Najbardziej chłonne przy farbowaniu są włosy zniszczone, rozjaśniane i porowate.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Ta trójka.",
+        "incorrectTitle": "Sprawdź listę.",
+        "explanation": "Źródła wskazują włosy zniszczone, rozjaśniane i porowate jako najbardziej chłonne."
+      }
+    },
+    {
+      "id": "wkc4-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Porowatość",
+      "question": "Dopasuj.",
+      "leftTitle": "Sytuacja",
+      "rightTitle": "Skutek",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Bardziej porowate (np. rozjaśnione)"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Włosy naturalne + płukanka"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Chłonność przy farbowaniu"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Można ożywić kolor lub pokryć małe ilości siwizny"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Barwnik mocniej wnika i szybciej się wypłukuje"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Nie wszystkie włosy biorą farbę tak samo"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Porowatość ma cenę.",
+        "incorrectTitle": "Sprawdź skutki.",
+        "explanation": "Im bardziej porowate włosy, tym barwnik głębiej wchodzi i szybciej schodzi. Na naturalnych płukanka działa delikatniej."
+      }
+    },
+    {
+      "id": "wkc4-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Salon",
+      "question": "Klientka ma mocno rozjaśniane, porowate końce i ciemniejszy, mniej zniszczony odrost. Na co uważasz przy kolorze?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Końce mogą wziąć kolor mocniej i szybciej go oddać — planuj aplikację i czas świadomie"
+        },
+        {
+          "id": "b",
+          "text": "Traktujesz całą głowę identycznie, bo chłonność zawsze jest taka sama"
+        },
+        {
+          "id": "c",
+          "text": "Rozjaśnione końce nigdy nie przyjmują barwnika"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Diagnoza stref.",
+        "incorrectTitle": "Nie ignoruj porowatości.",
+        "explanation": "Rozjaśniane i porowate są najbardziej chłonne — i szybciej wypłukują ton. Odrost i końce to często dwie historie."
+      }
+    },
+    {
+      "id": "wkc4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Chłonność",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Włosy zniszczone bywają bardzo chłonne"
+        },
+        {
+          "id": "s2",
+          "text": "Włosy rozjaśniane bywają bardzo chłonne"
+        },
+        {
+          "id": "s3",
+          "text": "Tylko włosy idealnie zdrowe i gładkie są najbardziej chłonne przy farbowaniu"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Jest odwrotnie.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Najbardziej chłonne: zniszczone, rozjaśniane, porowate — nie „najzdrowsze”."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Widzisz różnice w chłonności",
+    "subtitle": "Zniszczone, rozjaśniane, porowate — biorą mocniej.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Ton w ton czy płukanka — co robią inaczej?"
+    }
+  }
+}

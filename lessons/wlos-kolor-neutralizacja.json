@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-kolor-neutralizacja",
+  "title": "Neutralizacja niepożądanych odcieni",
+  "category": "Teoria koloru włosa",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Po rozjaśnieniu wychodzi niechciany ton. Klientka mówi: „Zgaś to”. Ty nie zgadujesz — sięgasz po logikę koła barw i dobór preparatu.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wkc3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Cel",
+      "question": "Neutralizacja niepożądanych odcieni w pracy fryzjera to przede wszystkim:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Gaszenie / korygowanie niechcianego tonu przy doborze koloru (z pomocą zależności z koła barw)"
+        },
+        {
+          "id": "b",
+          "text": "Zawsze to samo co utrwalacz w trwałej ondulacji"
+        },
+        {
+          "id": "c",
+          "text": "Mycie wyłącznie zimną wodą bez koloru"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cel jasny.",
+        "incorrectTitle": "Nie myl z trwałą.",
+        "explanation": "Koło barw służy m.in. do neutralizacji niepożądanych odcieni. To inna „neutralizacja” niż utrwalacz w trwałej."
+      }
+    },
+    {
+      "id": "wkc3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Narzędzie",
+      "question": "Koło barw pomaga fryzjerowi w neutralizacji niepożądanych odcieni.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — stąd koło.",
+        "incorrectTitle": "Wróć do roli koła.",
+        "explanation": "Źródła mówią wprost: koło służy do doboru kolorów i neutralizacji niepożądanych odcieni."
+      }
+    },
+    {
+      "id": "wkc3-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Nie pomyl słów",
+      "question": "Dopasuj.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Kontekst",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Neutralizacja odcienia (kolor)"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Utrwalacz / neutralizator w trwałej"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Zakwaszanie po koloryzacji"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Odbudowa wiązań siarkowych w nowym kształcie"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Korekta niepożądanego tonu barwy"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Przywracanie równowagi pH po zabiegu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy różne finisze.",
+        "incorrectTitle": "Nie mieszaj pojęć.",
+        "explanation": "Słowo „neutralizacja” wraca w różnych zabiegach — tu chodzi o odcień. W trwałej i przy pH role są inne."
+      }
+    },
+    {
+      "id": "wkc3-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Płukanka",
+      "question": "Który preparat w materiałach jest opisany jako osadający pigment na powierzchni i m.in. neutralizujący niepożądane odcienie?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Płukanka"
+        },
+        {
+          "id": "b",
+          "text": "Sam lakier bez pigmentu"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie wałki do trwałej"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Płukanka.",
+        "incorrectTitle": "Inny produkt.",
+        "explanation": "Płukanka osadza pigment na powierzchni włosa, odświeża kolor i neutralizuje niepożądane odcienie. Szczegóły ton w ton vs płukanka — w kolejnej lekcji praktycznej."
+      }
+    },
+    {
+      "id": "wkc3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Neutralizacja odcienia",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Koło barw wspiera neutralizację niepożądanych odcieni"
+        },
+        {
+          "id": "s2",
+          "text": "Płukanka może neutralizować niepożądane odcienie"
+        },
+        {
+          "id": "s3",
+          "text": "Neutralizacja odcienia i utrwalacz w trwałej to zawsze dokładnie ten sam zabieg chemiczny"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Różne zabiegi.",
+        "incorrectTitle": "Znajdź mylenie.",
+        "explanation": "Korekta tonu ≠ domykanie mostków siarkowych w trwałej. Używasz podobnych słów, innych procedur."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Gaszenie tonu ma logikę",
+    "subtitle": "Koło barw + właściwy preparat — nie zgadywanie.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dlaczego jedne włosy „biorą” farbę mocniej niż inne?"
+    }
+  }
+}

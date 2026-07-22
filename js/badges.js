@@ -162,6 +162,19 @@ var BADGE_CATALOG = [
     progress: function(ctx){
       return ctx.moduleProgress['wlos-ksztalt'] || { current: 0, goal: 1 };
     }
+  },
+  {
+    id: 'modul-wlos-teoria-koloru',
+    collectionId: 'moduly',
+    name: 'Teoria koloru',
+    description: 'Melanina, koło barw, chłonność i wybór farby — kolor ma u Ciebie logikę.',
+    conditionLabel: 'Ukończ wszystkie lekcje teorii koloru włosa',
+    symbol: 'mirror',
+    accent: 'mustard',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['wlos-teoria-koloru']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['wlos-teoria-koloru'] || { current: 0, goal: 1 };
+    }
   }
 ];
 

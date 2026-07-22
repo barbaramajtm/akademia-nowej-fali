@@ -438,11 +438,77 @@ window.LessonsCatalog = [
     locked: false,
     requiresLessonId: 'wlos-ksztalt-redukcja-utrwalenie',
     lockedReason: 'Najpierw ukończ: Redukcja i utrwalenie'
+  },
+  {
+    id: 'wlos-kolor-melanina',
+    moduleId: 'wlos-teoria-koloru',
+    title: 'Melanina — naturalny barwnik',
+    moduleTitle: 'Teoria koloru włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-oslonka-kora-rdzen',
+    lockedReason: 'Najpierw ukończ: Osłonka, kora i rdzeń'
+  },
+  {
+    id: 'wlos-kolor-kolo-barw',
+    moduleId: 'wlos-teoria-koloru',
+    title: 'Koło barw',
+    moduleTitle: 'Teoria koloru włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-kolor-melanina',
+    lockedReason: 'Najpierw ukończ: Melanina — naturalny barwnik'
+  },
+  {
+    id: 'wlos-kolor-neutralizacja',
+    moduleId: 'wlos-teoria-koloru',
+    title: 'Neutralizacja niepożądanych odcieni',
+    moduleTitle: 'Teoria koloru włosa',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-kolor-kolo-barw',
+    lockedReason: 'Najpierw ukończ: Koło barw'
+  },
+  {
+    id: 'wlos-kolor-chlonnosc',
+    moduleId: 'wlos-teoria-koloru',
+    title: 'Chłonność przy farbowaniu',
+    moduleTitle: 'Teoria koloru włosa',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-kolor-neutralizacja',
+    lockedReason: 'Najpierw ukończ: Neutralizacja niepożądanych odcieni'
+  },
+  {
+    id: 'wlos-kolor-ton-w-ton-plukanka',
+    moduleId: 'wlos-teoria-koloru',
+    title: 'Ton w ton i płukanka',
+    moduleTitle: 'Teoria koloru włosa',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-kolor-chlonnosc',
+    lockedReason: 'Najpierw ukończ: Chłonność przy farbowaniu'
+  },
+  {
+    id: 'wlos-kolor-roslinna-vs-oksydacyjna',
+    moduleId: 'wlos-teoria-koloru',
+    title: 'Farba roślinna czy oksydacyjna?',
+    moduleTitle: 'Teoria koloru włosa',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-kolor-ton-w-ton-plukanka',
+    lockedReason: 'Najpierw ukończ: Ton w ton i płukanka'
   }
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt'];
+window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];
