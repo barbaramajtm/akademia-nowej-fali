@@ -33,11 +33,11 @@
         },
         {
           "id": "b",
-          "text": "Wyłącznie balejaż i ton w ton"
+          "text": "Wyłącznie trwała chemiczna i ondulacja wodna"
         },
         {
           "id": "c",
-          "text": "Tylko numeracja farby 1–10"
+          "text": "Tylko mycie i suszenie bez cięcia"
         }
       ],
       "correctOptionId": "a",
@@ -93,17 +93,17 @@
         {
           "id": "r1",
           "pairId": "b",
-          "text": "Technika strzyżenia narzędziem elektrycznym / maszynką"
+          "text": "Cięcie z użyciem maszynki elektrycznej"
         },
         {
           "id": "r2",
           "pairId": "a",
-          "text": "Technika przerzedzania objętości (osobna lekcja)"
+          "text": "Przerzedzanie objętości (osobna lekcja o nożycach)"
         },
         {
           "id": "r3",
           "pairId": "c",
-          "text": "Technika z listy strzyżenia (ślizg)"
+          "text": "Technika z listy strzyżenia; wraca też przy cieniowaniu"
         }
       ],
       "reward": 15,
@@ -126,11 +126,11 @@
         },
         {
           "id": "b",
-          "text": "Wyłącznie balejaż w folii"
+          "text": "Tylko strzyżenie na tępo o 10 cm bez przerzedzania"
         },
         {
           "id": "c",
-          "text": "Tylko rozjaśnianie powyżej 12%"
+          "text": "Pominięcie cięcia i samo mycie"
         }
       ],
       "correctOptionId": "a",

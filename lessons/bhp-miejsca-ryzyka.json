@@ -37,7 +37,7 @@
         },
         {
           "id": "c",
-          "text": "Tylko wzornik poziomów 1–10"
+          "text": "Tylko nieużywane ręczniki w szafce"
         }
       ],
       "correctOptionId": "a",
@@ -130,7 +130,7 @@
         },
         {
           "id": "c",
-          "text": "Włożyć od razu do gaśnicy proszkowej"
+          "text": "Włożyć brudną szczotkę z powrotem do szuflady bez dezynfekcji"
         }
       ],
       "correctOptionId": "a",

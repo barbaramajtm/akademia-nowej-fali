@@ -13,7 +13,7 @@ Moduł `wlos-ksztalt`: wiązania H/S, reduktor, utrwalacz, czasowa vs chemiczna.
 | Mycie przed trwałą / przed farbą | Mat. 20 |
 | Po trwałej: płukanie, utwardzenie keratyny, zakwaszenie pH | Mat. 21 |
 | Trwałość ułożenia (ondulacja wodna) | Mat. 19 |
-| Techniki nawijania: klasyczne, spiralne, cegiełkowe, kierunkowe, mieszane | Tech. 30 |
+| Techniki nawijania: klasyczne, spiralne, cegiełkowe, kierunkowe, mieszane | Tech. 30 (`f1b002f4…jpg`); informator: cegiełkowa/klasyczna/spiralna |
 | Wałki trwała vs wodna (materiał, mocowanie, średnica) | Masz. 7 |
 | Przybory do trwałej | Masz. 15 |
 | Przybory ondulacja wodna na wałkach | Masz. 12 |
