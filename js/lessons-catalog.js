@@ -742,11 +742,66 @@ window.LessonsCatalog = [
     locked: false,
     requiresLessonId: 'strzyz-maszynki',
     lockedReason: 'Najpierw ukończ: Maszynki i konturówka'
+  },
+  {
+    id: 'prostowanie-sposoby',
+    moduleId: 'prostowanie-wlosow',
+    title: 'Sposoby prostowania włosów',
+    moduleTitle: 'Prostowanie włosów',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'strzyz-grzebienie-konserwacja',
+    lockedReason: 'Najpierw ukończ: Grzebienie, konserwacja, brzytwa'
+  },
+  {
+    id: 'prostowanie-prostownica-efekt',
+    moduleId: 'prostowanie-wlosow',
+    title: 'Prostownica: efekt nietrwały',
+    moduleTitle: 'Prostowanie włosów',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'prostowanie-sposoby',
+    lockedReason: 'Najpierw ukończ: Sposoby prostowania włosów'
+  },
+  {
+    id: 'prostowanie-plytki-temperatura',
+    moduleId: 'prostowanie-wlosow',
+    title: 'Płytki, temperatura i termostat',
+    moduleTitle: 'Prostowanie włosów',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'prostowanie-prostownica-efekt',
+    lockedReason: 'Najpierw ukończ: Prostownica: efekt nietrwały'
+  },
+  {
+    id: 'prostowanie-suche-mokre',
+    moduleId: 'prostowanie-wlosow',
+    title: 'Prostownice: suche i mokre',
+    moduleTitle: 'Prostowanie włosów',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'prostowanie-plytki-temperatura',
+    lockedReason: 'Najpierw ukończ: Płytki, temperatura i termostat'
+  },
+  {
+    id: 'prostowanie-chemiczne-mostki',
+    moduleId: 'prostowanie-wlosow',
+    title: 'Chemiczne prostowanie i mostki',
+    moduleTitle: 'Prostowanie włosów',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'prostowanie-suche-mokre',
+    lockedReason: 'Najpierw ukończ: Prostownice: suche i mokre'
   }
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia'];
+window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];

@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "prostowanie-plytki-temperatura",
+  "title": "Płytki, temperatura i termostat",
+  "category": "Prostowanie włosów",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Ten sam aparat, inne detale: zakres temperatury, materiał płytek, termostat. Dziś checklista z Masz. 9.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "pr3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Temperatura",
+      "question": "Płytki prostownicy są nagrzewane w zakresie ok.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "130°C do 230°C"
+        },
+        {
+          "id": "b",
+          "text": "10°C do 20°C"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie temperaturą pokojową bez grzania"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "130–230°C.",
+        "incorrectTitle": "Masz. 9.",
+        "explanation": "Materiały podają zakres od 130°C do 230°C."
+      }
+    },
+    {
+      "id": "pr3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Termostat",
+      "question": "Prostownica posiada termostat chroniący przed przegrzaniem.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Termostat.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Termostat chroni przed przegrzaniem — element z Masz. 9."
+      }
+    },
+    {
+      "id": "pr3-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Płytki",
+      "question": "Dopasuj.",
+      "leftTitle": "Element",
+      "rightTitle": "Opis z materiałów",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Powierzchnia płytek"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Zakres nagrzewania"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Termostat"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Ok. 130–230°C"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Wkład ceramiczny, szklany lub tytanowy"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Chroni przed przegrzaniem"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy fakty.",
+        "incorrectTitle": "Masz. 9.",
+        "explanation": "Materiał płytek + zakres temperatury + termostat."
+      }
+    },
+    {
+      "id": "pr3-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Widzisz prostownicę bez działającego termostatu / z przegrzewaniem. Co jest spójne z BHP sprzętu?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nie używać uszkodzonego sprzętu — ryzyko m.in. poparzenia / zniszczenia włosów"
+        },
+        {
+          "id": "b",
+          "text": "Podkręcić do maksimum „na czucie”"
+        },
+        {
+          "id": "c",
+          "text": "Gasić wodą z myjni podczas pracy pod napięciem"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Sprawny sprzęt.",
+        "incorrectTitle": "Masz. 6 + 9.",
+        "explanation": "Termostat chroni przed przegrzaniem; uszkodzony sprzęt odstawiasz."
+      }
+    },
+    {
+      "id": "pr3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Parametry",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Płytki bywają z wkładem ceramicznym, szklanym lub tytanowym"
+        },
+        {
+          "id": "s2",
+          "text": "Termostat chroni przed przegrzaniem"
+        },
+        {
+          "id": "s3",
+          "text": "Płytki grzeją wyłącznie w zakresie 1–5°C"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Zakres jest inny.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Z materiałów: ok. 130–230°C — nie kilka stopni."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz parametry prostownicy",
+    "subtitle": "130–230°C, wkład ceramiczny/szklany/tytanowy, termostat.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Prostownice do włosów suchych i mokrych."
+    }
+  }
+}

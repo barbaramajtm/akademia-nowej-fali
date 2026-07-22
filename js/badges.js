@@ -214,6 +214,19 @@ var BADGE_CATALOG = [
     progress: function(ctx){
       return ctx.moduleProgress['strzyzenie-narzedzia'] || { current: 0, goal: 1 };
     }
+  },
+  {
+    id: 'modul-prostowanie-wlosow',
+    collectionId: 'moduly',
+    name: 'Prostowanie',
+    description: 'Sposoby, prostownica i chemia mostków — wybierasz ligę zabiegu.',
+    conditionLabel: 'Ukończ wszystkie lekcje prostowania włosów',
+    symbol: 'strand',
+    accent: 'mustard',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['prostowanie-wlosow']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['prostowanie-wlosow'] || { current: 0, goal: 1 };
+    }
   }
 ];
 

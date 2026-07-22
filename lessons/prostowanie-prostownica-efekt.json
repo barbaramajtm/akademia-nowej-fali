@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "prostowanie-prostownica-efekt",
+  "title": "Prostownica: efekt nietrwały",
+  "category": "Prostowanie włosów",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Włączasz prostownicę. Klientka pyta: „Na ile to zostanie?”. Dziś: co robi aparat według maszynoznawstwa.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "pr2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Efekt",
+      "question": "Prostownica to aparat pozwalający na:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nietrwałe wyprostowanie i wygładzenie włosów nagrzanymi płytkami"
+        },
+        {
+          "id": "b",
+          "text": "Trwałą chemiczną bez reduktora"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie sterylizację narzędzi"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nietrwałe.",
+        "incorrectTitle": "Masz. 9.",
+        "explanation": "Prostownica = nietrwałe wyprostowanie i wygładzenie za pomocą nagrzanych płytek."
+      }
+    },
+    {
+      "id": "pr2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Trwałość",
+      "question": "Efekt prostownicy z materiałów to efekt nietrwały.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nietrwały.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Maszynoznawstwo mówi wprost o nietrwałym wyprostowaniu i wygładzeniu."
+      }
+    },
+    {
+      "id": "pr2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Porównaj ligi",
+      "question": "Dopasuj.",
+      "leftTitle": "Metoda",
+      "rightTitle": "Charakter efektu (z materiałów)",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Prostownica"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Trwała ondulacja (przypomnienie)"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Ondulacja wodna / układanie"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Chemia mostków siarkowych + utrwalacz"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Nietrwałe wyprostowanie/wygładzenie ciepłem płytek"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Zmiana czasowa oparta m.in. o wilgoć i ciepło"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Różne ligi.",
+        "incorrectTitle": "Masz. 9 + wcześniejsze moduły.",
+        "explanation": "Prostownica nie jest trwałą chemiczną — to ciepłe, nietrwałe prostowanie."
+      }
+    },
+    {
+      "id": "pr2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Rozmowa",
+      "question": "Jak uczciwie opisać efekt prostownicy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Wygładza i prostuje na czas — efekt nietrwały"
+        },
+        {
+          "id": "b",
+          "text": "Zastępuje trwałą chemiczną na mostkach S"
+        },
+        {
+          "id": "c",
+          "text": "Sterylizuje włosy w autoklawie"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Uczciwy opis.",
+        "incorrectTitle": "Bez obietnic „na zawsze”.",
+        "explanation": "Materiał: nietrwałe wyprostowanie i wygładzenie."
+      }
+    },
+    {
+      "id": "pr2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Prostownica",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Prostownica wygładza włosy nagrzanymi płytkami"
+        },
+        {
+          "id": "s2",
+          "text": "Efekt prostownicy jest opisany jako nietrwały"
+        },
+        {
+          "id": "s3",
+          "text": "Prostownica zawsze daje ten sam efekt co pełna trwała chemiczna"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To nie trwała.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Trwała chemiczna pracuje na mostkach S z reduktorem i utrwalaczem — prostownica to inna liga."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, jaki efekt daje prostownica",
+    "subtitle": "Nietrwałe wyprostowanie i wygładzenie płytkami.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Płytki, temperatura 130–230°C i termostat."
+    }
+  }
+}
