@@ -1031,6 +1031,15 @@ function hideAuthGate(){
   if (gate) gate.hidden = true;
 }
 
+function dismissAuthGate(){
+  /* Zamknięcie wraca do aplikacji: jeśli bramka była obowiązkowa — tryb gościa. */
+  if (window.Auth && window.Auth.needsAuthGate && window.Auth.needsAuthGate()){
+    window.Auth.continueAsGuest();
+  }
+  afterAuthSuccess();
+  if (typeof showView === 'function') showView('home');
+}
+
 function afterAuthSuccess(){
   hideAuthGate();
   /* Auth nie wyłącza admina — odblokowana sesja admina nadal obowiązuje po logowaniu. */
@@ -1199,6 +1208,25 @@ function bindAuthUi(){
   document.getElementById('authGuestBtn').addEventListener('click', function(){
     window.Auth.continueAsGuest();
     afterAuthSuccess();
+    if (typeof showView === 'function') showView('home');
+  });
+
+  function onDismissAuth(e){
+    if (e) e.preventDefault();
+    dismissAuthGate();
+  }
+  var closeBtn = document.getElementById('authCloseBtn');
+  if (closeBtn) closeBtn.addEventListener('click', onDismissAuth);
+  var dismissBtn = document.getElementById('authDismissBtn');
+  if (dismissBtn) dismissBtn.addEventListener('click', onDismissAuth);
+
+  gate.addEventListener('click', function(e){
+    if (e.target === gate) dismissAuthGate();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape') return;
+    if (gate.hidden) return;
+    dismissAuthGate();
   });
 
   var openBtn = document.getElementById('profileAuthOpen');
