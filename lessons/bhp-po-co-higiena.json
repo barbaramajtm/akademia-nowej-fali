@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "bhp-po-co-higiena",
+  "title": "Po co higiena w salonie?",
+  "category": "BHP i higiena salonu",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Przed pierwszą klientką dnia: po co w ogóle cała higiena? Dziś cztery cele z materiałów — żeby nie mylić „ładnie wygląda” z bezpieczeństwem.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bh1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Cel",
+      "question": "Celem zabiegów higienicznych w salonie jest m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Zapobieganie zakażeniom oraz bezpieczeństwo klientów i pracowników"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie dobór numeru farby 1–10"
+        },
+        {
+          "id": "c",
+          "text": "Tylko przyspieszenie trwałej bez chemii"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Bezpieczeństwo i zakażenia.",
+        "incorrectTitle": "Tech. 11.",
+        "explanation": "Higiena ma zapobiegać zakażeniom i chronić klientów oraz pracowników — to nie jest „tylko estetyka stanowiska”."
+      }
+    },
+    {
+      "id": "bh1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Czystość",
+      "question": "Utrzymanie czystości i spełnianie wymagań sanitarnych należą do celów zabiegów higienicznych.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — czystość i sanepid.",
+        "incorrectTitle": "Są w liście celów.",
+        "explanation": "Materiały wymieniają też utrzymanie czystości oraz spełnianie wymagań sanitarnych."
+      }
+    },
+    {
+      "id": "bh1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Cztery cele",
+      "question": "Dopasuj fragment celu.",
+      "leftTitle": "Hasło",
+      "rightTitle": "Znaczenie",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Zapobieganie zakażeniom"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Bezpieczeństwo klientów i pracowników"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Wymagania sanitarne"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Ochrona obu stron usługi, nie tylko „ładnego lustra”"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Ograniczanie ryzyka przeniesienia drobnoustrojów"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Spełnianie obowiązków sanitarnych zakładu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cele rozdzielone.",
+        "incorrectTitle": "Przypomnij Tech. 11.",
+        "explanation": "Cztery cele: zakażenia, bezpieczeństwo ludzi, czystość, wymagania sanitarne."
+      }
+    },
+    {
+      "id": "bh1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Koleżanka mówi: „Higiena to tylko sprzątanie na koniec dnia”. Co jest bliżej materiałów?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Higiena to m.in. zapobieganie zakażeniom i bezpieczeństwo ludzi — codziennie, nie tylko „na koniec”"
+        },
+        {
+          "id": "b",
+          "text": "Higiena dotyczy wyłącznie kolorymetrii"
+        },
+        {
+          "id": "c",
+          "text": "Higiena zastępuje trwałą chemiczną"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie tylko sprzątanie.",
+        "incorrectTitle": "Cele są szersze.",
+        "explanation": "Czystość jest jednym celem — obok zakażeń, bezpieczeństwa i wymagań sanitarnych."
+      }
+    },
+    {
+      "id": "bh1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Po co higiena",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Higiena ma zapobiegać zakażeniom"
+        },
+        {
+          "id": "s2",
+          "text": "Higiena chroni klientów i pracowników"
+        },
+        {
+          "id": "s3",
+          "text": "Jedynym celem higieny jest dobór wałków do ondulacji"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To nie o wałkach.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Wałki to procedura zabiegu — nie cel zabiegów higienicznych z Tech. 11."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, po co jest higiena",
+    "subtitle": "Zakażenia, ludzie, czystość, wymagania sanitarne.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dezynfekcja czy sterylizacja — i w jakiej kolejności?"
+    }
+  }
+}

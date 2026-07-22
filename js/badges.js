@@ -188,6 +188,19 @@ var BADGE_CATALOG = [
     progress: function(ctx){
       return ctx.moduleProgress['trwala-procedura'] || { current: 0, goal: 1 };
     }
+  },
+  {
+    id: 'modul-bhp-higiena-salonu',
+    collectionId: 'moduly',
+    name: 'BHP i higiena',
+    description: 'Dezynfekcja, prąd, salon i odmowa usługi — chronisz klienta i siebie.',
+    conditionLabel: 'Ukończ wszystkie lekcje BHP i higieny',
+    symbol: 'drop',
+    accent: 'sage',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['bhp-higiena-salonu']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['bhp-higiena-salonu'] || { current: 0, goal: 1 };
+    }
   }
 ];
 

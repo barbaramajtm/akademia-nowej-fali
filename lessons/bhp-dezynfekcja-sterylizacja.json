@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "bhp-dezynfekcja-sterylizacja",
+  "title": "Dezynfekcja czy sterylizacja?",
+  "category": "BHP i higiena salonu",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Na stanowisku leżą nożyczki po kliencie. Myć? Dezynfekować? Sterylizować? Dziś rozróżniasz pojęcia i kolejność — plus aparat kulkowy.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bh2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Definicje",
+      "question": "Dezynfekcja:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Niszczy drobnoustroje chorobotwórcze"
+        },
+        {
+          "id": "b",
+          "text": "Zawsze usuwa wszystkie mikroorganizmy i przetrwalniki"
+        },
+        {
+          "id": "c",
+          "text": "To wyłącznie suszenie wałków"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Chorobotwórcze.",
+        "incorrectTitle": "Tech. 7.",
+        "explanation": "Dezynfekcja niszczy drobnoustroje chorobotwórcze. Sterylizacja idzie dalej — usuwa wszystkie mikroorganizmy i przetrwalniki."
+      }
+    },
+    {
+      "id": "bh2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Sterylizacja",
+      "question": "Sterylizacja usuwa wszystkie mikroorganizmy i ich przetrwalniki.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Pełne usunięcie.",
+        "incorrectTitle": "To sterylizacja.",
+        "explanation": "Sterylizacja = wszystkie mikroorganizmy i przetrwalniki — mocniej niż sama dezynfekcja."
+      }
+    },
+    {
+      "id": "bh2-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · Kolejność",
+      "question": "Ułóż kolejność postępowania z narzędziami.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Mycie"
+        },
+        {
+          "id": "s2",
+          "text": "Dezynfekcja"
+        },
+        {
+          "id": "s3",
+          "text": "Sterylizacja (np. w autoklawie)"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Myj → dezynfekuj → sterylizuj.",
+        "incorrectTitle": "Inna kolejność.",
+        "explanation": "Narzędzia myje się, dezynfekuje, a następnie sterylizuje — np. w autoklawie."
+      }
+    },
+    {
+      "id": "bh2-z4",
+      "type": "matching",
+      "kicker": "Krok 4 · Po co i czym",
+      "question": "Dopasuj.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Treść z materiałów",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Znaczenie dezynfekcji"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Aparat kulkowy"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Autoklaw (przykład)"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Sterylizacja narzędzi metalowych ~240°C przez kilka minut (kulki szklane)"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Ochrona m.in. przed WZW, HIV, bakteriami, grzybami, prątkami gruźlicy"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Przykład miejsca sterylizacji po myciu i dezynfekcji"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Poziomy ochrony.",
+        "incorrectTitle": "Masz. 22/40 + Tech. 7.",
+        "explanation": "Dezynfekcja chroni przed krwiopochodnymi i innymi patogenami; kulkowy i autoklaw to ścieżki sterylizacji."
+      }
+    },
+    {
+      "id": "bh2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Dezynfekcja / sterylizacja",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Dezynfekcja niszczy drobnoustroje chorobotwórcze"
+        },
+        {
+          "id": "s2",
+          "text": "Kolejność: mycie → dezynfekcja → sterylizacja"
+        },
+        {
+          "id": "s3",
+          "text": "Sterylizacja i dezynfekcja oznaczają dokładnie to samo — różni je tylko nazwa marketingowa"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To nie synonimy.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Sterylizacja usuwa wszystkie mikroorganizmy i przetrwalniki — to inny poziom niż dezynfekcja."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozróżniasz dezynfekcję i sterylizację",
+    "subtitle": "Definicje, kolejność, kulkowy i autoklaw.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Gdzie w salonie siedzą wirusy i bakterie?"
+    }
+  }
+}

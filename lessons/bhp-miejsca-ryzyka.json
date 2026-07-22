@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "bhp-miejsca-ryzyka",
+  "title": "Gdzie kryją się drobnoustroje?",
+  "category": "BHP i higiena salonu",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Salon wygląda czysto — ale hotspoty bywają niewidoczne. Dziś lista miejsc ryzyka, szczotki i wentylacja.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bh3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Hotspoty",
+      "question": "Szczególnie narażone na wirusy i bakterie są m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Grzebienie, nożyczki, szczotki, umywalki, zagłówki, klamki, wycięcie przy myjni, obręcz suszarki…"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie czyste opakowania farb w magazynie"
+        },
+        {
+          "id": "c",
+          "text": "Tylko wzornik poziomów 1–10"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Lista Masz. 29.",
+        "incorrectTitle": "To kontaktowe miejsca.",
+        "explanation": "Narzędzia, armatura, poręcze, zagłówki, klamki, myjnia i obręcz suszarki — typowe miejsca ryzyka."
+      }
+    },
+    {
+      "id": "bh3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Szczotki",
+      "question": "Przy szczotkach: najpierw dezynfekcja, potem czyszczenie — i sposób dezynfekcji dobierasz tak, by ich nie uszkodzić.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Najpierw dezynfekcja.",
+        "incorrectTitle": "Masz. 21.",
+        "explanation": "Najpierw dezynfekujesz, potem czyścisz — żeby nie narażać się na mikroorganizmy; dobierz metodę (np. sanityzator)."
+      }
+    },
+    {
+      "id": "bh3-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Wentylacja",
+      "question": "Dopasuj.",
+      "leftTitle": "Sytuacja w salonie",
+      "rightTitle": "Rola wentylacji",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Wilgoć, lakiery, dezynfekcja, kurz, drobiny włosów"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "System wentylacyjno-klimatyzacyjny"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Pleśnie i grzyby"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Wymiana powietrza, stała wilgotność i temperatura"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Typowe obciążenie powietrza w zakładzie fryzjerskim"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Właściwe wietrzenie hamuje ich rozwój"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mikroklimat ma znaczenie.",
+        "incorrectTitle": "Masz. 23.",
+        "explanation": "Wentylacja utrzymuje mikroklimat i warunki pracy — przy typowym „koktajlu” wilgoci i chemii."
+      }
+    },
+    {
+      "id": "bh3-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Widzisz zabrudzoną szczotkę po kliencie. Co jest zgodne z materiałami?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Najpierw zdezynfekować, potem oczyścić — metodą bezpieczną dla szczotki"
+        },
+        {
+          "id": "b",
+          "text": "Wystarczy otrzepać nad koszem i oddać kolejnej osobie"
+        },
+        {
+          "id": "c",
+          "text": "Włożyć od razu do gaśnicy proszkowej"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dezynfekcja przed czyszczeniem.",
+        "incorrectTitle": "Nie skracaj.",
+        "explanation": "Kolejność chroni Ciebie przed mikroorganizmami; zła metoda może zniszczyć szczotkę."
+      }
+    },
+    {
+      "id": "bh3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Miejsca ryzyka",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Zagłówki, klamki i wycięcie przy myjni bywają narażone na drobnoustroje"
+        },
+        {
+          "id": "s2",
+          "text": "Wentylacja pomaga utrzymać mikroklimat salonu"
+        },
+        {
+          "id": "s3",
+          "text": "Jedynym miejscem ryzyka w salonie jest zawsze tylko czysta tubka farby w szafce"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Hotspotów jest więcej.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Materiały wskazują narzędzia, armaturę, meble kontaktowe i urządzenia — nie „tylko tubkę w szafce”."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Widzisz hotspoty salonu",
+    "subtitle": "Narzędzia, kontaktowe powierzchnie, szczotki, powietrze.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Prąd, woda i uszkodzony sprzęt — co grozi?"
+    }
+  }
+}
