@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "trwala-trwalosc-ulozenia",
+  "title": "Trwałość ułożenia — decyzje",
+  "category": "Trwała ondulacja — procedura",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Klientka wraca: „Zeszło po myciu” albo „Trzyma się świetnie”. Dziś składasz checklistę: co decyduje o trwałości ułożenia i kiedy idziesz w chemię.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "tp6-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Ułożenie",
+      "question": "O trwałości ułożonych włosów decyduje m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Środki do ondulacji wodnej i preparaty utrwalające, dokładne wysuszenie, technika układania do celu"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie numer farby na tubce"
+        },
+        {
+          "id": "c",
+          "text": "Tylko to, czy klientka ma siwe włosy"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy filary ułożenia.",
+        "incorrectTitle": "Mat. 19.",
+        "explanation": "Środki + dokładne wysuszenie + technika dopasowana do celu."
+      }
+    },
+    {
+      "id": "tp6-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Suszenie",
+      "question": "Dokładne wysuszenie włosów ma znaczenie dla trwałości ułożenia.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Suszenie ma znaczenie.",
+        "incorrectTitle": "Nie pomijaj.",
+        "explanation": "Bez dokładnego wysuszenia trudno utrzymać ułożenie oparte o wilgoć i ciepło."
+      }
+    },
+    {
+      "id": "tp6-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Synteza",
+      "question": "Dopasuj decyzję.",
+      "leftTitle": "Cel",
+      "rightTitle": "Ścieżka",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Efekt na krótko, częste mycie"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Kształt mający przeżyć mycie"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Mocniejszy skręt na trwałej"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Trwała: reduktor, nawinięcie, utrwalacz + finisz"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Ondulacja wodna / modelowanie + uczciwa rozmowa"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Mniejsze średnice wałków (przy przemyślanym doborze)"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mapa decyzji.",
+        "incorrectTitle": "Sprawdź ligi.",
+        "explanation": "Krótko = H. Na dłużej chemicznie = S. Siła skrętu = też średnica."
+      }
+    },
+    {
+      "id": "tp6-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Konsultacja",
+      "question": "Ułóż konsultację przed zabiegiem zmieniającym kształt.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Ustal, jak długo efekt ma przetrwać mycie"
+        },
+        {
+          "id": "s2",
+          "text": "Wybierz: układanie wodne albo trwała chemiczna"
+        },
+        {
+          "id": "s3",
+          "text": "Dobierz wałki/technikę (i chemię, jeśli trwała)"
+        },
+        {
+          "id": "s4",
+          "text": "Zaplanuj mycie/finisz zgodnie z zabiegiem"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Konsultacja jak trzeba.",
+        "incorrectTitle": "Inna kolejność.",
+        "explanation": "Najpierw trwałość oczekiwana, potem liga, potem technika, na końcu higiena i finisz."
+      }
+    },
+    {
+      "id": "tp6-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Procedura",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Przed trwałą myjemy włosy"
+        },
+        {
+          "id": "s2",
+          "text": "Techniki nawijania obejmują m.in. klasyczne i spiralne"
+        },
+        {
+          "id": "s3",
+          "text": "Trwałość ułożenia zależy wyłącznie od koloru melaniny — technika i wysuszenie nie mają znaczenia"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł procedury domknięty.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Ułożenie trzyma się dzięki środkom, wysuszeniu i technice — nie „tylko melaninie”."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Prowadzisz trwałą i układanie z checklistą",
+    "subtitle": "Liga zabiegu, mycie, nawijanie, średnica, stanowisko, finisz.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej możesz iść w strzyżenie, BHP albo poprawki grafik."
+    }
+  }
+}

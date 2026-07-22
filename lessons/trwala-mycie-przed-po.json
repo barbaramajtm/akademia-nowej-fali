@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "trwala-mycie-przed-po",
+  "title": "Mycie przed i po zabiegu",
+  "category": "Trwała ondulacja — procedura",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Na stanowisku pytanie: myć czy nie myć przed chemią? Przed trwałą odpowiedź jest inna niż przed farbą — a po trwałej kończysz inaczej niż po koloryzacji.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "tp2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Przed trwałą",
+      "question": "Przed trwałą ondulacją włosy:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Myjemy"
+        },
+        {
+          "id": "b",
+          "text": "Nigdy nie myjemy — nawet przy brudzie"
+        },
+        {
+          "id": "c",
+          "text": "Myjemy wyłącznie szamponem leczniczym do skóry problemowej"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Myjemy przed trwałą.",
+        "incorrectTitle": "Sprawdź Mat. 20.",
+        "explanation": "Przed trwałą ondulacją myjemy. Przed farbą — tylko gdy włosy są brudne i obciążone stylizacją."
+      }
+    },
+    {
+      "id": "tp2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Przed farbą",
+      "question": "Przed farbą myjemy zawsze, nawet gdy włosy są czyste.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie zawsze.",
+        "incorrectTitle": "Warunek brudu.",
+        "explanation": "Przed farbą myjemy, gdy włosy są brudne i obciążone środkami do stylizacji — szamponem głęboko oczyszczającym 1–2 razy. Nie leczniczym do skóry problemowej."
+      }
+    },
+    {
+      "id": "tp2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Po zabiegu",
+      "question": "Dopasuj finisz.",
+      "leftTitle": "Po zabiegu",
+      "rightTitle": "Postępowanie",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Po trwałej (po utrwaleniu)"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Po farbowaniu (skrót)"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Szampon leczniczy przed chemią"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Zmywanie nadmiaru barwnika, potem szampony bezalkaliczne/lekko kwaśne i neutralizacja odczynu"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Dokładne płukanie wodą; można utwardzić keratynę; zakwasić — przywrócić naturalne pH"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Nie stosować przed zabiegiem chemicznym w tym kontekście"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Finisze rozdzielone.",
+        "incorrectTitle": "Nie mieszaj po.",
+        "explanation": "Po trwałej: płukanie, opcjonalnie utwardzenie keratyny, zakwaszenie. Po farbie — inna ścieżka zmywania barwnika."
+      }
+    },
+    {
+      "id": "tp2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Szampon przed chemią",
+      "question": "Przed zabiegiem chemicznym (gdy myjemy z brudu/stylizacji) używasz:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Szamponu głęboko oczyszczającego 1–2 razy"
+        },
+        {
+          "id": "b",
+          "text": "Szamponu leczniczego do skóry i włosów z problemami"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie utrwalacza do trwałej zamiast mycia"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Głęboko oczyszczający.",
+        "incorrectTitle": "Nie leczniczy.",
+        "explanation": "Materiały: głęboko oczyszczający 1–2 razy. Nie leczniczy do skóry problemowej przed chemią."
+      }
+    },
+    {
+      "id": "tp2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Mycie a chemia",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Przed trwałą myjemy"
+        },
+        {
+          "id": "s2",
+          "text": "Po trwałej po utrwaleniu dokładnie płuczemy i przywracamy pH (zakwaszamy)"
+        },
+        {
+          "id": "s3",
+          "text": "Po trwałej wystarczy zostawić utrwalacz na włosach bez płukania i bez dbałości o pH"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Płucz i zakwaś.",
+        "incorrectTitle": "Domknij finisz.",
+        "explanation": "Po utrwaleniu: dokładne płukanie wodą i przywrócenie naturalnego pH skóry i włosów."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, kiedy myć i jak kończyć",
+    "subtitle": "Przed trwałą — mycie; po trwałej — płukanie i pH.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Klasyczne, spiralne, cegiełkowe… — techniki nawijania."
+    }
+  }
+}

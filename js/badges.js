@@ -175,6 +175,19 @@ var BADGE_CATALOG = [
     progress: function(ctx){
       return ctx.moduleProgress['wlos-teoria-koloru'] || { current: 0, goal: 1 };
     }
+  },
+  {
+    id: 'modul-trwala-procedura',
+    collectionId: 'moduly',
+    name: 'Trwała — procedura',
+    description: 'Wodna czy chemiczna, mycie, nawijanie i finisz — prowadzisz zabieg z checklistą.',
+    conditionLabel: 'Ukończ wszystkie lekcje procedury trwałej',
+    symbol: 'comb',
+    accent: 'coral',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['trwala-procedura']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['trwala-procedura'] || { current: 0, goal: 1 };
+    }
   }
 ];
 

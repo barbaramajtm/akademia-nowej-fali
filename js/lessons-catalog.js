@@ -548,11 +548,77 @@ window.LessonsCatalog = [
     locked: false,
     requiresLessonId: 'wlos-kolor-ton-w-ton-plukanka',
     lockedReason: 'Najpierw ukończ: Ton w ton i płukanka'
+  },
+  {
+    id: 'trwala-wodna-czy-trwala',
+    moduleId: 'trwala-procedura',
+    title: 'Ondulacja wodna czy trwała?',
+    moduleTitle: 'Trwała ondulacja — procedura',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-ksztalt-redukcja-utrwalenie',
+    lockedReason: 'Najpierw ukończ: Redukcja i utrwalenie'
+  },
+  {
+    id: 'trwala-mycie-przed-po',
+    moduleId: 'trwala-procedura',
+    title: 'Mycie przed i po zabiegu',
+    moduleTitle: 'Trwała ondulacja — procedura',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'trwala-wodna-czy-trwala',
+    lockedReason: 'Najpierw ukończ: Ondulacja wodna czy trwała?'
+  },
+  {
+    id: 'trwala-techniki-nawijania',
+    moduleId: 'trwala-procedura',
+    title: 'Techniki nawijania',
+    moduleTitle: 'Trwała ondulacja — procedura',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'trwala-mycie-przed-po',
+    lockedReason: 'Najpierw ukończ: Mycie przed i po zabiegu'
+  },
+  {
+    id: 'trwala-srednica-walkow',
+    moduleId: 'trwala-procedura',
+    title: 'Średnica wałków i spiralne',
+    moduleTitle: 'Trwała ondulacja — procedura',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'trwala-techniki-nawijania',
+    lockedReason: 'Najpierw ukończ: Techniki nawijania'
+  },
+  {
+    id: 'trwala-przybory-i-przebieg',
+    moduleId: 'trwala-procedura',
+    title: 'Przybory i przebieg trwałej',
+    moduleTitle: 'Trwała ondulacja — procedura',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'trwala-srednica-walkow',
+    lockedReason: 'Najpierw ukończ: Średnica wałków i spiralne'
+  },
+  {
+    id: 'trwala-trwalosc-ulozenia',
+    moduleId: 'trwala-procedura',
+    title: 'Trwałość ułożenia — decyzje',
+    moduleTitle: 'Trwała ondulacja — procedura',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'trwala-przybory-i-przebieg',
+    lockedReason: 'Najpierw ukończ: Przybory i przebieg trwałej'
   }
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru'];
+window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];
