@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-budowa-podsumowanie",
+  "title": "Budowa włosa — podsumowanie",
+  "category": "Budowa i skład włosa",
+  "levelLabel": "Podsumowanie",
+  "intro": {
+    "narratorText": "Czas złożyć obraz: skład, warstwy, keratyna, części, właściwości i cykl. Jedna wizyta — kilka decyzji, które pokazują, że rozumiesz włos jako całość.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wb4-z1",
+      "type": "matching",
+      "kicker": "Krok 1 · Warstwy vs części",
+      "question": "Dopasuj.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Zakres",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Osłonka, kora, rdzeń"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Łodyga, korzeń, cebulka"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Melanina"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Podstawowe części całego włosa"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Warstwy łodygi"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Naturalny barwnik w korze"
+        }
+      ],
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dwa poziomy opisu.",
+        "incorrectTitle": "Nie mieszaj list.",
+        "explanation": "Warstwy opisują przekrój łodygi. Części — cały włos nad skórą i w skórze. Melanina barwi korę."
+      }
+    },
+    {
+      "id": "wb4-z2",
+      "type": "singleChoice",
+      "kicker": "Krok 2 · Keratyna",
+      "question": "Keratyna we włosie to przede wszystkim:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Białko budujące włókna — rusztowanie"
+        },
+        {
+          "id": "b",
+          "text": "Płyn do trwałej"
+        },
+        {
+          "id": "c",
+          "text": "Numer refleksu na tubce"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Rusztowanie.",
+        "incorrectTitle": "Wróć do keratyny.",
+        "explanation": "Keratyna buduje włókna. Wiązania w tej strukturze ogarniasz w module o kształcie."
+      }
+    },
+    {
+      "id": "wb4-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · Od skóry do końcówek",
+      "question": "Ułóż od miejsca wzrostu ku temu, co widać na zewnątrz.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Cebulka z brodawką (wzrost)"
+        },
+        {
+          "id": "s2",
+          "text": "Korzeń w skórze"
+        },
+        {
+          "id": "s3",
+          "text": "Łodyga nad skórą"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Od wzrostu na zewnątrz.",
+        "incorrectTitle": "Przestaw kolejność.",
+        "explanation": "Najpierw cebulka i wzrost, potem korzeń w skórze, na końcu łodyga nad skórą."
+      }
+    },
+    {
+      "id": "wb4-z4",
+      "type": "trueFalse",
+      "kicker": "Krok 4 · Cykl",
+      "question": "Cykl włosowy ma trzy fazy: anagen, katagen i telogen.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy fazy.",
+        "incorrectTitle": "Przypomnij cykl.",
+        "explanation": "Anagen — wzrost, katagen — przejście, telogen — spoczynek."
+      }
+    },
+    {
+      "id": "wb4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Synteza",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Budowa włosa",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Higroskopijność należy do właściwości fizycznych włosa"
+        },
+        {
+          "id": "s2",
+          "text": "Pigment leży w korze łodygi"
+        },
+        {
+          "id": "s3",
+          "text": "Włos nie ma korzenia — rośnie tylko z lakieru na powierzchni"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Budowa domknięta.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Masz skład, warstwy, części, właściwości i cykl — fundament pod zabiegi i kolor."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Etap budowy domknięty",
+    "title": "Składasz włos w jedną całość",
+    "subtitle": "Od cebulki po końcówkę — wiesz, z czego i jak żyje włos.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Wiązania i kształt albo teoria koloru — zależnie od tego, co jeszcze przed Tobą."
+    }
+  }
+}

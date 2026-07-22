@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-wlasciwosci-fizyczne",
+  "title": "Właściwości fizyczne włosa",
+  "category": "Budowa i skład włosa",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Mokry włos dłuższy, po suszeniu wraca. Alkalia i wysoka temperatura też coś z nim robią. Dziś nazywasz najważniejsze właściwości fizyczne — bez zgadywania.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wb2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Higroskopijność",
+      "question": "Higroskopijność włosa oznacza m.in., że suchy włos ma około:",
+      "options": [
+        {
+          "id": "a",
+          "text": "18% wilgotności"
+        },
+        {
+          "id": "b",
+          "text": "0% wody zawsze"
+        },
+        {
+          "id": "c",
+          "text": "90% pigmentu w osłonce"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Około 18%.",
+        "incorrectTitle": "Sprawdź wilgotność.",
+        "explanation": "Higroskopijność: suchy włos ma około 18% wilgotności. Woda w składzie (~10%) z lekcji składu to inna perspektywa — tu mówimy o wilgotności suchego włosa."
+      }
+    },
+    {
+      "id": "wb2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Kapilarność",
+      "question": "Kapilarność to zdolność przenikania i przekazywania płynów.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — płyny.",
+        "incorrectTitle": "Inna definicja.",
+        "explanation": "Kapilarność = przenikanie i przekazywanie płynów we włosie."
+      }
+    },
+    {
+      "id": "wb2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Właściwości",
+      "question": "Dopasuj właściwość do opisu.",
+      "leftTitle": "Właściwość",
+      "rightTitle": "Sens",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Elastyczność i rozciągliwość"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Wrażliwość na alkalia"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Wrażliwość na wysokie temperatury"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Reakcja na środowisko zasadowe"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Zdolność rozciągania i powrotu"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Reakcja na silne ciepło"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Lista z materiałów.",
+        "incorrectTitle": "Sprawdź pary.",
+        "explanation": "Do właściwości fizycznych należą też stabilność i trwałość oraz higroskopijność i kapilarność."
+      }
+    },
+    {
+      "id": "wb2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Salon",
+      "question": "Dlaczego fryzjerce potrzebna jest wiedza o wrażliwości włosa na alkalia i wysoką temperaturę?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bo zabiegi chemiczne i stylizacja ciepłem działają na włos — trzeba dobierać siłę i czas świadomie"
+        },
+        {
+          "id": "b",
+          "text": "Bo to zastępuje diagnozę koloru numerem farby"
+        },
+        {
+          "id": "c",
+          "text": "Bo alkalia służą wyłącznie do mycia pędzli"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Siła i czas.",
+        "incorrectTitle": "Inny kontekst.",
+        "explanation": "Włos reaguje na alkalia i ciepło — stąd ostrożność przy chemii i stylizacji. To łączy się z tym, co znasz z pH i modelowania."
+      }
+    },
+    {
+      "id": "wb2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Właściwości fizyczne",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Do właściwości należy higroskopijność"
+        },
+        {
+          "id": "s2",
+          "text": "Do właściwości należy elastyczność i rozciągliwość"
+        },
+        {
+          "id": "s3",
+          "text": "Włos nie ma żadnych właściwości fizycznych — reaguje wyłącznie na numer farby"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Ma właściwości.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Higroskopijność, kapilarność, elastyczność, wrażliwość na alkalia i temperaturę — to lista z materiałów, nie „brak właściwości”."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Nazywasz właściwości włosa",
+    "subtitle": "Wilgoć, kapilarność, elastyczność, alkalia, temperatura.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Anagen, katagen, telogen — życie włosa w fazach."
+    }
+  }
+}
