@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "prostowanie-chemiczne-mostki",
+  "title": "Chemiczne prostowanie i mostki",
+  "category": "Prostowanie włosów",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Gdy rozmowa schodzi na chemię: kwas tioglikolowy pojawia się nie tylko w trwałej. Dziś mostki siarczkowe w prostowaniu — bez procedur marek.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "pr5-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Kwas",
+      "question": "Kwas tioglikolowy jest składnikiem płynów do:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Trwałej ondulacji i prostowania włosów"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie dezynfekcji grzebieni metalowych"
+        },
+        {
+          "id": "c",
+          "text": "Tylko farby ton w ton"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trwała i prostowanie.",
+        "incorrectTitle": "Mat. 38.",
+        "explanation": "Tioglikolowy: składnik płynów do trwałej i do prostowania."
+      }
+    },
+    {
+      "id": "pr5-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Redukcja",
+      "question": "Kwas tioglikolowy ma działanie redukujące — uwodornia mostki siarczkowe w keratynie.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Redukcja mostków S.",
+        "incorrectTitle": "Mat. 38.",
+        "explanation": "Działanie redukujące: uwodornia mostki siarczkowe w keratynie."
+      }
+    },
+    {
+      "id": "pr5-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Ligi",
+      "question": "Dopasuj.",
+      "leftTitle": "Ścieżka",
+      "rightTitle": "Mechanizm / charakter",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Prostownica"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Płyn z kwasem tioglikolowym (prostowanie/trwała)"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Nazwy keratynowe / nanoplastia (lista)"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Chemia redukująca mostki siarczkowe w keratynie"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Nietrwałe ciepło płytek — bez tej chemii mostków"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Są na liście sposobów; procedur lokalnie nie rozwijamy"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Ciepło ≠ chemia.",
+        "incorrectTitle": "Tech. 4 + Mat. 38 + Masz. 9.",
+        "explanation": "Nie mieszaj prostownicy z chemią mostków; nazw keratyna/nano nie rozbudowuj bez źródeł."
+      }
+    },
+    {
+      "id": "pr5-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Klientka chce „chemię na prosto”. Co jest spójne z materiałami?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rozmowa o płynie z działaniem redukującym na mostkach S — to inna liga niż prostownica"
+        },
+        {
+          "id": "b",
+          "text": "Obietnica, że prostownica = to samo co kwas tioglikolowy"
+        },
+        {
+          "id": "c",
+          "text": "Użycie metalowego grzebienia zamiast chemii"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Inna liga.",
+        "incorrectTitle": "Mostki S.",
+        "explanation": "Tioglikolowy łączy trwałą i prostowanie chemiczne mechanizmem redukcji — nie zastępuje go prostownica."
+      }
+    },
+    {
+      "id": "pr5-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Chemia",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Tioglikolowy bywa w płynach do trwałej i prostowania"
+        },
+        {
+          "id": "s2",
+          "text": "Działa redukująco na mostki siarczkowe w keratynie"
+        },
+        {
+          "id": "s3",
+          "text": "Prostownica zawsze zawiera kwas tioglikolowy w płytkach"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł prostowania domknięty.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Prostownica to ciepło płytek. Tioglikolowy to chemia płynów — nie „wkład w płytkach”."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Łączysz chemię prostowania z mostkami",
+    "subtitle": "Tioglikolowy: trwała i prostowanie; redukcja mostków S.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej możesz iść w balejaż albo poprawki grafik."
+    }
+  }
+}

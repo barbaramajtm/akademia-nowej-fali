@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "prostowanie-suche-mokre",
+  "title": "Prostownice: suche i mokre",
+  "category": "Prostowanie włosów",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Na stanowisku dwie prostownice. Nie wszystkie są do tego samego stanu włosa. Dziś: podział suchych / mokrych.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "pr4-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Podział",
+      "question": "Prostownice dzielą się m.in. na urządzenia:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Do włosów suchych i do włosów mokrych"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie do sterylizacji w autoklawie"
+        },
+        {
+          "id": "c",
+          "text": "Tylko do nawijania wałków trwałej"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Suche / mokre.",
+        "incorrectTitle": "Masz. 9.",
+        "explanation": "Materiały: prostownice do włosów suchych i mokrych."
+      }
+    },
+    {
+      "id": "pr4-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Dobór",
+      "question": "Dobór prostownicy powinien uwzględniać, czy włosy są suche, czy mokre (wg podziału urządzeń).",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobór ma sens.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Skoro są osobne typy urządzeń — stan włosa ma znaczenie przy wyborze."
+      }
+    },
+    {
+      "id": "pr4-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Synteza ciepła",
+      "question": "Dopasuj.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Treść",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Prostownica (efekt)"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Typ urządzenia"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Termostat"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Do włosów suchych albo do mokrych"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Nietrwałe wyprostowanie i wygładzenie"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Ochrona przed przegrzaniem"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Checklista ciepła.",
+        "incorrectTitle": "Masz. 9.",
+        "explanation": "Efekt + typ (suche/mokre) + termostat — trzy fakty z jednego źródła."
+      }
+    },
+    {
+      "id": "pr4-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Przed użyciem",
+      "question": "Ułóż sensowną checklistę przed prostowaniem ciepłem.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Ustal, czy włosy są w stanie zgodnym z typem prostownicy (suche/mokre)"
+        },
+        {
+          "id": "s2",
+          "text": "Sprawdź, że sprzęt jest sprawny (m.in. termostat / brak uszkodzeń)"
+        },
+        {
+          "id": "s3",
+          "text": "Wykonaj prostowanie i uczciwie opisz nietrwały charakter efektu"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Stan włosa → sprzęt → zabieg.",
+        "incorrectTitle": "Logika salonu.",
+        "explanation": "Najpierw dobór typu, potem sprawność, na końcu zabieg z uczciwą rozmową o trwałości."
+      }
+    },
+    {
+      "id": "pr4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Suche/mokre",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Są prostownice przeznaczone do włosów suchych"
+        },
+        {
+          "id": "s2",
+          "text": "Są prostownice przeznaczone do włosów mokrych"
+        },
+        {
+          "id": "s3",
+          "text": "Każda prostownica jest zawsze tylko do autoklawu, nigdy do włosów"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To aparat do włosów.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Prostownica służy do prostowania/wygładzania włosów — nie do sterylizacji narzędzi."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Dobierasz typ prostownicy",
+    "subtitle": "Urządzenia do włosów suchych i do mokrych.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Chemia prostowania: kwas tioglikolowy i mostki."
+    }
+  }
+}

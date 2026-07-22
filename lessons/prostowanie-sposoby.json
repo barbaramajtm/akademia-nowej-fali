@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "prostowanie-sposoby",
+  "title": "Sposoby prostowania włosów",
+  "category": "Prostowanie włosów",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka chce proste włosy. Zanim włączysz prostownicę, znasz listę sposobów z materiałów — od ciepła po chemię.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "pr1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Lista",
+      "question": "Do sposobów prostowania włosów należą m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prostownica, suszenie na szczotce, prostowanie chemiczne, keratynowe, nanoplastia"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie degażowanie nożycami"
+        },
+        {
+          "id": "c",
+          "text": "Tylko mycie bez stylizacji"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Pięć sposobów.",
+        "incorrectTitle": "Tech. 4.",
+        "explanation": "Lista z materiałów: prostownica, suszenie na szczotce, chemiczne, keratynowe, nanoplastia."
+      }
+    },
+    {
+      "id": "pr1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Szczotka",
+      "question": "Suszenie na szczotce należy do sposobów prostowania włosów.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak.",
+        "incorrectTitle": "Jest na liście.",
+        "explanation": "Suszenie na szczotce jest wymienione obok prostownicy i metod chemicznych."
+      }
+    },
+    {
+      "id": "pr1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Grupy",
+      "question": "Dopasuj.",
+      "leftTitle": "Sposób",
+      "rightTitle": "Charakter (uproszczenie)",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Prostownica"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Suszenie na szczotce"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Prostowanie chemiczne / keratynowe / nanoplastia"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Modelowanie ciepłem i napięciem na szczotce (bez listy procedur)"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Aparat z nagrzanymi płytkami (szczegóły w kolejnych lekcjach)"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Nazwy metod z listy — bez procedur i marek w tym module"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mapa bez procedur.",
+        "incorrectTitle": "Tech. 4.",
+        "explanation": "Uczymy nazw ze źródeł. Procedur keratyny/nanoplastii lokalnie nie rozwijamy."
+      }
+    },
+    {
+      "id": "pr1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Klientka: „Chcę prosto na dziś, bez chemii”. Która ścieżka z listy jest spójna na start?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prostownica lub suszenie na szczotce — z jasną rozmową o trwałości"
+        },
+        {
+          "id": "b",
+          "text": "Obietnica nanoplastii „na zawsze” bez konsultacji chemii"
+        },
+        {
+          "id": "c",
+          "text": "Pominięcie ciepła i chemii, bo „samo się wyprostuje”"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Ciepło / modelowanie.",
+        "incorrectTitle": "Uczciwa rozmowa.",
+        "explanation": "Na dziś bez chemii = ścieżki z listy oparte o ciepło/modelowanie. Chemia to inna liga."
+      }
+    },
+    {
+      "id": "pr1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Sposoby",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Keratynowe prostowanie jest na liście sposobów"
+        },
+        {
+          "id": "s2",
+          "text": "Nanoplastia jest na liście sposobów"
+        },
+        {
+          "id": "s3",
+          "text": "Jedynym sposobem prostowania jest zawsze tylko farba ton w ton"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To nie koloryzacja.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Prostowanie to osobna lista metod — nie zastępuje jej ton w ton."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz mapę sposobów",
+    "subtitle": "Prostownica, szczotka, chemia, keratyna, nanoplastia — jako nazwy z listy.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Prostownica: efekt nietrwały i wygładzenie."
+    }
+  }
+}
