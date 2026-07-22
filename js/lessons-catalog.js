@@ -797,11 +797,66 @@ window.LessonsCatalog = [
     locked: false,
     requiresLessonId: 'prostowanie-suche-mokre',
     lockedReason: 'Najpierw ukończ: Prostownice: suche i mokre'
+  },
+  {
+    id: 'balejaz-co-to',
+    moduleId: 'balejaz',
+    title: 'Co to jest balejaż?',
+    moduleTitle: 'Balejaż',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'prostowanie-chemiczne-mostki',
+    lockedReason: 'Najpierw ukończ: Chemiczne prostowanie i mostki'
+  },
+  {
+    id: 'balejaz-wybrane-pasma',
+    moduleId: 'balejaz',
+    title: 'Wybrane pasma, nie cała głowa',
+    moduleTitle: 'Balejaż',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'balejaz-co-to',
+    lockedReason: 'Najpierw ukończ: Co to jest balejaż?'
+  },
+  {
+    id: 'balejaz-piec-krokow',
+    moduleId: 'balejaz',
+    title: 'Pięć kroków balejażu',
+    moduleTitle: 'Balejaż',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'balejaz-wybrane-pasma',
+    lockedReason: 'Najpierw ukończ: Wybrane pasma, nie cała głowa'
+  },
+  {
+    id: 'balejaz-produkt-i-folia',
+    moduleId: 'balejaz',
+    title: 'Rozjaśniacz lub farba + folia',
+    moduleTitle: 'Balejaż',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'balejaz-piec-krokow',
+    lockedReason: 'Najpierw ukończ: Pięć kroków balejażu'
+  },
+  {
+    id: 'balejaz-konsultacja',
+    moduleId: 'balejaz',
+    title: 'Kiedy proponujesz balejaż?',
+    moduleTitle: 'Balejaż',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'balejaz-produkt-i-folia',
+    lockedReason: 'Najpierw ukończ: Rozjaśniacz lub farba + folia'
   }
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow'];
+window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];

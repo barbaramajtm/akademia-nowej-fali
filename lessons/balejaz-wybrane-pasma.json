@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "balejaz-wybrane-pasma",
+  "title": "Wybrane pasma, nie cała głowa",
+  "category": "Balejaż",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Różnica, którą klientka często myli: balejaż pracuje na wybranych pasmach. Dziś oddzielasz to od jednolitej koloryzacji całej głowy.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bj2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Zakres",
+      "question": "W balejażu pracujesz na:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Wybranych pasmach włosów"
+        },
+        {
+          "id": "b",
+          "text": "Zawsze wyłącznie całej głowie jedną tubką bez selekcji"
+        },
+        {
+          "id": "c",
+          "text": "Tylko skórze głowy bez włosów"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Wybrane pasma.",
+        "incorrectTitle": "Tech. 8.",
+        "explanation": "Definicja mówi o wybranych pasmach — to nie „wszystko naraz bez wyboru”."
+      }
+    },
+    {
+      "id": "bj2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Selekcja",
+      "question": "Wybór pasemek jest częścią sposobu wykonania balejażu.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — wybór pasemek.",
+        "incorrectTitle": "Tech. 13.",
+        "explanation": "Krok: wybór pasemek (po podziale na pasma)."
+      }
+    },
+    {
+      "id": "bj2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Nie pomyl",
+      "question": "Dopasuj.",
+      "leftTitle": "Zabieg",
+      "rightTitle": "Zakres z materiałów",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Balejaż"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Podział włosów na pasma"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Wybór pasemek"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Pierwszy krok wykonania z Tech. 13"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Technika na wybranych pasmach pod naturalne refleksy"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Krok selekcji przed nałożeniem produktu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Zakres + start procedury.",
+        "incorrectTitle": "Tech. 8 i 13.",
+        "explanation": "Najpierw podział, potem wybór pasemek — dopiero wtedy produkt."
+      }
+    },
+    {
+      "id": "bj2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Rozmowa",
+      "question": "Klientka: „Chcę balejaż, ale namalujcie od razu całą głowę jednym kolorem bez wyboru pasm”. Co odpowiadasz zgodnie z materiałami?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Balejaż opiera się na wybranych pasmach — inaczej to inna logika koloryzacji"
+        },
+        {
+          "id": "b",
+          "text": "OK, balejaż = zawsze cała głowa bez selekcji"
+        },
+        {
+          "id": "c",
+          "text": "Balejaż to tylko trwała na wałkach"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Selekcja jest w definicji.",
+        "incorrectTitle": "Uczciwie.",
+        "explanation": "Bez wybranych pasm wychodzisz poza definicję balejażu z materiałów."
+      }
+    },
+    {
+      "id": "bj2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Pasma",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Balejaż dotyczy wybranych pasm"
+        },
+        {
+          "id": "s2",
+          "text": "W wykonaniu jest krok wyboru pasemek"
+        },
+        {
+          "id": "s3",
+          "text": "Balejaż nigdy nie wymaga żadnego podziału ani wyboru pasm"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Podział i wybór są w Tech. 13.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Sposób wykonania zaczyna się od podziału i wyboru pasemek."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozróżniasz zakres balejażu",
+    "subtitle": "Selekcja pasm = rdzeń techniki.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Pięć kroków wykonania z materiałów."
+    }
+  }
+}

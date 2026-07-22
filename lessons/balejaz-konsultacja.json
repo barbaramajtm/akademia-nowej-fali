@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "balejaz-konsultacja",
+  "title": "Kiedy proponujesz balejaż?",
+  "category": "Balejaż",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Domknięcie: składasz definicję i pięć kroków w konsultację — bez dopisywania technik spoza źródeł.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bj5-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Kiedy",
+      "question": "Balejaż proponujesz, gdy celem jest m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Naturalne refleksy przez pracę na wybranych pasmach"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie trwała zmiana mostków S bez koloru"
+        },
+        {
+          "id": "c",
+          "text": "Tylko dezynfekcja narzędzi"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cel = refleksy.",
+        "incorrectTitle": "Tech. 8.",
+        "explanation": "To definicja: wybrane pasma → naturalne refleksy."
+      }
+    },
+    {
+      "id": "bj5-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Przebieg",
+      "question": "W konsultacji warto ułożyć przebieg: podział, wybór pasm, produkt, folia, spłukanie i pielęgnacja.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Checklista Tech. 13.",
+        "incorrectTitle": "Tak.",
+        "explanation": "To sposób wykonania z materiałów — dobra mapa rozmowy."
+      }
+    },
+    {
+      "id": "bj5-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Synteza",
+      "question": "Dopasuj decyzję.",
+      "leftTitle": "Sytuacja",
+      "rightTitle": "Ścieżka",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Chce naturalnych refleksów na pasmach"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Chce tylko przerzedzić objętość nożycami"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Po balejażu na stanowisku"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Degażowanie — inna technika, nie balejaż"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Balejaż (rozjaśnianie lub farbowanie wybranych pasm)"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Spłukanie i pielęgnacja według listy wykonania"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie myl zabiegów.",
+        "incorrectTitle": "Tech. 8, 13, 14.",
+        "explanation": "Balejaż ≠ degażowanie. Finisz balejażu = spłukanie i pielęgnacja."
+      }
+    },
+    {
+      "id": "bj5-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Konsultacja",
+      "question": "Ułóż konsultację przed balejażem.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Ustal cel: naturalne refleksy na wybranych pasmach"
+        },
+        {
+          "id": "s2",
+          "text": "Zaplanuj podział i wybór pasemek"
+        },
+        {
+          "id": "s3",
+          "text": "Wybierz ścieżkę: rozjaśniacz lub farba, potem folia"
+        },
+        {
+          "id": "s4",
+          "text": "Zaplanuj spłukanie i pielęgnację"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cel → pasma → produkt/folia → finisz.",
+        "incorrectTitle": "Inna kolejność.",
+        "explanation": "Najpierw cel i zakres, potem produkt, na końcu finisz."
+      }
+    },
+    {
+      "id": "bj5-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Konsultacja",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Balejaż to technika na wybranych pasmach"
+        },
+        {
+          "id": "s2",
+          "text": "W materiałach po produkcie jest zawinięcie w folię"
+        },
+        {
+          "id": "s3",
+          "text": "Balejaż to to samo co degażowanie i nie wymaga żadnego koloru"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł balejażu domknięty.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Balejaż to kolor/rozjaśnianie pasm. Degażowanie to strzyżenie objętości."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Prowadzisz konsultację balejażu",
+    "subtitle": "Refleksy + pasma + przebieg z Tech. 8 i 13.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej: kok/pielęgnacja albo poprawki grafik."
+    }
+  }
+}

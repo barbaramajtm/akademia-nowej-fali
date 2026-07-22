@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "id": "balejaz-piec-krokow",
+  "title": "Pięć kroków balejażu",
+  "category": "Balejaż",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Masz definicję. Teraz kolejność ze źródeł — od podziału do spłukania. Bez dopisywania czasów i marek.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bj3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Lista",
+      "question": "Sposób wykonania balejażu obejmuje m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Podział na pasma, wybór pasemek, nałożenie rozjaśniacza lub farby, zawinięcie w folię, spłukanie i pielęgnacja"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie nawijanie wałków i utrwalacz"
+        },
+        {
+          "id": "c",
+          "text": "Tylko strzyżenie maszynką"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Pięć kroków.",
+        "incorrectTitle": "Tech. 13.",
+        "explanation": "Dokładnie ta lista z materiałów."
+      }
+    },
+    {
+      "id": "bj3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Folia",
+      "question": "Zawinięcie w folię należy do sposobu wykonania balejażu w materiałach.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Folia jest w Tech. 13.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Po nałożeniu produktu: zawinięcie w folię."
+      }
+    },
+    {
+      "id": "bj3-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · Kolejność",
+      "question": "Ułóż pięć kroków wykonania balejażu.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Podział włosów na pasma"
+        },
+        {
+          "id": "s2",
+          "text": "Wybór pasemek"
+        },
+        {
+          "id": "s3",
+          "text": "Nałożenie rozjaśniacza lub farby"
+        },
+        {
+          "id": "s4",
+          "text": "Zawinięcie w folię"
+        },
+        {
+          "id": "s5",
+          "text": "Spłukanie i pielęgnacja"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Kolejność z Tech. 13.",
+        "incorrectTitle": "Przestaw.",
+        "explanation": "Podział → wybór → produkt → folia → spłukanie i pielęgnacja."
+      }
+    },
+    {
+      "id": "bj3-z4",
+      "type": "matching",
+      "kicker": "Krok 4 · Role kroków",
+      "question": "Dopasuj.",
+      "leftTitle": "Krok",
+      "rightTitle": "Rola",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Podział + wybór pasemek"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Nałożenie produktu"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Spłukanie i pielęgnacja"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Rozjaśniacz lub farba na wybranych pasmach"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Organizacja głowy przed chemią koloru"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Domknięcie zabiegu po folii"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Logika wizyty.",
+        "incorrectTitle": "Tech. 13.",
+        "explanation": "Bez podziału/wyboru nie ma sensu nakładać; bez spłukania nie domykasz."
+      }
+    },
+    {
+      "id": "bj3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Przebieg",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Po produkcie w materiałach jest zawinięcie w folię"
+        },
+        {
+          "id": "s2",
+          "text": "Na końcu jest spłukanie i pielęgnacja"
+        },
+        {
+          "id": "s3",
+          "text": "Wystarczy namalować „na oko” bez podziału, wyboru pasm, folii i spłukania"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Kolejność ma znaczenie.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Tech. 13 podaje pełną ścieżkę — nie skracaj jej do „na oko”."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Układysz przebieg balejażu",
+    "subtitle": "Podział → wybór → produkt → folia → spłukanie i pielęgnacja.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Rozjaśniacz lub farba, folia, spłukanie."
+    }
+  }
+}
