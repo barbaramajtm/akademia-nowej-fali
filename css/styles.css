@@ -94,14 +94,19 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
 }
 .home-editorial-blobs{display:none;}
 /* Złote logo NF — główny znak marki; oko zostaje jako delikatny akcent */
+.home-topbar{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:10px;
+  margin:4px 0 2px;
+}
 .home-brand-logo{
-  margin:6px 0 2px;width:76px;max-width:28%;
+  margin:0;width:76px;max-width:28%;flex-shrink:0;
 }
 .home-brand-logo img{
   width:100%;height:auto;display:block;
 }
 .home-editorial-eye{
-  position:absolute;top:120px;right:-14px;width:108px;height:auto;
+  /* Start oka poniżej topbara (logo + Kosmyki/avatar) — bez nachodzenia */
+  position:absolute;top:148px;right:-14px;width:108px;height:auto;
   pointer-events:none;z-index:1;opacity:.38;
 }
 .home-editorial-eye img{
@@ -115,7 +120,7 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
 }
 .home-tagline-line{font-family:'Poppins';font-weight:600;font-size:14px;line-height:1.45;color:var(--navy);width:max-content;}
 .home-tagline-line--strong{font-weight:700;font-size:15px;line-height:1.35;color:var(--navy);}
-.header,.greet,.header-side,.home-tagline{position:relative;z-index:2;}
+.header,.greet,.header-side,.home-tagline,.home-topbar{position:relative;z-index:2;}
 
 .status{display:flex;justify-content:space-between;align-items:center;padding:16px 26px 4px;font-family:'Poppins';font-weight:600;font-size:14px;color:var(--ink);position:relative;z-index:2;}
 .status .icons{display:flex;gap:6px;align-items:center;}
@@ -123,10 +128,10 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
 .content-tight{padding-top:0;}
 
 .header{display:flex;justify-content:space-between;align-items:flex-start;margin:10px 0 0;gap:10px;}
-/* Wyżej o ~20px, żeby środek Oka nie nachodził na Kosmyki/avatar; prawa krawędź bez zmian */
+/* W jednym rzędzie z logo — całkowicie nad okiem, bez nachodzenia */
 .header-side{
   display:flex;align-items:center;gap:10px;flex-shrink:0;
-  margin-top:-20px;
+  margin-top:4px;
 }
 .greet .hello{font-family:'Poppins';font-weight:700;font-size:26px;color:var(--navy);line-height:1.08;letter-spacing:-.02em;}
 .greet .sub{font-size:14px;color:var(--ink-muted);margin-top:5px;font-weight:500;}
