@@ -40,7 +40,9 @@ const state = {
   /* punktacja: pierwsze podejście do zadania */
   taskHadMistake: false,
   scoredCorrect: 0,
-  pendingCheckBtn: null
+  pendingCheckBtn: null,
+  /* błędy w tej lekcji do powtórki modułu */
+  mistakesLog: []
 };
 
 function getGlobalKosmyki(){
@@ -75,6 +77,93 @@ function countScoredTasks(lesson){
     if (isScoredTask(lesson.tasks[i])) n++;
   }
   return n;
+}
+
+function summarizeCorrectAnswer(task){
+  if (!task) return '';
+  if (task.type === 'singleChoice' && Array.isArray(task.options)){
+    for (var i = 0; i < task.options.length; i++){
+      if (task.options[i].id === task.correctOptionId){
+        return richToPlain(task.options[i].text);
+      }
+    }
+    return '';
+  }
+  if (task.type === 'trueFalse'){
+    if (task.trueLabel != null && task.falseLabel != null){
+      return richToPlain(task.correctValue ? task.trueLabel : task.falseLabel);
+    }
+    return task.correctValue ? 'Prawda' : 'Fałsz';
+  }
+  if (task.type === 'findError' && Array.isArray(task.rows) && Array.isArray(task.correctOptionIds)){
+    var want = {};
+    task.correctOptionIds.forEach(function(id){ want[id] = true; });
+    return task.rows
+      .filter(function(r){ return want[r.id]; })
+      .map(function(r){ return richToPlain(r.text); })
+      .filter(Boolean)
+      .join(' · ');
+  }
+  if (task.type === 'matching'){
+    return 'Poprawne dopasowanie wszystkich par.';
+  }
+  if (task.type === 'ordering' && Array.isArray(task.correctOrder) && Array.isArray(task.steps)){
+    var byId = {};
+    task.steps.forEach(function(s){ byId[s.id] = s; });
+    return task.correctOrder
+      .map(function(id, idx){
+        var s = byId[id];
+        return s ? ((idx + 1) + '. ' + richToPlain(s.text)) : '';
+      })
+      .filter(Boolean)
+      .join(' ');
+  }
+  return '';
+}
+
+function recordMistakeForReview(task){
+  if (!isScoredTask(task) || !task.id) return;
+  if (!Array.isArray(state.mistakesLog)) state.mistakesLog = [];
+  for (var i = 0; i < state.mistakesLog.length; i++){
+    if (state.mistakesLog[i].taskId === task.id) return;
+  }
+  var f = task.feedback || {};
+  var lessonTitle = '';
+  try {
+    if (window.LessonsCatalogHelpers && window.LessonsCatalogHelpers.getEntry){
+      var entry = window.LessonsCatalogHelpers.getEntry(state.lessonId);
+      if (entry && entry.title) lessonTitle = entry.title;
+    }
+  } catch (e){ /* ignore */ }
+  if (!lessonTitle && state.lesson && state.lesson.title) lessonTitle = state.lesson.title;
+  state.mistakesLog.push({
+    lessonId: state.lessonId || (state.lesson && state.lesson.id) || '',
+    lessonTitle: lessonTitle,
+    taskId: task.id,
+    question: richToPlain(task.question),
+    explanation: richToPlain(f.explanation),
+    correctSummary: summarizeCorrectAnswer(task),
+    incorrectTitle: richToPlain(f.incorrectTitle) || CONFIG.ui.incorrectFallbackTitle
+  });
+}
+
+function getLessonModuleId(lessonId){
+  try {
+    if (window.LessonsCatalogHelpers && window.LessonsCatalogHelpers.getEntry){
+      var entry = window.LessonsCatalogHelpers.getEntry(lessonId);
+      return entry && entry.moduleId ? entry.moduleId : null;
+    }
+  } catch (e){ /* ignore */ }
+  return null;
+}
+
+function persistLessonMistakesLog(){
+  if (state.isAdminSandbox || state.isRepeat) return;
+  var moduleId = getLessonModuleId(state.lessonId || (state.lesson && state.lesson.id));
+  if (!moduleId || !state.mistakesLog || !state.mistakesLog.length) return;
+  if (window.AppState && window.AppState.appendModuleMistakeReviews){
+    window.AppState.appendModuleMistakeReviews(moduleId, state.mistakesLog);
+  }
 }
 
 /* ---------- ikony ----------
@@ -1022,7 +1111,11 @@ function showTask(index){
     state.pendingCheckBtn = checkBtn;
     const ctx = {
       setReady(v){ checkBtn.disabled = !v; },
-      countMistake(){ state.mistakes++; state.taskHadMistake = true; }
+      countMistake(){
+        if (!state.taskHadMistake) recordMistakeForReview(task);
+        state.mistakes++;
+        state.taskHadMistake = true;
+      }
     };
 
     const renderer = RENDERERS[task.type];
@@ -1040,6 +1133,7 @@ function showTask(index){
     checkBtn.addEventListener('click', () => {
       const ok = currentTaskApi.check();
       if (!ok){
+        if (!state.taskHadMistake) recordMistakeForReview(task);
         state.mistakes++;
         state.taskHadMistake = true;
         openFeedback(task, false, false);
@@ -1282,16 +1376,70 @@ function showDone(){
   }
 
   const r5 = el('div', 'reveal done-btns');
-  const bContinue = primaryButton(CONFIG.ui.continueLabel);
-  bContinue.addEventListener('click', function(){
-    if (window.AppShell) window.AppShell.goHome();
-  });
-  const bGallery = el('button', 'btn btn-ghost', CONFIG.ui.galleryLabel);
-  bGallery.type = 'button';
-  bGallery.addEventListener('click', function(){
-    if (window.AppShell) window.AppShell.goGablotka();
-  });
-  r5.appendChild(bContinue); r5.appendChild(bGallery);
+  const moduleId = getLessonModuleId(L.id);
+  let moduleJustComplete = false;
+  let moduleReviewItems = [];
+  if (!state.isRepeat && !state.isAdminSandbox && moduleId && window.LessonsCatalogHelpers){
+    try {
+      /* Lekcja jeszcze nie zapisana — sprawdzamy, czy to domyka moduł */
+      const lessons = window.LessonsCatalogHelpers.getLessonsForModule(moduleId) || [];
+      const stillOpen = lessons.filter(function(entry){
+        return entry && entry.id && entry.id !== L.id && !isLessonAlreadyCompleted(entry.id);
+      });
+      moduleJustComplete = stillOpen.length === 0 && lessons.length > 0;
+    } catch (e){ moduleJustComplete = false; }
+  }
+  if (moduleJustComplete && window.AppState && window.AppState.getModuleMistakeReviews){
+    /* Session log jeszcze nie zapisany — połącz z historią modułu */
+    const prev = window.AppState.getModuleMistakeReviews(moduleId) || [];
+    const seen = {};
+    moduleReviewItems = prev.concat(state.mistakesLog || []).filter(function(it){
+      if (!it || !it.taskId) return false;
+      const key = (it.lessonId || '') + '::' + it.taskId;
+      if (seen[key]) return false;
+      seen[key] = true;
+      return true;
+    });
+  }
+
+  if (moduleJustComplete && moduleReviewItems.length){
+    const reviewNote = el('div', 'module-review-note');
+    reviewNote.appendChild(el('div', 'module-review-note-title', 'Koniec modułu — powtórz błędy'));
+    reviewNote.appendChild(el('div', 'module-review-note-body',
+      'Masz ' + moduleReviewItems.length + ' ' +
+      (moduleReviewItems.length === 1 ? 'zagadnienie' : (moduleReviewItems.length < 5 ? 'zagadnienia' : 'zagadnień')) +
+      ' do szybkiej powtórki z wyjaśnieniem.'
+    ));
+    r5.appendChild(reviewNote);
+    const bReview = primaryButton('Zobacz swoje błędy (' + moduleReviewItems.length + ')');
+    bReview.addEventListener('click', function(){
+      showModuleMistakeReview(moduleId, moduleReviewItems);
+    });
+    r5.appendChild(bReview);
+    const bContinue = el('button', 'btn btn-ghost', CONFIG.ui.continueLabel);
+    bContinue.type = 'button';
+    bContinue.addEventListener('click', function(){
+      if (window.AppShell) window.AppShell.goHome();
+    });
+    r5.appendChild(bContinue);
+  } else {
+    if (moduleJustComplete){
+      const cleanNote = el('div', 'module-review-note module-review-note--ok');
+      cleanNote.appendChild(el('div', 'module-review-note-title', 'Moduł bez błędów do powtórki'));
+      cleanNote.appendChild(el('div', 'module-review-note-body', 'Świetna robota — idź dalej albo zajrzyj do Gablotki.'));
+      r5.appendChild(cleanNote);
+    }
+    const bContinue = primaryButton(CONFIG.ui.continueLabel);
+    bContinue.addEventListener('click', function(){
+      if (window.AppShell) window.AppShell.goHome();
+    });
+    const bGallery = el('button', 'btn btn-ghost', CONFIG.ui.galleryLabel);
+    bGallery.type = 'button';
+    bGallery.addEventListener('click', function(){
+      if (window.AppShell) window.AppShell.goGablotka();
+    });
+    r5.appendChild(bContinue); r5.appendChild(bGallery);
+  }
 
   const revealBlocks = [r1, r2];
   if (col || state.isRepeat) revealBlocks.push(r3);
@@ -1323,6 +1471,7 @@ function showDone(){
         payload.badgeName = badgeName;
       }
       window.AppShell.onLessonComplete(payload);
+      persistLessonMistakesLog();
     } catch (persistErr){
       console.warn('[Akademia Nowej Fali] onLessonComplete', persistErr);
     }
@@ -1349,6 +1498,65 @@ function showDone(){
   }
 }
 
+/* ---------- powtórka błędów po module ---------- */
+function showModuleMistakeReview(moduleId, items){
+  const list = Array.isArray(items) ? items.slice() : [];
+  const step = el('div', 'step done-step module-review-step');
+  const meta = (window.LessonsCatalogHelpers && window.LessonsCatalogHelpers.getModuleMeta)
+    ? window.LessonsCatalogHelpers.getModuleMeta(moduleId) : { title: 'Moduł' };
+
+  step.appendChild(el('div', 'solved', 'Powtórka błędów'));
+  step.appendChild(el('h1', null, meta.title || 'Twój moduł'));
+  step.appendChild(el('div', 'sub',
+    list.length
+      ? ('Przejrzyj ' + list.length + ' zagadnień, przy których warto jeszcze raz zobaczyć wyjaśnienie.')
+      : 'Brak zapisanych błędów w tym module.'
+  ));
+
+  const wrap = el('div', 'module-review-list');
+  list.forEach(function(item, idx){
+    const card = el('div', 'module-review-card');
+    card.appendChild(el('div', 'module-review-idx', String(idx + 1) + ' / ' + list.length));
+    if (item.lessonTitle){
+      card.appendChild(el('div', 'module-review-lesson', item.lessonTitle));
+    }
+    if (item.question){
+      const q = el('div', 'module-review-q');
+      q.textContent = item.question;
+      card.appendChild(q);
+    }
+    if (item.correctSummary){
+      const ans = el('div', 'module-review-answer');
+      ans.appendChild(el('span', 'module-review-label', 'Poprawna odpowiedź'));
+      ans.appendChild(el('div', 'module-review-answer-text', item.correctSummary));
+      card.appendChild(ans);
+    }
+    if (item.explanation){
+      const why = el('div', 'module-review-why');
+      why.appendChild(el('span', 'module-review-label', 'Dlaczego'));
+      why.appendChild(el('div', 'module-review-why-text', item.explanation));
+      card.appendChild(why);
+    }
+    wrap.appendChild(card);
+  });
+  step.appendChild(wrap);
+
+  const btns = el('div', 'done-btns');
+  const bHome = primaryButton(CONFIG.ui.backHomeLabel || 'Wróć do Akademii');
+  bHome.addEventListener('click', function(){
+    if (moduleId && window.AppState && window.AppState.clearModuleMistakeReviews){
+      window.AppState.clearModuleMistakeReviews(moduleId);
+    }
+    if (window.AppShell) window.AppShell.goHome();
+  });
+  btns.appendChild(bHome);
+  step.appendChild(btns);
+
+  if (dom.fb) dom.fb.classList.remove('show');
+  mountStep(step);
+  try { step.scrollTop = 0; } catch (e){ /* ignore */ }
+}
+
 /* ---------- restart / start ---------- */
 function buildProgress(){
   dom.progress.textContent = '';
@@ -1371,6 +1579,7 @@ function restart(){
   state.taskHadMistake = false;
   state.scoredCorrect = 0;
   state.pendingCheckBtn = null;
+  state.mistakesLog = [];
   adminImageInfo = null;
   if (dom.kNum) dom.kNum.textContent = String(state.kosmyki);
   if (dom.kwrap) dom.kwrap.hidden = state.isAdminSandbox;

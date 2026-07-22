@@ -45,7 +45,9 @@ function createDefaultState(){
       bestScorePct: null,
       perfectLessons: 0,
       lastLessonDate: null
-    }
+    },
+    /* Błędy do powtórki po ukończeniu modułu: { [moduleId]: [items] } */
+    moduleMistakeReviews: {}
   };
 }
 
@@ -158,8 +160,31 @@ function normalizeState(raw){
     totalBadges: totalBadges,
     collections: collections.length ? collections : def.collections,
     achievements: normalizeAchievements(raw.achievements),
-    stats: normalizeStats(raw.stats)
+    stats: normalizeStats(raw.stats),
+    moduleMistakeReviews: normalizeModuleMistakeReviews(raw.moduleMistakeReviews)
   };
+}
+
+function normalizeModuleMistakeReviews(raw){
+  var out = {};
+  if (!raw || typeof raw !== 'object') return out;
+  Object.keys(raw).forEach(function(moduleId){
+    var list = raw[moduleId];
+    if (!Array.isArray(list)) return;
+    out[moduleId] = list.map(function(item){
+      if (!item || typeof item !== 'object') return null;
+      return {
+        lessonId: String(item.lessonId || ''),
+        lessonTitle: String(item.lessonTitle || ''),
+        taskId: String(item.taskId || ''),
+        question: String(item.question || ''),
+        explanation: String(item.explanation || ''),
+        correctSummary: String(item.correctSummary || ''),
+        incorrectTitle: String(item.incorrectTitle || '')
+      };
+    }).filter(Boolean);
+  });
+  return out;
 }
 
 function readMeta(){
@@ -326,6 +351,43 @@ function completeLesson(payload){
   saveState();
 }
 
+function appendModuleMistakeReviews(moduleId, items){
+  if (!moduleId || !Array.isArray(items) || !items.length) return;
+  if (!appState) appState = loadState();
+  if (!appState.moduleMistakeReviews || typeof appState.moduleMistakeReviews !== 'object'){
+    appState.moduleMistakeReviews = {};
+  }
+  var prev = Array.isArray(appState.moduleMistakeReviews[moduleId])
+    ? appState.moduleMistakeReviews[moduleId] : [];
+  var seen = {};
+  prev.forEach(function(it){
+    if (it && it.taskId) seen[it.lessonId + '::' + it.taskId] = true;
+  });
+  items.forEach(function(it){
+    if (!it || !it.taskId) return;
+    var key = (it.lessonId || '') + '::' + it.taskId;
+    if (seen[key]) return;
+    seen[key] = true;
+    prev.push(it);
+  });
+  appState.moduleMistakeReviews[moduleId] = prev;
+  saveState();
+}
+
+function getModuleMistakeReviews(moduleId){
+  if (!appState) appState = loadState();
+  if (!moduleId || !appState.moduleMistakeReviews) return [];
+  var list = appState.moduleMistakeReviews[moduleId];
+  return Array.isArray(list) ? list.slice() : [];
+}
+
+function clearModuleMistakeReviews(moduleId){
+  if (!appState) appState = loadState();
+  if (!appState.moduleMistakeReviews || !moduleId) return;
+  delete appState.moduleMistakeReviews[moduleId];
+  saveState();
+}
+
 function resetProgress(){
   appState = createDefaultState();
   var label = 'Uczennica';
@@ -347,6 +409,7 @@ function resetProgress(){
   }];
   appState.achievements = {};
   appState.stats = { bestScorePct: null, perfectLessons: 0, lastLessonDate: null };
+  appState.moduleMistakeReviews = {};
   appState.totalBadges = 0;
   saveState();
   return appState;
@@ -404,7 +467,10 @@ window.AppState = {
   isCollectionBadgeEarned: function(collectionId, badgeName){
     var col = getCollectionFromState(getAppState(), collectionId);
     return hasCollectionBadge(col, badgeName);
-  }
+  },
+  appendModuleMistakeReviews: appendModuleMistakeReviews,
+  getModuleMistakeReviews: getModuleMistakeReviews,
+  clearModuleMistakeReviews: clearModuleMistakeReviews
 };
 
 initAccountFromSession();

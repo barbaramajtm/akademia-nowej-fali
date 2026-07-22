@@ -2,6 +2,18 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-22 — Powtórka błędów na końcu modułu
+
+### Dodano
+- Zapis błędów z lekcji do `moduleMistakeReviews` w `js/state.js`
+- Ekran powtórki (pytanie + poprawna odpowiedź + wyjaśnienie) po ukończeniu modułu w `js/app.js`
+- Style kart powtórki w `css/styles.css`
+
+### Zmieniono
+- Ekran końca lekcji: przy domknięciu modułu CTA „Zobacz swoje błędy”
+
+---
+
 ## 2026-07-22 — Ilustrowane avatary profilowe
 
 ### Dodano
