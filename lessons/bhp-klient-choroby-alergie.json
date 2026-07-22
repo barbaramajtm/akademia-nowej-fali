@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "bhp-klient-choroby-alergie",
+  "title": "Kiedy odmówić usługi?",
+  "category": "BHP i higiena salonu",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Klientka na fotelu — skóra wygląda niepokojąco albo chemia dała reakcję. Dziś: kiedy nie robisz usługi, co może dać uczulenie i jak chronisz własne dłonie.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bh6-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Zakaz usługi",
+      "question": "Przy zakaźnych chorobach skóry:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nie wolno wykonywać usług — klienta kierujesz do lekarza"
+        },
+        {
+          "id": "b",
+          "text": "Zawsze robisz trwałą „szybciej”, żeby skrócić kontakt"
+        },
+        {
+          "id": "c",
+          "text": "Wystarczy zmienić kolor farby na numer 7"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Odmowa + lekarz.",
+        "incorrectTitle": "Tech. 27.",
+        "explanation": "Przy chorobach zakaźnych skóry nie wykonujesz usług i kierujesz klienta do lekarza."
+      }
+    },
+    {
+      "id": "bh6-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Przykłady",
+      "question": "Do przykładów chorób/stanów, przy których nie wykonujesz usług, należą m.in. grzybica, wszawica, świerzb i ropne stany skóry.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Lista z Tech. 27.",
+        "incorrectTitle": "Te przykłady są w materiałach.",
+        "explanation": "Grzybica, wszawica, świerzb, ropne stany skóry — przykłady z materiałów."
+      }
+    },
+    {
+      "id": "bh6-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Alergie",
+      "question": "Dopasuj objawy uczulenia.",
+      "leftTitle": "Osoba",
+      "rightTitle": "Efekty z materiałów",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Klient"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Fryzjer"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Oboje (przykład ryzyka)"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "M.in. swędzenie i zaczerwienienie skóry dłoni; duszność od aerozoli"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "M.in. zaczerwienienie, świąd, wysypka, obrzęk, pęcherze, duszność, skurcz oskrzeli"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Chemia w salonie może dawać reakcje skórne i oddechowe"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Klient ≠ fryzjer — te same chemie.",
+        "incorrectTitle": "Mat. 26.",
+        "explanation": "U klienta pełniejsza lista skórno-oddechowa; u fryzjera często dłonie i aerozole."
+      }
+    },
+    {
+      "id": "bh6-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Dłonie",
+      "question": "Do higieny dłoni fryzjer powinien używać m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Łagodnych środków myjących, ochronno-zabezpieczających, dezynfekcji, pielęgnacji i rękawiczek"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie silnego rozjaśniacza jako „mydła”"
+        },
+        {
+          "id": "c",
+          "text": "Tylko wody z myjni bez żadnych środków"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Pakiet Mat. 47.",
+        "incorrectTitle": "Nie samym rozjaśniaczem.",
+        "explanation": "Łagodne mycie, ochrona, dezynfekcja, pielęgnacja, rękawiczki — dłonie są narażone na chemię i detergenty."
+      }
+    },
+    {
+      "id": "bh6-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Klient i zdrowie",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Dolegliwości pracy fryzjera obejmują m.in. alergie skórne, żylaki, bóle kręgosłupa, grzybicę, egzemę"
+        },
+        {
+          "id": "s2",
+          "text": "Przy zakaźnej chorobie skóry kierujesz klienta do lekarza"
+        },
+        {
+          "id": "s3",
+          "text": "Przy grzybicy skóry głowy zawsze kończysz usługę farbą, żeby „zamaskować” problem"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł BHP domknięty.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Zakaźne choroby skóry = brak usługi + lekarz. Farba nie „leczy” ani nie zastępuje tej decyzji."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Chronisz klienta i siebie",
+    "subtitle": "Odmowa przy zakażeniach, alergie, higiena dłoni.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej: strzyżenie, narzędzia albo poprawki grafik."
+    }
+  }
+}

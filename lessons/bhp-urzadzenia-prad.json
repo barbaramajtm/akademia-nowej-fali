@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "bhp-urzadzenia-prad",
+  "title": "Prąd, woda i sprzęt",
+  "category": "BHP i higiena salonu",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Suszarka, prostownica, myjnia obok. Dziś: skutki uszkodzonego sprzętu, zasady przy prądzie, pierwsza reakcja przy porażeniu i gaszenie.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bh4-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Uszkodzony sprzęt",
+      "question": "Korzystanie z uszkodzonego sprzętu fryzjerskiego może skutkować m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Porażeniem prądem, poparzeniem, zniszczeniem włosów, skaleczeniem"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie poprawą numeracji farby"
+        },
+        {
+          "id": "c",
+          "text": "Tylko lepszą trwałą bez reduktora"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cztery ryzyka.",
+        "incorrectTitle": "Masz. 6.",
+        "explanation": "Sprzęt ma być sprawny i używany zgodnie z instrukcją — inaczej grozi porażenie, poparzenie, zniszczenie włosów, skaleczenie."
+      }
+    },
+    {
+      "id": "bh4-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Zasady",
+      "question": "Przy aparaturze elektrycznej: unikaj kontaktu z wodą, nie zostawiaj włączonego bez kontroli, odłącz przed zamknięciem salonu, nie naprawiaj samodzielnie.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Checklista Masz. 37.",
+        "incorrectTitle": "To są zasady.",
+        "explanation": "Do tego m.in.: instrukcja, nie przeciążać sieci, nie oddawać urządzeń klientowi do obsługi."
+      }
+    },
+    {
+      "id": "bh4-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · Przebieg dnia",
+      "question": "Ułóż bezpieczną kolejność z zasad Masz. 37.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Nie pozostawiać włączonego urządzenia bez kontroli"
+        },
+        {
+          "id": "s2",
+          "text": "Wyczyścić i zabezpieczyć urządzenie po zakończeniu pracy"
+        },
+        {
+          "id": "s3",
+          "text": "Odłączyć urządzenia od prądu przed zamknięciem salonu"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Kontrola → finisz → odłączenie.",
+        "incorrectTitle": "Masz. 37.",
+        "explanation": "W trakcie: nie zostawiasz włączonego sprzętu bez kontroli. Po pracy: czyścisz i zabezpieczasz. Przed zamknięciem: odłączasz od prądu. Przy porażeniu pierwsze jest odłączenie zasilania."
+      }
+    },
+    {
+      "id": "bh4-z4",
+      "type": "matching",
+      "kicker": "Krok 4 · Gaszenie",
+      "question": "Dopasuj.",
+      "leftTitle": "Sytuacja",
+      "rightTitle": "Decyzja",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Urządzenie elektryczne pod napięciem"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Woda na urządzenie pod napięciem"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Uszkodzony sprzęt"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Nie — to zła ścieżka gaszenia"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Wolno gasić gaśnicą proszkową (nie wodą)"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Nie używać — ryzyko porażenia, poparzenia, skaleczenia"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Prąd ≠ woda.",
+        "incorrectTitle": "BHP 67 + Masz. 6.",
+        "explanation": "Pod napięciem: gaśnica proszkowa, nie woda. Uszkodzony sprzęt odstawiasz."
+      }
+    },
+    {
+      "id": "bh4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Prąd i sprzęt",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Przy porażeniu w pierwszej kolejności odłączasz zasilanie"
+        },
+        {
+          "id": "s2",
+          "text": "Nie naprawiasz urządzeń elektrycznych samodzielnie"
+        },
+        {
+          "id": "s3",
+          "text": "Urządzenie pod napięciem wolno swobodnie gasić wodą z myjni"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie wodą.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Urządzenie elektryczne pod napięciem wolno gasić gaśnicą proszkową — nie wodą."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Ogarniasz prąd na stanowisku",
+    "subtitle": "Sprawny sprzęt, odłączenie, proszek zamiast wody.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Sanitariaty, szkolenia BHP i obowiązki pracownika."
+    }
+  }
+}

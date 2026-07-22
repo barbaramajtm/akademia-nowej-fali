@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "bhp-salon-pracownik",
+  "title": "Bezpieczny salon i obowiązki",
+  "category": "BHP i higiena salonu",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Checklist zakładu i pracownika: co musi być w salonie, kiedy szkolenie, czym jest pomieszczenie stałej pracy i wypadek zbiorowy.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bh5-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Sanitariaty",
+      "question": "W zakładzie fryzjerskim muszą znaleźć się m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Toaleta z umywalką (ciepła i zimna woda), myjki, umywalki do rąk, zlewy do narzędzi, kosze na odpady"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie stoisko z farbami bez dostępu do wody"
+        },
+        {
+          "id": "c",
+          "text": "Tylko suszarka hełmowa bez umywalek"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Lista Masz. 8.",
+        "incorrectTitle": "Urządzenia sanitarne.",
+        "explanation": "Toaleta z umywalką, myjki, umywalki do rąk, zlewy do narzędzi i przyborów, kosze na odpady."
+      }
+    },
+    {
+      "id": "bh5-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Szkolenie",
+      "question": "Można dopuścić pracownika do pracy bez wstępnego przeszkolenia BHP.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie wolno.",
+        "incorrectTitle": "Test BHP 4.",
+        "explanation": "Bez wstępnego przeszkolenia BHP nie można dopuścić pracownika do pracy."
+      }
+    },
+    {
+      "id": "bh5-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Definicje",
+      "question": "Dopasuj.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Znaczenie (klucz / audyt)",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Szkolenie okresowe (robotnicze)"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Pomieszczenie stałej pracy"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Wypadek zbiorowy"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Ten sam pracownik przebywa ponad 4 godziny w ciągu doby"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Co najmniej raz na 3 lata; przy dużych zagrożeniach — nie rzadziej niż raz w roku"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "W tym samym zdarzeniu poszkodowane co najmniej dwie osoby"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Definicje z Testu BHP.",
+        "incorrectTitle": "Sprawdź 1, 2, 7.",
+        "explanation": "Okresowe: 3 lata / co rok przy dużych zagrożeniach. Stała praca: >4 h. Zbiorowy: ≥2 osoby."
+      }
+    },
+    {
+      "id": "bh5-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Obowiązki",
+      "question": "Pracownik w zakładzie powinien m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Przestrzegać regulaminu, zasad BHP i ppoż. oraz dbać o dobro zakładu i mienie"
+        },
+        {
+          "id": "b",
+          "text": "Tylko naśladować kolegów — bez własnych zasad"
+        },
+        {
+          "id": "c",
+          "text": "Ignorować przepisy przeciwpożarowe, jeśli jest „szybki dzień”"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Obowiązki pracownika.",
+        "incorrectTitle": "Test BHP 6.",
+        "explanation": "Regulamin, BHP, ppoż., dbałość o zakład i mienie — to oczekiwany standard zachowania."
+      }
+    },
+    {
+      "id": "bh5-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Salon i pracownik",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Strefa pożarowa ogranicza przeniesienie pożaru w określonym czasie"
+        },
+        {
+          "id": "s2",
+          "text": "Elementów maszyn w ruchu nie wolno naprawiać/czyścić/smarować — z wyjątkiem smarowania specjalnymi urządzeniami z DTR"
+        },
+        {
+          "id": "s3",
+          "text": "Wstępne szkolenie BHP jest opcjonalne — można zacząć pracę „na próbę” bez niego"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "BHP nie jest opcją.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Bez wstępnego BHP nie dopuszczasz do pracy. Strefa pożarowa i zakaz prac przy ruchu maszyn są z Testu."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz ramy salonu i pracownika",
+    "subtitle": "Sanitariaty, szkolenia, definicje, obowiązki.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Kiedy odmówić usługi — choroby, alergie, dłonie."
+    }
+  }
+}

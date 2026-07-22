@@ -614,11 +614,75 @@ window.LessonsCatalog = [
     locked: false,
     requiresLessonId: 'trwala-przybory-i-przebieg',
     lockedReason: 'Najpierw ukończ: Przybory i przebieg trwałej'
+  },
+  {
+    id: 'bhp-po-co-higiena',
+    moduleId: 'bhp-higiena-salonu',
+    title: 'Po co higiena w salonie?',
+    moduleTitle: 'BHP i higiena salonu',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false
+  },
+  {
+    id: 'bhp-dezynfekcja-sterylizacja',
+    moduleId: 'bhp-higiena-salonu',
+    title: 'Dezynfekcja czy sterylizacja?',
+    moduleTitle: 'BHP i higiena salonu',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'bhp-po-co-higiena',
+    lockedReason: 'Najpierw ukończ: Po co higiena w salonie?'
+  },
+  {
+    id: 'bhp-miejsca-ryzyka',
+    moduleId: 'bhp-higiena-salonu',
+    title: 'Gdzie kryją się drobnoustroje?',
+    moduleTitle: 'BHP i higiena salonu',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'bhp-dezynfekcja-sterylizacja',
+    lockedReason: 'Najpierw ukończ: Dezynfekcja czy sterylizacja?'
+  },
+  {
+    id: 'bhp-urzadzenia-prad',
+    moduleId: 'bhp-higiena-salonu',
+    title: 'Prąd, woda i sprzęt',
+    moduleTitle: 'BHP i higiena salonu',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'bhp-miejsca-ryzyka',
+    lockedReason: 'Najpierw ukończ: Gdzie kryją się drobnoustroje?'
+  },
+  {
+    id: 'bhp-salon-pracownik',
+    moduleId: 'bhp-higiena-salonu',
+    title: 'Bezpieczny salon i obowiązki',
+    moduleTitle: 'BHP i higiena salonu',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'bhp-urzadzenia-prad',
+    lockedReason: 'Najpierw ukończ: Prąd, woda i sprzęt'
+  },
+  {
+    id: 'bhp-klient-choroby-alergie',
+    moduleId: 'bhp-higiena-salonu',
+    title: 'Kiedy odmówić usługi?',
+    moduleTitle: 'BHP i higiena salonu',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'bhp-salon-pracownik',
+    lockedReason: 'Najpierw ukończ: Bezpieczny salon i obowiązki'
   }
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura'];
+window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];
