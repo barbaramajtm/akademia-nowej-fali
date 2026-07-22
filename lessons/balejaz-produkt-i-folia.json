@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "balejaz-produkt-i-folia",
+  "title": "Rozjaśniacz lub farba + folia",
+  "category": "Balejaż",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Na stanowisku decyzja: rozjaśniacz czy farba — i co dalej z folią. Dziś domykasz środek procedury z materiałów.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bj4-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Produkt",
+      "question": "W wykonaniu balejażu nakładasz:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rozjaśniacz lub farbę"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie utrwalacz do trwałej"
+        },
+        {
+          "id": "c",
+          "text": "Tylko wodę bez produktu koloryzującego"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Rozjaśniacz lub farba.",
+        "incorrectTitle": "Tech. 13.",
+        "explanation": "Krok: nałożenie rozjaśniacza lub farby — obie ścieżki są w materiałach."
+      }
+    },
+    {
+      "id": "bj4-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Definicja vs krok",
+      "question": "Definicja balejażu też mówi o rozjaśnianiu lub farbowaniu wybranych pasm.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Spójne z Tech. 8.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Tech. 8 i Tech. 13 mówią tym samym językiem: rozjaśnianie lub farbowanie."
+      }
+    },
+    {
+      "id": "bj4-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Po produkcie",
+      "question": "Dopasuj.",
+      "leftTitle": "Etap",
+      "rightTitle": "Co robisz",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Po nałożeniu rozjaśniacza lub farby"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Po folii (finisz z listy)"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Cel całego zabiegu"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Spłukanie i pielęgnacja"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Zawinięcie w folię"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Naturalne refleksy"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Produkt → folia → finisz.",
+        "incorrectTitle": "Tech. 8 i 13.",
+        "explanation": "Nie pomijaj folii ani spłukania z listy wykonania."
+      }
+    },
+    {
+      "id": "bj4-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Asystentka pyta: „Przy balejażu z materiałów pomijamy folię?”. Co jest zgodne ze źródłem?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nie — zawinięcie w folię jest w sposobie wykonania"
+        },
+        {
+          "id": "b",
+          "text": "Tak — folia jest zakazana przy balejażu"
+        },
+        {
+          "id": "c",
+          "text": "Folia dotyczy wyłącznie trwałej ondulacji"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Folia jest w Tech. 13.",
+        "incorrectTitle": "Sprawdź źródło.",
+        "explanation": "Lokalna odpowiedź wymienia zawinięcie w folię — uczymy tego, co jest w materiałach."
+      }
+    },
+    {
+      "id": "bj4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Produkt i folia",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Można użyć rozjaśniacza na wybranych pasmach"
+        },
+        {
+          "id": "s2",
+          "text": "Można użyć farby na wybranych pasmach"
+        },
+        {
+          "id": "s3",
+          "text": "Po nałożeniu produktu zawsze pomijasz folię i spłukanie"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Folia i finisz zostają.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Tech. 13: po produkcie folia, na końcu spłukanie i pielęgnacja."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Dobierasz produkt i domykasz folią",
+    "subtitle": "Rozjaśniacz lub farba → folia → spłukanie i pielęgnacja.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Konsultacja: kiedy proponujesz balejaż."
+    }
+  }
+}

@@ -227,6 +227,19 @@ var BADGE_CATALOG = [
     progress: function(ctx){
       return ctx.moduleProgress['prostowanie-wlosow'] || { current: 0, goal: 1 };
     }
+  },
+  {
+    id: 'modul-balejaz',
+    collectionId: 'moduly',
+    name: 'Balejaż',
+    description: 'Wybrane pasma, naturalne refleksy i pięć kroków z materiałów.',
+    conditionLabel: 'Ukończ wszystkie lekcje balejażu',
+    symbol: 'spark',
+    accent: 'coral',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['balejaz']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['balejaz'] || { current: 0, goal: 1 };
+    }
   }
 ];
 

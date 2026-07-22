@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "balejaz-co-to",
+  "title": "Co to jest balejaż?",
+  "category": "Balejaż",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka pokazuje zdjęcie „naturalnych refleksów”. Zanim weźmiesz pędzel, musisz wiedzieć, czym balejaż jest według materiałów.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "bj1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Definicja",
+      "question": "Balejaż to:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Technika rozjaśniania lub farbowania wybranych pasm włosów w celu uzyskania naturalnych refleksów"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie trwała ondulacja na wałkach"
+        },
+        {
+          "id": "c",
+          "text": "Tylko mycie szamponem leczniczym"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Definicja Tech. 8.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Balejaż = rozjaśnianie lub farbowanie wybranych pasm → naturalne refleksy."
+      }
+    },
+    {
+      "id": "bj1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Cel",
+      "question": "Celem balejażu jest uzyskanie naturalnych refleksów.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Naturalne refleksy.",
+        "incorrectTitle": "Tech. 8.",
+        "explanation": "Materiały wprost: w celu uzyskania naturalnych refleksów."
+      }
+    },
+    {
+      "id": "bj1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Co robi zabieg",
+      "question": "Dopasuj.",
+      "leftTitle": "Element definicji",
+      "rightTitle": "Znaczenie",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Rozjaśnianie lub farbowanie"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Wybrane pasma"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Naturalne refleksy"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Nie cała masa włosów naraz — selekcja"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Dwie możliwe ścieżki produktu w definicji"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Cel efektu z materiałów"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy części definicji.",
+        "incorrectTitle": "Tech. 8.",
+        "explanation": "Produkt (rozjaśniacz lub farba), zakres (pasma), cel (refleksy)."
+      }
+    },
+    {
+      "id": "bj1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Decyzja",
+      "question": "Klientka chce „lekko jaśniej, naturalnie, nie cała głowa jednolicie”. Co jest spójne?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Balejaż — wybrane pasma pod naturalne refleksy"
+        },
+        {
+          "id": "b",
+          "text": "Obietnica trwałej bez chemii"
+        },
+        {
+          "id": "c",
+          "text": "Tylko strzyżenie na tępo bez koloru"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To brzmi jak balejaż.",
+        "incorrectTitle": "Cel = refleksy.",
+        "explanation": "Selekcja pasm + naturalny efekt = definicja balejażu."
+      }
+    },
+    {
+      "id": "bj1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Balejaż",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Balejaż może oznaczać rozjaśnianie wybranych pasm"
+        },
+        {
+          "id": "s2",
+          "text": "Balejaż może oznaczać farbowanie wybranych pasm"
+        },
+        {
+          "id": "s3",
+          "text": "Balejaż to zawsze wyłącznie degażowanie nożycami"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To nie strzyżenie.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Degażowanie to przerzedzanie objętości — inna technika."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, czym jest balejaż",
+    "subtitle": "Rozjaśnianie lub farbowanie wybranych pasm dla naturalnych refleksów.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Wybrane pasma — nie cała głowa naraz."
+    }
+  }
+}

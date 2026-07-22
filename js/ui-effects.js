@@ -76,6 +76,13 @@ var MODULE_MOTIFS = {
       '<rect x="34" y="40" width="52" height="18" rx="6" fill="#A6B58D" opacity="0.4"/>' +
       '<path d="M40 49h40" stroke="#1A2744" stroke-width="2.2" stroke-linecap="round" opacity="0.25"/>' +
     '</svg>',
+  'balejaz':
+    '<svg viewBox="0 0 120 88" fill="none" aria-hidden="true">' +
+      '<ellipse cx="78" cy="28" rx="28" ry="16" fill="#E8B23E" opacity="0.3"/>' +
+      '<path d="M28 62 Q45 30 60 58 Q75 28 92 62" stroke="#E8A8B8" stroke-width="7" fill="none" opacity="0.55" stroke-linecap="round"/>' +
+      '<circle cx="52" cy="40" r="4" fill="#E86A4A" opacity="0.55"/>' +
+      '<circle cx="70" cy="36" r="4" fill="#E86A4A" opacity="0.55"/>' +
+    '</svg>',
   'numeracja-farb':
     '<svg viewBox="0 0 120 88" fill="none" aria-hidden="true">' +
       '<ellipse cx="78" cy="28" rx="30" ry="18" fill="#E8B23E" opacity="0.32"/>' +
@@ -256,7 +263,7 @@ window.UIEffects = {
       animateUnlockedTile(id);
     }, delay);
 
-    if (moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt' || moduleId === 'wlos-teoria-koloru' || moduleId === 'trwala-procedura' || moduleId === 'bhp-higiena-salonu' || moduleId === 'strzyzenie-narzedzia' || moduleId === 'prostowanie-wlosow'){
+    if (moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt' || moduleId === 'wlos-teoria-koloru' || moduleId === 'trwala-procedura' || moduleId === 'bhp-higiena-salonu' || moduleId === 'strzyzenie-narzedzia' || moduleId === 'prostowanie-wlosow' || moduleId === 'balejaz'){
       setTimeout(function(){
         blinkModuleMotif(moduleId);
       }, delay + 400);
