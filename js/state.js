@@ -26,7 +26,7 @@ function createDefaultState(){
       fala: 1,
       falaProgress: { current: 0, goal: 1000 },
       streakDays: 0,
-      avatarId: 'wave'
+      avatarId: 'blonde-sage'
     },
     completedLessons: {},
     totalBadges: 0,
@@ -398,7 +398,7 @@ window.AppState = {
   setAvatarId: function(id){
     if (!appState) appState = loadState();
     if (!appState.user) appState.user = createDefaultState().user;
-    appState.user.avatarId = String(id || 'wave');
+    appState.user.avatarId = String(id || 'blonde-sage');
     saveState();
   },
   isCollectionBadgeEarned: function(collectionId, badgeName){

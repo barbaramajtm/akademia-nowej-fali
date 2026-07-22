@@ -2,6 +2,19 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-22 — Ilustrowane avatary profilowe
+
+### Dodano
+- `assets/images/avatars/*.png` — 12 wycinków z arkusza avatarów
+- `assets/images/avatars-sheet.png` — oryginalny arkusz
+
+### Zmieniono
+- `js/avatars.js` — wybór ilustracji zamiast prostych ikon SVG
+- `js/state.js` — domyślny avatar `blonde-sage`
+- `css/styles.css` / `index.html` — styl podglądu zdjęć w pickerze
+
+---
+
 ## 2026-07-22 — Admin: podgląd hasła przy odblokowaniu
 
 ### Zmieniono

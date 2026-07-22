@@ -1,18 +1,32 @@
 /* ============================================================
-   Avatary profilowe — wybór z zestawu (bez uploadu zdjęć)
+   Avatary profilowe — ilustracje z arkusza (bez uploadu zdjęć)
    ============================================================ */
 'use strict';
 
 var AVATAR_PRESETS = [
-  { id: 'wave', label: 'Fala', bg: '#FFE8C8', fg: '#E65298' },
-  { id: 'kosmyk', label: 'Kosmyk', bg: '#FCE4EC', fg: '#FF4794' },
-  { id: 'mustard', label: 'Musztarda', bg: '#FFF3D6', fg: '#F1A520' },
-  { id: 'sage', label: 'Szałwia', bg: '#E8F0E3', fg: '#6B8F71' },
-  { id: 'plum', label: 'Śliwka', bg: '#F3E8F0', fg: '#8B4A6B' },
-  { id: 'navy', label: 'Granat', bg: '#E8EEF6', fg: '#1A2744' },
-  { id: 'coral', label: 'Koral', bg: '#FFE4DC', fg: '#E05A45' },
-  { id: 'mint', label: 'Mięta', bg: '#E4F5F0', fg: '#3D9B8F' }
+  { id: 'blonde-sage', label: 'Blond + szałwia', src: 'assets/images/avatars/blonde-sage.png' },
+  { id: 'ginger-coral', label: 'Ruda + koral', src: 'assets/images/avatars/ginger-coral.png' },
+  { id: 'brunette-mustard', label: 'Brunetka + musztarda', src: 'assets/images/avatars/brunette-mustard.png' },
+  { id: 'pink-sage', label: 'Różowe włosy', src: 'assets/images/avatars/pink-sage.png' },
+  { id: 'lavender-cream', label: 'Lawenda', src: 'assets/images/avatars/lavender-cream.png' },
+  { id: 'blonde-coral', label: 'Blond + koral', src: 'assets/images/avatars/blonde-coral.png' },
+  { id: 'guy-navy', label: 'Krótkie włosy', src: 'assets/images/avatars/guy-navy.png' },
+  { id: 'glasses-sage', label: 'Okulary', src: 'assets/images/avatars/glasses-sage.png' },
+  { id: 'teal-mustard', label: 'Turkus', src: 'assets/images/avatars/teal-mustard.png' },
+  { id: 'bangs-coral', label: 'Grzywka', src: 'assets/images/avatars/bangs-coral.png' },
+  { id: 'blue-sage', label: 'Niebieskie włosy', src: 'assets/images/avatars/blue-sage.png' },
+  { id: 'bun-coral', label: 'Kok', src: 'assets/images/avatars/bun-coral.png' }
 ];
+
+var DEFAULT_AVATAR_ID = AVATAR_PRESETS[0].id;
+
+function avatarAssetUrl(relativePath){
+  try {
+    return new URL(relativePath, document.baseURI).href;
+  } catch (e){
+    return relativePath;
+  }
+}
 
 function avatarById(id){
   for (var i = 0; i < AVATAR_PRESETS.length; i++){
@@ -21,28 +35,23 @@ function avatarById(id){
   return AVATAR_PRESETS[0];
 }
 
-function avatarSvgMarkup(preset, size){
+function avatarImgMarkup(preset, size){
   size = size || 54;
   var p = preset || AVATAR_PRESETS[0];
-  var r = Math.round(size * 0.2);
-  var cy = Math.round(size * 0.37);
-  var cr = Math.round(size * 0.2);
-  return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '" aria-hidden="true">' +
-    '<circle cx="' + (size / 2) + '" cy="' + cy + '" r="' + cr + '" fill="' + p.fg + '"/>' +
-    '<path d="M' + Math.round(size * 0.13) + ' ' + Math.round(size * 0.9) +
-      ' Q' + (size / 2) + ' ' + Math.round(size * 0.55) + ' ' + Math.round(size * 0.87) + ' ' + Math.round(size * 0.9) +
-      ' Z" fill="' + p.fg + '" opacity=".85"/>' +
-    '</svg>';
+  return '<img class="avatar-img" src="' + avatarAssetUrl(p.src) + '" alt="" width="' + size + '" height="' + size + '" decoding="async" draggable="false">';
 }
 
 function getSelectedAvatarId(){
   try {
     if (window.AppState && window.AppState.get){
       var u = window.AppState.get().user;
-      if (u && u.avatarId) return u.avatarId;
+      if (u && u.avatarId){
+        /* Stare ID (wave, kosmyk…) → pierwszy ilustracyjny zestaw */
+        if (avatarById(u.avatarId).id === u.avatarId) return u.avatarId;
+      }
     }
   } catch (e){ /* ignore */ }
-  return 'wave';
+  return DEFAULT_AVATAR_ID;
 }
 
 function setSelectedAvatarId(id){
@@ -55,8 +64,8 @@ function paintAvatarHosts(){
   var hosts = document.querySelectorAll('[data-avatar-host]');
   hosts.forEach(function(host){
     var size = parseInt(host.getAttribute('data-avatar-size') || '54', 10);
-    host.style.background = preset.bg;
-    host.innerHTML = avatarSvgMarkup(preset, size);
+    host.style.background = '#F7F1EA';
+    host.innerHTML = avatarImgMarkup(preset, size);
   });
 }
 
@@ -76,8 +85,7 @@ function openAvatarPicker(){
     btn.type = 'button';
     btn.className = 'avatar-pick' + (p.id === current ? ' is-selected' : '');
     btn.setAttribute('aria-label', p.label);
-    btn.style.background = p.bg;
-    btn.innerHTML = avatarSvgMarkup(p, 48);
+    btn.innerHTML = avatarImgMarkup(p, 72);
     btn.addEventListener('click', function(){
       setSelectedAvatarId(p.id);
       paintAvatarHosts();
