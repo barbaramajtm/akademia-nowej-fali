@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-ksztalt-wilgoc-cieplo",
+  "title": "Wilgoć, ciepło i modelowanie",
+  "category": "Włos, wiązania i zmiana kształtu",
+  "levelLabel": "Modelowanie",
+  "intro": {
+    "narratorText": "Suszarka, szczotka, wilgotny włos — klasyka salonu. Klientka pyta: „Dlaczego właśnie teraz włos daje się ułożyć?” Szukasz mechanizmu, nie magii narzędzia. Suszarka i szczotka zmieniają warunki: pojawia się wilgoć i ciepło. Za chwilę zdecydujesz, co we włosie na to reaguje.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wk3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Hipoteza",
+      "question": "Przy modelowaniu włos daje się przeformować, gdy pracujesz z wilgocią i ciepłem. Co najtrafniej opisuje to, co dzieje się we włosie?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Zachodzi czasowa zmiana wiązań wodorowych"
+        },
+        {
+          "id": "b",
+          "text": "Numer farby na tubce przestawia się o dwa tony"
+        },
+        {
+          "id": "c",
+          "text": "Melanina wypłukuje się z kory od samego ciepła suszarki"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trafiony mechanizm.",
+        "incorrectTitle": "To nie farba ani melanina.",
+        "explanation": "Podczas modelowania wilgoć i ciepło powodują czasową zmianę wiązań wodorowych. To nie zabieg koloryzacyjny i nie „wypalanie pigmentu” suszarką."
+      }
+    },
+    {
+      "id": "wk3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Liga zabiegu",
+      "question": "Czasowa zmiana wiązań wodorowych przy modelowaniu to to samo, co rozrywanie wiązań siarkowych w trwałej ondulacji.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To mit — dwie ligi.",
+        "incorrectTitle": "Nie mieszaj zabiegów.",
+        "explanation": "Modelowanie = czasowa zmiana wiązań H. Trwała chemiczna rusza wiązania siarkowe. Inny mechanizm, inna trwałość."
+      }
+    },
+    {
+      "id": "wk3-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · Przebieg w salonie",
+      "question": "Ułóż sensowną kolejność typowego modelowania z udziałem wilgoci i ciepła.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Pracujesz z włosem wilgotnym (lub nawilżonym w procesie układania)"
+        },
+        {
+          "id": "s2",
+          "text": "Formujesz kształt (szczotka, wałki, palce…)"
+        },
+        {
+          "id": "s3",
+          "text": "Suszysz / działasz ciepłem, żeby utrwalić ułożenie na teraz"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Logiczny przebieg.",
+        "incorrectTitle": "Przestaw kolejność.",
+        "explanation": "Najpierw warunki wilgoci, potem kształt, potem ciepło i dokładne wysuszenie. O trwałości ułożenia decydują też technika i preparaty — a o tym, co zniesie mycie, mówisz uczciwie klientce."
+      }
+    },
+    {
+      "id": "wk3-z4",
+      "type": "matching",
+      "kicker": "Krok 4 · Salon vs mit",
+      "question": "Dopasuj.",
+      "leftTitle": "Element",
+      "rightTitle": "Rola",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Modelowanie"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Czasowa zmiana wiązań H"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Sam lakier bez pracy na włosie"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Efekt wilgoci i ciepła we włosie"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Przeformowanie fryzury w salonie"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Wsparcie powierzchniowe, nie mechanizm wiązań H"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobrze rozdzielone.",
+        "incorrectTitle": "Pomyłka ról.",
+        "explanation": "Modelowanie pracuje na wiązaniach wodorowych. Lakier może pomóc utrzymać ułożenie z zewnątrz, ale nie zastępuje mechanizmu z wilgocią i ciepłem."
+      }
+    },
+    {
+      "id": "wk3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Pułapka",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Modelowanie",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Przy modelowaniu wilgoć i ciepło wpływają na wiązania wodorowe"
+        },
+        {
+          "id": "s2",
+          "text": "Zmiana wiązań wodorowych przy modelowaniu jest opisana jako czasowa"
+        },
+        {
+          "id": "s3",
+          "text": "Sam lakier na powierzchni zawsze zastępuje pracę wilgoci i ciepła na wiązaniach wodorowych — mechanizm jest identyczny"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Lakier ≠ mechanizm H.",
+        "incorrectTitle": "Znajdź mylenie ról.",
+        "explanation": "Lakier może wspierać ułożenie z zewnątrz. Mechanizm modelowania to czasowa zmiana wiązań wodorowych pod wpływem wilgoci i ciepła — tego lakier nie „jest”."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, co robią wilgoć i ciepło",
+    "subtitle": "Modelowanie to czasowa zmiana wiązań wodorowych — nie trwała chemiczna.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "A co ze skrętem po wałkach, gdy klientka umyje głowę?"
+    }
+  }
+}

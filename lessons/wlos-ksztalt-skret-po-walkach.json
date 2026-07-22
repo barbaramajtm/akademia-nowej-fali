@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-ksztalt-skret-po-walkach",
+  "title": "Skręt po wałkach",
+  "category": "Włos, wiązania i zmiana kształtu",
+  "levelLabel": "Modelowanie",
+  "intro": {
+    "narratorText": "Wałki zdjęte, skręt ładny, klientka zadowolona. Dwa dni później: „Umyłam głowę i loków jak nie było.” Co się stało we włosie — i co jej odpowiesz bez ściemy? Znasz już wilgoć, ciepło i wiązania wodorowe. Teraz domykasz skutek po wysuszeniu i po zmoczeniu.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wk4-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Obserwacja",
+      "question": "Klientka ma ładny skręt zaraz po zdjęciu wałków i wysuszeniu. Po umyciu głowy skręt znika. Która interpretacja jest zgodna z mechanizmem?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Skręt był nietrwały — zmiana wiązań wodorowych cofa się po zmoczeniu"
+        },
+        {
+          "id": "b",
+          "text": "Wałki na stałe zamieniły pigment w korze"
+        },
+        {
+          "id": "c",
+          "text": "Keratyna została wypłukana w całości szamponem"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trafiona interpretacja.",
+        "incorrectTitle": "Inny mechanizm.",
+        "explanation": "Po wyschnięciu skręt się trzyma, ale jest nietrwały i znika po zmoczeniu — bo chodziło o wiązania wodorowe, nie o wymianę pigmentu ani „wypłukanie keratyny”."
+      }
+    },
+    {
+      "id": "wk4-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Po wyschnięciu",
+      "question": "Po wyschnięciu włosy mogą utrzymywać skręt uzyskany na wałkach.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — na teraz.",
+        "incorrectTitle": "Jeszcze raz.",
+        "explanation": "Skręt po wyschnięciu jest realny. Problem zaczyna się przy kolejnym mocnym kontakcie z wodą — wtedy wraca temat nietrwałości."
+      }
+    },
+    {
+      "id": "wk4-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Przyczyna → skutek",
+      "question": "Dopasuj.",
+      "leftTitle": "Warunek",
+      "rightTitle": "Skutek",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Wilgoć i ciepło przy wałkach"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Wysuszenie na wałkach"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Zmoczenie później"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Utrzymanie skrętu na teraz"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Zmiana wiązań wodorowych"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Zanik nietrwałego skrętu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Łańcuch domknięty.",
+        "incorrectTitle": "Sprawdź skutki.",
+        "explanation": "Wilgoć i ciepło zmieniają wiązania H → po wyschnięciu skręt stoi → po zmoczeniu nietrwały efekt schodzi."
+      }
+    },
+    {
+      "id": "wk4-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Rozmowa z klientką",
+      "question": "Jak uczciwie zapowiesz efekt wałków / modelowania?",
+      "options": [
+        {
+          "id": "a",
+          "text": "„To ten sam efekt co trwała ondulacja — mycie nic nie zmieni.”"
+        },
+        {
+          "id": "b",
+          "text": "„Skręt utrzyma się po wysuszeniu, ale po zmoczeniu może zejść — to zmiana czasowa.”"
+        },
+        {
+          "id": "c",
+          "text": "„Skręt znika tylko wtedy, gdy użyjesz złego numeru farby.”"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Uczciwa zapowiedź.",
+        "incorrectTitle": "Obietnica za duża.",
+        "explanation": "Klientka zasługuje na jasność: to nie trwała chemiczna. Mycie / zmoczenie znosi nietrwały skręt z wiązań wodorowych."
+      }
+    },
+    {
+      "id": "wk4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Egzaminowy mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Skręt po wałkach",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Wilgoć i ciepło powodują zmianę wiązań wodorowych przy uzyskiwaniu skrętu"
+        },
+        {
+          "id": "s2",
+          "text": "Po wyschnięciu skręt może się utrzymywać"
+        },
+        {
+          "id": "s3",
+          "text": "Skręt z wałków jest trwały chemicznie i nigdy nie znika po zmoczeniu"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mit obalony.",
+        "incorrectTitle": "To nie trwała chemiczna.",
+        "explanation": "Źródła mówią wprost: skręt jest nietrwały i znika po zmoczeniu. Trwałość chemiczną ogarniesz przy wiązaniach siarkowych."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Umiesz wyjaśnić znikający lok",
+    "subtitle": "Po wysuszeniu skręt stoi; po zmoczeniu nietrwały efekt z wiązań H schodzi.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Które wiązania trzeba ruszyć, żeby kształt został na dłużej?"
+    }
+  }
+}

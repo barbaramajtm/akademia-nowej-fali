@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-ksztalt-redukcja-utrwalenie",
+  "title": "Redukcja i utrwalenie",
+  "category": "Włos, wiązania i zmiana kształtu",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Na stanowisku stoi płyn do trwałej i utrwalacz. Klientka na wałkach. Żeby nie pomylić kolejności, musisz wiedzieć, co się dzieje w mostkach — krok po kroku. Chodzi o wiązania siarkowe, nie o czasowe mostki wodorowe z modelowania.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Dwa produkty, jedna kolejność",
+      "text": "Spójrz na trzy kroki na planszy: reduktor otwiera mostki, nadajesz nowy kształt (np. wałki), utrwalacz odbudowuje mostki. Za chwilę ułożysz tę kolejność sama i dopasujesz reakcje chemiczne.",
+      "note": "„Rozrywa” to język z materiałów technologicznych — nie oznacza, że włos ma zostać zniszczony „do zera”. Zasadowe środowisko może wspomagać pęcznienie i działanie reduktorów (z modułu pH).",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-sulfur-bonds-permanent.png",
+      "imageAlt": "Trzy kroki trwałej: reduktor, nowy kształt na wałku, utrwalacz.",
+      "imageCaption": "Reduktor → nowy kształt → utrwalacz odbudowuje mostki."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wk6-z1",
+      "type": "ordering",
+      "kicker": "Krok 1 · Kolejność",
+      "question": "Ułóż kolejność trwałej zmiany kształtu we włosie.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Preparat z reduktorem przekształca (rozrywa) wiązania siarkowe"
+        },
+        {
+          "id": "s2",
+          "text": "Włosy są ułożone w nowym kształcie (np. nawinięte na wałki)"
+        },
+        {
+          "id": "s3",
+          "text": "Utrwalacz odbudowuje wiązania w nowym kształcie"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Kolejność jak w procesie.",
+        "incorrectTitle": "Przestaw etapy.",
+        "explanation": "Najpierw redukcja / otwarcie mostków, potem kształt, na końcu odbudowa utrwalaczem. Bez utrwalenia nowy kształt się nie „domknie” w mostkach."
+      }
+    },
+    {
+      "id": "wk6-z2",
+      "type": "singleChoice",
+      "kicker": "Krok 2 · Reduktor",
+      "question": "Co jest podstawowym składnikiem płynów do trwałej ondulacji?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Reduktor"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie pigment roślinny"
+        },
+        {
+          "id": "c",
+          "text": "Sam lakier do włosów"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Reduktor.",
+        "incorrectTitle": "Nie ten składnik.",
+        "explanation": "Podstawą każdego płynu trwale ondulującego jest reduktor. Rodzaj reduktora zależy m.in. od środowiska (pH) — bez wkuwania całej listy chemicznej wystarczy ta zasada."
+      }
+    },
+    {
+      "id": "wk6-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Redukcja vs utlenianie",
+      "question": "Dopasuj reakcję do momentu zabiegu.",
+      "leftTitle": "Reakcja",
+      "rightTitle": "Moment",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Redukcja"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Utlenianie (w tym kontekście)"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Samo modelowanie wilgocią i ciepłem"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Utrwalanie trwałej ondulacji / odbudowa wiązań"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Przekształcanie włosa w trakcie trwałej (mostki)"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Czasowa zmiana wiązań wodorowych"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Chemia we właściwych miejscach.",
+        "incorrectTitle": "Zamiana etapów.",
+        "explanation": "Redukcja — przekształcanie w trakcie trwałej. Utlenianie — m.in. utrwalanie trwałej. Modelowanie H — osobna, czasowa ścieżka."
+      }
+    },
+    {
+      "id": "wk6-z4",
+      "type": "trueFalse",
+      "kicker": "Krok 4 · H₂O₂",
+      "question": "Roztwory nadtlenku wodoru stosuje się m.in. przy utrwalaniu zabiegu trwałej ondulacji.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — też przy trwałej.",
+        "incorrectTitle": "Wróć do zastosowań H₂O₂.",
+        "explanation": "H₂O₂ znasz z koloryzacji i rozjaśniania; w materiałach jest też przy utrwalaniu trwałej. Ten sam świat utleniania, inny cel zabiegu."
+      }
+    },
+    {
+      "id": "wk6-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Domknij proces",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Trwała zmiana kształtu",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Utrwalacz odbudowuje wiązania w nowym kształcie po nawinięciu"
+        },
+        {
+          "id": "s2",
+          "text": "Reduktor jest podstawą płynu do trwałej"
+        },
+        {
+          "id": "s3",
+          "text": "Wystarczy sam reduktor bez utrwalacza — mostki i tak zawsze wrócą same w idealnym nowym kształcie"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Utrwalacz nie jest ozdobą.",
+        "incorrectTitle": "Domknij proces.",
+        "explanation": "Proces w materiałach ma etap odbudowy utrwalaczem. Pominięcie utrwalenia psuje logikę trwałej zmiany kształtu — i efekt w salonie."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Trzymasz kolejność redukcja → kształt → utrwalenie",
+    "subtitle": "Wiesz, czemu na stanowisku stoją dwa produkty do trwałej.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Kiedy proponujesz modelowanie, a kiedy chemię?"
+    }
+  }
+}

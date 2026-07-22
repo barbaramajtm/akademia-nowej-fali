@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-ksztalt-czasowa-czy-chemiczna",
+  "title": "Czasowa czy chemiczna?",
+  "category": "Włos, wiązania i zmiana kształtu",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Dwie klientki, ten sam „chcę fale”. Jedna — impreza na jutro. Druga — „żeby zostało na miesiące”. Twoja decyzja zaczyna się od pytania: czasowa czy chemiczna? Modelowanie: wilgoć i ciepło → wiązania wodorowe. Trwała / chemiczne prostowanie: mostki siarczkowe, reduktor, utrwalenie.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wk7-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Decyzja",
+      "question": "Klientka chce fale na jutrzejsze wyjście i myje głowę co drugi dzień. Która ścieżka jest spójna z mechanizmem?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Modelowanie oparte o czasową zmianę wiązań wodorowych — z jasną rozmową o myciu"
+        },
+        {
+          "id": "b",
+          "text": "Obiecać efekt trwałej bez chemii, bo „wałki wystarczą na miesiące”"
+        },
+        {
+          "id": "c",
+          "text": "Od razu rozjaśnianie H₂O₂ zamiast rozmowy o kształcie"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trafiona ścieżka.",
+        "incorrectTitle": "Zła liga zabiegu.",
+        "explanation": "Krótki termin + częste mycie = uczciwe modelowanie na wiązaniach H. Obietnica „jak trwała bez chemii” jest sprzeczna z tym, czego się nauczyłaś."
+      }
+    },
+    {
+      "id": "wk7-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Mycie",
+      "question": "Skręt uzyskany zmianą wiązań wodorowych (np. po wałkach) jest nietrwały i może zniknąć po zmoczeniu.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tak — wraca lekcja o wałkach.",
+        "incorrectTitle": "Przypomnij mechanizm skrętu.",
+        "explanation": "To kluczowa różnica w rozmowie z klientką: woda kończy historię czasowego skrętu."
+      }
+    },
+    {
+      "id": "wk7-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Zabieg → wiązania",
+      "question": "Dopasuj.",
+      "leftTitle": "Zabieg",
+      "rightTitle": "Mechanizm",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Modelowanie / ondulacja wodna"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Trwała ondulacja"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Chemiczne prostowanie"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Mostki siarczkowe: redukcja i utrwalenie w skręcie"
+        },
+        {
+          "id": "r2",
+          "pairId": "c",
+          "text": "Mostki siarczkowe: redukcja w kierunku prostego układu"
+        },
+        {
+          "id": "r3",
+          "pairId": "a",
+          "text": "Wiązania wodorowe: wilgoć i ciepło"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mapa zabiegów.",
+        "incorrectTitle": "Sprawdź mostki.",
+        "explanation": "H dla modelowania. S dla trwałej i dla chemicznego prostowania — ten sam typ mostków, inny kształt docelowy."
+      }
+    },
+    {
+      "id": "wk7-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Konsultacja",
+      "question": "Ułóż sensowną kolejność decyzji przed zabiegiem zmieniającym kształt.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Ustal, jak długo efekt ma przetrwać mycie"
+        },
+        {
+          "id": "s2",
+          "text": "Wybierz ligę: wiązania H (czasowo) albo S (chemicznie)"
+        },
+        {
+          "id": "s3",
+          "text": "Jeśli chemia — zaplanuj redukcję, kształt i utrwalenie"
+        },
+        {
+          "id": "s4",
+          "text": "Uczciwie opisz klientce, czego się spodziewać po umyciu głowy"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Konsultacja jak trzeba.",
+        "incorrectTitle": "Inna kolejność.",
+        "explanation": "Najpierw oczekiwanie wobec trwałości, potem mechanizm, potem proces, na końcu komunikat. Bez tego łatwo o obiecaną „trwałą z wałków”."
+      }
+    },
+    {
+      "id": "wk7-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Synteza",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Zmiana kształtu",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Wilgoć i ciepło przy modelowaniu dają czasową zmianę wiązań wodorowych"
+        },
+        {
+          "id": "s2",
+          "text": "Trwała opiera się o przekształcenie wiązań siarkowych i utrwalenie nowego kształtu"
+        },
+        {
+          "id": "s3",
+          "text": "Każde ułożenie szczotką na sucho bez wilgoci i ciepła na stałe przebudowuje mostki siarczkowe jak pełna trwała"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł domknięty.",
+        "incorrectTitle": "Znajdź przesadę.",
+        "explanation": "Nie każde ułożenie = trwała. Mostki siarczkowe rusza chemia (reduktor + utrwalenie). Modelowanie to liga wiązań wodorowych."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Wybierasz świadomie: czasowo albo chemicznie",
+    "subtitle": "Wiesz, o co pytać, zanim weźmiesz wałki albo płyn do trwałej.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej w kursie: procedura trwałej w praktyce albo teoria koloru — zależnie od mapy Akademii."
+    }
+  }
+}

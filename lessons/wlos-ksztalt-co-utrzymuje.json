@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "id": "wlos-ksztalt-co-utrzymuje",
+  "title": "Co utrzymuje kształt włosa?",
+  "category": "Włos, wiązania i zmiana kształtu",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka wraca po tygodniu: „Wczoraj miałam piękne fale, a po umyciu głowy zniknęły. Czy włos w ogóle potrafi utrzymać kształt?” Dziś szukasz odpowiedzi we włosie — nie w półce z lakierami.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Kształt siedzi w strukturze",
+      "text": "Keratynę znasz jako rusztowanie włosa. Rusztowanie trzyma kształt dzięki połączeniom wewnątrz struktury — nazywamy je wiązaniami. Różne wiązania reagują na różne rzeczy: wodę, ciepło albo chemię.",
+      "note": "Na razie nie rozstrzygamy jeszcze, które wiązanie odpowiada za trwałą ondulację — do tego dojdziesz w kolejnych lekcjach.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-fibrous-keratin.png",
+      "imageAlt": "Przypomnienie: spirale peptydowe tworzą keratynę włóknistą — rusztowanie włosa.",
+      "imageCaption": "Keratyna buduje włókna. Kształt zależy od tego, jak te włókna są powiązane."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "wk1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Obserwacja",
+      "question": "Klientka mówi, że fale zrobione w salonie zniknęły po umyciu głowy. Co to sugeruje o utrzymaniu kształtu?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Kształt fryzury zawsze zależy wyłącznie od lakieru na powierzchni"
+        },
+        {
+          "id": "b",
+          "text": "We włosie musiało dojść do zmiany, która nie przetrwała kontaktu z wodą"
+        },
+        {
+          "id": "c",
+          "text": "Keratyna rozpuszcza się w wodzie przy każdym myciu"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobry trop.",
+        "incorrectTitle": "Spójrz jeszcze raz.",
+        "explanation": "Skoro mycie znosi efekt, chodzi o zmianę we włosie wrażliwą na wodę — nie o „zniknięcie keratyny” i nie o sam lakier. W kolejnych krokach zobaczysz, co dokładnie to utrzymuje."
+      }
+    },
+    {
+      "id": "wk1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Mit",
+      "question": "Kształt włosa utrzymuje wyłącznie to, co nałożysz na powierzchnię — wewnątrz włosa nic nie „trzyma” ułożenia.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": false,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To mit.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
+        "explanation": "Keratyna tworzy rusztowanie, a połączenia w tej strukturze — wiązania — decydują, czy kształt zostanie. Preparaty powierzchniowe pomagają, ale nie zastępują tego, co dzieje się w strukturze."
+      }
+    },
+    {
+      "id": "wk1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Co do czego?",
+      "question": "Dopasuj sytuację do tego, czego dotyczy.",
+      "leftTitle": "Sytuacja",
+      "rightTitle": "Znaczenie",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Fale znikają po umyciu"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Keratyna we włosie"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Lakier na gotowej fryzurze"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Rusztowanie białkowe włókien"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Zmiana we włosie wrażliwa na wodę"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Utrwalenie powierzchniowe ułożenia"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Role rozdzielone.",
+        "incorrectTitle": "Sprawdź pary.",
+        "explanation": "Keratyna to budulec. Znikające fale wskazują na zmianę we włosie. Lakier działa na powierzchni — to inna rola niż wiązania w strukturze."
+      }
+    },
+    {
+      "id": "wk1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Salon",
+      "question": "Jak krótko wyjaśnisz klientce, dlaczego rozmawiacie o „tym, co wewnątrz włosa”, a nie tylko o kosmetykach do stylizacji?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bo kolor farby siedzi w wiązaniach i zawsze zmywa się wodą"
+        },
+        {
+          "id": "b",
+          "text": "Bo to wiązania w strukturze keratyny utrzymują kształt — kosmetyk tylko wspiera efekt"
+        },
+        {
+          "id": "c",
+          "text": "Bo rdzeń włosa magazynuje lakier na wiele myć"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Jasny komunikat.",
+        "incorrectTitle": "Inaczej.",
+        "explanation": "Klientce mówisz prosto: kształt trzyma struktura włosa. W kolejnych lekcjach zobaczysz, że różne wiązania reagują inaczej — stąd różne zabiegi."
+      }
+    },
+    {
+      "id": "wk1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Znajdź błąd",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Kształt włosa",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Keratyna buduje rusztowanie włókien we włosie"
+        },
+        {
+          "id": "s2",
+          "text": "Wiązania w strukturze keratyny mają znaczenie dla utrzymania kształtu"
+        },
+        {
+          "id": "s3",
+          "text": "Po każdym umyciu keratyna znika z włosa i trzeba ją wbudować od zera lakierem"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Błąd wyłapany.",
+        "incorrectTitle": "Jeszcze raz.",
+        "explanation": "Keratyna nie „znika przy myciu”. Mycie może znieść czasową zmianę kształtu — ale to temat wiązań wrażliwych na wodę, nie utraty całego rusztowania."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Kształt siedzi w strukturze włosa",
+    "subtitle": "Wiesz, że o kształcie decydują wiązania w keratynie — nie sam lakier.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Które wiązania reagują na wilgoć i ciepło przy modelowaniu?"
+    }
+  }
+}
