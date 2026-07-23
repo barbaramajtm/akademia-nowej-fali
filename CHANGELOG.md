@@ -2,6 +2,15 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-23 — Gablotka: błyszczące odznaki-klejnoty
+
+### Zmieniono
+- Symbole odznak: kryształowe oko, złote nożyczki, diamenty, medal, fala, kropla itd.
+- Większe „klejnoty” na kartach + lekki blask przy zdobytych
+- Unikalne id gradientów SVG przy renderze (bez kolizji na liście)
+
+---
+
 ## 2026-07-23 — Profil: logo na środku, bez nachodzenia na oko
 
 ### Zmieniono
