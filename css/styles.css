@@ -49,6 +49,8 @@
   --plum-tint:#F8D6E6;
   --red-tint:#F8D0E0;
   --gold-tint:#FFE9A0;
+  --brand-gold:#C8A880;
+  --brand-brown:#4A3226;
   --pink-soft:var(--color-pink-soft);
   --orange:var(--color-orange);
   --yellow:var(--color-mustard);
@@ -133,8 +135,11 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
   display:flex;align-items:center;gap:10px;flex-shrink:0;
   margin-top:4px;margin-right:108px;
 }
-.greet .hello{font-family:'Poppins';font-weight:700;font-size:26px;color:var(--navy);line-height:1.08;letter-spacing:-.02em;}
-.greet .hello-heart{color:var(--coral);font-weight:700;margin-left:2px;}
+.greet .hello{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:34px;
+  color:var(--brand-brown);line-height:1.08;letter-spacing:.01em;
+}
+.greet .hello-heart{color:var(--brand-gold);font-weight:700;margin-left:4px;}
 .greet .sub{font-size:14px;color:var(--ink-muted);margin-top:5px;font-weight:500;}
 .kosmyk-pill{display:flex;align-items:center;gap:7px;background:var(--card);border:1.5px solid rgba(255,71,148,.35);padding:9px 14px 9px 11px;border-radius:22px;box-shadow:var(--shadow-soft);}
 .kosmyk-pill .num{font-family:'Poppins';font-weight:700;font-size:16px;color:var(--pink-hot);}
