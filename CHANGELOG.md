@@ -2,6 +2,19 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-23 — Moduł: oksydant — proporcje i mieszanie
+
+### Dodano
+- 5 lekcji: `oksydant-proporcja-11-5`, `oksydant-gramy-szybko`, `oksydant-polka-stezen`, `oksydant-mieszanie-7`, `oksydant-sprawdzian`
+- Docs: `OKSYDANT_PROPORCJE_{AUDIT,GRAPHICS,SCENARIOS,SOURCES}.md`
+- Odznaka `modul-oksydant-proporcje` + motyw UI
+
+### Zmieniono
+- `LessonsModuleOrder`: po `ph`, przed `numeracja-farb`
+- Odblokowanie N1 po sprawdzianie oksydantu
+
+---
+
 ## 2026-07-23 — Gablotka: błyszczące odznaki-klejnoty
 
 ### Zmieniono

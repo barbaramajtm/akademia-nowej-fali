@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "oksydant-gramy-szybko",
+  "title": "Szybkie gramy: 15, 20, 25, 35",
+  "category": "Oksydant — proporcje i mieszanie",
+  "levelLabel": "Ćwiczenia",
+  "intro": {
+    "narratorText": "Stopień: stół, waga, tubka. Masz wyrobić refleks: farba × 1,5 = oksydant. Ćwiczymy typowe porcje: 15, 20, 25 i 35 g.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "ox2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · 20 g",
+      "question": "Bierzesz 20 g farby w proporcji 1:1,5. Ile oksydantu?",
+      "options": [
+        {
+          "id": "a",
+          "text": "20 g"
+        },
+        {
+          "id": "b",
+          "text": "30 g"
+        },
+        {
+          "id": "c",
+          "text": "40 g"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "20 × 1,5 = 30.",
+        "incorrectTitle": "Półtora raza.",
+        "explanation": "20 + połowa z 20 (10) = 30 g oksydantu."
+      }
+    },
+    {
+      "id": "ox2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · 15 g",
+      "question": "Przy 15 g farby i 1:1,5 potrzebujesz 22,5 g oksydantu.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "15 × 1,5 = 22,5.",
+        "incorrectTitle": "Policz jeszcze.",
+        "explanation": "15 + 7,5 = 22,5 g. Połówki grama na wadze — normalna sprawa przy 1:1,5."
+      }
+    },
+    {
+      "id": "ox2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Tablica szybkiego szacowania",
+      "question": "Dopasuj gramy farby do oksydantu (1:1,5).",
+      "leftTitle": "Farba",
+      "rightTitle": "Oksydant",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "20 g farby"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "25 g farby"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "35 g farby"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "37,5 g oksydantu"
+        },
+        {
+          "id": "r2",
+          "pairId": "c",
+          "text": "52,5 g oksydantu"
+        },
+        {
+          "id": "r3",
+          "pairId": "a",
+          "text": "30 g oksydantu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tablica w głowie.",
+        "incorrectTitle": "× 1,5.",
+        "explanation": "20→30, 25→37,5, 35→52,5. Im częściej liczysz, tym szybciej szacujesz bez kalkulatora."
+      }
+    },
+    {
+      "id": "ox2-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Od najmniejszej porcji oksy",
+      "question": "Ułóż porcje oksydantu (przy 1:1,5) od najmniejszej do największej.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Oksydant do 15 g farby (22,5 g)"
+        },
+        {
+          "id": "s2",
+          "text": "Oksydant do 20 g farby (30 g)"
+        },
+        {
+          "id": "s3",
+          "text": "Oksydant do 25 g farby (37,5 g)"
+        },
+        {
+          "id": "s4",
+          "text": "Oksydant do 35 g farby (52,5 g)"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Rosną z farbą.",
+        "incorrectTitle": "Więcej farby → więcej oksy.",
+        "explanation": "Przy stałej proporcji większa waga farby zawsze ciągnie większą wagę oksydantu."
+      }
+    },
+    {
+      "id": "ox2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit przy wadze",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Szybkie gramy",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "25 g farby przy 1:1,5 → 37,5 g oksydantu"
+        },
+        {
+          "id": "s2",
+          "text": "35 g farby przy 1:1,5 → 52,5 g oksydantu"
+        },
+        {
+          "id": "s3",
+          "text": "Przy 1:1,5 gramy oksydantu zawsze równają się gramom farby"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To byłoby 1:1.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Równe gramy farby i oksydantu to proporcja 1:1. Przy 1:1,5 oksydantu jest zawsze więcej."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Gramy × 1,5 — w refleksie",
+    "subtitle": "15→22,5 · 20→30 · 25→37,5 · 35→52,5",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej: półka stężeń 1,5% · 3% · 6% · 9% · 12%."
+    }
+  }
+}

@@ -566,7 +566,7 @@ function renderModuleHero(moduleId, section){
     progLabel.textContent = progress.completed + ' / ' + progress.total + ' lekcji w module';
   }
   if (hero){
-    hero.classList.toggle('continue-card--ph', moduleId === 'ph');
+    hero.classList.toggle('continue-card--ph', moduleId === 'ph' || moduleId === 'oksydant-proporcje');
     hero.classList.toggle('continue-card--hair', moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt' || moduleId === 'wlos-teoria-koloru' || moduleId === 'trwala-procedura' || moduleId === 'bhp-higiena-salonu' || moduleId === 'strzyzenie-narzedzia' || moduleId === 'prostowanie-wlosow' || moduleId === 'joico-kpak' || moduleId === 'balejaz');
     hero.classList.toggle('continue-card--numeracja', moduleId === 'numeracja-farb');
   }

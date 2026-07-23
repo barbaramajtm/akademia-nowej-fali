@@ -114,13 +114,70 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: pH produktów zakwaszających'
   },
   {
+    id: 'oksydant-proporcja-11-5',
+    moduleId: 'oksydant-proporcje',
+    title: 'Proporcja 1:1,5 — farba do oksydantu',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'ph-podsumowanie-modulu',
+    lockedReason: 'Najpierw ukończ: Podsumowanie modułu pH'
+  },
+  {
+    id: 'oksydant-gramy-szybko',
+    moduleId: 'oksydant-proporcje',
+    title: 'Szybkie gramy: 15, 20, 25, 35',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Ćwiczenia',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'oksydant-proporcja-11-5',
+    lockedReason: 'Najpierw ukończ: Proporcja 1:1,5 — farba do oksydantu'
+  },
+  {
+    id: 'oksydant-polka-stezen',
+    moduleId: 'oksydant-proporcje',
+    title: 'Półka stężeń: 1,5% · 3% · 6% · 9% · 12%',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'oksydant-gramy-szybko',
+    lockedReason: 'Najpierw ukończ: Szybkie gramy: 15, 20, 25, 35'
+  },
+  {
+    id: 'oksydant-mieszanie-7',
+    moduleId: 'oksydant-proporcje',
+    title: 'Jak zrobić 7% z 6% i 9%',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Ćwiczenia',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'oksydant-polka-stezen',
+    lockedReason: 'Najpierw ukończ: Półka stężeń: 1,5% · 3% · 6% · 9% · 12%'
+  },
+  {
+    id: 'oksydant-sprawdzian',
+    moduleId: 'oksydant-proporcje',
+    title: 'Sprawdzian: szybkie szacowanie',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Sprawdzian',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'oksydant-mieszanie-7',
+    lockedReason: 'Najpierw ukończ: Jak zrobić 7% z 6% i 9%'
+  },
+  {
     id: 'lesson-n1-numer-farby',
     moduleId: 'numeracja-farb',
     title: 'Co widać w numerze farby',
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false
+    locked: false,
+    requiresLessonId: 'oksydant-sprawdzian',
+    lockedReason: 'Najpierw ukończ: Sprawdzian: szybkie szacowanie'
   },
   {
     id: 'lesson-n2-liczba-przed-separatorem',
@@ -922,7 +979,7 @@ window.LessonsCatalog = [
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'joico-kpak', 'balejaz'];
+window.LessonsModuleOrder = ['ph', 'oksydant-proporcje', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'joico-kpak', 'balejaz'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];

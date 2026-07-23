@@ -293,6 +293,19 @@ var BADGE_CATALOG = [
     }
   },
   {
+    id: 'modul-oksydant-proporcje',
+    collectionId: 'moduly',
+    name: 'Oksydant w gramach',
+    description: '1:1,5, szybkie gramy i składanie stężeń z półki — liczysz jak na stanowisku.',
+    conditionLabel: 'Ukończ wszystkie lekcje oksydantu (proporcje i mieszanie)',
+    symbol: 'drop',
+    accent: 'coral',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['oksydant-proporcje']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['oksydant-proporcje'] || { current: 0, goal: 1 };
+    }
+  },
+  {
     id: 'modul-wlos',
     collectionId: 'moduly',
     name: 'Budowa włosa',
