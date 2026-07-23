@@ -50,11 +50,13 @@ function renderHomeLessons(moduleId, host){
 
   entries.forEach(function(entry){
     var status = helpers ? helpers.getStatus(entry) : 'locked';
+    /* W adminie każda lekcja jest otwieralna — nawet gdy status lokalnie mówi „locked”. */
+    if (adminBrowse && status === 'locked') status = 'available';
     var tile = document.createElement('div');
     tile.className = 'mission lesson-tile';
     if (status === 'completed') tile.classList.add('is-completed');
     if (status === 'locked') tile.classList.add('is-locked');
-    if (status === 'locked' && adminBrowse) tile.classList.add('is-admin-unlock');
+    if (adminBrowse && status !== 'completed') tile.classList.add('is-admin-unlock');
 
     if (status === 'locked' && !adminBrowse){
       tile.setAttribute('role', 'group');
@@ -85,41 +87,6 @@ function renderHomeLessons(moduleId, host){
       return;
     }
 
-    if (status === 'locked' && adminBrowse){
-      var illA = document.createElement('div');
-      illA.className = 'ill';
-      illA.innerHTML = '<svg width="26" height="26" viewBox="0 0 26 26"><rect x="5" y="11" width="16" height="12" rx="2" fill="none" stroke="#1E2A44" stroke-width="2"/><path d="M9 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="#1E2A44" stroke-width="2"/></svg>';
-
-      var txtA = document.createElement('div');
-      txtA.className = 'txt';
-      var kA = document.createElement('div');
-      kA.className = 'k';
-      kA.textContent = 'QA · zablokowana';
-      var tA = document.createElement('div');
-      tA.className = 't';
-      tA.textContent = entry.title;
-      var rA = document.createElement('div');
-      rA.className = 'r';
-      rA.textContent = 'Podgląd administratora';
-      txtA.appendChild(kA);
-      txtA.appendChild(tA);
-      txtA.appendChild(rA);
-
-      var btnA = document.createElement('button');
-      btnA.type = 'button';
-      btnA.className = 'go btn-start';
-      btnA.textContent = 'Otwórz';
-      btnA.addEventListener('click', function(){
-        window.AppShell.startLesson(entry.id);
-      });
-
-      tile.appendChild(illA);
-      tile.appendChild(txtA);
-      tile.appendChild(btnA);
-      host.appendChild(tile);
-      return;
-    }
-
     var ill = document.createElement('div');
     ill.className = 'ill';
     if (status === 'completed'){
@@ -133,6 +100,7 @@ function renderHomeLessons(moduleId, host){
     var k = document.createElement('div');
     k.className = 'k';
     if (status === 'completed') k.textContent = 'Ukończona';
+    else if (adminBrowse) k.textContent = 'QA · podgląd';
     else k.textContent = 'Dostępna';
 
     var t = document.createElement('div');
@@ -143,6 +111,8 @@ function renderHomeLessons(moduleId, host){
     r.className = 'r';
     if (status === 'completed'){
       r.textContent = entry.rewardLabel + ' · ukończono';
+    } else if (adminBrowse){
+      r.textContent = 'Podgląd administratora';
     } else {
       r.textContent = entry.rewardLabel + ' · ok. 4 min';
     }
@@ -161,7 +131,7 @@ function renderHomeLessons(moduleId, host){
         window.AppShell.startLesson(entry.id);
       });
     } else if (status === 'available'){
-      btn.textContent = 'Zacznij';
+      btn.textContent = adminBrowse ? 'Otwórz' : 'Zacznij';
       btn.classList.add('btn-start');
       btn.addEventListener('click', function(){
         window.AppShell.startLesson(entry.id);
@@ -1366,6 +1336,8 @@ function bindChrome(){
   syncProfileAccountUi();
   document.addEventListener('anf-admin-change', function(){
     syncProfileAdminUi();
+    /* Po haśle / włączeniu admina odśwież Home — inaczej kafelki zostają „zablokowane”. */
+    refreshUI();
   });
   if (window.AnfPushUi && window.AnfPushUi.bind){
     window.AnfPushUi.bind();
@@ -1510,6 +1482,7 @@ window.AppShell = {
 
   refreshAdminChrome: function(){
     syncProfileAdminUi();
+    refreshUI();
   },
 
   showAuth: function(){

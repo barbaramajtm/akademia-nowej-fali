@@ -66,6 +66,9 @@ function activateAdminUi(){
   document.documentElement.classList.add('is-admin');
   renderAdminBar();
   notifyAdminUiChanged();
+  if (window.AppShell && typeof window.AppShell.refreshAdminChrome === 'function'){
+    try { window.AppShell.refreshAdminChrome(); } catch (e){ /* ignore */ }
+  }
 }
 
 function deactivateAdminUi(){

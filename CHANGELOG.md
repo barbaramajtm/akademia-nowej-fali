@@ -2,6 +2,15 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-23 — Admin: wszystkie lekcje i pytania odblokowane
+
+### Naprawiono
+- Po haśle / włączeniu trybu administratora lista lekcji na Home odświeża się od razu (wcześniej kafelki zostawały „zablokowane”)
+- W trybie admina błędna odpowiedź nie blokuje przejścia — przycisk „Następne pytanie” zamiast wymuszonej poprawki
+- Kafelki QA oznaczone jako podgląd, każda lekcja otwieralna
+
+---
+
 ## 2026-07-23 — Moduł JOICO K-PAK (regeneracja)
 
 ### Dodano
