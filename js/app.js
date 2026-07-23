@@ -1200,7 +1200,14 @@ function openFeedback(task, ok, firstTryOk){
   dom.fb.dataset.firstTry = awardEligible ? '1' : '0';
   dom.fb.dataset.bonus = bonusNow ? '1' : '0';
   dom.fb.dataset.reward = String(task.reward || 0);
-  dom.fnext.textContent = ok ? CONFIG.ui.nextLabel : 'Spróbuj ponownie';
+  if (ok){
+    dom.fnext.textContent = CONFIG.ui.nextLabel;
+  } else if (isAdminMode()){
+    /* Admin: nie blokuj na błędzie — można iść dalej bez poprawki. */
+    dom.fnext.textContent = 'Następne pytanie';
+  } else {
+    dom.fnext.textContent = 'Spróbuj ponownie';
+  }
   if (isAdminMode() && document.getElementById('adminPanel')){
     document.getElementById('adminPanel').classList.add('is-collapsed');
   }
@@ -1208,9 +1215,37 @@ function openFeedback(task, ok, firstTryOk){
 }
 
 function advance(){
-  /* błędna odpowiedź: pozwól poprawić, bez kasowania błędu */
+  /* błędna odpowiedź: uczennica poprawia; admin może iść dalej od razu */
   if (dom.fb.dataset.ok === '0'){
     dom.fb.classList.remove('show');
+    if (isAdminMode()){
+      state.answers.push({
+        taskId: state.lesson.tasks[state.currentTaskIndex].id,
+        correct: false,
+        skipped: true
+      });
+      const nextIndex = state.currentTaskIndex + 1;
+      const seg = dom.progress.children[state.currentTaskIndex];
+      if (seg) seg.firstElementChild.style.width = '100%';
+      setTimeout(function(){
+        try {
+          if (!state.lesson || !state.lesson.tasks){
+            showLessonError('Lekcja nie jest wczytana.', state.lessonId);
+            return;
+          }
+          if (nextIndex >= state.lesson.tasks.length){
+            setAdminScreen('done', -1);
+            showDone();
+          } else {
+            setAdminScreen('task', nextIndex);
+            showTask(nextIndex);
+          }
+        } catch (e){
+          showLessonError(e.message || String(e), state.lessonId);
+        }
+      }, 200);
+      return;
+    }
     unlockTaskForRetry();
     return;
   }
