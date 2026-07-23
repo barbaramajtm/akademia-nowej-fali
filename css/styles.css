@@ -441,21 +441,27 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
   position:relative;overflow:hidden;padding-bottom:8px;border-bottom:1px solid var(--line);
   background:linear-gradient(160deg,var(--peach) 0%,var(--pink-soft) 48%,var(--cream) 100%);
 }
+/* Logo wyśrodkowane — osobna warstwa nad okiem, bez nachodzenia */
 .profile-hero-logo{
-  position:absolute;top:44px;right:18px;width:56px;z-index:1;pointer-events:none;
+  position:relative;z-index:2;
+  width:72px;margin:48px auto 4px;pointer-events:none;
 }
 .profile-hero-logo img{width:100%;height:auto;display:block;}
-.profile-hero-eye{position:absolute;top:28px;right:-8px;width:96px;opacity:.28;pointer-events:none;}
+/* Oko jako akcent z prawej, poniżej logo (jak na Home) */
+.profile-hero-eye{
+  position:absolute;top:118px;right:-12px;width:88px;opacity:.28;pointer-events:none;z-index:0;
+}
 .profile-hero-eye img,.profile-hero-eye svg{width:100%;height:auto;display:block;}
 .profile-hero-arc{position:absolute;bottom:-36px;left:-10%;width:120%;height:72px;background:var(--bg);border-radius:50% 50% 0 0;}
 .profile-hero::before{
   content:'';position:absolute;width:120px;height:120px;border-radius:50%;
   top:-30px;left:-40px;background:var(--mustard);opacity:.22;pointer-events:none;
 }
-.profile-head{position:relative;z-index:1;padding-right:78px;}
+.profile-head{position:relative;z-index:1;padding-top:8px;padding-right:20px;text-align:center;}
 .subpage-head{padding:52px 20px 16px;position:relative;}
 .subpage-head h2{font-family:'Poppins';font-weight:700;font-size:26px;color:var(--navy);letter-spacing:-.02em;}
 .subpage-head p{font-size:14px;color:var(--ink-muted);margin-top:4px;font-weight:500;}
+.profile-head.subpage-head{padding-top:8px;}
 
 .profile-card{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius-lg);padding:26px 20px;text-align:center;margin-bottom:18px;box-shadow:var(--shadow-card);}
 .profile-card--main{border-color:rgba(217,123,148,.28);background:linear-gradient(180deg,#FFFCFA 0%,#FFF3EE 100%);}

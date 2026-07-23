@@ -2,6 +2,15 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-23 — Profil: logo na środku, bez nachodzenia na oko
+
+### Zmieniono
+- Logo Nowej Fali wyśrodkowane w hero profilu
+- Motyw oka przesunięty w prawo / niżej (jak na Home), żeby nie nachodził na logo
+- Tytuł „Profil” wyśrodkowany pod logo
+
+---
+
 ## 2026-07-23 — Admin: zamknięcie listy kont
 
 ### Naprawiono
