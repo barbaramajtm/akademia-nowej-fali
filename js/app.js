@@ -1011,12 +1011,40 @@ function renderMatching(task, ctx){
   };
 }
 
+function shuffleOrderingSteps(steps, correctOrder){
+  if (!Array.isArray(steps) || steps.length < 2) return Array.isArray(steps) ? steps.slice() : [];
+  const correct = Array.isArray(correctOrder) ? correctOrder : [];
+  function sameAsCorrect(list){
+    if (list.length !== correct.length) return false;
+    for (let i = 0; i < list.length; i++){
+      if (list[i].id !== correct[i]) return false;
+    }
+    return true;
+  }
+  let out = steps.slice();
+  for (let attempt = 0; attempt < 16; attempt++){
+    for (let i = out.length - 1; i > 0; i--){
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = out[i];
+      out[i] = out[j];
+      out[j] = tmp;
+    }
+    if (!sameAsCorrect(out)) return out;
+  }
+  /* Awaria losowania: obróć o 1, żeby nie zostawić gotowej ścieżki. */
+  out = steps.slice();
+  out.push(out.shift());
+  return out;
+}
+
 function renderOrdering(task, ctx){
   const wrap = el('div');
   const list = el('div', 'order');
   let nextPos = 0;
   const stepsById = {};
-  const rows = task.steps.map(s => {
+  /* Wyświetlaj w kolejności innej niż poprawna — inaczej „ułóż” nie ma wyzwania. */
+  const displaySteps = shuffleOrderingSteps(task.steps, task.correctOrder);
+  const rows = displaySteps.map(s => {
     const row = el('button', 'ostep');
     row.type = 'button'; row.dataset.id = s.id;
     row.appendChild(el('span', 'n', '·'));
