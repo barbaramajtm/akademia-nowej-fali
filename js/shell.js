@@ -195,7 +195,11 @@ function findFirstAvailableLessonId(){
 
 function badgeSymbolHtml(symbolKey){
   var map = window.BadgesCatalog && window.BadgesCatalog.SYMBOLS;
-  return (map && map[symbolKey]) || (map && map.medal) || '';
+  var tpl = (map && map[symbolKey]) || (map && map.medal) || '';
+  if (!tpl) return '';
+  /* Unikalne id gradientów — wiele odznak na jednej stronie. */
+  var uid = 'bs' + Math.random().toString(36).slice(2, 9);
+  return String(tpl).split('{{UID}}').join(uid);
 }
 
 function openBadgeModal(view){

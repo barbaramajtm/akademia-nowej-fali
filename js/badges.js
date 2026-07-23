@@ -1,20 +1,175 @@
 /* ============================================================
    Akademia Nowej Fali — katalog odznak i kolekcji (Gablotka)
    Jedno źródło definicji. Przyznawanie przez AppState / BadgesAPI.
+   Symbole: {{UID}} zamieniane przy renderze (unikalne gradienty).
    ============================================================ */
 'use strict';
 
 var BADGE_SYMBOLS = {
-  eye: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><ellipse cx="24" cy="24" rx="18" ry="11" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="6" fill="currentColor"/><circle cx="26" cy="22" r="2" fill="#FFFBF5" opacity=".7"/></svg>',
-  comb: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M12 8v32M18 8v32M24 8v32M30 8v32M36 8v32" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10 8h28" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>',
-  scissors: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="14" cy="34" r="5" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="34" r="5" stroke="currentColor" stroke-width="2"/><path d="M18 31 L38 10M30 31 L10 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>',
-  strand: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 6 C18 14 18 22 24 30 C30 38 28 42 24 44" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/><path d="M28 8 C24 16 26 24 30 32" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".55"/></svg>',
-  star: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 6l4.2 12.8H42l-10.5 7.8 4 12.8L24 32.4 12.5 39.4l4-12.8L6 18.8h13.8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/></svg>',
-  drop: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 6 C24 6 10 22 10 30 a14 14 0 0 0 28 0 C38 22 24 6 24 6z" stroke="currentColor" stroke-width="2" fill="none"/></svg>',
-  spark: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 4v12M24 32v12M4 24h12M32 24h12M10 10l8 8M30 30l8 8M38 10l-8 8M18 30l-8 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>',
-  medal: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="28" r="12" stroke="currentColor" stroke-width="2"/><path d="M16 8l8 8 8-8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="28" r="4" fill="currentColor"/></svg>',
-  mirror: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><ellipse cx="24" cy="22" rx="12" ry="16" stroke="currentColor" stroke-width="2"/><path d="M14 38h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 16c2-3 8-3 10 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".5"/></svg>',
-  wave: '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M6 28 Q14 16 22 28 T38 28 T46 28" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/><path d="M6 36 Q14 28 22 36 T38 36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".45"/></svg>'
+  /* Kryształ w kształcie oka */
+  eye:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-a" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FFE8F0"/><stop offset=".45" stop-color="#E86A9A"/><stop offset="1" stop-color="#9B2D5C"/>' +
+        '</linearGradient>' +
+        '<linearGradient id="{{UID}}-b" x1="20" y1="20" x2="44" y2="44" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FFFBF5"/><stop offset="1" stop-color="#F5D0A9"/>' +
+        '</linearGradient>' +
+        '<radialGradient id="{{UID}}-c" cx="38%" cy="35%" r="55%">' +
+          '<stop stop-color="#FFE14A"/><stop offset=".55" stop-color="#F0A018"/><stop offset="1" stop-color="#B86A00"/>' +
+        '</radialGradient>' +
+      '</defs>' +
+      '<path d="M32 8 L52 28 L32 56 L12 28 Z" fill="url(#{{UID}}-a)" stroke="#7A2348" stroke-width="1.2"/>' +
+      '<path d="M32 12 L46 28 L32 48 L18 28 Z" fill="url(#{{UID}}-b)" opacity=".92"/>' +
+      '<ellipse cx="32" cy="30" rx="14" ry="8" fill="#FFFBF5"/>' +
+      '<circle cx="32" cy="30" r="6.5" fill="#E86A9A"/>' +
+      '<circle cx="32" cy="30" r="3.4" fill="url(#{{UID}}-c)"/>' +
+      '<circle cx="34.5" cy="27.8" r="1.5" fill="#FFFBF5" opacity=".95"/>' +
+      '<path d="M32 8 L32 56 M12 28 L52 28" stroke="#FFF6FA" stroke-width="1" opacity=".35"/>' +
+      '<path d="M24 14 L28 18 M40 14 L36 18" stroke="#FFFBF5" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>' +
+    '</svg>',
+
+  /* Błyszczące nożyczki */
+  scissors:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-m" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FFF8E7"/><stop offset=".4" stop-color="#E8C15A"/><stop offset="1" stop-color="#8A6A1E"/>' +
+        '</linearGradient>' +
+        '<linearGradient id="{{UID}}-s" x1="8" y1="40" x2="56" y2="20" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#F7F7F7"/><stop offset=".5" stop-color="#C8CDD6"/><stop offset="1" stop-color="#6E7585"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<circle cx="18" cy="46" r="8" fill="url(#{{UID}}-m)" stroke="#6B5214" stroke-width="1.2"/>' +
+      '<circle cx="18" cy="46" r="3.2" fill="#FFF8E7"/>' +
+      '<circle cx="46" cy="46" r="8" fill="url(#{{UID}}-m)" stroke="#6B5214" stroke-width="1.2"/>' +
+      '<circle cx="46" cy="46" r="3.2" fill="#FFF8E7"/>' +
+      '<path d="M22 40 L48 12" stroke="url(#{{UID}}-s)" stroke-width="5" stroke-linecap="round"/>' +
+      '<path d="M42 40 L16 12" stroke="url(#{{UID}}-s)" stroke-width="5" stroke-linecap="round"/>' +
+      '<path d="M22 40 L48 12M42 40 L16 12" stroke="#FFFBF5" stroke-width="1.4" stroke-linecap="round" opacity=".55"/>' +
+      '<circle cx="32" cy="34" r="2.4" fill="#E8C15A" stroke="#6B5214" stroke-width="1"/>' +
+      '<path d="M20 14 L24 10 M44 14 L40 10" stroke="#FFFBF5" stroke-width="1.8" stroke-linecap="round" opacity=".9"/>' +
+    '</svg>',
+
+  /* Diament / brylant */
+  spark:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-d" x1="14" y1="6" x2="50" y2="58" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FFFFFF"/><stop offset=".35" stop-color="#D9ECFF"/><stop offset=".7" stop-color="#7EB6E8"/><stop offset="1" stop-color="#2F6FA8"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<path d="M32 4 L38 16 L32 20 L26 16 Z" fill="#FFFBF5" opacity=".95"/>' +
+      '<path d="M18 18 L32 8 L46 18 L40 28 L24 28 Z" fill="url(#{{UID}}-d)" stroke="#2F5F8A" stroke-width="1"/>' +
+      '<path d="M24 28 L40 28 L32 56 Z" fill="#5A9FD4" stroke="#2F5F8A" stroke-width="1"/>' +
+      '<path d="M24 28 L32 56 L18 18 Z" fill="#8FC4EE" opacity=".9"/>' +
+      '<path d="M40 28 L32 56 L46 18 Z" fill="#3F7FB8" opacity=".95"/>' +
+      '<path d="M32 8 L32 56 M24 28 L40 28" stroke="#FFFBF5" stroke-width="1" opacity=".45"/>' +
+      '<path d="M12 12 L16 16 M52 12 L48 16 M32 60 L32 56" stroke="#FFFBF5" stroke-width="2" stroke-linecap="round" opacity=".85"/>' +
+    '</svg>',
+
+  /* Złota gwiazda-diament */
+  star:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-g" x1="10" y1="4" x2="54" y2="60" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FFF6C8"/><stop offset=".4" stop-color="#F0C44A"/><stop offset="1" stop-color="#A06A00"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<path d="M32 6 L38.5 24.5 H58 L42.5 36.5 L48.5 56 L32 45 L15.5 56 L21.5 36.5 L6 24.5 H25.5 Z" fill="url(#{{UID}}-g)" stroke="#7A5400" stroke-width="1.2" stroke-linejoin="round"/>' +
+      '<path d="M32 12 L36 24 H46 L38 31 L41 42 L32 35 L23 42 L26 31 L18 24 H28 Z" fill="#FFF8DC" opacity=".55"/>' +
+      '<circle cx="32" cy="30" r="3" fill="#FFFBF5"/>' +
+      '<path d="M32 2 L32 8 M58 30 L52 30" stroke="#FFFBF5" stroke-width="2" stroke-linecap="round" opacity=".8"/>' +
+    '</svg>',
+
+  /* Kryształowa kropla */
+  drop:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-w" x1="18" y1="6" x2="46" y2="58" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FDE2EA"/><stop offset=".4" stop-color="#E86A9A"/><stop offset="1" stop-color="#7A2D55"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<path d="M32 6 C32 6 14 26 14 38 a18 18 0 0 0 36 0 C50 26 32 6 32 6z" fill="url(#{{UID}}-w)" stroke="#6B2448" stroke-width="1.2"/>' +
+      '<path d="M24 22 C26 30 28 36 32 44" stroke="#FFFBF5" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>' +
+      '<circle cx="38" cy="28" r="3.2" fill="#FFFBF5" opacity=".9"/>' +
+      '<path d="M28 10 L32 14 L36 10" stroke="#FFFBF5" stroke-width="1.4" stroke-linecap="round" opacity=".75"/>' +
+    '</svg>',
+
+  /* Diamentowy kosmyk */
+  strand:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-k" x1="16" y1="4" x2="48" y2="60" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FFE0F0"/><stop offset=".5" stop-color="#E86A9A"/><stop offset="1" stop-color="#8B3A62"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<path d="M30 6 C22 16 20 28 28 40 C34 50 30 56 26 58 C36 56 44 46 40 34 C37 24 40 14 46 8 C40 8 34 6 30 6Z" fill="url(#{{UID}}-k)" stroke="#6B2448" stroke-width="1.1"/>' +
+      '<path d="M28 12 C26 22 28 32 34 42" stroke="#FFFBF5" stroke-width="2" stroke-linecap="round" opacity=".5"/>' +
+      '<circle cx="36" cy="18" r="2.4" fill="#FFFBF5" opacity=".9"/>' +
+      '<path d="M18 20 L22 16 M42 48 L46 44" stroke="#FFFBF5" stroke-width="1.6" stroke-linecap="round" opacity=".75"/>' +
+    '</svg>',
+
+  /* Szmaragdowa fala */
+  wave:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-e" x1="6" y1="12" x2="58" y2="52" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#E8F6DE"/><stop offset=".45" stop-color="#8FB86A"/><stop offset="1" stop-color="#3F6B2E"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<path d="M8 34 C16 18 24 18 32 34 C40 50 48 50 56 34" fill="none" stroke="url(#{{UID}}-e)" stroke-width="7" stroke-linecap="round"/>' +
+      '<path d="M8 34 C16 18 24 18 32 34 C40 50 48 50 56 34" fill="none" stroke="#FFFBF5" stroke-width="2" stroke-linecap="round" opacity=".45"/>' +
+      '<path d="M10 44 C18 34 26 34 34 44 C42 54 50 52 56 44" fill="none" stroke="#A6D08A" stroke-width="4" stroke-linecap="round" opacity=".85"/>' +
+      '<circle cx="20" cy="24" r="2.2" fill="#FFFBF5"/><circle cx="44" cy="40" r="1.8" fill="#FFFBF5" opacity=".85"/>' +
+      '<path d="M32 8 L32 14 M50 16 L46 20" stroke="#FFFBF5" stroke-width="1.8" stroke-linecap="round" opacity=".8"/>' +
+    '</svg>',
+
+  /* Złoty grzebień-klejnot */
+  comb:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-c" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FFF4C8"/><stop offset=".5" stop-color="#E0B84A"/><stop offset="1" stop-color="#8A6418"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<rect x="12" y="10" width="40" height="10" rx="4" fill="url(#{{UID}}-c)" stroke="#6B5214" stroke-width="1.1"/>' +
+      '<path d="M16 20 V52 M24 20 V52 M32 20 V52 M40 20 V52 M48 20 V48" stroke="url(#{{UID}}-c)" stroke-width="3.4" stroke-linecap="round"/>' +
+      '<path d="M16 20 V52 M24 20 V52 M32 20 V52 M40 20 V52 M48 20 V48" stroke="#FFF8DC" stroke-width="1" stroke-linecap="round" opacity=".45"/>' +
+      '<circle cx="32" cy="15" r="2.2" fill="#FFFBF5"/>' +
+      '<path d="M20 8 L24 4 M44 8 L40 4" stroke="#FFFBF5" stroke-width="1.6" stroke-linecap="round" opacity=".85"/>' +
+    '</svg>',
+
+  /* Lustrzany kryształ */
+  mirror:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-r" x1="16" y1="6" x2="48" y2="54" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FFFFFF"/><stop offset=".5" stop-color="#D5DDED"/><stop offset="1" stop-color="#6F7C98"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<ellipse cx="32" cy="28" rx="16" ry="20" fill="url(#{{UID}}-r)" stroke="#4A5670" stroke-width="1.3"/>' +
+      '<ellipse cx="32" cy="28" rx="11" ry="14" fill="#EEF3FF" opacity=".75"/>' +
+      '<path d="M26 18 C30 14 38 15 40 22" stroke="#FFFBF5" stroke-width="2.2" stroke-linecap="round" opacity=".9"/>' +
+      '<rect x="22" y="48" width="20" height="6" rx="2" fill="#C5A04A" stroke="#6B5214" stroke-width="1"/>' +
+      '<path d="M18 12 L22 8 M46 12 L42 8" stroke="#FFFBF5" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>' +
+    '</svg>',
+
+  /* Medal z diamentem */
+  medal:
+    '<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<defs>' +
+        '<linearGradient id="{{UID}}-o" x1="14" y1="14" x2="50" y2="58" gradientUnits="userSpaceOnUse">' +
+          '<stop stop-color="#FFE9A0"/><stop offset=".5" stop-color="#E0A820"/><stop offset="1" stop-color="#8A5A00"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<path d="M22 8 L32 18 L42 8" fill="#E86A4A" stroke="#8A2E2E" stroke-width="1"/>' +
+      '<circle cx="32" cy="36" r="16" fill="url(#{{UID}}-o)" stroke="#6B5214" stroke-width="1.3"/>' +
+      '<circle cx="32" cy="36" r="10" fill="#FFF4C8" opacity=".55"/>' +
+      '<path d="M32 26 L35 34 H44 L37 39 L40 48 L32 43 L24 48 L27 39 L20 34 H29 Z" fill="#7EB6E8" stroke="#2F5F8A" stroke-width=".8"/>' +
+      '<circle cx="36" cy="30" r="1.8" fill="#FFFBF5"/>' +
+    '</svg>'
 };
 
 /**
@@ -55,7 +210,7 @@ var BADGE_CATALOG = [
     name: 'Pięć na koncie',
     description: 'Pięć lekcji za sobą. Gablotka zaczyna mieć ciężar.',
     conditionLabel: 'Ukończ 5 lekcji',
-    symbol: 'strand',
+    symbol: 'scissors',
     accent: 'mustard',
     evaluate: function(ctx){ return ctx.completedCount >= 5; },
     progress: function(ctx){ return { current: Math.min(ctx.completedCount, 5), goal: 5 }; }
@@ -88,7 +243,7 @@ var BADGE_CATALOG = [
     name: 'Precyzyjna ręka',
     description: 'Lekcja ukończona bez pomyłki. Salony lubią taką pewność.',
     conditionLabel: 'Ukończ 1 lekcję bez błędu (100%)',
-    symbol: 'scissors',
+    symbol: 'star',
     accent: 'dusty',
     evaluate: function(ctx){ return ctx.perfectLessons >= 1; },
     progress: function(ctx){ return { current: Math.min(ctx.perfectLessons, 1), goal: 1 }; }
@@ -99,7 +254,7 @@ var BADGE_CATALOG = [
     name: 'Bez skazy',
     description: 'Trzy lekcje bezbłędnie. Precyzja przestaje być wyjątkiem.',
     conditionLabel: 'Ukończ 3 lekcje bez błędu',
-    symbol: 'star',
+    symbol: 'medal',
     accent: 'mustard',
     evaluate: function(ctx){ return ctx.perfectLessons >= 3; },
     progress: function(ctx){ return { current: Math.min(ctx.perfectLessons, 3), goal: 3 }; }
