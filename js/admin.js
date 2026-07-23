@@ -80,6 +80,8 @@ function deactivateAdminUi(){
   if (panel && panel.parentNode) panel.parentNode.removeChild(panel);
   var gate = document.getElementById('adminPassGate');
   if (gate && gate.parentNode) gate.parentNode.removeChild(gate);
+  var users = document.getElementById('adminUsersSheet');
+  if (users) users.hidden = true;
   notifyAdminUiChanged();
 }
 

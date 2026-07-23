@@ -2,6 +2,14 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-23 — Admin: zamknięcie listy kont
+
+### Naprawiono
+- Lista „Konta uczennic” była pod paskiem admina (`z-index`) — przycisk Zamknij niełapany
+- Overlay nad paskiem + krzyżyk + „Wróć” + tap w tło / ponowne „Konta” zamyka listę
+
+---
+
 ## 2026-07-23 — Ordering: tasowanie kroków + Joico bez spoilera
 
 ### Naprawiono
