@@ -464,9 +464,9 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
   width:72px;margin:48px auto 4px;pointer-events:none;
 }
 .profile-hero-logo img{width:100%;height:auto;display:block;}
-/* Oko jako akcent z prawej, poniżej logo (jak na Home) */
+/* Oko jako akcent z prawej — wyżej, żeby nie chowało się pod łukiem / overflow */
 .profile-hero-eye{
-  position:absolute;top:118px;right:-12px;width:88px;opacity:.28;pointer-events:none;z-index:0;
+  position:absolute;top:56px;right:-8px;width:88px;opacity:.32;pointer-events:none;z-index:0;
 }
 .profile-hero-eye img,.profile-hero-eye svg{width:100%;height:auto;display:block;}
 .profile-hero-arc{position:absolute;bottom:-36px;left:-10%;width:120%;height:72px;background:var(--bg);border-radius:50% 50% 0 0;}

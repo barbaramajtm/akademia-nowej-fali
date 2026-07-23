@@ -2,6 +2,13 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-23 — Profil: oko wyżej w hero
+
+### Zmieniono
+- Motyw oka na profilu przesunięty w górę (`top: 56px`), żeby nie chował się pod łukiem / `overflow`
+
+---
+
 ## 2026-07-23 — Home: powitanie „Witaj ♥”
 
 ### Zmieniono
