@@ -1223,6 +1223,11 @@ function renderAdminUsersList(){
     sheet.hidden = true;
     return;
   }
+  /* Ponowne „Konta” zamyka listę — szybkie wyjście z paska admina. */
+  if (!sheet.hidden){
+    hideAdminUsersList();
+    return;
+  }
   var users = window.Auth && window.Auth.listUsersForAdmin ? window.Auth.listUsersForAdmin() : [];
   if (!users.length){
     list.innerHTML = '<li><div class="u-name">Brak kont</div><div class="u-meta">Nikt jeszcze nie zarejestrował się na tym urządzeniu.</div></li>';
@@ -1297,6 +1302,16 @@ function bindChrome(){
   var adminUsersClose = document.getElementById('adminUsersClose');
   if (adminUsersClose){
     adminUsersClose.addEventListener('click', hideAdminUsersList);
+  }
+  var adminUsersDone = document.getElementById('adminUsersDone');
+  if (adminUsersDone){
+    adminUsersDone.addEventListener('click', hideAdminUsersList);
+  }
+  var adminUsersSheet = document.getElementById('adminUsersSheet');
+  if (adminUsersSheet){
+    adminUsersSheet.addEventListener('click', function(e){
+      if (e.target === adminUsersSheet) hideAdminUsersList();
+    });
   }
   var resetBtn = document.getElementById('profileResetProgress');
   if (resetBtn){
