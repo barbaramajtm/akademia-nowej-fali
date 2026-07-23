@@ -2,6 +2,14 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-23 — Ordering: tasowanie kroków + Joico bez spoilera
+
+### Naprawiono
+- Zadania `ordering` pokazują kroki w losowej kolejności (nie w gotowej ścieżce poprawnej)
+- `joico-kpak-powtorzenie-2-3`: usunięte numery `1.`/`2.` z etykiet — nie zdradzają kolejności
+
+---
+
 ## 2026-07-23 — Admin: wszystkie lekcje i pytania odblokowane
 
 ### Naprawiono

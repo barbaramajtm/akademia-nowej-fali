@@ -74,27 +74,27 @@
       "steps": [
         {
           "id": "s1",
-          "text": "1. Clarifying — oczyszczanie"
+          "text": "Clarifying — oczyszczanie"
         },
         {
           "id": "s2",
-          "text": "2. Cuticle Sealer — wygładzanie"
+          "text": "Cuticle Sealer — pierwsze wygładzanie"
         },
         {
           "id": "s3",
-          "text": "3. Reconstructor — rekonstrukcja"
+          "text": "Reconstructor — pierwsza rekonstrukcja"
         },
         {
           "id": "s4",
-          "text": "2. Cuticle Sealer — ponownie"
+          "text": "Cuticle Sealer — powtórne wygładzanie"
         },
         {
           "id": "s5",
-          "text": "3. Reconstructor — ponownie"
+          "text": "Reconstructor — powtórna rekonstrukcja"
         },
         {
           "id": "s6",
-          "text": "4. Intense Hydrator — nawilżenie"
+          "text": "Intense Hydrator — nawilżenie"
         }
       ],
       "correctOrder": [
