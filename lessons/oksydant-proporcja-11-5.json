@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "oksydant-proporcja-11-5",
+  "title": "Proporcja 1:1,5 — farba do oksydantu",
+  "category": "Oksydant — proporcje i mieszanie",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Na stanowisku nie zgadujesz „na oko”. Proporcja 1:1,5 mówi: na 1 część farby dajesz 1,5 części oksydantu. Dziś ogarniasz sens tej miary.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "ox1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Co oznacza zapis",
+      "question": "Proporcja 1:1,5 (farba : oksydant) oznacza:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Na 1 część farby dajesz 1,5 części oksydantu"
+        },
+        {
+          "id": "b",
+          "text": "Na 1,5 części farby dajesz 1 część oksydantu"
+        },
+        {
+          "id": "c",
+          "text": "Zawsze dokładnie 1,5% oksydantu, niezależnie od gramów farby"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Farba : oksydant.",
+        "incorrectTitle": "Kolejność.",
+        "explanation": "Pierwsza liczba to farba, druga — oksydant. 1:1,5 = półtora raza więcej oksydantu niż farby."
+      }
+    },
+    {
+      "id": "ox1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Szybka reguła",
+      "question": "Przy 1:1,5 oksydantu wychodzi półtora raza więcej gramów niż farby.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Półtora raza.",
+        "incorrectTitle": "Przelicz.",
+        "explanation": "1 × farba + 0,5 × farba = 1,5 × farba. Stąd „półtora raza więcej oksydantu”."
+      }
+    },
+    {
+      "id": "ox1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Co z czym",
+      "question": "Dopasuj.",
+      "leftTitle": "Element",
+      "rightTitle": "Rola w 1:1,5",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Liczba przed dwukropkiem"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Liczba po dwukropku"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Przeliczenie na stanowisku"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Części oksydantu (tu: 1,5)"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Części farby (tu: 1)"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Gramy farby × 1,5 = gramy oksydantu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Mapa proporcji.",
+        "incorrectTitle": "Ułóż role.",
+        "explanation": "1 = farba, 1,5 = oksydant. W gramach: bierziesz wagę farby i mnożysz przez 1,5."
+      }
+    },
+    {
+      "id": "ox1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Pułapka",
+      "question": "Klientka: „Daj więcej oksydantu, będzie jaśniej”. Przy ustalonej proporcji 1:1,5 co robisz?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dolewasz oksydantu „na czuja”, żeby było jaśniej"
+        },
+        {
+          "id": "b",
+          "text": "Trzymasz 1:1,5; jasność zmieniasz stężeniem (%) i diagnostyką — nie rozwalaniem proporcji"
+        },
+        {
+          "id": "c",
+          "text": "Zamieniasz farbę na wodę, bo proporcja i tak nic nie znaczy"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Proporcja ≠ stężenie.",
+        "incorrectTitle": "Rozdziel pojęcia.",
+        "explanation": "1:1,5 to stosunek ilości. Siłę utleniania bierzesz ze stężenia (np. 6% vs 9%), nie z dolewania „więcej kremu” poza proporcją."
+      }
+    },
+    {
+      "id": "ox1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Proporcja 1:1,5",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "1:1,5 oznacza więcej oksydantu niż farby"
+        },
+        {
+          "id": "s2",
+          "text": "Gramy oksydantu = gramy farby × 1,5"
+        },
+        {
+          "id": "s3",
+          "text": "1:1,5 zawsze znaczy oksydant 1,5% — niezależnie od tubki 3% / 6% / 9%"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Proporcja ≠ procent.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "1:1,5 to stosunek ilości. Procent (1,5% / 3% / 6%…) to osobna decyzja o stężeniu na półce."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "1:1,5 ma sens",
+    "subtitle": "Farba : oksydant — półtora raza oksydantu względem farby.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej: szybkie gramy — 15, 20, 25, 35 g farby."
+    }
+  }
+}

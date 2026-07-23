@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "oksydant-sprawdzian",
+  "title": "Sprawdzian: szybkie szacowanie",
+  "category": "Oksydant — proporcje i mieszanie",
+  "levelLabel": "Sprawdzian",
+  "intro": {
+    "narratorText": "Mieszanka z całego modułu: 1:1,5 w gramach, półka % i składanie 7%. Liczysz szybko — jak przy kliencie na fotelu.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij sprawdzian"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "ox5-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Start wizyty",
+      "question": "35 g farby, proporcja 1:1,5. Ile oksydantu odważasz?",
+      "options": [
+        {
+          "id": "a",
+          "text": "35 g"
+        },
+        {
+          "id": "b",
+          "text": "52,5 g"
+        },
+        {
+          "id": "c",
+          "text": "70 g"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "35 × 1,5 = 52,5.",
+        "incorrectTitle": "Półtora raza.",
+        "explanation": "35 + 17,5 = 52,5 g oksydantu."
+      }
+    },
+    {
+      "id": "ox5-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · 25 g",
+      "question": "25 g farby przy 1:1,5 → 37,5 g oksydantu.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "25 × 1,5 = 37,5.",
+        "incorrectTitle": "Jeszcze raz.",
+        "explanation": "Zapamiętaj czwórkę: 15→22,5 · 20→30 · 25→37,5 · 35→52,5."
+      }
+    },
+    {
+      "id": "ox5-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Decyzje na stanowisku",
+      "question": "Dopasuj sytuację do działania.",
+      "leftTitle": "Sytuacja",
+      "rightTitle": "Decyzja",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "20 g farby, 1:1,5"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Potrzebujesz 7%, masz 6% i 9%"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Cel ton w ton (orientacja z materiałów)"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "2 części 6% + 1 część 9%"
+        },
+        {
+          "id": "r2",
+          "pairId": "c",
+          "text": "Orientacyjnie ok. 6%"
+        },
+        {
+          "id": "r3",
+          "pairId": "a",
+          "text": "30 g oksydantu"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Gramy i % osobno.",
+        "incorrectTitle": "Rozdziel zadania.",
+        "explanation": "Najpierw ile (proporcja), potem jakie % (półka / mieszanka). Nie mieszaj tych dwóch decyzji w jedną zgadywankę."
+      }
+    },
+    {
+      "id": "ox5-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Kolejność myślenia",
+      "question": "Ułóż sensowną kolejność przy mieszaniu farby.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Ustal cel kolorystyczny i oceń włos"
+        },
+        {
+          "id": "s2",
+          "text": "Wybierz stężenie % (lub złóż je z półki)"
+        },
+        {
+          "id": "s3",
+          "text": "Odważ farbę"
+        },
+        {
+          "id": "s4",
+          "text": "Odważ oksydant według 1:1,5"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Najpierw decyzja, potem waga.",
+        "incorrectTitle": "Cel → % → gramy.",
+        "explanation": "Bez celu i % sama waga 1:1,5 nic nie „naprawi”. Proporcja domyka ilość, nie strategię."
+      }
+    },
+    {
+      "id": "ox5-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit końcowy",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Szybkie szacowanie",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Przy 1:1,5 możesz szacować: „półtora raza więcej oksydantu niż farby”"
+        },
+        {
+          "id": "s2",
+          "text": "7% z 6% i 9% składasz w częściach 2:1 (więcej 6%)"
+        },
+        {
+          "id": "s3",
+          "text": "Jak nie masz 9%, zawsze wolno wziąć 12% w tej samej gramaturze — efekt będzie identyczny"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł domknięty.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Zmiana % przy tych samych gramach zmienia siłę utleniania. Gramatura ≠ stężenie."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Szacujesz oksydant jak na stanowisku",
+    "subtitle": "1:1,5 w gramach, półka % i składanie 7% — w jednym refleksie.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej w akademii: numeracja farb — czytanie numeru na tubce."
+    }
+  }
+}

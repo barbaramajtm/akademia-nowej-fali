@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "id": "oksydant-mieszanie-7",
+  "title": "Jak zrobić 7% z 6% i 9%",
+  "category": "Oksydant — proporcje i mieszanie",
+  "levelLabel": "Ćwiczenia",
+  "intro": {
+    "narratorText": "Nie ma butelki 7%. Masz 6% i 9%. Metoda części (krzyżówka): bliższe stężenie bierzesz w większej ilości. Na 7% wychodzi 2 części 6% + 1 część 9%.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Krzyżówka stężeń",
+      "text": "Chcesz 7%. Masz 6% i 9%.\n\nOd większego odejmij cel: 9 − 7 = 2 → tyle części słabszego (6%).\nOd celu odejmij mniejszy: 7 − 6 = 1 → tyle części mocniejszego (9%).\n\nWynik: 2 : 1 (6% : 9%).\nPrzykład na 30 g oksy: 20 g z 6% + 10 g z 9%.",
+      "note": "Równe części 6% + 9% dają 7,5% — to nie to samo co 7%.",
+      "continueLabel": "Dalej do zadań"
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "ox4-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Części na 7%",
+      "question": "Żeby dostać 7% z 6% i 9%, w jakich częściach mieszasz?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 części 6% + 1 część 9%"
+        },
+        {
+          "id": "b",
+          "text": "1 część 6% + 2 części 9%"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie równe części — zawsze 1:1"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "2 : 1 na korzyść 6%.",
+        "incorrectTitle": "Krzyżówka.",
+        "explanation": "9−7=2 części 6%; 7−6=1 część 9%. Bliżej 6% niż 9%, więc więcej słabszego."
+      }
+    },
+    {
+      "id": "ox4-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Pułapka 1:1",
+      "question": "Równe części 6% i 9% dają oksydant 7,5% — nie 7%.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Średnia arytmetyczna.",
+        "incorrectTitle": "Policz średnią.",
+        "explanation": "(6+9)/2 = 7,5. Na dokładnie 7% potrzebujesz więcej 6% niż 9% (2:1)."
+      }
+    },
+    {
+      "id": "ox4-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · 30 g oksy 7%",
+      "question": "Dopasuj przy mieszance 7% (2:1 z 6% i 9%).",
+      "leftTitle": "Porcja",
+      "rightTitle": "Ile bierzesz",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Całość oksydantu 7%"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Z butelki 6%"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Z butelki 9%"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "20 g (2 części)"
+        },
+        {
+          "id": "r2",
+          "pairId": "c",
+          "text": "10 g (1 część)"
+        },
+        {
+          "id": "r3",
+          "pairId": "a",
+          "text": "30 g łącznie"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "20 + 10 = 30.",
+        "incorrectTitle": "Trzymaj 2:1.",
+        "explanation": "Przy 30 g całości: dwie trzecie z 6%, jedna trzecia z 9%."
+      }
+    },
+    {
+      "id": "ox4-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Inny cel: 4,5%",
+      "question": "Chcesz ok. 4,5% mając 3% i 6%. Jaka logika części?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Równe części 3% i 6% (średnia 4,5%)"
+        },
+        {
+          "id": "b",
+          "text": "Tylko 12% rozcieńczone wodą do połowy"
+        },
+        {
+          "id": "c",
+          "text": "3 części 12% + 1 część 1,5%"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Środek między 3 a 6.",
+        "incorrectTitle": "Średnia sąsiadów.",
+        "explanation": "(3+6)/2 = 4,5. Gdy cel jest dokładnie w połowie drogi — równe części działają. Przy 7% między 6 a 9 cel nie jest w połowie, stąd 2:1."
+      }
+    },
+    {
+      "id": "ox4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Mieszanie stężeń",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Na 7% z 6% i 9% bierzesz więcej 6% niż 9%"
+        },
+        {
+          "id": "s2",
+          "text": "Możesz odważyć np. 20 g z 6% i 10 g z 9%, żeby mieć 30 g oksy 7%"
+        },
+        {
+          "id": "s3",
+          "text": "Żeby mieć 7%, wystarczy wziąć samą butelkę 6% i „domieszać farbę 1%”"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Farba ≠ dozownik %.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Stężenie oksydantu składasz z butelek oksydantu. Farba nie służy do „dopychania procentu” wody utlenionej."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Umiesz złożyć 7%",
+    "subtitle": "2 części 6% + 1 część 9%. I wiesz, że 1:1 to 7,5%.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Sprawdzian: gramy + stężenia na czas."
+    }
+  }
+}

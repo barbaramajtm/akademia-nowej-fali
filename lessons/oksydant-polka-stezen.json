@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "oksydant-polka-stezen",
+  "title": "Półka stężeń: 1,5% · 3% · 6% · 9% · 12%",
+  "category": "Oksydant — proporcje i mieszanie",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Proporcja mówi ile. Stężenie mówi jak mocno. Na półce: 1,5% · 3% · 6% · 9% · 12%. Materiały wiążą procent z celem zabiegu — dziś to łączysz.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "ox3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Półka",
+      "question": "Który zestaw stężeń oksydantu jest na półce w tej akademii (praktyka salonu)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,5% · 3% · 6% · 9% · 12%"
+        },
+        {
+          "id": "b",
+          "text": "Tylko 30% perhydrol — resztę robisz zawsze z wody"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie 0% i 100%"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Pięć butelek w głowie.",
+        "incorrectTitle": "Półka salonu.",
+        "explanation": "Pracujesz na gotowych kremach: 1,5% · 3% · 6% · 9% · 12%. Perhydrol 30% znasz z materiałów jako koncentrat — to inna liga niż codzienna tubka."
+      }
+    },
+    {
+      "id": "ox3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Materiałoznawstwo",
+      "question": "Według materiałów: do przyciemniania lub ton w ton często wskazuje się ok. 6% nadtlenku.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "6% — ton w ton / przyciemnianie.",
+        "incorrectTitle": "Wróć do doboru %.",
+        "explanation": "Materiałoznawstwo: odświeżanie/repigmentacja ~1,8%; rozjaśniane 3%; ton w ton/przyciemnianie 6%; 1–3 tony i siwizna 9%; 4–5 poziomów farbami rozjaśniającymi 12%."
+      }
+    },
+    {
+      "id": "ox3-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Cel → % (materiały)",
+      "question": "Dopasuj cel z materiałów do stężenia.",
+      "leftTitle": "Cel",
+      "rightTitle": "Orientacyjne %",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Farbowanie włosów rozjaśnianych"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Rozjaśnianie o 1–3 tony / krycie siwizny"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "4–5 poziomów farbami rozjaśniającymi"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "ok. 9%"
+        },
+        {
+          "id": "r2",
+          "pairId": "c",
+          "text": "ok. 12%"
+        },
+        {
+          "id": "r3",
+          "pairId": "a",
+          "text": "ok. 3%"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Dobór pod cel.",
+        "incorrectTitle": "Sprawdź materiały.",
+        "explanation": "3% / 9% / 12% — tak materiały wiążą stężenie z celem. Zawsze oceniasz stan włosa przed decyzją."
+      }
+    },
+    {
+      "id": "ox3-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · 1,5% na półce",
+      "question": "Po co na półce jest też 1,5%, skoro w materiałach przy odświeżaniu pada ok. 1,8%?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,5% to „to samo co 12%”, tylko inna etykieta"
+        },
+        {
+          "id": "b",
+          "text": "To słabszy aktywator z półki — do lekkich zadań; materiały podają ok. 1,8% jako orientację przy odświeżaniu/repigmentacji"
+        },
+        {
+          "id": "c",
+          "text": "1,5% wolno tylko do trwałej ondulacji, nigdy do koloru"
+        }
+      ],
+      "correctOptionId": "b",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Półka + materiały.",
+        "incorrectTitle": "Rozdziel źródła.",
+        "explanation": "Materiały: ~1,8% przy odświeżaniu/repigmentacji. W salonie masz tubkę 1,5% jako najsłabszy gotowy aktywator — nie myl go z 9% czy 12%."
+      }
+    },
+    {
+      "id": "ox3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Stężenia",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Wyższe % to zwykle mocniejsze utlenianie przy doborze pod cel"
+        },
+        {
+          "id": "s2",
+          "text": "Dobór % zależy też od stanu włosów i zamierzonego efektu"
+        },
+        {
+          "id": "s3",
+          "text": "Skoro masz 12% na półce, zawsze używasz 12% — „na wszelki wypadek będzie jaśniej i lepiej”"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie na zapas.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Materiały: % dobierasz do celu i stanu włosa. 12% „na wszelki wypadek” to nie profesjonalna decyzja."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz półkę i cele %",
+    "subtitle": "1,5 · 3 · 6 · 9 · 12 — i po co które bierzesz.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej: jak złożyć 7% z butelek 6% i 9%."
+    }
+  }
+}
