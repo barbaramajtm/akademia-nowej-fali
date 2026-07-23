@@ -757,8 +757,8 @@ function refreshUI(){
   var kosPill = document.querySelector('.kosmyk-pill');
   if (kosPill) kosPill.setAttribute('aria-label', 'Kosmyki: ' + formatKosmyki(user.kosmyki));
 
-  var labelEls = [document.getElementById('homeUserLabel'), document.getElementById('profileName')];
-  labelEls.forEach(function(el){ if (el) el.textContent = getDisplayLabel(user.label); });
+  var profileName = document.getElementById('profileName');
+  if (profileName) profileName.textContent = getDisplayLabel(user.label);
 
   var falaText = 'Fala ' + user.fala;
   var falaPct = Math.round(user.falaProgress.current / user.falaProgress.goal * 100);

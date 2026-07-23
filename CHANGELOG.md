@@ -2,6 +2,13 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-23 — Home: powitanie „Witaj ♥”
+
+### Zmieniono
+- Strona główna: zamiast „Cześć, Uczennico” — **Witaj** + serduszko
+
+---
+
 ## 2026-07-23 — Moduł: oksydant — proporcje i mieszanie
 
 ### Dodano
