@@ -229,6 +229,19 @@ var BADGE_CATALOG = [
     }
   },
   {
+    id: 'modul-joico-kpak',
+    collectionId: 'moduly',
+    name: 'JOICO K-PAK',
+    description: 'O-W-R-N, procedura 1-2-3-4, powtórzenia 2–3 i tonacja po rekonstrukcji.',
+    conditionLabel: 'Ukończ wszystkie lekcje JOICO K-PAK',
+    symbol: 'drop',
+    accent: 'olive',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['joico-kpak']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['joico-kpak'] || { current: 0, goal: 1 };
+    }
+  },
+  {
     id: 'modul-balejaz',
     collectionId: 'moduly',
     name: 'Balejaż',

@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-powtorzenie-2-3",
+  "title": "Powtórka kroków 2 i 3",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Przy bardzo zniszczonych włosach instrukcja każe wracać do 2 i 3. Dziś: dlaczego robisz 1 → 2 → 3 → 2 → 3 → 4 (nawet do trzech powtórzeń pary 2–3).",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jk4-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Kiedy",
+      "question": "Powtórzenie kroków 2 i 3 zaleca się:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Przy bardzo zniszczonych włosach — by maksymalnie wzmocnić efekt odbudowy"
+        },
+        {
+          "id": "b",
+          "text": "Zawsze przy zdrowych, nietkniętych włosach „dla ozdoby”"
+        },
+        {
+          "id": "c",
+          "text": "Tylko zamiast kroku 1 i 4"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Bardzo zniszczone.",
+        "incorrectTitle": "Instrukcja.",
+        "explanation": "W przypadku bardzo zniszczonych włosów — powtórz 2 i 3."
+      }
+    },
+    {
+      "id": "jk4-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Ile",
+      "question": "Instrukcja dopuszcza powtórzenie kroków 2 i 3 do trzech razy.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Do trzech razy.",
+        "incorrectTitle": "Tak.",
+        "explanation": "„Do trzech razy”, żeby maksymalnie wzmocnić efekt odbudowy."
+      }
+    },
+    {
+      "id": "jk4-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · Ścieżka 1-2-3-2-3-4",
+      "question": "Ułóż przykładową kolejność z jedną powtórką pary 2–3.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "1. Clarifying — oczyszczanie"
+        },
+        {
+          "id": "s2",
+          "text": "2. Cuticle Sealer — wygładzanie"
+        },
+        {
+          "id": "s3",
+          "text": "3. Reconstructor — rekonstrukcja"
+        },
+        {
+          "id": "s4",
+          "text": "2. Cuticle Sealer — ponownie"
+        },
+        {
+          "id": "s5",
+          "text": "3. Reconstructor — ponownie"
+        },
+        {
+          "id": "s6",
+          "text": "4. Intense Hydrator — nawilżenie"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "1→2→3→2→3→4.",
+        "incorrectTitle": "Powtórka W+R.",
+        "explanation": "Najpierw raz pełne 2 i 3, potem znów 2 i 3, na końcu dopiero nawilżenie."
+      }
+    },
+    {
+      "id": "jk4-z4",
+      "type": "matching",
+      "kicker": "Krok 4 · Po co powtórka",
+      "question": "Dopasuj.",
+      "leftTitle": "Element",
+      "rightTitle": "Sens",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Powtórka kroku 2 (wygładzanie)"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Powtórka kroku 3 (rekonstrukcja)"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Krok 4 na końcu"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Kolejna dawka składników odbudowujących włókno"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Ponowne uporządkowanie powierzchni / przygotowanie pod rekonstrukcję"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Domknięcie miękkością — po wzmocnieniu, nie zamiast niego"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "W+R, potem N.",
+        "incorrectTitle": "Logika instrukcji.",
+        "explanation": "Powtarzasz wygładzanie i rekonstrukcję, bo tam jest rdzeń odbudowy; nawilżenie zostaje na finisz."
+      }
+    },
+    {
+      "id": "jk4-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Powtórka",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Przy bardzo zniszczonych włosach można powtórzyć kroki 2 i 3"
+        },
+        {
+          "id": "s2",
+          "text": "Przykładowa ścieżka to m.in. 1-2-3-2-3-4"
+        },
+        {
+          "id": "s3",
+          "text": "Przy mocno zniszczonych włosach pomijamy rekonstrukcję i robimy tylko szampon"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie pomijaj 2 i 3.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Właśnie przy mocnych zniszczeniach wzmacniasz odbudowę powtórką 2 i 3 — nie rezygnujesz z niej."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Wiesz, kiedy powtórzyć 2 i 3",
+    "subtitle": "Bardzo zniszczone włosy → wzmocnij odbudowę powtórką W+R.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Tonacja/koloryzacja — zaraz po rekonstrukcji, przed nawilżeniem."
+    }
+  }
+}

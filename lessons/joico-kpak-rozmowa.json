@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-rozmowa",
+  "title": "Rozmowa i technologie",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Domknięcie: wersja 15 sekund, SmartRelease/Quadramine bez wykładu oraz kiedy proponować — zanim przejdziesz do balejażu.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jk6-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · 15 sekund",
+      "question": "Która wypowiedź jest najbliżej wersji 15 s z materiałów?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Regeneracja w 4 krokach: oczyszcza, wygładza, wzmacnia i nawilża — włosy zwykle miększe, gładsze, sprężystsze"
+        },
+        {
+          "id": "b",
+          "text": "Naprawi włosy na zawsze i zastąpi każde strzyżenie"
+        },
+        {
+          "id": "c",
+          "text": "To wyłącznie farba ton w ton"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Wersja 15 s.",
+        "incorrectTitle": "Materiał.",
+        "explanation": "Cztery kroki + efekt miękkości/gładkości/sprężystości — bez absolutów."
+      }
+    },
+    {
+      "id": "jk6-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · SmartRelease",
+      "question": "SmartRelease to technologia liposomowa stopniowego uwalniania składników (m.in. olej z dzikiej róży, arginina, keratyna).",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Stopniowe uwalnianie.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Dla klientki: nie wszystko naraz — składniki uwalniają się stopniowo."
+      }
+    },
+    {
+      "id": "jk6-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Technologia prosto",
+      "question": "Dopasuj.",
+      "leftTitle": "Hasło",
+      "rightTitle": "Jak powiedzieć klientce",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "SmartRelease"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Quadramine / składniki proteinowe"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Keratyna (bezpiecznie)"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Wspiera włos na różnych poziomach uszkodzenia — nie tylko wygładza z zewnątrz"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Stopniowo uwalnia składniki pielęgnujące"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Składniki keratynowe/proteinowe wspierają osłabione miejsca — bez „20 rodzajów”"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Bez naukowego popisu.",
+        "incorrectTitle": "Materiał.",
+        "explanation": "Technologia jest zapleczem; dla klientki liczy się efekt w dotyku."
+      }
+    },
+    {
+      "id": "jk6-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Przed kolorem",
+      "question": "Jak powiedzieć o K-PAK przed koloryzacją?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pomaga przygotować włosy: oczyszcza, wygładza, wzmacnia i nawilża, żeby efekt wyglądał lepiej"
+        },
+        {
+          "id": "b",
+          "text": "Zastępuje całkowicie farbę i rozjaśniacz"
+        },
+        {
+          "id": "c",
+          "text": "Diagnozuje choroby skóry głowy"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Przygotowanie do usługi.",
+        "incorrectTitle": "Fiszka / materiał.",
+        "explanation": "Przy problemach skóry — nie udajemy lekarza; K-PAK dotyczy długości."
+      }
+    },
+    {
+      "id": "jk6-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Salon",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Przy mocno zniszczonych włosach możesz powtórzyć kroki 2 i 3"
+        },
+        {
+          "id": "s2",
+          "text": "Po kroku 3 możesz wstawić tonację przed nawilżeniem"
+        },
+        {
+          "id": "s3",
+          "text": "Wolno obiecać: „to leczenie włosa i Olaplex, tylko lepsze”"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł K-PAK domknięty.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Bez „leczenia” i bez porównań „tylko lepsze”. Dalej możesz iść w balejaż."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Mówisz o K-PAK jak w salonie",
+    "subtitle": "Prosto, uczciwie, z O-W-R-N w tle.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej: balejaż — wybrane pasma i naturalne refleksy."
+    }
+  }
+}

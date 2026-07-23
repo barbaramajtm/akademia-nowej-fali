@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-co-to",
+  "title": "Czym jest JOICO K-PAK?",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka pyta o „regenerację”. Zanim wymienisz produkty, wiesz: K-PAK to rekonstrukcja fryzjerska — nie leczenie żywej tkanki.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jk1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Definicja",
+      "question": "JOICO K-PAK to przede wszystkim:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Profesjonalny zabieg rekonstrukcyjno-pielęgnacyjny (oczyszcza, wygładza, wzmacnia, nawilża)"
+        },
+        {
+          "id": "b",
+          "text": "Lekarstwo, które biologicznie ożywia martwą długość włosa"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie trwała ondulacja"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Rekonstrukcja fryzjerska.",
+        "incorrectTitle": "Materiał uczennic.",
+        "explanation": "K-PAK = zabieg rekonstrukcyjno-pielęgnacyjny w czterech krokach — nie biologiczne leczenie."
+      }
+    },
+    {
+      "id": "jk1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Granica",
+      "question": "Włos na długości jest martwą strukturą — zabieg nie „leczy” go jak skóry.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Martwa długość.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Działa kosmetycznie/fryzjersko na włókno i powierzchnię — nie jak gojenie skóry."
+      }
+    },
+    {
+      "id": "jk1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Mówimy / nie mówimy",
+      "question": "Dopasuj.",
+      "leftTitle": "Komunikat",
+      "rightTitle": "Ocena",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "„Wspiera odbudowę włókna, wzmacnia, wygładza”"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "„Naprawi włosy na zawsze / odbuduje w 100%”"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "„To to samo co Olaplex, tylko lepsze”"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Nie mówimy — zbyt absolutna obietnica"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Tak mówimy — język z materiałów szkoleniowych"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Nie mówimy — zakazane porównanie marketingowe"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Uczciwa rozmowa.",
+        "incorrectTitle": "Czego nie mówić.",
+        "explanation": "Obiecujemy kondycję wizualną/dotykową — bez cudów i bez porównań „tylko lepsze”."
+      }
+    },
+    {
+      "id": "jk1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Kiedy",
+      "question": "K-PAK szczególnie warto proponować, gdy włosy są m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Po rozjaśnianiu/koloryzacji, matowe, szorstkie, kruche, puszające się"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie gdy klientka chce trwałą chemiczną"
+        },
+        {
+          "id": "c",
+          "text": "Tylko przy zdrowym owłosieniu bez żadnych uszkodzeń"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Typowe wskazania.",
+        "incorrectTitle": "Fiszki / materiał.",
+        "explanation": "Rozjaśnianie, matowość, szorstkość, kruchość, przed koloryzacją — typowe momenty."
+      }
+    },
+    {
+      "id": "jk1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "K-PAK",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "K-PAK działa na kondycję fryzjerską włókna i powierzchni"
+        },
+        {
+          "id": "s2",
+          "text": "Można mówić o wzmocnieniu, gładkości i elastyczności"
+        },
+        {
+          "id": "s3",
+          "text": "K-PAK gwarantuje, że włosy nigdy więcej się nie złamią"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Bez gwarancji absolutnych.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Nie mówimy „po tym nie będą się łamać” — to zakazana obietnica."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Umiesz nazwać K-PAK uczciwie",
+    "subtitle": "Rekonstrukcyjno-pielęgnacyjny zabieg — bez „leczenia na zawsze”.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Cztery kroki O-W-R-N: po co każdy etap."
+    }
+  }
+}
