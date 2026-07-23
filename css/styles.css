@@ -105,9 +105,9 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
   width:100%;height:auto;display:block;
 }
 .home-editorial-eye{
-  /* Wyżej — w pełni widoczne przy prawej krawędzi, pod topbarem */
-  position:absolute;top:92px;right:-6px;width:108px;height:auto;
-  pointer-events:none;z-index:1;opacity:.38;
+  /* Przy prawej krawędzi, obok topbara (avatar/Kosmyki są przesunięte w lewo) */
+  position:absolute;top:88px;right:-4px;width:108px;height:auto;
+  pointer-events:none;z-index:1;opacity:.42;
 }
 .home-editorial-eye img{
   width:100%;height:auto;display:block;
@@ -128,10 +128,10 @@ body{font-family:'Inter',sans-serif;background:#D45A94;color:var(--ink);min-heig
 .content-tight{padding-top:0;}
 
 .header{display:flex;justify-content:space-between;align-items:flex-start;margin:10px 0 0;gap:10px;}
-/* W jednym rzędzie z logo — całkowicie nad okiem, bez nachodzenia */
+/* W jednym rzędzie z logo — po lewej od oka, bez nachodzenia */
 .header-side{
   display:flex;align-items:center;gap:10px;flex-shrink:0;
-  margin-top:4px;margin-right:36px;
+  margin-top:4px;margin-right:108px;
 }
 .greet .hello{font-family:'Poppins';font-weight:700;font-size:26px;color:var(--navy);line-height:1.08;letter-spacing:-.02em;}
 .greet .hello-heart{color:var(--coral);font-weight:700;margin-left:2px;}
