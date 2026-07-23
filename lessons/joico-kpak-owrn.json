@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-owrn",
+  "title": "O-W-R-N: cztery etapy",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Szkielet zabiegu: Oczyszczamy → Wygładzamy → Rekonstruujemy → Nawilżamy. Dziś sens każdego etapu — jak model „domku”.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jk2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Skrót",
+      "question": "Skrót O-W-R-N oznacza:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oczyszczanie → Wygładzanie → Rekonstrukcja → Nawilżenie"
+        },
+        {
+          "id": "b",
+          "text": "Ondulacja → Wałki → Reduktor → Neutralizacja"
+        },
+        {
+          "id": "c",
+          "text": "Osłonka → Włos → Rdzeń → Numer farby"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "O-W-R-N.",
+        "incorrectTitle": "Materiał.",
+        "explanation": "Oczyszczamy, wygładzamy, rekonstruujemy, nawilżamy."
+      }
+    },
+    {
+      "id": "jk2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Oczyszczanie",
+      "question": "Etap oczyszczania usuwa m.in. osady, chlor, minerały i resztki stylizacji, żeby włos lepiej przyjął kolejne produkty.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Przygotowanie włosa.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Bez oczyszczenia kolejne kroki mają gorszy start."
+      }
+    },
+    {
+      "id": "jk2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Domek",
+      "question": "Dopasuj etap do obrazu.",
+      "leftTitle": "Etap",
+      "rightTitle": "Porównanie z materiałów",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Oczyszczanie"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Rekonstrukcja"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Nawilżenie"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Dokładamy „cegiełki” tam, gdzie włos jest osłabiony"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Sprzątamy domek przed remontem"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Miękki koc — komfort, miękkość, elastyczność"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Model domku.",
+        "incorrectTitle": "Materiał uczennic.",
+        "explanation": "Wygładzanie to domykanie powierzchni (drzwi/okna) — tu ćwiczysz trzy inne etapy."
+      }
+    },
+    {
+      "id": "jk2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Wygładzanie",
+      "question": "Wygładzanie / zakwaszenie ma m.in.:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pomóc wyrównać pH i wygładzić/domknąć łuskę — mniej szorstkości"
+        },
+        {
+          "id": "b",
+          "text": "Zastąpić cały zabieg samym szamponem Clarifying"
+        },
+        {
+          "id": "c",
+          "text": "Zrobić trwałą chemiczną na mostkach S"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Powierzchnia i pH.",
+        "incorrectTitle": "Etap 2.",
+        "explanation": "Porządkujemy powierzchnię przed rekonstrukcją."
+      }
+    },
+    {
+      "id": "jk2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "O-W-R-N",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Rekonstrukcja dostarcza składniki proteinowo-keratynowe / aminokwasy"
+        },
+        {
+          "id": "s2",
+          "text": "Nawilżenie domyka miękkość i komfort dotykowy"
+        },
+        {
+          "id": "s3",
+          "text": "Wystarczy samo nawilżenie — oczyszczanie i rekonstrukcja są zbędne"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cztery etapy mają sens.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "K-PAK to pełniejszy plan: O-W-R-N, nie tylko „maska na koniec”."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Znasz logikę O-W-R-N",
+    "subtitle": "Cztery etapy = kręgosłup opowieści i zabiegu.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Procedura produktowa: czasy, ręcznik, unikaj skóry głowy."
+    }
+  }
+}

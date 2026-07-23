@@ -76,6 +76,12 @@ var MODULE_MOTIFS = {
       '<rect x="34" y="40" width="52" height="18" rx="6" fill="#A6B58D" opacity="0.4"/>' +
       '<path d="M40 49h40" stroke="#1A2744" stroke-width="2.2" stroke-linecap="round" opacity="0.25"/>' +
     '</svg>',
+  'joico-kpak':
+    '<svg viewBox="0 0 120 88" fill="none" aria-hidden="true">' +
+      '<ellipse cx="78" cy="28" rx="28" ry="16" fill="#E8B23E" opacity="0.3"/>' +
+      '<path d="M60 22c-10 14-18 24-18 34a18 18 0 0 0 36 0c0-10-8-20-18-34z" fill="#A6B58D" opacity="0.45"/>' +
+      '<circle cx="60" cy="52" r="6" fill="#1A2744" opacity="0.12"/>' +
+    '</svg>',
   'balejaz':
     '<svg viewBox="0 0 120 88" fill="none" aria-hidden="true">' +
       '<ellipse cx="78" cy="28" rx="28" ry="16" fill="#E8B23E" opacity="0.3"/>' +
@@ -263,7 +269,7 @@ window.UIEffects = {
       animateUnlockedTile(id);
     }, delay);
 
-    if (moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt' || moduleId === 'wlos-teoria-koloru' || moduleId === 'trwala-procedura' || moduleId === 'bhp-higiena-salonu' || moduleId === 'strzyzenie-narzedzia' || moduleId === 'prostowanie-wlosow' || moduleId === 'balejaz'){
+    if (moduleId === 'wlos-kolor' || moduleId === 'wlos-ksztalt' || moduleId === 'wlos-teoria-koloru' || moduleId === 'trwala-procedura' || moduleId === 'bhp-higiena-salonu' || moduleId === 'strzyzenie-narzedzia' || moduleId === 'prostowanie-wlosow' || moduleId === 'joico-kpak' || moduleId === 'balejaz'){
       setTimeout(function(){
         blinkModuleMotif(moduleId);
       }, delay + 400);

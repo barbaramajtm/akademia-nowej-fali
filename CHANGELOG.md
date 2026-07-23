@@ -2,6 +2,21 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-23 — Moduł JOICO K-PAK (regeneracja)
+
+### Dodano
+- 6 lekcji: `joico-kpak-co-to`, `joico-kpak-owrn`, `joico-kpak-procedura`, `joico-kpak-powtorzenie-2-3`, `joico-kpak-tonacja-po-3`, `joico-kpak-rozmowa`
+- Grafika stanowiskowa: `assets/images/joico-kpak-instrukcja.png` (z instrukcji wykonania)
+- Dokumentacja: `docs/modules/JOICO_KPAK_{AUDIT,GRAPHICS,SCENARIOS,SOURCES}.md`
+- Odznaka `modul-joico-kpak` + motyw modułu w UI
+
+### Zmieniono
+- Katalog: moduł `joico-kpak` między prostowaniem a balejażem
+- Odblokowanie `balejaz-co-to` po `joico-kpak-rozmowa`
+- Teaser po `prostowanie-chemiczne-mostki` → JOICO K-PAK
+
+---
+
 ## 2026-07-22 — Powtórka błędów na końcu modułu
 
 ### Dodano

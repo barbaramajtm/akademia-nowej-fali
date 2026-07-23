@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-procedura",
+  "title": "Procedura na stanowisku",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Produkty z instrukcji: Clarifying → Cuticle Sealer → Reconstructor → Intense Hydrator. Czasy, ręcznik, unikaj skóry głowy.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Instrukcja K-PAK na stanowisku",
+      "text": "Cztery produkty w kolejności O-W-R-N. Między krokami włosy lekko wilgotne po ręczniku. Unikaj skóry głowy. Za chwilę zobaczysz, kiedy powtarzać kroki 2 i 3.",
+      "note": "Źródło: instrukcja wykonania JOICO K-PAK (Nowa Fala).",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/joico-kpak-instrukcja.png",
+      "imageAlt": "Instrukcja wykonania JOICO K-PAK: cztery kroki produktowe.",
+      "imageCaption": "Clarifying → Cuticle Sealer → Reconstructor → Intense Hydrator."
+    }
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jk3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Produkty",
+      "question": "Kolejność produktów z instrukcji to:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Clarifying Shampoo → Cuticle Sealer → Deep-Penetrating Reconstructor → Intense Hydrator"
+        },
+        {
+          "id": "b",
+          "text": "Tylko Intense Hydrator bez oczyszczania"
+        },
+        {
+          "id": "c",
+          "text": "Utrwalacz do trwałej → wałki → reduktor"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Instrukcja wykonania.",
+        "incorrectTitle": "O-W-R-N w produktach.",
+        "explanation": "1 Clarifying, 2 Cuticle Sealer, 3 Reconstructor, 4 Intense Hydrator."
+      }
+    },
+    {
+      "id": "jk3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Skóra głowy",
+      "question": "Produkty nakładamy równomiernie na włosy, unikając skóry głowy.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Unikaj skóry głowy.",
+        "incorrectTitle": "Instrukcja.",
+        "explanation": "We wszystkich krokach: unikaj skóry głowy."
+      }
+    },
+    {
+      "id": "jk3-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Czasy",
+      "question": "Dopasuj.",
+      "leftTitle": "Produkt / etap",
+      "rightTitle": "Czas z instrukcji",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Clarifying Shampoo"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Cuticle Sealer / Reconstructor / Intense Hydrator"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Między krokami"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Zostaw na włosach ok. 5 minut, spłucz ciepłą wodą"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "2–5 minut dla głębszego oczyszczenia, potem spłucz"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Osusz ręcznikiem — włosy lekko wilgotne"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Czasy i ręcznik.",
+        "incorrectTitle": "Instrukcja.",
+        "explanation": "Clarifying 2–5 min; kolejne etapy po ok. 5 min; między krokami lekko wilgotne."
+      }
+    },
+    {
+      "id": "jk3-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Przebieg bazowy",
+      "question": "Ułóż bazową kolejność zabiegu (bez powtórek).",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Clarifying — oczyszczanie"
+        },
+        {
+          "id": "s2",
+          "text": "Cuticle Sealer — wygładzanie"
+        },
+        {
+          "id": "s3",
+          "text": "Reconstructor — rekonstrukcja"
+        },
+        {
+          "id": "s4",
+          "text": "Intense Hydrator — nawilżenie"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "1→2→3→4.",
+        "incorrectTitle": "Instrukcja.",
+        "explanation": "Bazowa ścieżka O-W-R-N produktami z instrukcji."
+      }
+    },
+    {
+      "id": "jk3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Procedura",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Po Clarifying osuszasz ręcznikiem do lekko wilgotnych"
+        },
+        {
+          "id": "s2",
+          "text": "Cuticle Sealer rozprowadzasz równomiernie, unikając skóry głowy"
+        },
+        {
+          "id": "s3",
+          "text": "Można pominąć spłukiwanie i zostawić wszystkie produkty „na sucho” bez czasu"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Czas i spłukanie.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Instrukcja podaje czas działania i dokładne spłukanie ciepłą wodą."
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Prowadzisz procedurę produktową",
+    "subtitle": "Cztery produkty, czasy, lekko wilgotny włos między krokami.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dlaczego przy mocno zniszczonych włosach powtarzasz 2 i 3."
+    }
+  }
+}
