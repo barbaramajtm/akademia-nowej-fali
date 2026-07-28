@@ -9,4 +9,9 @@
 | `joico-kpak-tonacja-po-3` | Tonacja po kroku 3 |
 | `joico-kpak-rozmowa` | Rozmowa i technologie |
 
-Kolejność w akademii: po prostowaniu, przed balejażem.
+Kolejność w akademii: **zaraz po budowie włosa** (`wlos-kolor`), przed wiązaniami i kształtem (`wlos-ksztalt`).
+
+## Akcent dydaktyczny (rozbudowa)
+
+- **O-W-R-N:** czym etapy różnią się od siebie + gotowe zdania przy myjce.
+- **Procedura:** Clarifying ≠ zwykły szampon (osady, 2–5 min); nakładanie na **długości**, omijanie skóry głowy.

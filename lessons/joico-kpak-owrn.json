@@ -5,9 +5,18 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Podstawy",
   "intro": {
-    "narratorText": "Szkielet zabiegu: Oczyszczamy → Wygładzamy → Rekonstruujemy → Nawilżamy. Dziś sens każdego etapu — jak model „domku”.",
+    "narratorText": "W salonie klientka pyta „co to za etapy?”. O-W-R-N to nie lista produktów — to cztery różne prace na włosie. Dziś: czym się różnią i jak o tym mówić.",
     "stakeText": "do 75 Kosmyków",
-    "startButtonLabel": "Zacznij lekcję"
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Czym różnią się etapy O-W-R-N?",
+      "text": "Oczyszczanie zdejmuje osady (chlor, minerały, resztki stylizacji), żeby włos przyjął pielęgnację. Wygładzanie porządkuje powierzchnię i pH — mniej szorstkości. Rekonstrukcja daje składniki proteinowo-keratynowe włóknu. Nawilżenie domyka miękkość i komfort. Każdy etap robi coś innego — jeden nie zastępuje drugiego.",
+      "note": "Źródło: materiał szkoleniowy Nowej Fali (OWRN) + ulotka salonowa.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/joico-kpak-instrukcja.png",
+      "imageAlt": "Cztery etapy JOICO K-PAK na stanowisku: Oczyszczanie, Wygładzanie, Rekonstrukcja, Nawilżenie.",
+      "imageCaption": "O → W → R → N — każdy etap ma inny cel."
+    }
   },
   "rewards": {
     "streakBonus": {
@@ -24,54 +33,60 @@
     {
       "id": "jk2-z1",
       "type": "singleChoice",
-      "kicker": "Krok 1 · Skrót",
-      "question": "Skrót O-W-R-N oznacza:",
+      "kicker": "Krok 1 · Różnica etapów",
+      "question": "Klientka: „Czym się różni oczyszczanie od rekonstrukcji?” Która odpowiedź jest trafna?",
       "options": [
         {
           "id": "a",
-          "text": "Oczyszczanie → Wygładzanie → Rekonstrukcja → Nawilżenie"
+          "text": "Oczyszczanie zdejmuje osady i przygotowuje włos; rekonstrukcja dostarcza składniki proteinowe włóknu"
         },
         {
           "id": "b",
-          "text": "Ondulacja → Wałki → Reduktor → Neutralizacja"
+          "text": "To dwa nazwy tego samego — zawsze robisz tylko szampon"
         },
         {
           "id": "c",
-          "text": "Osłonka → Włos → Rdzeń → Numer farby"
+          "text": "Oczyszczanie to trwała chemiczna; rekonstrukcja to wyłącznie tonacja"
         }
       ],
       "correctOptionId": "a",
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "O-W-R-N.",
-        "incorrectTitle": "Materiał.",
-        "explanation": "Oczyszczamy, wygładzamy, rekonstruujemy, nawilżamy."
+        "correctTitle": "Dwa różne zadania.",
+        "incorrectTitle": "Rozróżnij cele.",
+        "explanation": "Oczyszczanie sprząta i przygotowuje. Rekonstrukcja wzmacnia włókno składnikami proteinowo-keratynowymi. To nie to samo.",
+        "funFact": {
+          "text": "Ewa: Gdy klientka myli etapy, wróć do O-W-R-N: najpierw przygotowanie, potem wzmocnienie."
+        }
       }
     },
     {
       "id": "jk2-z2",
       "type": "trueFalse",
-      "kicker": "Krok 2 · Oczyszczanie",
-      "question": "Etap oczyszczania usuwa m.in. osady, chlor, minerały i resztki stylizacji, żeby włos lepiej przyjął kolejne produkty.",
+      "kicker": "Krok 2 · Wygładzanie ≠ nawilżenie",
+      "question": "Wygładzanie porządkuje powierzchnię i pH (mniej szorstkości). Nawilżenie na końcu daje miękkość i komfort — to nie ten sam etap.",
       "trueLabel": "Prawda",
       "falseLabel": "Mit",
       "correctValue": true,
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Przygotowanie włosa.",
-        "incorrectTitle": "Tak.",
-        "explanation": "Bez oczyszczenia kolejne kroki mają gorszy start."
+        "correctTitle": "Powierzchnia, potem komfort.",
+        "incorrectTitle": "Tak — dwa cele.",
+        "explanation": "Wygładzanie: łuska i pH. Nawilżenie: miękkość, blask, łatwość układania. Pominięcie jednego zmienia efekt.",
+        "funFact": {
+          "text": "Ewa: „Tylko maska na koniec” to nie pełny K-PAK — brakuje przygotowania i odbudowy."
+        }
       }
     },
     {
       "id": "jk2-z3",
       "type": "matching",
-      "kicker": "Krok 3 · Domek",
-      "question": "Dopasuj etap do obrazu.",
+      "kicker": "Krok 3 · Co mówisz przy myjce",
+      "question": "Dopasuj etap do zdania dla klientki.",
       "leftTitle": "Etap",
-      "rightTitle": "Porównanie z materiałów",
+      "rightTitle": "Jak powiedzieć",
       "left": [
         {
           "id": "l1",
@@ -81,11 +96,16 @@
         {
           "id": "l2",
           "pairId": "b",
-          "text": "Rekonstrukcja"
+          "text": "Wygładzanie"
         },
         {
           "id": "l3",
           "pairId": "c",
+          "text": "Rekonstrukcja"
+        },
+        {
+          "id": "l4",
+          "pairId": "d",
           "text": "Nawilżenie"
         }
       ],
@@ -93,73 +113,84 @@
         {
           "id": "r1",
           "pairId": "b",
-          "text": "Dokładamy „cegiełki” tam, gdzie włos jest osłabiony"
+          "text": "„Uspokajamy powierzchnię włosa, żeby była gładsza”"
         },
         {
           "id": "r2",
           "pairId": "a",
-          "text": "Sprzątamy domek przed remontem"
+          "text": "„Zdejmujemy osady, żeby pielęgnacja mogła zadziałać”"
         },
         {
           "id": "r3",
+          "pairId": "d",
+          "text": "„Na koniec miękkość i komfort w dotyku”"
+        },
+        {
+          "id": "r4",
           "pairId": "c",
-          "text": "Miękki koc — komfort, miękkość, elastyczność"
+          "text": "„Wzmacniamy włos tam, gdzie jest zmęczony zabiegami”"
         }
       ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Model domku.",
+        "correctTitle": "Cztery różne zdania.",
         "incorrectTitle": "Materiał uczennic.",
-        "explanation": "Wygładzanie to domykanie powierzchni (drzwi/okna) — tu ćwiczysz trzy inne etapy."
+        "explanation": "Każdy etap ma inne zdanie. Nie mów „robimy regenerację” bez rozróżnienia — klientka ma usłyszeć, co właśnie się dzieje.",
+        "funFact": {
+          "text": "Ewa: Ćwicz na głos przy myjce — jedna osoba pyta, druga tłumaczy etap."
+        }
       }
     },
     {
       "id": "jk2-z4",
       "type": "singleChoice",
-      "kicker": "Krok 4 · Wygładzanie",
-      "question": "Wygładzanie / zakwaszenie ma m.in.:",
+      "kicker": "Krok 4 · Po co kolejność",
+      "question": "Dlaczego nie zaczynamy od samej maski nawilżającej?",
       "options": [
         {
           "id": "a",
-          "text": "Pomóc wyrównać pH i wygładzić/domknąć łuskę — mniej szorstkości"
+          "text": "Osady i szorstkość przeszkadzają — najpierw przygotowanie i odbudowa, nawilżenie na finisz"
         },
         {
           "id": "b",
-          "text": "Zastąpić cały zabieg samym szamponem Clarifying"
+          "text": "Bo nawilżenie jest zabronione w salonie"
         },
         {
           "id": "c",
-          "text": "Zrobić trwałą chemiczną na mostkach S"
+          "text": "Bo K-PAK to wyłącznie farba, bez pielęgnacji"
         }
       ],
       "correctOptionId": "a",
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Powierzchnia i pH.",
-        "incorrectTitle": "Etap 2.",
-        "explanation": "Porządkujemy powierzchnię przed rekonstrukcją."
+        "correctTitle": "Plan, nie przypadek.",
+        "incorrectTitle": "Logika O-W-R-N.",
+        "explanation": "Osady i otwarta, szorstka powierzchnia utrudniają efekt. O-W-R-N: najpierw przygotowanie i wzmocnienie, potem miękkość.",
+        "funFact": {
+          "text": "Ewa: Klientce: „Nie tylko maska — praca etapowa, żeby każdy krok miał sens.”"
+        }
       }
     },
     {
       "id": "jk2-z5",
       "type": "findError",
-      "kicker": "Krok 5 · Mit",
+      "kicker": "Krok 5 · Mit o etapach",
       "question": "Które stwierdzenie jest błędne?",
       "cardTitle": "O-W-R-N",
       "rows": [
         {
           "id": "s1",
-          "text": "Rekonstrukcja dostarcza składniki proteinowo-keratynowe / aminokwasy"
+          "text": "Oczyszczanie usuwa m.in. chlor, minerały i resztki stylizacji"
         },
         {
           "id": "s2",
-          "text": "Nawilżenie domyka miękkość i komfort dotykowy"
+          "text": "Rekonstrukcja wspiera osłabione miejsca składnikami proteinowymi"
         },
         {
           "id": "s3",
-          "text": "Wystarczy samo nawilżenie — oczyszczanie i rekonstrukcja są zbędne"
+          "text": "Wystarczy samo nawilżenie — oczyszczanie, wygładzanie i rekonstrukcja są zbędne"
         }
       ],
       "correctOptionIds": [
@@ -170,18 +201,21 @@
       "feedback": {
         "correctTitle": "Cztery etapy mają sens.",
         "incorrectTitle": "Znajdź mit.",
-        "explanation": "K-PAK to pełniejszy plan: O-W-R-N, nie tylko „maska na koniec”."
+        "explanation": "K-PAK to pełniejszy plan O-W-R-N. Sama „maska na koniec” nie zastępuje przygotowania ani odbudowy.",
+        "funFact": {
+          "text": "Ewa: Jak zapomnisz szczegóły — wróć do czterech słów: oczyszczamy, wygładzamy, rekonstruujemy, nawilżamy."
+        }
       }
     }
   ],
   "completion": {
     "solvedLabel": "Lekcja ukończona",
-    "title": "Znasz logikę O-W-R-N",
-    "subtitle": "Cztery etapy = kręgosłup opowieści i zabiegu.",
+    "title": "Rozróżniasz etapy i umiesz o nich mówić",
+    "subtitle": "Każdy krok O-W-R-N robi co innego — i masz na to zdanie przy myjce.",
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
       "label": "Kolejny temat",
-      "teaser": "Procedura produktowa: czasy, ręcznik, unikaj skóry głowy."
+      "teaser": "Szampon Clarifying vs zwykły mycie — i nakładanie na długości."
     }
   }
 }

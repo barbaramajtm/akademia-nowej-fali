@@ -2,6 +2,18 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-28 — Regeneracja K-PAK zaraz po budowie włosa
+
+### Zmieniono
+- `LessonsModuleOrder`: `joico-kpak` zaraz po `wlos-kolor` (budowa), przed `wlos-ksztalt`
+- Odblokowanie: `joico-kpak-co-to` po `wlos-budowa-podsumowanie`; `wlos-ksztalt-co-utrzymuje` po `joico-kpak-rozmowa`; `balejaz-co-to` po `prostowanie-chemiczne-mostki`
+- `joico-kpak-owrn`: różnice etapów O-W-R-N + zdania przy myjce (+ plansza edukacyjna)
+- `joico-kpak-procedura`: Clarifying ≠ zwykły szampon; nakładanie na długości / omijanie skóry głowy; czasy
+- Teasery / intro `joico-kpak-co-to` i `joico-kpak-rozmowa` dopasowane do nowej kolejności
+- Docs: `JOICO_KPAK_{SCENARIOS,SOURCES,AUDIT,GRAPHICS}.md`
+
+---
+
 ## 2026-07-23 — Profil: oko wyżej w hero
 
 ### Zmieniono
