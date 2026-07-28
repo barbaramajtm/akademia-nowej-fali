@@ -257,61 +257,6 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
   },
   {
-    id: 'oksydant-proporcja-11-5',
-    moduleId: 'oksydant-proporcje',
-    title: 'Proporcja 1:1,5 — farba do oksydantu',
-    moduleTitle: 'Oksydant — proporcje i mieszanie',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-rozmowa',
-    lockedReason: 'Najpierw ukończ: Rozmowa i technologie'
-  },
-  {
-    id: 'oksydant-gramy-szybko',
-    moduleId: 'oksydant-proporcje',
-    title: 'Szybkie gramy: 15, 20, 25, 35',
-    moduleTitle: 'Oksydant — proporcje i mieszanie',
-    moduleSubtitle: 'Ćwiczenia',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'oksydant-proporcja-11-5',
-    lockedReason: 'Najpierw ukończ: Proporcja 1:1,5 — farba do oksydantu'
-  },
-  {
-    id: 'oksydant-polka-stezen',
-    moduleId: 'oksydant-proporcje',
-    title: 'Półka stężeń: 1,5% · 3% · 6% · 9% · 12%',
-    moduleTitle: 'Oksydant — proporcje i mieszanie',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'oksydant-gramy-szybko',
-    lockedReason: 'Najpierw ukończ: Szybkie gramy: 15, 20, 25, 35'
-  },
-  {
-    id: 'oksydant-mieszanie-7',
-    moduleId: 'oksydant-proporcje',
-    title: 'Jak zrobić 7% z 6% i 9%',
-    moduleTitle: 'Oksydant — proporcje i mieszanie',
-    moduleSubtitle: 'Ćwiczenia',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'oksydant-polka-stezen',
-    lockedReason: 'Najpierw ukończ: Półka stężeń: 1,5% · 3% · 6% · 9% · 12%'
-  },
-  {
-    id: 'oksydant-sprawdzian',
-    moduleId: 'oksydant-proporcje',
-    title: 'Sprawdzian: szybkie szacowanie',
-    moduleTitle: 'Oksydant — proporcje i mieszanie',
-    moduleSubtitle: 'Sprawdzian',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'oksydant-mieszanie-7',
-    lockedReason: 'Najpierw ukończ: Jak zrobić 7% z 6% i 9%'
-  },
-  {
     id: 'lesson-n1-numer-farby',
     moduleId: 'numeracja-farb',
     title: 'Co widać w numerze farby',
@@ -319,8 +264,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'oksydant-sprawdzian',
-    lockedReason: 'Najpierw ukończ: Sprawdzian: szybkie szacowanie'
+    requiresLessonId: 'joico-kpak-rozmowa',
+    lockedReason: 'Najpierw ukończ: Rozmowa i technologie'
   },
   {
     id: 'lesson-n2-liczba-przed-separatorem',
@@ -532,6 +477,61 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Powtórka mieszana'
   },
   {
+    id: 'oksydant-proporcja-11-5',
+    moduleId: 'oksydant-proporcje',
+    title: 'Proporcja 1:1,5 — farba do oksydantu',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'lesson-n20-sprawdzian-modulu',
+    lockedReason: 'Najpierw ukończ: Sprawdzian modułu'
+  },
+  {
+    id: 'oksydant-gramy-szybko',
+    moduleId: 'oksydant-proporcje',
+    title: 'Szybkie gramy: 15, 20, 25, 35',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Ćwiczenia',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'oksydant-proporcja-11-5',
+    lockedReason: 'Najpierw ukończ: Proporcja 1:1,5 — farba do oksydantu'
+  },
+  {
+    id: 'oksydant-polka-stezen',
+    moduleId: 'oksydant-proporcje',
+    title: 'Półka stężeń: 1,5% · 3% · 6% · 9% · 12%',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'oksydant-gramy-szybko',
+    lockedReason: 'Najpierw ukończ: Szybkie gramy: 15, 20, 25, 35'
+  },
+  {
+    id: 'oksydant-mieszanie-7',
+    moduleId: 'oksydant-proporcje',
+    title: 'Jak zrobić 7% z 6% i 9%',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Ćwiczenia',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'oksydant-polka-stezen',
+    lockedReason: 'Najpierw ukończ: Półka stężeń: 1,5% · 3% · 6% · 9% · 12%'
+  },
+  {
+    id: 'oksydant-sprawdzian',
+    moduleId: 'oksydant-proporcje',
+    title: 'Sprawdzian: szybkie szacowanie',
+    moduleTitle: 'Oksydant — proporcje i mieszanie',
+    moduleSubtitle: 'Sprawdzian',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'oksydant-mieszanie-7',
+    lockedReason: 'Najpierw ukończ: Jak zrobić 7% z 6% i 9%'
+  },
+  {
     id: 'wlos-ksztalt-co-utrzymuje',
     moduleId: 'wlos-ksztalt',
     title: 'Co utrzymuje kształt włosa?',
@@ -539,8 +539,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'lesson-n20-sprawdzian-modulu',
-    lockedReason: 'Najpierw ukończ: Sprawdzian modułu'
+    requiresLessonId: 'oksydant-sprawdzian',
+    lockedReason: 'Najpierw ukończ: Sprawdzian: szybkie szacowanie'
   },
   {
     id: 'wlos-ksztalt-wodorowe',
@@ -981,7 +981,7 @@ window.LessonsCatalog = [
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'wlos-kolor', 'joico-kpak', 'oksydant-proporcje', 'numeracja-farb', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
+window.LessonsModuleOrder = ['ph', 'wlos-kolor', 'joico-kpak', 'numeracja-farb', 'oksydant-proporcje', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];
