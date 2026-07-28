@@ -10,9 +10,9 @@
 
 ## Zakres modułu (6 lekcji)
 
-- Czym jest K-PAK (rekonstrukcja fryzjerska vs „leczenie”)
-- Model O-W-R-N (oczyszczanie → wygładzanie → rekonstrukcja → nawilżenie)
-- Procedura produktowa z instrukcji (czasy, ręcznik, unikaj skóry głowy) + grafika
+- Czym jest K-PAK (rekonstrukcja fryzjerska vs „leczenie”) — zaraz po budowie włosa
+- Model O-W-R-N: czym etapy się różnią + zdania przy myjce
+- Procedura: Clarifying ≠ zwykły szampon; nakładanie na długości (omijaj skórę głowy); czasy, ręcznik + grafika
 - Powtórzenie kroków 2–3 przy mocno uszkodzonych (np. 1-2-3-2-3-4)
 - Tonacja / koloryzacja zaraz po kroku 3, przed hydratorem
 - Rozmowa z klientką: SmartRelease / Quadramine bez overclaimów; kiedy proponować
@@ -22,4 +22,5 @@
 - Włos na długości = martwa struktura — zabieg działa kosmetycznie/fryzjersko.
 - Nie porównywać marketingowo z Olaplexem („tylko lepsze”).
 - Preferować `…ladniejsza-wersja.pdf` przy treściach; procedurę trzymać zgodnie z `…instrukcja-wykonania.pdf`.
-- W `LessonsModuleOrder`: po `prostowanie-wlosow`, przed `balejaz`.
+- W `LessonsModuleOrder`: po `wlos-kolor` (budowa włosa), przed `wlos-ksztalt`.
+- Odblokowanie: `joico-kpak-co-to` po `wlos-budowa-podsumowanie`; `wlos-ksztalt-co-utrzymuje` po `joico-kpak-rozmowa`; `balejaz-co-to` po `prostowanie-chemiczne-mostki`.

@@ -464,6 +464,72 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Cykl wzrostu włosa'
   },
   {
+    id: 'joico-kpak-co-to',
+    moduleId: 'joico-kpak',
+    title: 'Czym jest JOICO K-PAK?',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-budowa-podsumowanie',
+    lockedReason: 'Najpierw ukończ: Budowa włosa — podsumowanie'
+  },
+  {
+    id: 'joico-kpak-owrn',
+    moduleId: 'joico-kpak',
+    title: 'O-W-R-N: cztery etapy',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-co-to',
+    lockedReason: 'Najpierw ukończ: Czym jest JOICO K-PAK?'
+  },
+  {
+    id: 'joico-kpak-procedura',
+    moduleId: 'joico-kpak',
+    title: 'Procedura na stanowisku',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-owrn',
+    lockedReason: 'Najpierw ukończ: O-W-R-N: cztery etapy'
+  },
+  {
+    id: 'joico-kpak-powtorzenie-2-3',
+    moduleId: 'joico-kpak',
+    title: 'Powtórka kroków 2 i 3',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-procedura',
+    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
+  },
+  {
+    id: 'joico-kpak-tonacja-po-3',
+    moduleId: 'joico-kpak',
+    title: 'Tonacja po kroku 3',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-powtorzenie-2-3',
+    lockedReason: 'Najpierw ukończ: Powtórka kroków 2 i 3'
+  },
+  {
+    id: 'joico-kpak-rozmowa',
+    moduleId: 'joico-kpak',
+    title: 'Rozmowa i technologie',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-tonacja-po-3',
+    lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
+  },
+  {
     id: 'wlos-ksztalt-co-utrzymuje',
     moduleId: 'wlos-ksztalt',
     title: 'Co utrzymuje kształt włosa?',
@@ -471,8 +537,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'wlos-keratyna-rusztowanie',
-    lockedReason: 'Najpierw ukończ: Keratyna — rusztowanie włosa'
+    requiresLessonId: 'joico-kpak-rozmowa',
+    lockedReason: 'Najpierw ukończ: Rozmowa i technologie'
   },
   {
     id: 'wlos-ksztalt-wodorowe',
@@ -856,72 +922,6 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Prostownice: suche i mokre'
   },
   {
-    id: 'joico-kpak-co-to',
-    moduleId: 'joico-kpak',
-    title: 'Czym jest JOICO K-PAK?',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'prostowanie-chemiczne-mostki',
-    lockedReason: 'Najpierw ukończ: Chemiczne prostowanie i mostki'
-  },
-  {
-    id: 'joico-kpak-owrn',
-    moduleId: 'joico-kpak',
-    title: 'O-W-R-N: cztery etapy',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-co-to',
-    lockedReason: 'Najpierw ukończ: Czym jest JOICO K-PAK?'
-  },
-  {
-    id: 'joico-kpak-procedura',
-    moduleId: 'joico-kpak',
-    title: 'Procedura na stanowisku',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Zabiegi',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-owrn',
-    lockedReason: 'Najpierw ukończ: O-W-R-N: cztery etapy'
-  },
-  {
-    id: 'joico-kpak-powtorzenie-2-3',
-    moduleId: 'joico-kpak',
-    title: 'Powtórka kroków 2 i 3',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Zabiegi',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-procedura',
-    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
-  },
-  {
-    id: 'joico-kpak-tonacja-po-3',
-    moduleId: 'joico-kpak',
-    title: 'Tonacja po kroku 3',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Zabiegi',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-powtorzenie-2-3',
-    lockedReason: 'Najpierw ukończ: Powtórka kroków 2 i 3'
-  },
-  {
-    id: 'joico-kpak-rozmowa',
-    moduleId: 'joico-kpak',
-    title: 'Rozmowa i technologie',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Zabiegi',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-tonacja-po-3',
-    lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
-  },
-  {
     id: 'balejaz-co-to',
     moduleId: 'balejaz',
     title: 'Co to jest balejaż?',
@@ -929,8 +929,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'joico-kpak-rozmowa',
-    lockedReason: 'Najpierw ukończ: Rozmowa i technologie'
+    requiresLessonId: 'prostowanie-chemiczne-mostki',
+    lockedReason: 'Najpierw ukończ: Chemiczne prostowanie i mostki'
   },
   {
     id: 'balejaz-wybrane-pasma',
@@ -979,7 +979,7 @@ window.LessonsCatalog = [
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'oksydant-proporcje', 'numeracja-farb', 'wlos-kolor', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'joico-kpak', 'balejaz'];
+window.LessonsModuleOrder = ['ph', 'oksydant-proporcje', 'numeracja-farb', 'wlos-kolor', 'joico-kpak', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];
