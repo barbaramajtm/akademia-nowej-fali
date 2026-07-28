@@ -9,7 +9,7 @@
 | `joico-kpak-tonacja-po-3` | Tonacja po kroku 3 |
 | `joico-kpak-rozmowa` | Rozmowa i technologie |
 
-Kolejność w akademii: **zaraz po budowie włosa** (`wlos-kolor`), przed wiązaniami i kształtem (`wlos-ksztalt`).
+Kolejność w akademii: **pH → budowa włosa → JOICO K-PAK**, potem oksydant i numeracja.
 
 ## Akcent dydaktyczny (rozbudowa)
 

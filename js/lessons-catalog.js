@@ -114,6 +114,149 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: pH produktów zakwaszających'
   },
   {
+    id: 'wlos-z-czego-sklada-sie',
+    moduleId: 'wlos-kolor',
+    title: 'Z czego składa się włos?',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'ph-podsumowanie-modulu',
+    lockedReason: 'Najpierw ukończ: Podsumowanie modułu pH'
+  },
+  {
+    id: 'wlos-oslonka-kora-rdzen',
+    moduleId: 'wlos-kolor',
+    title: 'Osłonka, kora i rdzeń',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-z-czego-sklada-sie',
+    lockedReason: 'Najpierw ukończ: Z czego składa się włos?'
+  },
+  {
+    id: 'wlos-keratyna-rusztowanie',
+    moduleId: 'wlos-kolor',
+    title: 'Keratyna — rusztowanie włosa',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-oslonka-kora-rdzen',
+    lockedReason: 'Najpierw ukończ: Osłonka, kora i rdzeń'
+  },
+  {
+    id: 'wlos-czesci-wlosa',
+    moduleId: 'wlos-kolor',
+    title: 'Łodyga, korzeń, cebulka',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-keratyna-rusztowanie',
+    lockedReason: 'Najpierw ukończ: Keratyna — rusztowanie włosa'
+  },
+  {
+    id: 'wlos-wlasciwosci-fizyczne',
+    moduleId: 'wlos-kolor',
+    title: 'Właściwości fizyczne włosa',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-czesci-wlosa',
+    lockedReason: 'Najpierw ukończ: Łodyga, korzeń, cebulka'
+  },
+  {
+    id: 'wlos-cykl-wzrostu',
+    moduleId: 'wlos-kolor',
+    title: 'Cykl wzrostu włosa',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-wlasciwosci-fizyczne',
+    lockedReason: 'Najpierw ukończ: Właściwości fizyczne włosa'
+  },
+  {
+    id: 'wlos-budowa-podsumowanie',
+    moduleId: 'wlos-kolor',
+    title: 'Budowa włosa — podsumowanie',
+    moduleTitle: 'Budowa i skład włosa',
+    moduleSubtitle: 'Podsumowanie',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-cykl-wzrostu',
+    lockedReason: 'Najpierw ukończ: Cykl wzrostu włosa'
+  },
+  {
+    id: 'joico-kpak-co-to',
+    moduleId: 'joico-kpak',
+    title: 'Czym jest JOICO K-PAK?',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'wlos-budowa-podsumowanie',
+    lockedReason: 'Najpierw ukończ: Budowa włosa — podsumowanie'
+  },
+  {
+    id: 'joico-kpak-owrn',
+    moduleId: 'joico-kpak',
+    title: 'O-W-R-N: cztery etapy',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-co-to',
+    lockedReason: 'Najpierw ukończ: Czym jest JOICO K-PAK?'
+  },
+  {
+    id: 'joico-kpak-procedura',
+    moduleId: 'joico-kpak',
+    title: 'Procedura na stanowisku',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-owrn',
+    lockedReason: 'Najpierw ukończ: O-W-R-N: cztery etapy'
+  },
+  {
+    id: 'joico-kpak-powtorzenie-2-3',
+    moduleId: 'joico-kpak',
+    title: 'Powtórka kroków 2 i 3',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-procedura',
+    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
+  },
+  {
+    id: 'joico-kpak-tonacja-po-3',
+    moduleId: 'joico-kpak',
+    title: 'Tonacja po kroku 3',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-powtorzenie-2-3',
+    lockedReason: 'Najpierw ukończ: Powtórka kroków 2 i 3'
+  },
+  {
+    id: 'joico-kpak-rozmowa',
+    moduleId: 'joico-kpak',
+    title: 'Rozmowa i technologie',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-tonacja-po-3',
+    lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
+  },
+  {
     id: 'oksydant-proporcja-11-5',
     moduleId: 'oksydant-proporcje',
     title: 'Proporcja 1:1,5 — farba do oksydantu',
@@ -121,8 +264,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'ph-podsumowanie-modulu',
-    lockedReason: 'Najpierw ukończ: Podsumowanie modułu pH'
+    requiresLessonId: 'joico-kpak-rozmowa',
+    lockedReason: 'Najpierw ukończ: Rozmowa i technologie'
   },
   {
     id: 'oksydant-gramy-szybko',
@@ -389,147 +532,6 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Powtórka mieszana'
   },
   {
-    id: 'wlos-z-czego-sklada-sie',
-    moduleId: 'wlos-kolor',
-    title: 'Z czego składa się włos?',
-    moduleTitle: 'Budowa i skład włosa',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false
-  },
-  {
-    id: 'wlos-oslonka-kora-rdzen',
-    moduleId: 'wlos-kolor',
-    title: 'Osłonka, kora i rdzeń',
-    moduleTitle: 'Budowa i skład włosa',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'wlos-z-czego-sklada-sie',
-    lockedReason: 'Najpierw ukończ: Z czego składa się włos?'
-  },
-  {
-    id: 'wlos-keratyna-rusztowanie',
-    moduleId: 'wlos-kolor',
-    title: 'Keratyna — rusztowanie włosa',
-    moduleTitle: 'Budowa i skład włosa',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'wlos-oslonka-kora-rdzen',
-    lockedReason: 'Najpierw ukończ: Osłonka, kora i rdzeń'
-  },
-  {
-    id: 'wlos-czesci-wlosa',
-    moduleId: 'wlos-kolor',
-    title: 'Łodyga, korzeń, cebulka',
-    moduleTitle: 'Budowa i skład włosa',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'wlos-keratyna-rusztowanie',
-    lockedReason: 'Najpierw ukończ: Keratyna — rusztowanie włosa'
-  },
-  {
-    id: 'wlos-wlasciwosci-fizyczne',
-    moduleId: 'wlos-kolor',
-    title: 'Właściwości fizyczne włosa',
-    moduleTitle: 'Budowa i skład włosa',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'wlos-czesci-wlosa',
-    lockedReason: 'Najpierw ukończ: Łodyga, korzeń, cebulka'
-  },
-  {
-    id: 'wlos-cykl-wzrostu',
-    moduleId: 'wlos-kolor',
-    title: 'Cykl wzrostu włosa',
-    moduleTitle: 'Budowa i skład włosa',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'wlos-wlasciwosci-fizyczne',
-    lockedReason: 'Najpierw ukończ: Właściwości fizyczne włosa'
-  },
-  {
-    id: 'wlos-budowa-podsumowanie',
-    moduleId: 'wlos-kolor',
-    title: 'Budowa włosa — podsumowanie',
-    moduleTitle: 'Budowa i skład włosa',
-    moduleSubtitle: 'Podsumowanie',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'wlos-cykl-wzrostu',
-    lockedReason: 'Najpierw ukończ: Cykl wzrostu włosa'
-  },
-  {
-    id: 'joico-kpak-co-to',
-    moduleId: 'joico-kpak',
-    title: 'Czym jest JOICO K-PAK?',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'wlos-budowa-podsumowanie',
-    lockedReason: 'Najpierw ukończ: Budowa włosa — podsumowanie'
-  },
-  {
-    id: 'joico-kpak-owrn',
-    moduleId: 'joico-kpak',
-    title: 'O-W-R-N: cztery etapy',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Podstawy',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-co-to',
-    lockedReason: 'Najpierw ukończ: Czym jest JOICO K-PAK?'
-  },
-  {
-    id: 'joico-kpak-procedura',
-    moduleId: 'joico-kpak',
-    title: 'Procedura na stanowisku',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Zabiegi',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-owrn',
-    lockedReason: 'Najpierw ukończ: O-W-R-N: cztery etapy'
-  },
-  {
-    id: 'joico-kpak-powtorzenie-2-3',
-    moduleId: 'joico-kpak',
-    title: 'Powtórka kroków 2 i 3',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Zabiegi',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-procedura',
-    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
-  },
-  {
-    id: 'joico-kpak-tonacja-po-3',
-    moduleId: 'joico-kpak',
-    title: 'Tonacja po kroku 3',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Zabiegi',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-powtorzenie-2-3',
-    lockedReason: 'Najpierw ukończ: Powtórka kroków 2 i 3'
-  },
-  {
-    id: 'joico-kpak-rozmowa',
-    moduleId: 'joico-kpak',
-    title: 'Rozmowa i technologie',
-    moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Zabiegi',
-    rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'joico-kpak-tonacja-po-3',
-    lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
-  },
-  {
     id: 'wlos-ksztalt-co-utrzymuje',
     moduleId: 'wlos-ksztalt',
     title: 'Co utrzymuje kształt włosa?',
@@ -537,8 +539,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'joico-kpak-rozmowa',
-    lockedReason: 'Najpierw ukończ: Rozmowa i technologie'
+    requiresLessonId: 'lesson-n20-sprawdzian-modulu',
+    lockedReason: 'Najpierw ukończ: Sprawdzian modułu'
   },
   {
     id: 'wlos-ksztalt-wodorowe',
@@ -979,7 +981,7 @@ window.LessonsCatalog = [
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'oksydant-proporcje', 'numeracja-farb', 'wlos-kolor', 'joico-kpak', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
+window.LessonsModuleOrder = ['ph', 'wlos-kolor', 'joico-kpak', 'oksydant-proporcje', 'numeracja-farb', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];

@@ -2,6 +2,15 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-07-28 — Ścieżka: pH → budowa → regeneracja (przed oksydantem)
+
+### Zmieniono
+- `LessonsModuleOrder`: `ph` → `wlos-kolor` → `joico-kpak` → `oksydant-proporcje` → `numeracja-farb` → …
+- Odblokowanie: budowa po podsumowaniu pH; oksydant po domknięciu K-PAK; kształt po N20
+- Katalog lekcji: fizyczna kolejność wpisów zgodna ze ścieżką
+
+---
+
 ## 2026-07-28 — Regeneracja K-PAK zaraz po budowie włosa
 
 ### Zmieniono
