@@ -20,7 +20,7 @@
       "kicker": "Krok 1 · 15 sekund",
       "question": "Która wypowiedź jest najbliżej uczciwej wersji 15 s?",
       "options": [
-        { "id": "a", "text": "Cztery fazy: przygotujemy, wzmocnimy włókno, poprawimy powierzchnię i zamkniemy — zwykle więcej miękkości, gładkości i połysku" },
+        { "id": "a", "text": "Cztery fazy: przygotowanie, wzmocnienie włókna, powierzchnia i zamknięcie — więcej miękkości i połysku" },
         { "id": "b", "text": "Naprawi włosy na zawsze i zastąpi każde strzyżenie" },
         { "id": "c", "text": "To wyłącznie farba ton w ton bez pielęgnacji" }
       ],
