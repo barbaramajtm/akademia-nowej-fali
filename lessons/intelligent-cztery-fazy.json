@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "id": "intelligent-cztery-fazy",
+  "title": "Cztery fazy: I–II–III–IV",
+  "category": "Babilon Intelligent — regeneracja",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Jak przy O-W-R-N w K-PAK: każdy produkt robi co innego. Dziś rozróżnisz PRIME, TREATMENT, BUILD UP i CLOSER — i powiesz to klientce.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Czym różnią się cztery fazy?",
+      "text": "I PRIME — szampon oczyszczający, przygotowuje włos. II TREATMENT — intensywna kuracja białkowo-keratynowa w głąb włókien (2–3 min, bez spłukiwania). III BUILD UP — fluid na zewnętrzną strukturę długości i końców (1 min, spłukać). IV CLOSER — leave-in zamyka kurację we włosie (też do domu).",
+      "note": "Źródło: instrukcja Intelligent — opis faz 1–4.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/intelligent-instrukcja.png",
+      "imageAlt": "Opis faz Intelligent: PRIME, TREATMENT, BUILD UP, CLOSER.",
+      "imageCaption": "I → II → III → IV — każdy etap ma inny cel."
+    }
+  },
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+  },
+  "tasks": [
+    {
+      "id": "bi2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Kolejność",
+      "question": "Poprawna kolejność faz Intelligent to:",
+      "options": [
+        { "id": "a", "text": "PRIME → TREATMENT → BUILD UP → CLOSER" },
+        { "id": "b", "text": "CLOSER → PRIME → BUILD UP → TREATMENT" },
+        { "id": "c", "text": "Tylko CLOSER, bez przygotowania" }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "I → II → III → IV.",
+        "incorrectTitle": "Sekwencja z instrukcji.",
+        "explanation": "Produkty są sekwencyjne: najpierw przygotowanie, potem kuracja w głąb, potem zewnętrzna naprawa, na końcu zamknięcie.",
+        "funFact": { "text": "Ewa: Na głos: „Przygotowuję, wzmacniam głębiej, wygładzam zewnątrz, zamykam.”" }
+      }
+    },
+    {
+      "id": "bi2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · PRIME",
+      "question": "PRIME to szampon oczyszczający przygotowujący włos do kuracji Intelligent — nie zastępuje sam całego systemu.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Start systemu.",
+        "incorrectTitle": "Faza 1.",
+        "explanation": "PRIME przygotowuje włos (m.in. z ekstraktami fiołka, aloesu, pokrzywy). To faza 1, nie cały zabieg.",
+        "funFact": { "text": "Ewa: Jak Clarifying w K-PAK — bez przygotowania kolejne kroki mają gorszy start." }
+      }
+    },
+    {
+      "id": "bi2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Cel fazy",
+      "question": "Dopasuj fazę do roli.",
+      "leftTitle": "Faza",
+      "rightTitle": "Rola",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "TREATMENT" },
+        { "id": "l2", "pairId": "b", "text": "BUILD UP" },
+        { "id": "l3", "pairId": "c", "text": "CLOSER" }
+      ],
+      "right": [
+        { "id": "r1", "pairId": "b", "text": "Naprawa zewnętrznej części — długości i końce" },
+        { "id": "r2", "pairId": "a", "text": "Kuracja białkowa — najgłębsze włókna" },
+        { "id": "r3", "pairId": "c", "text": "Leave-in zamyka kurację we włosie" }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy różne prace.",
+        "incorrectTitle": "Rozróżnij II, III i IV.",
+        "explanation": "TREATMENT idzie w głąb włókien. BUILD UP pracuje na zewnątrz. CLOSER hermetycznie domyka i zostaje na włosie.",
+        "funFact": { "text": "Ewa: Klientce nie recytuj składu — powiedz cel każdej fazy jednym zdaniem." }
+      }
+    },
+    {
+      "id": "bi2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Spłukiwanie",
+      "question": "Które zdanie o spłukiwaniu jest zgodne z instrukcją?",
+      "options": [
+        { "id": "a", "text": "TREATMENT 2–3 min bez spłukiwania; BUILD UP 1 min i spłukać; CLOSER leave-in" },
+        { "id": "b", "text": "Wszystkie cztery fazy zawsze spłukujesz od razu bez czasu" },
+        { "id": "c", "text": "CLOSER zawsze spłukujesz przed koloryzacją" }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Czasy i spłukiwanie.",
+        "incorrectTitle": "Instrukcja faz 2–4.",
+        "explanation": "TREATMENT nie spłukujesz. BUILD UP po 1 min spłukujesz. CLOSER nie wymaga spłukiwania.",
+        "funFact": { "text": "Ewa: Najczęstszy błąd: spłukać TREATMENT z przyzwyczajenia — nie rób tego." }
+      }
+    },
+    {
+      "id": "bi2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Cztery fazy",
+      "rows": [
+        { "id": "s1", "text": "PRIME przygotowuje włos do kuracji" },
+        { "id": "s2", "text": "BUILD UP działa na zewnętrzną strukturę długości i końców" },
+        { "id": "s3", "text": "Wystarczy sam CLOSER zamiast PRIME, TREATMENT i BUILD UP" }
+      ],
+      "correctOptionIds": ["s3"],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Pełna sekwencja.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "To system sekwencyjny — CLOSER zamyka kurację, nie zastępuje przygotowania ani odbudowy.",
+        "funFact": { "text": "Ewa: Jak przy O-W-R-N: jeden produkt na finisz to nie cały plan." }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Rozróżniasz cztery fazy Intelligent",
+    "subtitle": "PRIME, TREATMENT, BUILD UP, CLOSER — każdy ma inny cel.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Fazy a budowa włosa: kora, osłonka, od środka na zewnątrz."
+    }
+  }
+}

@@ -410,6 +410,19 @@ var BADGE_CATALOG = [
     }
   },
   {
+    id: 'modul-intelligent-babilon',
+    collectionId: 'moduly',
+    name: 'Babilon Intelligent',
+    description: 'Cztery fazy rekonstrukcji, budowa włosa oraz I–III przed kolorem / IV po.',
+    conditionLabel: 'Ukończ wszystkie lekcje Babilon Intelligent',
+    symbol: 'drop',
+    accent: 'olive',
+    evaluate: function(ctx){ return !!ctx.moduleComplete['intelligent-babilon']; },
+    progress: function(ctx){
+      return ctx.moduleProgress['intelligent-babilon'] || { current: 0, goal: 1 };
+    }
+  },
+  {
     id: 'modul-balejaz',
     collectionId: 'moduly',
     name: 'Balejaż',

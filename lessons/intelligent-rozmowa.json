@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "intelligent-rozmowa",
+  "title": "Rozmowa i domknięcie",
+  "category": "Babilon Intelligent — regeneracja",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Domknięcie modułu: wersja 15 sekund, uczciwe obietnice, CLOSER do domu oraz szybka powtórka budowy włosa — żebyś mówiła pewnie przy fotelu.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+  },
+  "tasks": [
+    {
+      "id": "bi6-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · 15 sekund",
+      "question": "Która wypowiedź jest najbliżej uczciwej wersji 15 s?",
+      "options": [
+        { "id": "a", "text": "Cztery fazy: przygotujemy, wzmocnimy włókno, poprawimy powierzchnię i zamkniemy — zwykle więcej miękkości, gładkości i połysku" },
+        { "id": "b", "text": "Naprawi włosy na zawsze i zastąpi każde strzyżenie" },
+        { "id": "c", "text": "To wyłącznie farba ton w ton bez pielęgnacji" }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Prosto i uczciwie.",
+        "incorrectTitle": "Bez cudów.",
+        "explanation": "Mówisz o czterech fazach i efekcie kondycji (moc, struktura, wygląd, połysk) — bez absolutów.",
+        "funFact": { "text": "Ewa: Jak przy K-PAK: technologia w tle, efekt w dotyku na pierwszym planie." }
+      }
+    },
+    {
+      "id": "bi6-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · CLOSER w domu",
+      "question": "CLOSER jest też przeznaczony do użytku domowego jako ochrona kosmetyczna (leave-in, film ochronny, ułatwia rozczesywanie).",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Salon + dom.",
+        "incorrectTitle": "Instrukcja fazy 4.",
+        "explanation": "CLOSER zamyka kurację w salonie i może iść do domu: białka proteinowe i olejek jojoba tworzą film bez obciążania.",
+        "funFact": { "text": "Ewa: Na koniec wizyty: „To zostawiamy na włosie — i możesz tak domykać efekt w domu.”" }
+      }
+    },
+    {
+      "id": "bi6-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Powtórka budowy",
+      "question": "Dopasuj pojęcie z budowy włosa do roli w rozmowie o Intelligent.",
+      "leftTitle": "Pojęcie",
+      "rightTitle": "Jak używasz w salonie",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "Osłonka / powierzchnia" },
+        { "id": "l2", "pairId": "b", "text": "Kora / włókno" },
+        { "id": "l3", "pairId": "c", "text": "Martwa długość" }
+      ],
+      "right": [
+        { "id": "r1", "pairId": "b", "text": "Tu tłumaczysz TREATMENT — wsparcie najgłębszych włókien" },
+        { "id": "r2", "pairId": "a", "text": "Tu tłumaczysz BUILD UP — szorstkie długości i końce" },
+        { "id": "r3", "pairId": "c", "text": "Granica obietnicy: rekonstrukcja fryzjerska, nie „leczenie jak skóry”" }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Budowa = język przy fotelu.",
+        "incorrectTitle": "Utrwalenie.",
+        "explanation": "Intelligent nie zastępuje wiedzy o budowie — korzysta z niej. Osłonka, kora i granica martwej długości wracają w każdej rozmowie o regeneracji.",
+        "funFact": { "text": "Ewa: Jak zapomnisz nazw produktów — wróć do warstw włosa. Potem dopasujesz fazy." }
+      }
+    },
+    {
+      "id": "bi6-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Kiedy proponujesz",
+      "question": "Kiedy szczególnie warto zaproponować Intelligent?",
+      "options": [
+        { "id": "a", "text": "Po chemii / cieple stylizacji / czynnikach zewnętrznych (słońce, sól, smog), gdy włosy są osłabione" },
+        { "id": "b", "text": "Tylko gdy klientka chce trwałą ondulację" },
+        { "id": "c", "text": "Wyłącznie przy zdrowych włosach bez żadnych uszkodzeń „dla ozdoby”" }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Wskazania z instrukcji.",
+        "incorrectTitle": "„Stworzone dla Ciebie, jeśli…”.",
+        "explanation": "Trzy grupy: czynniki zewnętrzne, wysoka temperatura, zabiegi chemiczne. Diagnoza najpierw.",
+        "funFact": { "text": "Ewa: Masz już K-PAK i Intelligent — wybór zależy od protokołu salonu i stanu włosów, nie od „które ładniejsze”." }
+      }
+    },
+    {
+      "id": "bi6-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Salon",
+      "rows": [
+        { "id": "s1", "text": "I–III przed kolorem, IV po kolorze" },
+        { "id": "s2", "text": "TREATMENT bez spłukiwania; BUILD UP po 1 min spłukujesz" },
+        { "id": "s3", "text": "Wolno obiecać: „to leczenie cebulki i włosy jak nowe na zawsze”" }
+      ],
+      "correctOptionIds": ["s3"],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Moduł Intelligent domknięty.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Bez leczenia cebulki i bez gwarancji „jak nowe”. Masz fazy, budowę włosa i plan z kolorem.",
+        "funFact": { "text": "Ewa: Dwa systemy regeneracji w akademii — obie umiesz opowiedzieć. To już poziom salonu." }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Moduł domknięty",
+    "title": "Mówisz o Intelligent jak w salonie",
+    "subtitle": "Cztery fazy, budowa włosa i uczciwa rozmowa — gotowa przy fotelu.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Dalej: oksydant — proporcje i mieszanie farby."
+    }
+  }
+}

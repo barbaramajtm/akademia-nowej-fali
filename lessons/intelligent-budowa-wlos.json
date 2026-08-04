@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "id": "intelligent-budowa-wlos",
+  "title": "Intelligent a budowa włosa",
+  "category": "Babilon Intelligent — regeneracja",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Tu łączysz Intelligent z budową włosa: osłonka, kora, keratyna. System idzie od wewnątrz na zewnątrz — i właśnie dlatego fazy nie są przypadkowe.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Od kory do osłonki",
+      "text": "Przypomnij przekrój łodygi: osłonka (łuski) na zewnątrz, kora głębiej — w niej m.in. wytrzymałość i pigment. TREATMENT wzmacnia najgłębsze włókna (praca „w środku”). BUILD UP naprawia zewnętrzną część przy szorstkich długościach i końcach. Różne wymiary molekularne składników dobiera się do potrzeb — mniejsze fragmenty łatwiej wspierają głębsze miejsca.",
+      "note": "Powtórka z modułu budowy + instrukcja Intelligent.",
+      "continueLabel": "Dalej",
+      "imageSrc": "assets/images/hair-layers.png",
+      "imageAlt": "Schemat przekroju włosa: osłonka, kora i rdzeń.",
+      "imageCaption": "Osłonka na zewnątrz, kora głębiej — Intelligent pracuje od wewnątrz na zewnątrz."
+    }
+  },
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+  },
+  "tasks": [
+    {
+      "id": "bi3-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Warstwy",
+      "question": "Która warstwa łodygi leży na zewnątrz i chroni powierzchnię jak „dachówki”?",
+      "options": [
+        { "id": "a", "text": "Osłonka (łuski)" },
+        { "id": "b", "text": "Wyłącznie rdzeń — zawsze u każdego włosa" },
+        { "id": "c", "text": "Cebulka w skórze głowy" }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Osłonka na zewnątrz.",
+        "incorrectTitle": "Powtórka budowy.",
+        "explanation": "Osłonka to zewnętrzna warstwa łusek. Pod nią kora. BUILD UP w Intelligent pracuje właśnie na zewnętrznej strukturze.",
+        "funFact": { "text": "Ewa: Jak klientka mówi „szorstkie końce” — myślisz osłonka/powierzchnia, nie „tylko farba”." }
+      }
+    },
+    {
+      "id": "bi3-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · TREATMENT a kora",
+      "question": "TREATMENT ma wzmacniać najgłębsze włókna włosa — to łączy się z pracą w głębszej strukturze (kora / włókno), nie tylko z wygładzeniem powierzchni.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Głębiej niż tylko połysk.",
+        "incorrectTitle": "Instrukcja + budowa.",
+        "explanation": "TREATMENT: ceramidy, kreatyna, keratyna, sole mineralne — wsparcie najsłabszych miejsc we włóknie. To nie sam „błyszczący spray”.",
+        "funFact": { "text": "Ewa: Keratyna z budowy włosa wraca tu jako składnik kuracji — mówisz „wspiera włókno”, nie „20 rodzajów keratyny”." }
+      }
+    },
+    {
+      "id": "bi3-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Faza ↔ warstwa",
+      "question": "Dopasuj fazę do poziomu pracy na włosie.",
+      "leftTitle": "Faza",
+      "rightTitle": "Poziom",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "TREATMENT" },
+        { "id": "l2", "pairId": "b", "text": "BUILD UP" },
+        { "id": "l3", "pairId": "c", "text": "CLOSER" }
+      ],
+      "right": [
+        { "id": "r1", "pairId": "b", "text": "Zewnętrzna struktura — długości i końce" },
+        { "id": "r2", "pairId": "a", "text": "Najgłębsze włókna / wsparcie od wewnątrz" },
+        { "id": "r3", "pairId": "c", "text": "Film zamykający kurację na powierzchni" }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Od środka na zewnątrz.",
+        "incorrectTitle": "Połącz z budową.",
+        "explanation": "System: najpierw wsparcie głębszych włókien, potem zewnętrzna naprawa, na końcu zamknięcie filmem ochronnym.",
+        "funFact": { "text": "Ewa: To samo zdanie co w instrukcji — „od wewnętrznej do zewnętrznej strony włosa”." }
+      }
+    },
+    {
+      "id": "bi3-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Molekuły",
+      "question": "Instrukcja mówi o składnikach o różnym wymiarze molekularnym. Po co to w praktyce?",
+      "options": [
+        { "id": "a", "text": "Żeby wspierać włos na różnych poziomach uszkodzenia — nie tylko na powierzchni" },
+        { "id": "b", "text": "Żeby zastąpić strzyżenie i koloryzację" },
+        { "id": "c", "text": "Żeby diagnozować choroby skóry głowy" }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Różne poziomy pracy.",
+        "incorrectTitle": "Sens systemu.",
+        "explanation": "Różne wielkości cząsteczek mają wspierać różne potrzeby włosa — od głębszych miejsc po powierzchnię. To tłumaczysz prosto, bez wykładu chemii.",
+        "funFact": { "text": "Ewa: Klientce: „Pracujemy i głębiej we włóknie, i na szorstkiej powierzchni.”" }
+      }
+    },
+    {
+      "id": "bi3-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Budowa + Intelligent",
+      "rows": [
+        { "id": "s1", "text": "Osłonka to zewnętrzna warstwa łusek" },
+        { "id": "s2", "text": "TREATMENT wspiera najgłębsze włókna; BUILD UP — zewnętrzną strukturę" },
+        { "id": "s3", "text": "Intelligent ożywia cebulkę i leczy skórę głowy jak dermatolog" }
+      ],
+      "correctOptionIds": ["s3"],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Praca na długości.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Zabieg dotyczy kondycji łodygi/długości. Przy problemach skóry nie udajesz lekarza — tak samo jak przy K-PAK.",
+        "funFact": { "text": "Ewa: Budowa włosa = Twój kompas. Jak wiesz gdzie jest problem, łatwiej tłumaczysz fazy." }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Łączysz Intelligent z budową włosa",
+    "subtitle": "Osłonka, kora, od środka na zewnątrz — i wiesz, która faza gdzie pracuje.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Procedura na stanowisku: czasy, spłukiwanie, przeczesywanie."
+    }
+  }
+}
