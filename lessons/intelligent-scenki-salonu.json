@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "intelligent-scenki-salonu",
+  "title": "Scenki przy fotelu — Intelligent",
+  "category": "Babilon Intelligent — regeneracja",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Salon nie pyta z podręcznika. Dziś: kiedy proponujesz Intelligent, jak tłumaczysz fazy i co robisz, gdy w planie jest koloryzacja.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+  },
+  "tasks": [
+    {
+      "id": "bi8-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Kiedy",
+      "question": "Klientka po wakacjach: słońce, sól, włosy szorstkie. Co robisz?",
+      "options": [
+        { "id": "a", "text": "Proponujesz Intelligent — wskazanie z instrukcji: czynniki zewnętrzne" },
+        { "id": "b", "text": "Odmawiasz jakiejkolwiek pielęgnacji" },
+        { "id": "c", "text": "Robisz tylko farbenie bez przygotowania długości" }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trafione wskazanie.",
+        "incorrectTitle": "Smog / słońce / sól.",
+        "explanation": "Instrukcja wymienia czynniki zewnętrzne, ciepło stylizacji i chemię jako typowe momenty na Intelligent.",
+        "funFact": { "text": "Ewa: Po soli i słońcu długości często „piszczą” w dłoni — to moment na rozmowę o regeneracji." }
+      }
+    },
+    {
+      "id": "bi8-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Dom",
+      "question": "CLOSER możesz polecić też do domu jako leave-in chroniący efekt salonu.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Salon + dom.",
+        "incorrectTitle": "Faza 4.",
+        "explanation": "CLOSER zamyka kurację i jest też do użytku domowego — film ochronny, rozczesywanie, bez obciążania.",
+        "funFact": { "text": "Ewa: Na koniec: „To zostaje na włosie — i tak możesz domykać efekt w domu.”" }
+      }
+    },
+    {
+      "id": "bi8-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Co mówisz",
+      "question": "Dopasuj fazę do zdania przy myjce.",
+      "leftTitle": "Faza",
+      "rightTitle": "Zdanie",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "PRIME" },
+        { "id": "l2", "pairId": "b", "text": "TREATMENT" },
+        { "id": "l3", "pairId": "c", "text": "BUILD UP" },
+        { "id": "l4", "pairId": "d", "text": "CLOSER" }
+      ],
+      "right": [
+        { "id": "r1", "pairId": "b", "text": "„Wzmacniamy włókno tam, gdzie jest zmęczone”" },
+        { "id": "r2", "pairId": "a", "text": "„Przygotowujemy włos pod kurację”" },
+        { "id": "r3", "pairId": "d", "text": "„Zamykamy efekt — to zostaje na włosie”" },
+        { "id": "r4", "pairId": "c", "text": "„Porządkujemy szorstkie długości i końce”" }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cztery zdania, cztery fazy.",
+        "incorrectTitle": "Ćwicz przy myjce.",
+        "explanation": "Klientka ma usłyszeć, co właśnie robisz — nie numer tubki.",
+        "funFact": { "text": "Ewa: Jedno zdanie na fazę. Reszta to hałas." }
+      }
+    },
+    {
+      "id": "bi8-z4",
+      "type": "ordering",
+      "kicker": "Krok 4 · Z kolorem",
+      "question": "Ułóż wizytę: Intelligent + koloryzacja.",
+      "resetLabel": "Od początku",
+      "steps": [
+        { "id": "s1", "text": "I–III: PRIME, TREATMENT, BUILD UP" },
+        { "id": "s2", "text": "Koloryzacja" },
+        { "id": "s3", "text": "IV: CLOSER" }
+      ],
+      "correctOrder": ["s1", "s2", "s3"],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy przed, jeden po.",
+        "incorrectTitle": "Ramka UWAGA.",
+        "explanation": "I–III przed kolorem, CLOSER po — tak stoi w instrukcji.",
+        "funFact": { "text": "Ewa: Inaczej niż K-PAK (tonacja po 3 przed hydratorem) — tu IV jest po farbie." }
+      }
+    },
+    {
+      "id": "bi8-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Salon Intelligent",
+      "rows": [
+        { "id": "s1", "text": "System działa od wewnętrznej do zewnętrznej strony włosa" },
+        { "id": "s2", "text": "Można proponować po cieple stylizacji i po chemii" },
+        { "id": "s3", "text": "Wolno obiecać leczenie cebulki i włosy jak nowe na zawsze" }
+      ],
+      "correctOptionIds": ["s3"],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Bez cudów.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Rekonstrukcja fryzjerska długości — nie leczenie cebulki i nie gwarancja „jak nowe”.",
+        "funFact": { "text": "Ewa: Masz już JOICO i Intelligent — obie potrafisz opowiedzieć uczciwie." }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Prowadzisz Intelligent przy fotelu",
+    "subtitle": "Wskazania, zdania przy myjce, plan z kolorem — bez zgadywania.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Domknięcie Intelligent: 15 sekund i CLOSER do domu."
+    }
+  }
+}

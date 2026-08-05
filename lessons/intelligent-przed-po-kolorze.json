@@ -19,8 +19,15 @@
     }
   },
   "rewards": {
-    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
-    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
   },
   "tasks": [
     {
@@ -29,9 +36,18 @@
       "kicker": "Krok 1 · Uwaga z karty",
       "question": "Jeśli w tej samej wizycie jest koloryzacja, instrukcja każe:",
       "options": [
-        { "id": "a", "text": "Zrobić I, II i III przed kolorem, a IV (CLOSER) po kolorze" },
-        { "id": "b", "text": "Zrobić cały Intelligent dopiero tydzień po farbie" },
-        { "id": "c", "text": "Nakładać CLOSER przed PRIME, a potem farbę" }
+        {
+          "id": "a",
+          "text": "Zrobić I, II i III przed kolorem, a IV (CLOSER) po kolorze"
+        },
+        {
+          "id": "b",
+          "text": "Zrobić cały Intelligent dopiero tydzień po farbie"
+        },
+        {
+          "id": "c",
+          "text": "Nakładać CLOSER przed PRIME, a potem farbę"
+        }
       ],
       "correctOptionId": "a",
       "reward": 10,
@@ -40,7 +56,9 @@
         "correctTitle": "I–III przed, IV po.",
         "incorrectTitle": "Ramka UWAGA.",
         "explanation": "Instrukcja jest jednoznaczna: I, II, III przed koloryzacją; IV po koloryzacji.",
-        "funFact": { "text": "Ewa: Zapisz to w głowie jak hasło: „trzy przed, jeden po”." }
+        "funFact": {
+          "text": "Ewa: Zapisz to w głowie jak hasło: „trzy przed, jeden po”."
+        }
       }
     },
     {
@@ -57,7 +75,9 @@
         "correctTitle": "Zamknięcie na końcu.",
         "incorrectTitle": "Po kolorze.",
         "explanation": "CLOSER hermetycznie zamyka kurację i zostawia film ochronny. Przy farbie w planie — po usłudze koloryzacji.",
-        "funFact": { "text": "Ewa: Nie „zamykaj” włosa leave-inem przed farbą, jeśli robisz pełny Intelligent z kolorem." }
+        "funFact": {
+          "text": "Ewa: Nie „zamykaj” włosa leave-inem przed farbą, jeśli robisz pełny Intelligent z kolorem."
+        }
       }
     },
     {
@@ -68,14 +88,38 @@
       "leftTitle": "Etap",
       "rightTitle": "Kiedy",
       "left": [
-        { "id": "l1", "pairId": "a", "text": "PRIME + TREATMENT + BUILD UP" },
-        { "id": "l2", "pairId": "b", "text": "Koloryzacja" },
-        { "id": "l3", "pairId": "c", "text": "CLOSER" }
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "PRIME + TREATMENT + BUILD UP"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Koloryzacja"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "CLOSER"
+        }
       ],
       "right": [
-        { "id": "r1", "pairId": "b", "text": "Po fazach I–III, przed CLOSER" },
-        { "id": "r2", "pairId": "a", "text": "Przed koloryzacją" },
-        { "id": "r3", "pairId": "c", "text": "Po koloryzacji — domknięcie" }
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Po fazach I–III, przed CLOSER"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Przed koloryzacją"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Po koloryzacji — domknięcie"
+        }
       ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
@@ -83,7 +127,9 @@
         "correctTitle": "Baza → kolor → zamknięcie.",
         "incorrectTitle": "Ułóż wizytę.",
         "explanation": "Przygotowanie i odbudowa przed kolorem; leave-in CLOSER dopiero gdy kolor jest zrobiony.",
-        "funFact": { "text": "Ewa: Inaczej niż K-PAK (tonacja po kroku 3, przed hydratorem) — tu IV jest wyraźnie po kolorze." }
+        "funFact": {
+          "text": "Ewa: Inaczej niż K-PAK (tonacja po kroku 3, przed hydratorem) — tu IV jest wyraźnie po kolorze."
+        }
       }
     },
     {
@@ -93,18 +139,33 @@
       "question": "Ułóż wizytę: Intelligent + koloryzacja.",
       "resetLabel": "Od początku",
       "steps": [
-        { "id": "s1", "text": "Fazy I–III (PRIME, TREATMENT, BUILD UP)" },
-        { "id": "s2", "text": "Koloryzacja" },
-        { "id": "s3", "text": "Faza IV — CLOSER" }
+        {
+          "id": "s1",
+          "text": "Fazy I–III (PRIME, TREATMENT, BUILD UP)"
+        },
+        {
+          "id": "s2",
+          "text": "Koloryzacja"
+        },
+        {
+          "id": "s3",
+          "text": "Faza IV — CLOSER"
+        }
       ],
-      "correctOrder": ["s1", "s2", "s3"],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "I–III → kolor → IV.",
         "incorrectTitle": "Przestaw.",
         "explanation": "To dokładna ścieżka z uwagi w instrukcji.",
-        "funFact": { "text": "Ewa: Bez koloru w planie robisz I–IV pod rząd. Z kolorem — rozdzielasz IV." }
+        "funFact": {
+          "text": "Ewa: Bez koloru w planie robisz I–IV pod rząd. Z kolorem — rozdzielasz IV."
+        }
       }
     },
     {
@@ -114,18 +175,31 @@
       "question": "Które stwierdzenie jest błędne?",
       "cardTitle": "Kolor + Intelligent",
       "rows": [
-        { "id": "s1", "text": "I, II i III stosujesz przed koloryzacją" },
-        { "id": "s2", "text": "IV (CLOSER) stosujesz po koloryzacji" },
-        { "id": "s3", "text": "CLOSER zawsze nakładasz przed farbą, a I–III dopiero na koniec wizyty" }
+        {
+          "id": "s1",
+          "text": "I, II i III stosujesz przed koloryzacją"
+        },
+        {
+          "id": "s2",
+          "text": "IV (CLOSER) stosujesz po koloryzacji"
+        },
+        {
+          "id": "s3",
+          "text": "CLOSER zawsze nakładasz przed farbą, a I–III dopiero na koniec wizyty"
+        }
       ],
-      "correctOptionIds": ["s3"],
+      "correctOptionIds": [
+        "s3"
+      ],
       "reward": 25,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Nie odwracaj kolejności.",
         "incorrectTitle": "Znajdź mit.",
         "explanation": "Odwrócenie I–III i IV psuje zarówno logikę kuracji, jak i domknięcie po kolorze.",
-        "funFact": { "text": "Ewa: Jak masz wątpliwość — wróć do ramki UWAGA na karcie." }
+        "funFact": {
+          "text": "Ewa: Jak masz wątpliwość — wróć do ramki UWAGA na karcie."
+        }
       }
     }
   ],
@@ -136,7 +210,7 @@
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
       "label": "Kolejny temat",
-      "teaser": "Rozmowa z klientką i CLOSER do domu."
+      "teaser": "Scenki przy fotelu: kiedy proponujesz i co mówisz."
     }
   }
 }

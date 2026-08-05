@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "id": "intelligent-sklad-czasy",
+  "title": "Składniki i czasy faz",
+  "category": "Babilon Intelligent — regeneracja",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Żeby nie mylić tubek przy myjce: co jest w TREATMENT i BUILD UP, ile trzymasz i czy spłukujesz. Dziś detale, które widać w rękach.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
+    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+  },
+  "tasks": [
+    {
+      "id": "bi7-z1",
+      "type": "matching",
+      "kicker": "Krok 1 · Skład vs faza",
+      "question": "Dopasuj produkt do składników / roli z instrukcji.",
+      "leftTitle": "Faza",
+      "rightTitle": "Z instrukcji",
+      "left": [
+        { "id": "l1", "pairId": "a", "text": "PRIME" },
+        { "id": "l2", "pairId": "b", "text": "TREATMENT" },
+        { "id": "l3", "pairId": "c", "text": "CLOSER" }
+      ],
+      "right": [
+        { "id": "r1", "pairId": "b", "text": "Ceramidy, kreatyna, keratyna, sole mineralne" },
+        { "id": "r2", "pairId": "a", "text": "Fiołek, aloes, pokrzywa — przygotowanie" },
+        { "id": "r3", "pairId": "c", "text": "Białka proteinowe + olejek jojoba, leave-in" }
+      ],
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Tubki mają sens.",
+        "incorrectTitle": "Instrukcja faz.",
+        "explanation": "PRIME przygotowuje, TREATMENT wzmacnia włókna, CLOSER zamyka filmem bez spłukiwania.",
+        "funFact": { "text": "Ewa: Nie musisz recytować listy klientce — wystarczy cel fazy." }
+      }
+    },
+    {
+      "id": "bi7-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · BUILD UP",
+      "question": "BUILD UP pracuje na zewnętrznej strukturze długości i końców; po 1 minucie spłukujesz.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Zewnętrznie, krótko, spłukać.",
+        "incorrectTitle": "Faza 3.",
+        "explanation": "To fluid na szorstkie długości — nie leave-in i nie faza „w głąb włókien”.",
+        "funFact": { "text": "Ewa: 1 minuta na zegarku — potem woda. Nie zgaduj „na oko”." }
+      }
+    },
+    {
+      "id": "bi7-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · Czasy w ręku",
+      "question": "Ułóż fazy II–IV z poprawnym zachowaniem czasu/spłukiwania.",
+      "resetLabel": "Od początku",
+      "steps": [
+        { "id": "s1", "text": "TREATMENT — przeczesz, 2–3 min, nie spłukuj" },
+        { "id": "s2", "text": "BUILD UP — na długościach, 1 min, spłucz" },
+        { "id": "s3", "text": "CLOSER — leave-in, przeczesz, bez spłukiwania" }
+      ],
+      "correctOrder": ["s1", "s2", "s3"],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy różne reguły wody.",
+        "incorrectTitle": "Spłukiwanie miesza fazy.",
+        "explanation": "II zostaje, III krótko i spłukać, IV zostaje. To najczęściej mylone miejsca.",
+        "funFact": { "text": "Ewa: Zanim odkręcisz wodę — nazwij fazę na głos." }
+      }
+    },
+    {
+      "id": "bi7-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Molekuły",
+      "question": "Po co w Intelligent składniki o różnym wymiarze molekularnym?",
+      "options": [
+        { "id": "a", "text": "Żeby wspierać włos na różnych poziomach uszkodzenia — nie tylko powierzchnię" },
+        { "id": "b", "text": "Żeby zastąpić strzyżenie i koloryzację" },
+        { "id": "c", "text": "Żeby leczyć skórę głowy jak dermatolog" }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Od środka na zewnątrz.",
+        "incorrectTitle": "Sens systemu.",
+        "explanation": "Różne wielkości cząsteczek = praca na różnych poziomach. Tłumaczysz to prosto, bez wykładu.",
+        "funFact": { "text": "Ewa: „Pracujemy głębiej we włóknie i na szorstkiej powierzchni” — wystarczy." }
+      }
+    },
+    {
+      "id": "bi7-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Czasy Intelligent",
+      "rows": [
+        { "id": "s1", "text": "TREATMENT: 2–3 minuty, bez spłukiwania" },
+        { "id": "s2", "text": "BUILD UP: 1 minuta, potem spłukanie" },
+        { "id": "s3", "text": "CLOSER zawsze spłukujesz przed koloryzacją w tej samej wizycie" }
+      ],
+      "correctOptionIds": ["s3"],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "CLOSER leave-in, po kolorze.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "CLOSER nie spłukujesz. Przy kolorze w planie — IV po koloryzacji, nie przed.",
+        "funFact": { "text": "Ewa: Hasło: „trzy przed kolorem, jeden po”." }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Nie mylisz czasów i tubek",
+    "subtitle": "Składniki, minuty i woda — każda faza ma swoje reguły.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Kolor w wizycie: I–III przed, IV po."
+    }
+  }
+}
