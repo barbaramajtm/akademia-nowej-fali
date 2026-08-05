@@ -5,8 +5,10 @@
 | `joico-kpak-co-to` | Czym jest JOICO K-PAK? |
 | `joico-kpak-owrn` | O-W-R-N: cztery etapy |
 | `joico-kpak-procedura` | Procedura na stanowisku |
+| `joico-kpak-clarifying-dlugosci` | Clarifying i długości włosa |
 | `joico-kpak-powtorzenie-2-3` | Powtórka kroków 2 i 3 |
 | `joico-kpak-tonacja-po-3` | Tonacja po kroku 3 |
+| `joico-kpak-scenki-salonu` | Scenki przy fotelu — K-PAK |
 | `joico-kpak-rozmowa` | Rozmowa i technologie |
 
 Kolejność w akademii: **JOICO K-PAK → Babilon Intelligent → budowa włosa → pH → numeracja farb** → …
