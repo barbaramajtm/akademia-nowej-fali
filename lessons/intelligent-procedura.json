@@ -19,8 +19,15 @@
     }
   },
   "rewards": {
-    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
-    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
   },
   "tasks": [
     {
@@ -29,9 +36,18 @@
       "kicker": "Krok 1 · TREATMENT",
       "question": "Jak poprawnie wykonasz TREATMENT?",
       "options": [
-        { "id": "a", "text": "Rozprowadzasz, przeczesujesz, 2–3 min — nie spłukujesz" },
-        { "id": "b", "text": "Nakładasz tylko na skórę głowy i od razu spłukujesz" },
-        { "id": "c", "text": "Zostawiasz na godzinę pod folią bez przeczesania" }
+        {
+          "id": "a",
+          "text": "Rozprowadzasz, przeczesujesz, 2–3 min — nie spłukujesz"
+        },
+        {
+          "id": "b",
+          "text": "Nakładasz tylko na skórę głowy i od razu spłukujesz"
+        },
+        {
+          "id": "c",
+          "text": "Zostawiasz na godzinę pod folią bez przeczesania"
+        }
       ],
       "correctOptionId": "a",
       "reward": 10,
@@ -40,7 +56,9 @@
         "correctTitle": "2–3 min, bez spłukiwania.",
         "incorrectTitle": "Instrukcja fazy 2.",
         "explanation": "TREATMENT zostaje na włosie — to baza pod BUILD UP. Spłukanie go psuje logikę sekwencji.",
-        "funFact": { "text": "Ewa: Powiedz na głos przy myjce: „To zostaje — nie spłukujemy.” Klientka wtedy nie panikuje." }
+        "funFact": {
+          "text": "Ewa: Powiedz na głos przy myjce: „To zostaje — nie spłukujemy.” Klientka wtedy nie panikuje."
+        }
       }
     },
     {
@@ -57,7 +75,9 @@
         "correctTitle": "1 minuta i spłukanie.",
         "incorrectTitle": "Faza 3.",
         "explanation": "BUILD UP pracuje na zewnętrznej strukturze długości i końców — krótki czas, potem dokładne spłukanie.",
-        "funFact": { "text": "Ewa: Grzebień = równomierna warstwa. Bez przeczesania łatwo o „łaty” produktu." }
+        "funFact": {
+          "text": "Ewa: Grzebień = równomierna warstwa. Bez przeczesania łatwo o „łaty” produktu."
+        }
       }
     },
     {
@@ -68,14 +88,38 @@
       "leftTitle": "Faza",
       "rightTitle": "Spłukiwanie",
       "left": [
-        { "id": "l1", "pairId": "a", "text": "TREATMENT" },
-        { "id": "l2", "pairId": "b", "text": "BUILD UP" },
-        { "id": "l3", "pairId": "c", "text": "CLOSER" }
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "TREATMENT"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "BUILD UP"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "CLOSER"
+        }
       ],
       "right": [
-        { "id": "r1", "pairId": "b", "text": "Po 1 minucie — spłukujesz" },
-        { "id": "r2", "pairId": "a", "text": "Nie spłukujesz" },
-        { "id": "r3", "pairId": "c", "text": "Leave-in — bez spłukiwania" }
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Po 1 minucie — spłukujesz"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Nie spłukujesz"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Leave-in — bez spłukiwania"
+        }
       ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
@@ -83,7 +127,9 @@
         "correctTitle": "Trzy różne reguły.",
         "incorrectTitle": "Sprawdź instrukcję.",
         "explanation": "II bez spłukiwania, III krótko i spłukać, IV zostaje na włosie. To trzeba umieć powiedzieć i zrobić.",
-        "funFact": { "text": "Ewa: Zanim odkręcisz wodę — sprawdź, która to faza. Nawyk ratuje zabieg." }
+        "funFact": {
+          "text": "Ewa: Zanim odkręcisz wodę — sprawdź, która to faza. Nawyk ratuje zabieg."
+        }
       }
     },
     {
@@ -93,19 +139,38 @@
       "question": "Ułóż bazową kolejność zabiegu Intelligent.",
       "resetLabel": "Od początku",
       "steps": [
-        { "id": "s1", "text": "PRIME — oczyszczenie / przygotowanie" },
-        { "id": "s2", "text": "TREATMENT — 2–3 min, bez spłukiwania" },
-        { "id": "s3", "text": "BUILD UP — 1 min, spłukać" },
-        { "id": "s4", "text": "CLOSER — leave-in, przeczesanie" }
+        {
+          "id": "s1",
+          "text": "PRIME — oczyszczenie / przygotowanie"
+        },
+        {
+          "id": "s2",
+          "text": "TREATMENT — 2–3 min, bez spłukiwania"
+        },
+        {
+          "id": "s3",
+          "text": "BUILD UP — 1 min, spłukać"
+        },
+        {
+          "id": "s4",
+          "text": "CLOSER — leave-in, przeczesanie"
+        }
       ],
-      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "I → II → III → IV.",
         "incorrectTitle": "Sekwencja.",
         "explanation": "Pełna ścieżka bazowa bez koloryzacji w środku. Kolor wstawisz w kolejnej lekcji.",
-        "funFact": { "text": "Ewa: CLOSER przeczesz — film ma być cienki i równomierny, nie „kleksy”." }
+        "funFact": {
+          "text": "Ewa: CLOSER przeczesz — film ma być cienki i równomierny, nie „kleksy”."
+        }
       }
     },
     {
@@ -115,18 +180,31 @@
       "question": "Które stwierdzenie jest błędne?",
       "cardTitle": "Procedura",
       "rows": [
-        { "id": "s1", "text": "PRIME przygotowuje włos przed kuracją" },
-        { "id": "s2", "text": "TREATMENT przeczesujesz i zostawiasz 2–3 min bez spłukiwania" },
-        { "id": "s3", "text": "Wystarczy szybko umyć samą skórę głowy jak codziennym szamponem i pominąć długości" }
+        {
+          "id": "s1",
+          "text": "PRIME przygotowuje włos przed kuracją"
+        },
+        {
+          "id": "s2",
+          "text": "TREATMENT przeczesujesz i zostawiasz 2–3 min bez spłukiwania"
+        },
+        {
+          "id": "s3",
+          "text": "Wystarczy szybko umyć samą skórę głowy jak codziennym szamponem i pominąć długości"
+        }
       ],
-      "correctOptionIds": ["s3"],
+      "correctOptionIds": [
+        "s3"
+      ],
       "reward": 25,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Praca na długościach.",
         "incorrectTitle": "Znajdź mit.",
         "explanation": "Intelligent to kuracja długości: równomierne rozprowadzanie i przeczesywanie. To nie codzienne mycie „tylko skóry”.",
-        "funFact": { "text": "Ewa: Pokaż ręką długości — klientka widzi, że to nie zwykłe mycie." }
+        "funFact": {
+          "text": "Ewa: Pokaż ręką długości — klientka widzi, że to nie zwykłe mycie."
+        }
       }
     }
   ],
@@ -137,7 +215,7 @@
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
       "label": "Kolejny temat",
-      "teaser": "Koloryzacja: I–II–III przed, IV po kolorze."
+      "teaser": "Składniki i czasy — żeby nie mylić tubek."
     }
   }
 }

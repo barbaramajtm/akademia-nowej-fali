@@ -12,9 +12,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-budowa-podsumowanie',
-    lockedReason: 'Najpierw ukończ: Budowa włosa — podsumowanie'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'ph-jak-wplywa-na-wlos',
@@ -23,9 +23,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-co-oznacza-ph',
-    lockedReason: 'Najpierw ukończ: Co oznacza pH?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'ph-preparaty-fryzjerskie',
@@ -34,9 +34,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-jak-wplywa-na-wlos',
-    lockedReason: 'Najpierw ukończ: Jak pH wpływa na włos?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'ph-przywracanie-ph-po-zabiegu',
@@ -45,9 +45,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-preparaty-fryzjerskie',
-    lockedReason: 'Najpierw ukończ: Jakie pH mają preparaty fryzjerskie?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'ph-koloryzacja',
@@ -56,9 +56,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-przywracanie-ph-po-zabiegu',
-    lockedReason: 'Najpierw ukończ: Dlaczego po zabiegu trzeba przywrócić właściwe pH?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'ph-rozjasnianie',
@@ -67,9 +67,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-koloryzacja',
-    lockedReason: 'Najpierw ukończ: pH podczas koloryzacji'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'ph-szampony',
@@ -78,9 +78,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Pielęgnacja',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-rozjasnianie',
-    lockedReason: 'Najpierw ukończ: pH podczas rozjaśniania'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'ph-odzywki-i-maski',
@@ -89,9 +89,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Pielęgnacja',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-szampony',
-    lockedReason: 'Najpierw ukończ: pH szamponów'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'ph-produkty-zakwaszajace',
@@ -100,9 +100,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Pielęgnacja',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-odzywki-i-maski',
-    lockedReason: 'Najpierw ukończ: pH odżywek i masek'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'ph-podsumowanie-modulu',
@@ -111,9 +111,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-produkty-zakwaszajace',
-    lockedReason: 'Najpierw ukończ: pH produktów zakwaszających'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-z-czego-sklada-sie',
@@ -122,9 +122,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Budowa i skład włosa',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'intelligent-rozmowa',
-    lockedReason: 'Najpierw ukończ: Rozmowa i domknięcie'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-oslonka-kora-rdzen',
@@ -133,9 +133,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Budowa i skład włosa',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-z-czego-sklada-sie',
-    lockedReason: 'Najpierw ukończ: Z czego składa się włos?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-keratyna-rusztowanie',
@@ -144,9 +144,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Budowa i skład włosa',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-oslonka-kora-rdzen',
-    lockedReason: 'Najpierw ukończ: Osłonka, kora i rdzeń'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-czesci-wlosa',
@@ -155,9 +155,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Budowa i skład włosa',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-keratyna-rusztowanie',
-    lockedReason: 'Najpierw ukończ: Keratyna — rusztowanie włosa'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-wlasciwosci-fizyczne',
@@ -166,9 +166,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Budowa i skład włosa',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-czesci-wlosa',
-    lockedReason: 'Najpierw ukończ: Łodyga, korzeń, cebulka'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-cykl-wzrostu',
@@ -177,9 +177,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Budowa i skład włosa',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-wlasciwosci-fizyczne',
-    lockedReason: 'Najpierw ukończ: Właściwości fizyczne włosa'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-budowa-podsumowanie',
@@ -188,9 +188,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Budowa i skład włosa',
     moduleSubtitle: 'Podsumowanie',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-cykl-wzrostu',
-    lockedReason: 'Najpierw ukończ: Cykl wzrostu włosa'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'joico-kpak-co-to',
@@ -224,6 +224,17 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: O-W-R-N: cztery etapy'
   },
   {
+    id: 'joico-kpak-clarifying-dlugosci',
+    moduleId: 'joico-kpak',
+    title: 'Clarifying i długości włosa',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-procedura',
+    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
+  },
+  {
     id: 'joico-kpak-powtorzenie-2-3',
     moduleId: 'joico-kpak',
     title: 'Powtórka kroków 2 i 3',
@@ -231,8 +242,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'joico-kpak-procedura',
-    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
+    requiresLessonId: 'joico-kpak-clarifying-dlugosci',
+    lockedReason: 'Najpierw ukończ: Clarifying i długości włosa'
   },
   {
     id: 'joico-kpak-tonacja-po-3',
@@ -246,6 +257,17 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Powtórka kroków 2 i 3'
   },
   {
+    id: 'joico-kpak-scenki-salonu',
+    moduleId: 'joico-kpak',
+    title: 'Scenki przy fotelu — K-PAK',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-tonacja-po-3',
+    lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
+  },
+  {
     id: 'joico-kpak-rozmowa',
     moduleId: 'joico-kpak',
     title: 'Rozmowa i technologie',
@@ -253,8 +275,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'joico-kpak-tonacja-po-3',
-    lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
+    requiresLessonId: 'joico-kpak-scenki-salonu',
+    lockedReason: 'Najpierw ukończ: Scenki przy fotelu — K-PAK'
   },
   {
     id: 'intelligent-co-to',
@@ -301,6 +323,17 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Intelligent a budowa włosa'
   },
   {
+    id: 'intelligent-sklad-czasy',
+    moduleId: 'intelligent-babilon',
+    title: 'Składniki i czasy faz',
+    moduleTitle: 'Babilon Intelligent — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'intelligent-procedura',
+    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
+  },
+  {
     id: 'intelligent-przed-po-kolorze',
     moduleId: 'intelligent-babilon',
     title: 'Przed i po koloryzacji',
@@ -308,8 +341,19 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'intelligent-procedura',
-    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
+    requiresLessonId: 'intelligent-sklad-czasy',
+    lockedReason: 'Najpierw ukończ: Składniki i czasy faz'
+  },
+  {
+    id: 'intelligent-scenki-salonu',
+    moduleId: 'intelligent-babilon',
+    title: 'Scenki przy fotelu — Intelligent',
+    moduleTitle: 'Babilon Intelligent — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'intelligent-przed-po-kolorze',
+    lockedReason: 'Najpierw ukończ: Przed i po koloryzacji'
   },
   {
     id: 'intelligent-rozmowa',
@@ -319,8 +363,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'intelligent-przed-po-kolorze',
-    lockedReason: 'Najpierw ukończ: Przed i po koloryzacji'
+    requiresLessonId: 'intelligent-scenki-salonu',
+    lockedReason: 'Najpierw ukończ: Scenki przy fotelu — Intelligent'
   },
   {
     id: 'lesson-n1-numer-farby',
@@ -329,9 +373,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'ph-podsumowanie-modulu',
-    lockedReason: 'Najpierw ukończ: Podsumowanie modułu pH'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n2-liczba-przed-separatorem',
@@ -340,9 +384,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n1-numer-farby',
-    lockedReason: 'Najpierw ukończ: Co widać w numerze farby'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n3-skala-poziomow',
@@ -351,9 +395,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n2-liczba-przed-separatorem',
-    lockedReason: 'Najpierw ukończ: Liczba przed separatorem'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n4-refleks-glowny',
@@ -362,9 +406,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n3-skala-poziomow',
-    lockedReason: 'Najpierw ukończ: Skala poziomów 1–10'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n5-refleks-dodatkowy',
@@ -373,9 +417,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n4-refleks-glowny',
-    lockedReason: 'Najpierw ukończ: Pierwsza cyfra po separatorze'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n6-kolejnosc-refleksow',
@@ -384,9 +428,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n5-refleks-dodatkowy',
-    lockedReason: 'Najpierw ukończ: Druga cyfra po separatorze'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n7-podwojny-refleks',
@@ -395,9 +439,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n6-kolejnosc-refleksow',
-    lockedReason: 'Najpierw ukończ: Dlaczego 7.13 i 7.31 to nie to samo'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n8-czytanie-numeru',
@@ -406,9 +450,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n7-podwojny-refleks',
-    lockedReason: 'Najpierw ukończ: Co oznacza 7.11'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n9-separatory',
@@ -417,9 +461,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n8-czytanie-numeru',
-    lockedReason: 'Najpierw ukończ: Czytanie całego numeru krok po kroku'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n10-legenda-producenta',
@@ -428,9 +472,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n9-separatory',
-    lockedReason: 'Najpierw ukończ: Separatory i nazwy stosowane przez marki'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n11-rozpoznawanie-poziomow',
@@ -439,9 +483,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Diagnoza koloru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n10-legenda-producenta',
-    lockedReason: 'Najpierw ukończ: Legenda producenta'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n12-poziom-a-refleks',
@@ -450,9 +494,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Diagnoza koloru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n11-rozpoznawanie-poziomow',
-    lockedReason: 'Najpierw ukończ: Rozpoznawanie poziomów 1–10'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n13-sytuacje-kolorystyczne',
@@ -461,9 +505,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Diagnoza koloru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n12-poziom-a-refleks',
-    lockedReason: 'Najpierw ukończ: Poziom to nie refleks'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n14-naturalny-odrost',
@@ -472,9 +516,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Diagnoza koloru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n13-sytuacje-kolorystyczne',
-    lockedReason: 'Najpierw ukończ: Co właściwie oceniamy na włosach klientki'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n15-kolor-kosmetyczny',
@@ -483,9 +527,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Diagnoza koloru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n14-naturalny-odrost',
-    lockedReason: 'Najpierw ukończ: Naturalny odrost'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n16-rozjasnione-strefy',
@@ -494,9 +538,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Diagnoza koloru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n15-kolor-kosmetyczny',
-    lockedReason: 'Najpierw ukończ: Kolor kosmetyczny a stan faktyczny'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n17-procent-siwizny',
@@ -505,9 +549,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Diagnoza koloru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n16-rozjasnione-strefy',
-    lockedReason: 'Najpierw ukończ: Rozjaśnienia i różne poziomy na jednej głowie'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n18-pelna-diagnoza-koloru',
@@ -516,9 +560,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Diagnoza koloru',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n17-procent-siwizny',
-    lockedReason: 'Najpierw ukończ: Ocena procentu siwizny'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n19-powtorka-mieszana',
@@ -527,9 +571,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Podsumowanie',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n18-pelna-diagnoza-koloru',
-    lockedReason: 'Najpierw ukończ: Pełna diagnoza koloru'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'lesson-n20-sprawdzian-modulu',
@@ -538,9 +582,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Numeracja farb i diagnoza koloru',
     moduleSubtitle: 'Podsumowanie',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n19-powtorka-mieszana',
-    lockedReason: 'Najpierw ukończ: Powtórka mieszana'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'oksydant-proporcja-11-5',
@@ -549,9 +593,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Oksydant — proporcje i mieszanie',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'lesson-n20-sprawdzian-modulu',
-    lockedReason: 'Najpierw ukończ: Sprawdzian modułu'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'oksydant-gramy-szybko',
@@ -560,9 +604,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Oksydant — proporcje i mieszanie',
     moduleSubtitle: 'Ćwiczenia',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'oksydant-proporcja-11-5',
-    lockedReason: 'Najpierw ukończ: Proporcja 1:1,5 — farba do oksydantu'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'oksydant-polka-stezen',
@@ -571,9 +615,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Oksydant — proporcje i mieszanie',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'oksydant-gramy-szybko',
-    lockedReason: 'Najpierw ukończ: Szybkie gramy: 15, 20, 25, 35'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'oksydant-mieszanie-7',
@@ -582,9 +626,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Oksydant — proporcje i mieszanie',
     moduleSubtitle: 'Ćwiczenia',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'oksydant-polka-stezen',
-    lockedReason: 'Najpierw ukończ: Półka stężeń: 1,5% · 3% · 6% · 9% · 12%'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'oksydant-sprawdzian',
@@ -593,9 +637,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Oksydant — proporcje i mieszanie',
     moduleSubtitle: 'Sprawdzian',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'oksydant-mieszanie-7',
-    lockedReason: 'Najpierw ukończ: Jak zrobić 7% z 6% i 9%'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-ksztalt-co-utrzymuje',
@@ -604,9 +648,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Włos, wiązania i zmiana kształtu',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'oksydant-sprawdzian',
-    lockedReason: 'Najpierw ukończ: Sprawdzian: szybkie szacowanie'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-ksztalt-wodorowe',
@@ -615,9 +659,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Włos, wiązania i zmiana kształtu',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-ksztalt-co-utrzymuje',
-    lockedReason: 'Najpierw ukończ: Co utrzymuje kształt włosa?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-ksztalt-wilgoc-cieplo',
@@ -626,9 +670,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Włos, wiązania i zmiana kształtu',
     moduleSubtitle: 'Modelowanie',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-ksztalt-wodorowe',
-    lockedReason: 'Najpierw ukończ: Wiązania wodorowe'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-ksztalt-skret-po-walkach',
@@ -637,9 +681,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Włos, wiązania i zmiana kształtu',
     moduleSubtitle: 'Modelowanie',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-ksztalt-wilgoc-cieplo',
-    lockedReason: 'Najpierw ukończ: Wilgoć, ciepło i modelowanie'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-ksztalt-siarkowe',
@@ -648,9 +692,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Włos, wiązania i zmiana kształtu',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-ksztalt-skret-po-walkach',
-    lockedReason: 'Najpierw ukończ: Skręt po wałkach'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-ksztalt-redukcja-utrwalenie',
@@ -659,9 +703,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Włos, wiązania i zmiana kształtu',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-ksztalt-siarkowe',
-    lockedReason: 'Najpierw ukończ: Wiązania siarkowe'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-ksztalt-czasowa-czy-chemiczna',
@@ -670,9 +714,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Włos, wiązania i zmiana kształtu',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-ksztalt-redukcja-utrwalenie',
-    lockedReason: 'Najpierw ukończ: Redukcja i utrwalenie'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-kolor-melanina',
@@ -681,9 +725,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Teoria koloru włosa',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-oslonka-kora-rdzen',
-    lockedReason: 'Najpierw ukończ: Osłonka, kora i rdzeń'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-kolor-kolo-barw',
@@ -692,9 +736,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Teoria koloru włosa',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-kolor-melanina',
-    lockedReason: 'Najpierw ukończ: Melanina — naturalny barwnik'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-kolor-neutralizacja',
@@ -703,9 +747,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Teoria koloru włosa',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-kolor-kolo-barw',
-    lockedReason: 'Najpierw ukończ: Koło barw'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-kolor-chlonnosc',
@@ -714,9 +758,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Teoria koloru włosa',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-kolor-neutralizacja',
-    lockedReason: 'Najpierw ukończ: Neutralizacja niepożądanych odcieni'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-kolor-ton-w-ton-plukanka',
@@ -725,9 +769,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Teoria koloru włosa',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-kolor-chlonnosc',
-    lockedReason: 'Najpierw ukończ: Chłonność przy farbowaniu'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'wlos-kolor-roslinna-vs-oksydacyjna',
@@ -736,9 +780,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Teoria koloru włosa',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-kolor-ton-w-ton-plukanka',
-    lockedReason: 'Najpierw ukończ: Ton w ton i płukanka'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'trwala-wodna-czy-trwala',
@@ -747,9 +791,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Trwała ondulacja — procedura',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'wlos-ksztalt-redukcja-utrwalenie',
-    lockedReason: 'Najpierw ukończ: Redukcja i utrwalenie'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'trwala-mycie-przed-po',
@@ -758,9 +802,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Trwała ondulacja — procedura',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'trwala-wodna-czy-trwala',
-    lockedReason: 'Najpierw ukończ: Ondulacja wodna czy trwała?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'trwala-techniki-nawijania',
@@ -769,9 +813,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Trwała ondulacja — procedura',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'trwala-mycie-przed-po',
-    lockedReason: 'Najpierw ukończ: Mycie przed i po zabiegu'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'trwala-srednica-walkow',
@@ -780,9 +824,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Trwała ondulacja — procedura',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'trwala-techniki-nawijania',
-    lockedReason: 'Najpierw ukończ: Techniki nawijania'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'trwala-przybory-i-przebieg',
@@ -791,9 +835,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Trwała ondulacja — procedura',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'trwala-srednica-walkow',
-    lockedReason: 'Najpierw ukończ: Średnica wałków i spiralne'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'trwala-trwalosc-ulozenia',
@@ -802,9 +846,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Trwała ondulacja — procedura',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'trwala-przybory-i-przebieg',
-    lockedReason: 'Najpierw ukończ: Przybory i przebieg trwałej'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'bhp-po-co-higiena',
@@ -813,7 +857,8 @@ window.LessonsCatalog = [
     moduleTitle: 'BHP i higiena salonu',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false
+    locked: true,
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'bhp-dezynfekcja-sterylizacja',
@@ -822,9 +867,9 @@ window.LessonsCatalog = [
     moduleTitle: 'BHP i higiena salonu',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'bhp-po-co-higiena',
-    lockedReason: 'Najpierw ukończ: Po co higiena w salonie?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'bhp-miejsca-ryzyka',
@@ -833,9 +878,9 @@ window.LessonsCatalog = [
     moduleTitle: 'BHP i higiena salonu',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'bhp-dezynfekcja-sterylizacja',
-    lockedReason: 'Najpierw ukończ: Dezynfekcja czy sterylizacja?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'bhp-urzadzenia-prad',
@@ -844,9 +889,9 @@ window.LessonsCatalog = [
     moduleTitle: 'BHP i higiena salonu',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'bhp-miejsca-ryzyka',
-    lockedReason: 'Najpierw ukończ: Gdzie kryją się drobnoustroje?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'bhp-salon-pracownik',
@@ -855,9 +900,9 @@ window.LessonsCatalog = [
     moduleTitle: 'BHP i higiena salonu',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'bhp-urzadzenia-prad',
-    lockedReason: 'Najpierw ukończ: Prąd, woda i sprzęt'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'bhp-klient-choroby-alergie',
@@ -866,9 +911,9 @@ window.LessonsCatalog = [
     moduleTitle: 'BHP i higiena salonu',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'bhp-salon-pracownik',
-    lockedReason: 'Najpierw ukończ: Bezpieczny salon i obowiązki'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'strzyz-techniki-lista',
@@ -877,7 +922,8 @@ window.LessonsCatalog = [
     moduleTitle: 'Strzyżenie — techniki i narzędzia',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false
+    locked: true,
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'strzyz-degazowanie',
@@ -886,9 +932,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Strzyżenie — techniki i narzędzia',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'strzyz-techniki-lista',
-    lockedReason: 'Najpierw ukończ: Techniki strzyżenia — lista'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'strzyz-cieniowanie',
@@ -897,9 +943,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Strzyżenie — techniki i narzędzia',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'strzyz-degazowanie',
-    lockedReason: 'Najpierw ukończ: Degażowanie'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'strzyz-rodzaje-nozyczek',
@@ -908,9 +954,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Strzyżenie — techniki i narzędzia',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'strzyz-cieniowanie',
-    lockedReason: 'Najpierw ukończ: Sposoby cieniowania'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'strzyz-maszynki',
@@ -919,9 +965,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Strzyżenie — techniki i narzędzia',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'strzyz-rodzaje-nozyczek',
-    lockedReason: 'Najpierw ukończ: Rodzaje nożyczek'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'strzyz-grzebienie-konserwacja',
@@ -930,9 +976,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Strzyżenie — techniki i narzędzia',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'strzyz-maszynki',
-    lockedReason: 'Najpierw ukończ: Maszynki i konturówka'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'prostowanie-sposoby',
@@ -941,9 +987,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Prostowanie włosów',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'strzyz-grzebienie-konserwacja',
-    lockedReason: 'Najpierw ukończ: Grzebienie, konserwacja, brzytwa'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'prostowanie-prostownica-efekt',
@@ -952,9 +998,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Prostowanie włosów',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'prostowanie-sposoby',
-    lockedReason: 'Najpierw ukończ: Sposoby prostowania włosów'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'prostowanie-plytki-temperatura',
@@ -963,9 +1009,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Prostowanie włosów',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'prostowanie-prostownica-efekt',
-    lockedReason: 'Najpierw ukończ: Prostownica: efekt nietrwały'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'prostowanie-suche-mokre',
@@ -974,9 +1020,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Prostowanie włosów',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'prostowanie-plytki-temperatura',
-    lockedReason: 'Najpierw ukończ: Płytki, temperatura i termostat'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'prostowanie-chemiczne-mostki',
@@ -985,9 +1031,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Prostowanie włosów',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'prostowanie-suche-mokre',
-    lockedReason: 'Najpierw ukończ: Prostownice: suche i mokre'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'balejaz-co-to',
@@ -996,9 +1042,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Balejaż',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'prostowanie-chemiczne-mostki',
-    lockedReason: 'Najpierw ukończ: Chemiczne prostowanie i mostki'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'balejaz-wybrane-pasma',
@@ -1007,9 +1053,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Balejaż',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'balejaz-co-to',
-    lockedReason: 'Najpierw ukończ: Co to jest balejaż?'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'balejaz-piec-krokow',
@@ -1018,9 +1064,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Balejaż',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'balejaz-wybrane-pasma',
-    lockedReason: 'Najpierw ukończ: Wybrane pasma, nie cała głowa'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'balejaz-produkt-i-folia',
@@ -1029,9 +1075,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Balejaż',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'balejaz-piec-krokow',
-    lockedReason: 'Najpierw ukończ: Pięć kroków balejażu'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   },
   {
     id: 'balejaz-konsultacja',
@@ -1040,9 +1086,9 @@ window.LessonsCatalog = [
     moduleTitle: 'Balejaż',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
+    locked: true,
     requiresLessonId: 'balejaz-produkt-i-folia',
-    lockedReason: 'Najpierw ukończ: Rozjaśniacz lub farba + folia'
+    lockedReason: 'Wkrótce — na razie uczysz się regeneracji (JOICO i Intelligent)'
   }
 
 ];

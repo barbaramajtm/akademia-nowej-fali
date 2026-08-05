@@ -6,7 +6,9 @@
 | `intelligent-cztery-fazy` | Cztery fazy: I–II–III–IV |
 | `intelligent-budowa-wlos` | Intelligent a budowa włosa |
 | `intelligent-procedura` | Procedura na stanowisku |
+| `intelligent-sklad-czasy` | Składniki i czasy faz |
 | `intelligent-przed-po-kolorze` | Przed i po koloryzacji |
+| `intelligent-scenki-salonu` | Scenki przy fotelu — Intelligent |
 | `intelligent-rozmowa` | Rozmowa i domknięcie |
 
 Kolejność w akademii: **zaraz po JOICO K-PAK**, potem budowa włosa → pH → numeracja.

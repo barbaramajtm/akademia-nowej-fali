@@ -2,6 +2,18 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-08-05 — Tylko regeneracje odblokowane + więcej pytań
+
+### Zmieniono
+- Wszystkie moduły poza `joico-kpak` i `intelligent-babilon` mają `locked: true` („Wkrótce…”)
+- Start: jedyna dostępna lekcja dla nowego konta = `joico-kpak-co-to`
+
+### Dodano
+- JOICO: `joico-kpak-clarifying-dlugosci`, `joico-kpak-scenki-salonu`
+- Intelligent: `intelligent-sklad-czasy`, `intelligent-scenki-salonu`
+
+---
+
 ## 2026-08-05 — Ścieżka: JOICO → Intelligent → budowa → pH → numeracja
 
 ### Zmieniono
