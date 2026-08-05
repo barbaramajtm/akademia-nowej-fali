@@ -12,9 +12,20 @@ Format oparty na datach. Najnowsze wpisy na górze.
 - Odznaka `modul-intelligent-babilon` + motyw UI
 
 ### Zmieniono
-- `LessonsModuleOrder`: po `joico-kpak`, przed `oksydant-proporcje`
-- Odblokowanie oksydantu po `intelligent-rozmowa`
+- `LessonsModuleOrder`: po `joico-kpak`, potem `numeracja-farb` → `oksydant-proporcje`
+- Odblokowanie: N1 po `intelligent-rozmowa`; oksydant po N20 (jak na main)
 - Teaser po `joico-kpak-rozmowa` → Intelligent
+
+---
+
+## 2026-07-28 — Kolejność: numeracja przed oksydantem
+
+### Zmieniono
+- `LessonsModuleOrder`: `ph` → `wlos-kolor` → `joico-kpak` → `numeracja-farb` → `oksydant-proporcje` → …
+- Odblokowanie: N1 po K-PAK; oksydant po N20; kształt po sprawdzianie oksydantu
+- Teasery graniczne: K-PAK → numeracja → oksydant → wiązania
+
+---
 
 ## 2026-07-28 — Ścieżka: pH → budowa → regeneracja (przed oksydantem)
 

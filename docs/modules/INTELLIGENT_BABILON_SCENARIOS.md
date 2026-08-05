@@ -9,7 +9,7 @@
 | `intelligent-przed-po-kolorze` | Przed i po koloryzacji |
 | `intelligent-rozmowa` | Rozmowa i domknięcie |
 
-Kolejność w akademii: **zaraz po JOICO K-PAK**, przed oksydantem.
+Kolejność w akademii: **zaraz po JOICO K-PAK**, potem numeracja i oksydant.
 
 ## Akcent dydaktyczny
 

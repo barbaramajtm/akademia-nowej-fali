@@ -17,4 +17,4 @@
 ## Uwagi
 
 - Język uczciwy jak przy K-PAK: rekonstrukcja fryzjerska, bez „leczenia cebulki”.
-- W `LessonsModuleOrder`: po `joico-kpak`, przed `oksydant-proporcje`.
+- W `LessonsModuleOrder`: po `joico-kpak`, przed `numeracja-farb` (potem oksydant).
