@@ -2,6 +2,30 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-08-05 — Ścieżka: JOICO → Intelligent → budowa → pH → numeracja
+
+### Zmieniono
+- `LessonsModuleOrder`: `joico-kpak` → `intelligent-babilon` → `wlos-kolor` → `ph` → `numeracja-farb` → …
+- Odblokowanie: start od K-PAK; budowa po Intelligent; pH po budowie; numeracja po pH
+- Teasery i intro dopasowane do nowej kolejności
+
+---
+
+## 2026-08-04 — Moduł: Babilon Intelligent — regeneracja
+
+### Dodano
+- 6 lekcji: `intelligent-co-to`, `intelligent-cztery-fazy`, `intelligent-budowa-wlos`, `intelligent-procedura`, `intelligent-przed-po-kolorze`, `intelligent-rozmowa`
+- Źródło: `source-materials/intelligent-babilon/intelligent-instrukcja.pdf`
+- Grafiki: `assets/images/intelligent-przeglad.png`, `intelligent-instrukcja.png`
+- Docs: `INTELLIGENT_BABILON_{SOURCES,SCENARIOS,GRAPHICS,AUDIT}.md`
+- Odznaka `modul-intelligent-babilon` + motyw UI
+
+### Zmieniono
+- `LessonsModuleOrder`: po `joico-kpak` (kolejność ścieżki zaktualizowana 2026-08-05)
+- Odznaka + 6 lekcji Intelligent
+- Teaser po `joico-kpak-rozmowa` → Intelligent
+
+---
 ## 2026-08-04 — BHP: cztery cele bez zgadywania
 
 ### Zmieniono
@@ -9,6 +33,8 @@ Format oparty na datach. Najnowsze wpisy na górze.
 - Matching obejmuje wszystkie 4 cele (wcześniej 3 + „czystość” tylko we feedbacku)
 - Ordering do utrwalenia kolejności z materiału
 - Grafika: `assets/images/bhp-cztery-cele.png`
+
+---
 
 ## 2026-07-28 — Kolejność: numeracja przed oksydantem
 

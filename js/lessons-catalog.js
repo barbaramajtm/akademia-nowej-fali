@@ -12,7 +12,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false
+    locked: false,
+    requiresLessonId: 'wlos-budowa-podsumowanie',
+    lockedReason: 'Najpierw ukończ: Budowa włosa — podsumowanie'
   },
   {
     id: 'ph-jak-wplywa-na-wlos',
@@ -121,8 +123,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'ph-podsumowanie-modulu',
-    lockedReason: 'Najpierw ukończ: Podsumowanie modułu pH'
+    requiresLessonId: 'intelligent-rozmowa',
+    lockedReason: 'Najpierw ukończ: Rozmowa i domknięcie'
   },
   {
     id: 'wlos-oslonka-kora-rdzen',
@@ -197,9 +199,7 @@ window.LessonsCatalog = [
     moduleTitle: 'JOICO K-PAK — regeneracja',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'wlos-budowa-podsumowanie',
-    lockedReason: 'Najpierw ukończ: Budowa włosa — podsumowanie'
+    locked: false
   },
   {
     id: 'joico-kpak-owrn',
@@ -257,6 +257,72 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
   },
   {
+    id: 'intelligent-co-to',
+    moduleId: 'intelligent-babilon',
+    title: 'Czym jest Babilon Intelligent?',
+    moduleTitle: 'Babilon Intelligent — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-rozmowa',
+    lockedReason: 'Najpierw ukończ: Rozmowa i technologie'
+  },
+  {
+    id: 'intelligent-cztery-fazy',
+    moduleId: 'intelligent-babilon',
+    title: 'Cztery fazy: I–II–III–IV',
+    moduleTitle: 'Babilon Intelligent — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'intelligent-co-to',
+    lockedReason: 'Najpierw ukończ: Czym jest Babilon Intelligent?'
+  },
+  {
+    id: 'intelligent-budowa-wlos',
+    moduleId: 'intelligent-babilon',
+    title: 'Intelligent a budowa włosa',
+    moduleTitle: 'Babilon Intelligent — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'intelligent-cztery-fazy',
+    lockedReason: 'Najpierw ukończ: Cztery fazy: I–II–III–IV'
+  },
+  {
+    id: 'intelligent-procedura',
+    moduleId: 'intelligent-babilon',
+    title: 'Procedura na stanowisku',
+    moduleTitle: 'Babilon Intelligent — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'intelligent-budowa-wlos',
+    lockedReason: 'Najpierw ukończ: Intelligent a budowa włosa'
+  },
+  {
+    id: 'intelligent-przed-po-kolorze',
+    moduleId: 'intelligent-babilon',
+    title: 'Przed i po koloryzacji',
+    moduleTitle: 'Babilon Intelligent — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'intelligent-procedura',
+    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
+  },
+  {
+    id: 'intelligent-rozmowa',
+    moduleId: 'intelligent-babilon',
+    title: 'Rozmowa i domknięcie',
+    moduleTitle: 'Babilon Intelligent — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'intelligent-przed-po-kolorze',
+    lockedReason: 'Najpierw ukończ: Przed i po koloryzacji'
+  },
+  {
     id: 'lesson-n1-numer-farby',
     moduleId: 'numeracja-farb',
     title: 'Co widać w numerze farby',
@@ -264,8 +330,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'joico-kpak-rozmowa',
-    lockedReason: 'Najpierw ukończ: Rozmowa i technologie'
+    requiresLessonId: 'ph-podsumowanie-modulu',
+    lockedReason: 'Najpierw ukończ: Podsumowanie modułu pH'
   },
   {
     id: 'lesson-n2-liczba-przed-separatorem',
@@ -981,7 +1047,7 @@ window.LessonsCatalog = [
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'wlos-kolor', 'joico-kpak', 'numeracja-farb', 'oksydant-proporcje', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
+window.LessonsModuleOrder = ['joico-kpak', 'intelligent-babilon', 'wlos-kolor', 'ph', 'numeracja-farb', 'oksydant-proporcje', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];

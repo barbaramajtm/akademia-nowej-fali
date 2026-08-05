@@ -4,18 +4,22 @@
   "title": "Podsumowanie modułu pH",
   "category": "pH we fryzjerstwie",
   "levelLabel": "Podsumowanie",
-
   "intro": {
     "narratorText": "Przeszłaś całą ścieżkę modułu pH — od skali odczynu po produkty końcowe. Ta lekcja zbiera wszystko w jedną całość. Pokaż, że rozumiesz nie tylko liczby, ale też logikę pracy fryzjerskiej.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
-
   "rewards": {
-    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
-    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
   },
-
   "tasks": [
     {
       "id": "ph10-z1",
@@ -25,14 +29,38 @@
       "leftTitle": "Etap",
       "rightTitle": "Typowy odczyn / rola",
       "left": [
-        { "id": "l1", "pairId": "a", "text": "Koloryzacja oksydacyjna" },
-        { "id": "l2", "pairId": "b", "text": "Szampon do codziennej pielęgnacji" },
-        { "id": "l3", "pairId": "c", "text": "Produkt końcowy po zabiegu chemicznym" }
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Koloryzacja oksydacyjna"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Szampon do codziennej pielęgnacji"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Produkt końcowy po zabiegu chemicznym"
+        }
       ],
       "right": [
-        { "id": "r1", "pairId": "b", "text": "Różne pH — dobór do włosa i skóry" },
-        { "id": "r2", "pairId": "a", "text": "Silnie zasadowe środowisko mieszaniny" },
-        { "id": "r3", "pairId": "c", "text": "Przywraca równowagę pH włosa" }
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Różne pH — dobór do włosa i skóry"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Silnie zasadowe środowisko mieszaniny"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Przywraca równowagę pH włosa"
+        }
       ],
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
@@ -65,11 +93,24 @@
       "question": "Ułóż logiczną kolejność nauki, którą przeszłaś w tym module.",
       "resetLabel": "Od początku",
       "steps": [
-        { "id": "s1", "text": "Zrozumienie skali pH i wpływu na włos" },
-        { "id": "s2", "text": "Rola preparatów w zabiegach chemicznych" },
-        { "id": "s3", "text": "Przywracanie równowagi i pielęgnacja po zabiegu" }
+        {
+          "id": "s1",
+          "text": "Zrozumienie skali pH i wpływu na włos"
+        },
+        {
+          "id": "s2",
+          "text": "Rola preparatów w zabiegach chemicznych"
+        },
+        {
+          "id": "s3",
+          "text": "Przywracanie równowagi i pielęgnacja po zabiegu"
+        }
       ],
-      "correctOrder": ["s1", "s2", "s3"],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
@@ -84,9 +125,18 @@
       "kicker": "Krok 4 · Egzaminowa intuicja",
       "question": "Które zdanie najlepiej podsumowuje moduł pH?",
       "options": [
-        { "id": "a", "text": "pH opisuje odczyn środowiska; zabiegi chemiczne go zmieniają, a właściwa pielęgnacja i finisz przywracają równowagę włosowi." },
-        { "id": "b", "text": "Im niższe pH, tym zawsze lepiej — niezależnie od sytuacji." },
-        { "id": "c", "text": "pH dotyczy tylko farb — szampony i odżywki nie mają odczynu." }
+        {
+          "id": "a",
+          "text": "pH opisuje odczyn środowiska; zabiegi chemiczne go zmieniają, a właściwa pielęgnacja i finisz przywracają równowagę włosowi."
+        },
+        {
+          "id": "b",
+          "text": "Im niższe pH, tym zawsze lepiej — niezależnie od sytuacji."
+        },
+        {
+          "id": "c",
+          "text": "pH dotyczy tylko farb — szampony i odżywki nie mają odczynu."
+        }
       ],
       "correctOptionId": "a",
       "reward": 15,
@@ -103,9 +153,18 @@
       "kicker": "Krok 5 · Jesteś gotowa",
       "question": "Co robisz, gdy nie jesteś pewna pH produktu w salonie?",
       "options": [
-        { "id": "a", "text": "Sprawdzam kartę produktu, szkolenie producenta lub pytam doświadczonego instruktora — nie zgaduję." },
-        { "id": "b", "text": "Mieszam produkty na wyczucie — efekt zawsze wyjdzie." },
-        { "id": "c", "text": "Ignoruję pH — liczy się tylko szybkość obsługi klientki." }
+        {
+          "id": "a",
+          "text": "Sprawdzam kartę produktu, szkolenie producenta lub pytam doświadczonego instruktora — nie zgaduję."
+        },
+        {
+          "id": "b",
+          "text": "Mieszam produkty na wyczucie — efekt zawsze wyjdzie."
+        },
+        {
+          "id": "c",
+          "text": "Ignoruję pH — liczy się tylko szybkość obsługi klientki."
+        }
       ],
       "correctOptionId": "a",
       "reward": 25,
@@ -120,15 +179,14 @@
       }
     }
   ],
-
   "completion": {
     "solvedLabel": "Moduł ukończony",
     "title": "Opanowałaś pH we fryzjerstwie",
     "subtitle": "Rozumiesz skalę pH, wpływ na włos, rolę preparatów w zabiegach, pielęgnację i różnicę między produktami końcowymi. To solidny fundament pod dalszą naukę.",
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
-      "label": "Co dalej",
-      "teaser": "Dalej: oksydant — proporcja 1:1,5 i szybkie gramy na wadze."
+      "label": "Kolejny temat",
+      "teaser": "Dalej: numeracja farb — co widać w numerze na tubce."
     }
   }
 }

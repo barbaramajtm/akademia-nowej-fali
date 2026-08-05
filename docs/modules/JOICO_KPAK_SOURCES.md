@@ -22,5 +22,5 @@
 - Włos na długości = martwa struktura — zabieg działa kosmetycznie/fryzjersko.
 - Nie porównywać marketingowo z Olaplexem („tylko lepsze”).
 - Preferować `…ladniejsza-wersja.pdf` przy treściach; procedurę trzymać zgodnie z `…instrukcja-wykonania.pdf`.
-- W `LessonsModuleOrder`: `ph` → `wlos-kolor` → `joico-kpak` → `numeracja-farb` → `oksydant-proporcje` → …
-- Odblokowanie: budowa po `ph-podsumowanie-modulu`; K-PAK po `wlos-budowa-podsumowanie`; numeracja po `joico-kpak-rozmowa`; oksydant po N20.
+- W `LessonsModuleOrder`: `joico-kpak` → `intelligent-babilon` → `wlos-kolor` → `ph` → `numeracja-farb` → `oksydant-proporcje` → …
+- Odblokowanie: K-PAK start bez wymagań; Intelligent po `joico-kpak-rozmowa`; budowa po `intelligent-rozmowa`; pH po `wlos-budowa-podsumowanie`; numeracja po `ph-podsumowanie-modulu`; oksydant po N20.
