@@ -5,9 +5,18 @@
   "category": "BHP i higiena salonu",
   "levelLabel": "Podstawy",
   "intro": {
-    "narratorText": "Przed pierwszą klientką dnia: po co w ogóle cała higiena? Dziś cztery cele z materiałów — żeby nie mylić „ładnie wygląda” z bezpieczeństwem.",
+    "narratorText": "Zanim zaczniesz zgadywać przy pytaniach — najpierw zobaczysz cztery cele higieny z materiałów. Potem tylko je utrwalasz.",
     "stakeText": "do 75 Kosmyków",
-    "startButtonLabel": "Zacznij lekcję"
+    "startButtonLabel": "Zacznij lekcję",
+    "hairGuide": {
+      "title": "Cztery cele higieny w salonie",
+      "text": "Zapamiętaj tę listę jak checklistę przed dniem pracy. Higiena w salonie ma dokładnie cztery cele: (1) zapobieganie zakażeniom, (2) bezpieczeństwo klientów i pracowników, (3) utrzymanie czystości, (4) spełnianie wymagań sanitarnych. To nie jest „ładne stanowisko” — to bezpieczeństwo usługi.",
+      "note": "Źródło: Tech. 11 — cel zabiegów higienicznych.",
+      "continueLabel": "Rozumiem — do zadań",
+      "imageSrc": "assets/images/bhp-cztery-cele.png",
+      "imageAlt": "Cztery cele higieny: zakażenia, bezpieczeństwo ludzi, czystość, wymagania sanitarne.",
+      "imageCaption": "1 zakażenia · 2 ludzie · 3 czystość · 4 wymagania sanitarne"
+    }
   },
   "rewards": {
     "streakBonus": {
@@ -24,122 +33,88 @@
     {
       "id": "bh1-z1",
       "type": "singleChoice",
-      "kicker": "Krok 1 · Cel",
-      "question": "Celem zabiegów higienicznych w salonie jest m.in.:",
+      "kicker": "Krok 1 · Lista",
+      "question": "Ile celów zabiegów higienicznych wymieniają materiały (Tech. 11)?",
       "options": [
-        {
-          "id": "a",
-          "text": "Zapobieganie zakażeniom oraz bezpieczeństwo klientów i pracowników"
-        },
-        {
-          "id": "b",
-          "text": "Wyłącznie dobór wałków do trwałej"
-        },
-        {
-          "id": "c",
-          "text": "Tylko przyspieszenie trwałej bez chemii"
-        }
+        { "id": "a", "text": "Cztery" },
+        { "id": "b", "text": "Jeden — tylko sprzątanie na koniec dnia" },
+        { "id": "c", "text": "Zero — higiena nie jest w programie" }
       ],
       "correctOptionId": "a",
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Bezpieczeństwo i zakażenia.",
-        "incorrectTitle": "Tech. 11.",
-        "explanation": "Higiena ma zapobiegać zakażeniom i chronić klientów oraz pracowników — to nie jest „tylko estetyka stanowiska”."
+        "correctTitle": "Cztery cele.",
+        "incorrectTitle": "Spójrz na listę sprzed chwili.",
+        "explanation": "Tech. 11 wymienia cztery: zakażenia, bezpieczeństwo ludzi, czystość, wymagania sanitarne.",
+        "funFact": { "text": "Ewa: Na głos: „zakażenia, ludzie, czystość, sanepid” — cztery słowa i lista siedzi." }
       }
     },
     {
       "id": "bh1-z2",
       "type": "trueFalse",
       "kicker": "Krok 2 · Czystość",
-      "question": "Utrzymanie czystości i spełnianie wymagań sanitarnych należą do celów zabiegów higienicznych.",
+      "question": "„Utrzymanie czystości” to jeden z czterech celów higieny — obok zakażeń, bezpieczeństwa ludzi i wymagań sanitarnych.",
       "trueLabel": "Prawda",
       "falseLabel": "Mit",
       "correctValue": true,
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Tak — czystość i sanepid.",
-        "incorrectTitle": "Są w liście celów.",
-        "explanation": "Materiały wymieniają też utrzymanie czystości oraz spełnianie wymagań sanitarnych."
+        "correctTitle": "Tak — cel nr 3.",
+        "incorrectTitle": "Jest na liście.",
+        "explanation": "Czystość jest celem samym w sobie. Nie zastępuje jednak zapobiegania zakażeniom ani bezpieczeństwa ludzi.",
+        "funFact": { "text": "Ewa: Czyste lustro ≠ zrobiona higiena. To tylko jeden z czterech punktów." }
       }
     },
     {
       "id": "bh1-z3",
       "type": "matching",
-      "kicker": "Krok 3 · Cztery cele",
-      "question": "Dopasuj fragment celu.",
-      "leftTitle": "Hasło",
+      "kicker": "Krok 3 · Dopasuj 4 cele",
+      "question": "Dopasuj każdy cel do krótkiego znaczenia.",
+      "leftTitle": "Cel",
       "rightTitle": "Znaczenie",
       "left": [
-        {
-          "id": "l1",
-          "pairId": "a",
-          "text": "Zapobieganie zakażeniom"
-        },
-        {
-          "id": "l2",
-          "pairId": "b",
-          "text": "Bezpieczeństwo klientów i pracowników"
-        },
-        {
-          "id": "l3",
-          "pairId": "c",
-          "text": "Wymagania sanitarne"
-        }
+        { "id": "l1", "pairId": "a", "text": "Zapobieganie zakażeniom" },
+        { "id": "l2", "pairId": "b", "text": "Bezpieczeństwo klientów i pracowników" },
+        { "id": "l3", "pairId": "c", "text": "Utrzymanie czystości" },
+        { "id": "l4", "pairId": "d", "text": "Wymagania sanitarne" }
       ],
       "right": [
-        {
-          "id": "r1",
-          "pairId": "b",
-          "text": "Ochrona obu stron usługi, nie tylko „ładnego lustra”"
-        },
-        {
-          "id": "r2",
-          "pairId": "a",
-          "text": "Ograniczanie ryzyka przeniesienia drobnoustrojów"
-        },
-        {
-          "id": "r3",
-          "pairId": "c",
-          "text": "Spełnianie obowiązków sanitarnych zakładu"
-        }
+        { "id": "r1", "pairId": "b", "text": "Ochrona obu stron usługi" },
+        { "id": "r2", "pairId": "a", "text": "Mniejsze ryzyko drobnoustrojów" },
+        { "id": "r3", "pairId": "d", "text": "Obowiązki sanitarne zakładu" },
+        { "id": "r4", "pairId": "c", "text": "Porządek i czystość stanowiska" }
       ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Cele rozdzielone.",
-        "incorrectTitle": "Przypomnij Tech. 11.",
-        "explanation": "Cztery cele: zakażenia, bezpieczeństwo ludzi, czystość, wymagania sanitarne."
+        "correctTitle": "Cztery cele dopasowane.",
+        "incorrectTitle": "Wróć do listy 1–2–3–4.",
+        "explanation": "1 zakażenia · 2 bezpieczeństwo ludzi · 3 czystość · 4 wymagania sanitarne. Wszystkie cztery są w Tech. 11.",
+        "funFact": { "text": "Ewa: Jak brakuje Ci czwartego — zapomniałaś o czystości albo o sanepidzie." }
       }
     },
     {
       "id": "bh1-z4",
-      "type": "singleChoice",
-      "kicker": "Krok 4 · Decyzja",
-      "question": "Koleżanka mówi: „Higiena to tylko sprzątanie na koniec dnia”. Co jest bliżej materiałów?",
-      "options": [
-        {
-          "id": "a",
-          "text": "Higiena to m.in. zapobieganie zakażeniom i bezpieczeństwo ludzi — codziennie, nie tylko „na koniec”"
-        },
-        {
-          "id": "b",
-          "text": "Higiena dotyczy wyłącznie kolorymetrii"
-        },
-        {
-          "id": "c",
-          "text": "Higiena zastępuje trwałą chemiczną"
-        }
+      "type": "ordering",
+      "kicker": "Krok 4 · Powtórz listę",
+      "question": "Ułóż cztery cele w tej samej kolejności co w materiale (Tech. 11).",
+      "resetLabel": "Od początku",
+      "steps": [
+        { "id": "s1", "text": "Zapobieganie zakażeniom" },
+        { "id": "s2", "text": "Bezpieczeństwo klientów i pracowników" },
+        { "id": "s3", "text": "Utrzymanie czystości" },
+        { "id": "s4", "text": "Spełnianie wymagań sanitarnych" }
       ],
-      "correctOptionId": "a",
+      "correctOrder": ["s1", "s2", "s3", "s4"],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Nie tylko sprzątanie.",
-        "incorrectTitle": "Cele są szersze.",
-        "explanation": "Czystość jest jednym celem — obok zakażeń, bezpieczeństwa i wymagań sanitarnych."
+        "correctTitle": "Kolejność z Tech. 11.",
+        "incorrectTitle": "Jak na planszy: 1–2–3–4.",
+        "explanation": "Najpierw zakażenia, potem ludzie, potem czystość, na końcu wymagania sanitarne — tak stoi w materiale.",
+        "funFact": { "text": "Ewa: Układanie listy = lepsze zapamiętanie niż samo czytanie." }
       }
     },
     {
@@ -149,35 +124,25 @@
       "question": "Które stwierdzenie jest błędne?",
       "cardTitle": "Po co higiena",
       "rows": [
-        {
-          "id": "s1",
-          "text": "Higiena ma zapobiegać zakażeniom"
-        },
-        {
-          "id": "s2",
-          "text": "Higiena chroni klientów i pracowników"
-        },
-        {
-          "id": "s3",
-          "text": "Jedynym celem higieny jest dobór wałków do ondulacji"
-        }
+        { "id": "s1", "text": "Higiena ma zapobiegać zakażeniom" },
+        { "id": "s2", "text": "Higiena chroni klientów i pracowników" },
+        { "id": "s3", "text": "Jedynym celem higieny jest „ładne lustro” na koniec dnia" }
       ],
-      "correctOptionIds": [
-        "s3"
-      ],
+      "correctOptionIds": ["s3"],
       "reward": 25,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "To nie o wałkach.",
+        "correctTitle": "Nie tylko lustro.",
         "incorrectTitle": "Znajdź mit.",
-        "explanation": "Wałki to procedura zabiegu — nie cel zabiegów higienicznych z Tech. 11."
+        "explanation": "Czystość jest jednym z czterech celów — obok zakażeń, bezpieczeństwa ludzi i wymagań sanitarnych.",
+        "funFact": { "text": "Ewa: Jak koleżanka mówi „to tylko sprzątanie” — dopowiedz pozostałe trzy cele." }
       }
     }
   ],
   "completion": {
     "solvedLabel": "Lekcja ukończona",
-    "title": "Wiesz, po co jest higiena",
-    "subtitle": "Zakażenia, ludzie, czystość, wymagania sanitarne.",
+    "title": "Znasz cztery cele higieny",
+    "subtitle": "Zakażenia · ludzie · czystość · wymagania sanitarne — bez zgadywania.",
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
       "label": "Kolejny temat",

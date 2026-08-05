@@ -2,6 +2,7 @@
 
 | Lekcja | Status | Plik |
 |--------|--------|------|
-| L1–L6 | NIEPOTRZEBNA na tym etapie | — |
+| `bhp-po-co-higiena` | **JEST** — plansza 4 celów przed zadaniami | `assets/images/bhp-cztery-cele.png` |
+| L2–L6 | NIEPOTRZEBNA na tym etapie | — |
 
-Bez nowych grafik (poprawki wizualne później). Treść oparta o checklisty i decyzje.
+L1 uczy najpierw listę Tech. 11 (zakażenia, ludzie, czystość, wymagania sanitarne), potem sprawdza.
