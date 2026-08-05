@@ -2,7 +2,6 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
-<<<<<<< HEAD
 ## 2026-08-05 — Ścieżka: JOICO → Intelligent → budowa → pH → numeracja
 
 ### Zmieniono
@@ -27,7 +26,6 @@ Format oparty na datach. Najnowsze wpisy na górze.
 - Teaser po `joico-kpak-rozmowa` → Intelligent
 
 ---
-=======
 ## 2026-08-04 — BHP: cztery cele bez zgadywania
 
 ### Zmieniono
@@ -35,7 +33,8 @@ Format oparty na datach. Najnowsze wpisy na górze.
 - Matching obejmuje wszystkie 4 cele (wcześniej 3 + „czystość” tylko we feedbacku)
 - Ordering do utrwalenia kolejności z materiału
 - Grafika: `assets/images/bhp-cztery-cele.png`
->>>>>>> origin/main
+
+---
 
 ## 2026-07-28 — Kolejność: numeracja przed oksydantem
 
