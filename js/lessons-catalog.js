@@ -12,7 +12,9 @@ window.LessonsCatalog = [
     moduleTitle: 'pH we fryzjerstwie',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false
+    locked: false,
+    requiresLessonId: 'wlos-budowa-podsumowanie',
+    lockedReason: 'Najpierw ukończ: Budowa włosa — podsumowanie'
   },
   {
     id: 'ph-jak-wplywa-na-wlos',
@@ -121,8 +123,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'ph-podsumowanie-modulu',
-    lockedReason: 'Najpierw ukończ: Podsumowanie modułu pH'
+    requiresLessonId: 'intelligent-rozmowa',
+    lockedReason: 'Najpierw ukończ: Rozmowa i domknięcie'
   },
   {
     id: 'wlos-oslonka-kora-rdzen',
@@ -197,9 +199,7 @@ window.LessonsCatalog = [
     moduleTitle: 'JOICO K-PAK — regeneracja',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
-    locked: false,
-    requiresLessonId: 'wlos-budowa-podsumowanie',
-    lockedReason: 'Najpierw ukończ: Budowa włosa — podsumowanie'
+    locked: false
   },
   {
     id: 'joico-kpak-owrn',
@@ -330,8 +330,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Odczyt numeru',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'intelligent-rozmowa',
-    lockedReason: 'Najpierw ukończ: Rozmowa i domknięcie'
+    requiresLessonId: 'ph-podsumowanie-modulu',
+    lockedReason: 'Najpierw ukończ: Podsumowanie modułu pH'
   },
   {
     id: 'lesson-n2-liczba-przed-separatorem',
@@ -1047,7 +1047,7 @@ window.LessonsCatalog = [
 
 ];
 
-window.LessonsModuleOrder = ['ph', 'wlos-kolor', 'joico-kpak', 'intelligent-babilon', 'numeracja-farb', 'oksydant-proporcje', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
+window.LessonsModuleOrder = ['joico-kpak', 'intelligent-babilon', 'wlos-kolor', 'ph', 'numeracja-farb', 'oksydant-proporcje', 'wlos-ksztalt', 'wlos-teoria-koloru', 'trwala-procedura', 'bhp-higiena-salonu', 'strzyzenie-narzedzia', 'prostowanie-wlosow', 'balejaz'];
 
 function getCatalogEntry(lessonId){
   var list = window.LessonsCatalog || [];

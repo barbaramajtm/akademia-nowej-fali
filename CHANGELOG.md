@@ -2,6 +2,15 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-08-05 — Ścieżka: JOICO → Intelligent → budowa → pH → numeracja
+
+### Zmieniono
+- `LessonsModuleOrder`: `joico-kpak` → `intelligent-babilon` → `wlos-kolor` → `ph` → `numeracja-farb` → …
+- Odblokowanie: start od K-PAK; budowa po Intelligent; pH po budowie; numeracja po pH
+- Teasery i intro dopasowane do nowej kolejności
+
+---
+
 ## 2026-08-04 — Moduł: Babilon Intelligent — regeneracja
 
 ### Dodano
@@ -12,8 +21,8 @@ Format oparty na datach. Najnowsze wpisy na górze.
 - Odznaka `modul-intelligent-babilon` + motyw UI
 
 ### Zmieniono
-- `LessonsModuleOrder`: po `joico-kpak`, potem `numeracja-farb` → `oksydant-proporcje`
-- Odblokowanie: N1 po `intelligent-rozmowa`; oksydant po N20 (jak na main)
+- `LessonsModuleOrder`: po `joico-kpak` (kolejność ścieżki zaktualizowana 2026-08-05)
+- Odznaka + 6 lekcji Intelligent
 - Teaser po `joico-kpak-rozmowa` → Intelligent
 
 ---

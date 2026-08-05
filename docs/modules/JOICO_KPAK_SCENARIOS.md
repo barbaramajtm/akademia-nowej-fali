@@ -9,7 +9,7 @@
 | `joico-kpak-tonacja-po-3` | Tonacja po kroku 3 |
 | `joico-kpak-rozmowa` | Rozmowa i technologie |
 
-Kolejność w akademii: **pH → budowa włosa → JOICO K-PAK → Babilon Intelligent → numeracja farb → oksydant** → …
+Kolejność w akademii: **JOICO K-PAK → Babilon Intelligent → budowa włosa → pH → numeracja farb** → …
 
 ## Akcent dydaktyczny (rozbudowa)
 
