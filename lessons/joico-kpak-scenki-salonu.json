@@ -5,13 +5,20 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Dziś nie teoria z kartki — decyzje jak w salonie. Klientka pyta, koleżanka myli etapy, a Ty wybierasz, co powiedzieć i w jakiej kolejności działać.",
+    "narratorText": "Sceny jak w salonie: diagnoza, obietnica, kolejność — i głos przy myjce. Klientka ma wiedzieć, co jej robisz.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
   "rewards": {
-    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
-    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
   },
   "tasks": [
     {
@@ -20,9 +27,18 @@
       "kicker": "Krok 1 · Diagnoza",
       "question": "Włosy matowe, szorstkie, po rozjaśnianiu. Co proponujesz najtrafniej?",
       "options": [
-        { "id": "a", "text": "K-PAK — rekonstrukcja w 4 krokach pod kondycję długości" },
-        { "id": "b", "text": "Tylko trwałą chemiczną, bez pielęgnacji" },
-        { "id": "c", "text": "Nic — „tak już musi być po blondzie”" }
+        {
+          "id": "a",
+          "text": "K-PAK — rekonstrukcja w 4 krokach pod kondycję długości"
+        },
+        {
+          "id": "b",
+          "text": "Tylko trwałą chemiczną, bez pielęgnacji"
+        },
+        {
+          "id": "c",
+          "text": "Nic — „tak już musi być po blondzie”"
+        }
       ],
       "correctOptionId": "a",
       "reward": 10,
@@ -31,24 +47,28 @@
         "correctTitle": "Trafiona propozycja.",
         "incorrectTitle": "Wskazania K-PAK.",
         "explanation": "Po rozjaśnianiu, przy matowości i szorstkości K-PAK ma sens — uczciwie, bez obietnicy „jak nowe”.",
-        "funFact": { "text": "Ewa: Najpierw zobacz włos w dłoni, potem mów o zabiegu." }
+        "funFact": {
+          "text": "Ewa: Najpierw zobacz włos w dłoni, potem mów o zabiegu."
+        }
       }
     },
     {
       "id": "jk8-z2",
       "type": "trueFalse",
-      "kicker": "Krok 2 · Obietnica",
-      "question": "Wolno powiedzieć: „Po K-PAK włosy będą jak przed rozjaśnianiem i nigdy się nie złamią.”",
+      "kicker": "Krok 2 · Cisza przy myjce",
+      "question": "Wolno przejść cały K-PAK w milczeniu, bez nazwania etapów — „bo ręce i tak robią robotę”.",
       "trueLabel": "Prawda",
       "falseLabel": "Mit",
       "correctValue": false,
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "To mit — za dużo obietnicy.",
-        "incorrectTitle": "Granica rozmowy.",
-        "explanation": "Mówimy o wzmocnieniu, gładkości, elastyczności — nie o cofnięciu czasu ani gwarancji „nigdy”.",
-        "funFact": { "text": "Ewa: Uczciwość buduje powrót klientki bardziej niż marketing." }
+        "correctTitle": "Mit — to nie standard.",
+        "incorrectTitle": "Obsługa.",
+        "explanation": "Ręce robią zabieg. Głos prowadzi klientkę: co teraz, wpływ na włosy, co zaraz. Milczenie = niedopowiedzenie usługi.",
+        "funFact": {
+          "text": "Ewa: Jedno zdanie na etap. Potem możesz być spokojnie cicho podczas czasu działania."
+        }
       }
     },
     {
@@ -58,18 +78,33 @@
       "question": "Ułóż wizytę: K-PAK + tonacja.",
       "resetLabel": "Od początku",
       "steps": [
-        { "id": "s1", "text": "Oczyszczenie + wygładzanie + rekonstrukcja" },
-        { "id": "s2", "text": "Tonacja / koloryzacja" },
-        { "id": "s3", "text": "Intense Hydrator — nawilżenie" }
+        {
+          "id": "s1",
+          "text": "Oczyszczenie + wygładzanie + rekonstrukcja"
+        },
+        {
+          "id": "s2",
+          "text": "Tonacja / koloryzacja"
+        },
+        {
+          "id": "s3",
+          "text": "Intense Hydrator — nawilżenie"
+        }
       ],
-      "correctOrder": ["s1", "s2", "s3"],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3"
+      ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Po 3, przed 4.",
         "incorrectTitle": "Instrukcja z kolorem.",
         "explanation": "Tonacja zaraz po rekonstrukcji, nawilżenie na końcu.",
-        "funFact": { "text": "Ewa: Nie domykaj hydratorem przed kolorem, jeśli kolor jest dziś w planie." }
+        "funFact": {
+          "text": "Ewa: Nie domykaj hydratorem przed kolorem, jeśli kolor jest dziś w planie."
+        }
       }
     },
     {
@@ -80,22 +115,48 @@
       "leftTitle": "Pytanie",
       "rightTitle": "Odpowiedź",
       "left": [
-        { "id": "l1", "pairId": "a", "text": "„Czy to leczy włosy?”" },
-        { "id": "l2", "pairId": "b", "text": "„Czemu cztery kroki?”" },
-        { "id": "l3", "pairId": "c", "text": "„Czy to jak Olaplex, tylko lepsze?”" }
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "„Czy to leczy włosy?”"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "„Nakładasz szampon na całą długość — co w tym niezwykłego?”"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "„Czy to jak Olaplex, tylko lepsze?”"
+        }
       ],
       "right": [
-        { "id": "r1", "pairId": "b", "text": "Każdy etap robi co innego: czyści, wygładza, wzmacnia, nawilża" },
-        { "id": "r2", "pairId": "a", "text": "To rekonstrukcja fryzjerska długości — nie leczenie jak skóry" },
-        { "id": "r3", "pairId": "c", "text": "Nie porównujemy tak — mówimy o naszym protokole K-PAK" }
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Zwykle szampon idzie głównie na skórę; tu czyścimy długości z osadów pod pielęgnację"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "To rekonstrukcja fryzjerska długości — nie leczenie jak skóry"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Nie porównujemy tak — mówimy o naszym protokole K-PAK"
+        }
       ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Gotowe repliki.",
         "incorrectTitle": "Ćwicz na głos.",
-        "explanation": "Krótko, uczciwie, bez cudów i bez „tylko lepsze”.",
-        "funFact": { "text": "Ewa: Te trzy odpowiedzi warto powiedzieć na głos dwa razy w domu." }
+        "explanation": "Szczególnie zdanie o długościach vs skórze — klientka pyta o to przy myjce.",
+        "funFact": {
+          "text": "Ewa: To pytanie padło wczoraj w salonie. Odpowiedź ma wyjść bez myślenia."
+        }
       }
     },
     {
@@ -105,18 +166,31 @@
       "question": "Który plan jest błędny?",
       "cardTitle": "Plan wizyty",
       "rows": [
-        { "id": "s1", "text": "Przy bardzo zniszczonych: powtórz kroki 2 i 3" },
-        { "id": "s2", "text": "Clarifying na długościach, 2–5 min, potem kolejne etapy" },
-        { "id": "s3", "text": "Tylko Intense Hydrator „bo szybciej” — bez O-W-R" }
+        {
+          "id": "s1",
+          "text": "Przy bardzo zniszczonych: powtórz 2 i 3 — i mówisz, że wracacie do wygładzania i rekonstrukcji"
+        },
+        {
+          "id": "s2",
+          "text": "Clarifying na długościach, 2–5 min, z krótkim wyjaśnieniem dla klientki"
+        },
+        {
+          "id": "s3",
+          "text": "Tylko Intense Hydrator w milczeniu „bo szybciej” — bez O-W-R i bez informacji"
+        }
       ],
-      "correctOptionIds": ["s3"],
+      "correctOptionIds": [
+        "s3"
+      ],
       "reward": 25,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Bez skrótów kosztem sensu.",
         "incorrectTitle": "Znajdź zły plan.",
-        "explanation": "Samo nawilżenie nie zastępuje oczyszczenia, wygładzania i rekonstrukcji.",
-        "funFact": { "text": "Ewa: Jak ktoś skraca do jednej maski — nie sprzedajecie już K-PAK." }
+        "explanation": "Skrót do maski + cisza = ani K-PAK, ani obsługa.",
+        "funFact": {
+          "text": "Ewa: Jak ktoś skraca i milczy — klientka wychodzi bez poczucia, co dostała."
+        }
       }
     }
   ],

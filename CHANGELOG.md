@@ -15,6 +15,24 @@ Format oparty na datach. Najnowsze wpisy na górze.
 
 ---
 
+## 2026-08-06 — JOICO: kartka rozbita na mikro-lekcje
+
+### Zmieniono
+- Usunięto wklejoną planszę instrukcji z lekcji OWRN / procedura — nauka podpunktami, nie czytaniem kartki
+- Usunięto `joico-kpak-clarifying-dlugosci` (treść weszła w mikro-lekcje O)
+- `joico-kpak-owrn` = tylko mapa czterech etapów
+- `joico-kpak-procedura` = składanie całości na końcu ścieżki JOICO
+
+### Dodano
+- O: `joico-kpak-o-cel`, `joico-kpak-o-dlugosci`, `joico-kpak-o-czas`
+- W: `joico-kpak-w-cel`, `joico-kpak-w-jak`
+- R: `joico-kpak-r-cel`, `joico-kpak-r-jak`
+- N: `joico-kpak-n-cel`, `joico-kpak-n-jak`
+- Kluczowe pytanie klientki: zwykły szampon = skóra; Clarifying = długości + dlaczego
+- **Standard obsługi:** `joico-kpak-glos-przy-myjce` + głos wpleciony w O/W/R/N, powtórkę, tonację, procedurę i scenki (jedno zdanie na etap: co / po co / co zaraz)
+
+---
+
 ## 2026-08-05 — Tylko regeneracje odblokowane + więcej pytań
 
 ### Zmieniono
