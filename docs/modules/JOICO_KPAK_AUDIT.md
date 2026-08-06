@@ -6,6 +6,7 @@
 |----------|--------|--------|
 | Czym jest K-PAK / uczciwy język | `joico-kpak-uczennice-ladniejsza-wersja.pdf` | OK |
 | Mapa O-W-R-N (bez kartki) | materiał OWRN + ulotka | OK |
+| Standard głosu przy myjce (1 zdanie na etap) | praktyka salonowa Nowej Fali | OK |
 | O: cel (osady) | fiszki + OWRN | OK |
 | O: długości vs skóra + pytanie klientki | instrukcja + praktyka salonowa | OK |
 | O: czas 2–5 min, ręcznik | `joico-kpak-instrukcja-wykonania.pdf` | OK |

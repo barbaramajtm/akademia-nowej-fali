@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Klientka: „Czemu zostawiasz to na kilka minut?”. Dziś: czas 2–5 min, spłukanie i lekko wilgotny włos pod kolejne kroki.",
+    "narratorText": "Klientka: „Czemu zostawiasz to na kilka minut?”. Dziś czas 2–5 min — i obowiązek powiedzieć, po co czekamy, zanim zostawisz produkt.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -115,31 +115,31 @@
     {
       "id": "jko3-z4",
       "type": "singleChoice",
-      "kicker": "Krok 4 · Klientka",
-      "question": "Klientka: „Czemu nie spłukujesz od razu?”",
+      "kicker": "Krok 4 · Głos przed czasem",
+      "question": "Zostawiasz Clarifying na 2–5 min. Co mówisz PRZED odliczaniem?",
       "options": [
         {
           "id": "a",
-          "text": "Potrzebujemy kilku minut, żeby głębiej zdjąć osady — dopiero potem kolejne produkty mają szansę zadziałać"
+          "text": "„Zostawiam kilka minut, żeby głębiej zdjąć osady — wtedy kolejne produkty lepiej wejdą. Potem spłuczemy i wygładzanie.”"
         },
         {
           "id": "b",
-          "text": "Bo zapomniałam o spłukaniu"
+          "text": "Nic — odliczasz w milczeniu"
         },
         {
           "id": "c",
-          "text": "Bo tak robi się trwałą"
+          "text": "„Czekamy, bo tak każe Instagram”"
         }
       ],
       "correctOptionId": "a",
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Czas ma sens.",
-        "incorrectTitle": "Pytanie przy myjce.",
-        "explanation": "2–5 min = głębsze oczyszczenie, nie ozdoba.",
+        "correctTitle": "Czekanie ma sens.",
+        "incorrectTitle": "Najpierw głos.",
+        "explanation": "Bez zdania czas wygląda jak „nic się nie dzieje”. Z zdaniem klientka rozumie wpływ na włosy.",
         "funFact": {
-          "text": "Ewa: Krótko: „Zostawiam, żeby zdjąć osady — nie jak zwykłe mycie.”"
+          "text": "Ewa: Najpierw informacja, potem zegarek — zawsze w tej kolejności."
         }
       }
     },

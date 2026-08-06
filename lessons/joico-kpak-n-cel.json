@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Podstawy",
   "intro": {
-    "narratorText": "Finisz OWRN. Klientka: „To ta miękkość na koniec?”. N = Intense Hydrator — komfort, blask, układanie. Osobno od W i R.",
+    "narratorText": "Finisz OWRN. Klientka ma usłyszeć: „na koniec nawilżenie — miękkość i komfort”. Nawet ostatni etap nazywasz na głos.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -126,31 +126,31 @@
     {
       "id": "jkn1-z4",
       "type": "singleChoice",
-      "kicker": "Krok 4 · Klientka",
-      "question": "Klientka: „Możemy zrobić tylko tę maskę na koniec?”",
+      "kicker": "Krok 4 · Głos przy N",
+      "question": "Nakładasz Intense Hydrator. Standardowe zdanie:",
       "options": [
         {
           "id": "a",
-          "text": "Maska to finisz — bez O, W i R nie ma pełnego K-PAK; sama miękkość nie zastąpi przygotowania i odbudowy"
+          "text": "„Na koniec nawilżenie — domykamy miękkość, blask i komfort w dotyku. Potem spłuczemy i układamy.”"
         },
         {
           "id": "b",
-          "text": "Tak, reszta jest zbędna zawsze"
+          "text": "Milczysz — „i tak wie, że to maska”"
         },
         {
           "id": "c",
-          "text": "Maska to to samo co Clarifying"
+          "text": "„To Clarifying jeszcze raz”"
         }
       ],
       "correctOptionId": "a",
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "N nie zastępuje całości.",
-        "incorrectTitle": "Uczciwie.",
-        "explanation": "N domyka. OWR robi robotę wcześniej.",
+        "correctTitle": "Finisz nazwany.",
+        "incorrectTitle": "Głos do końca.",
+        "explanation": "Ostatni etap też informujesz. Klientka wie, że zabieg się domyka — nie „coś jeszcze leci”.",
         "funFact": {
-          "text": "Ewa: „Możemy nawilżyć, ale pełny efekt to cały plan etapów.”"
+          "text": "Ewa: Domknięcie głosem = spokojniejsze wyjście do stylizacji."
         }
       }
     },

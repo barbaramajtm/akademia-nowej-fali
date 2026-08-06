@@ -213,6 +213,17 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Czym jest JOICO K-PAK?'
   },
   {
+    id: 'joico-kpak-glos-przy-myjce',
+    moduleId: 'joico-kpak',
+    title: 'Głos przy myjce: informuj klientkę',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-owrn',
+    lockedReason: 'Najpierw ukończ: O-W-R-N: mapa czterech etapów'
+  },
+  {
     id: 'joico-kpak-o-cel',
     moduleId: 'joico-kpak',
     title: 'Oczyszczanie: po co ten etap',
@@ -220,8 +231,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'joico-kpak-owrn',
-    lockedReason: 'Najpierw ukończ: O-W-R-N: mapa czterech etapów'
+    requiresLessonId: 'joico-kpak-glos-przy-myjce',
+    lockedReason: 'Najpierw ukończ: Głos przy myjce: informuj klientkę'
   },
   {
     id: 'joico-kpak-o-dlugosci',

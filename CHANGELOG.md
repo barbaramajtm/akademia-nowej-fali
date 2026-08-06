@@ -16,6 +16,7 @@ Format oparty na datach. Najnowsze wpisy na górze.
 - R: `joico-kpak-r-cel`, `joico-kpak-r-jak`
 - N: `joico-kpak-n-cel`, `joico-kpak-n-jak`
 - Kluczowe pytanie klientki: zwykły szampon = skóra; Clarifying = długości + dlaczego
+- **Standard obsługi:** `joico-kpak-glos-przy-myjce` + głos wpleciony w O/W/R/N, powtórkę, tonację, procedurę i scenki (jedno zdanie na etap: co / po co / co zaraz)
 
 ---
 

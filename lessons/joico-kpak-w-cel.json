@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Podstawy",
   "intro": {
-    "narratorText": "Po oczyszczeniu włos jest „posprzątany”. Teraz W: wygładzanie powierzchni i pH. Klientka pyta: „Po co jeszcze coś przed maską?”.",
+    "narratorText": "Po oczyszczeniu włos jest „posprzątany”. Teraz W. Klientka ma usłyszeć: co robisz, po co dla powierzchni włosa, co zaraz (rekonstrukcja).",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -126,31 +126,31 @@
     {
       "id": "jkw1-z4",
       "type": "singleChoice",
-      "kicker": "Krok 4 · Klientka",
-      "question": "Klientka: „Po oczyszczeniu od razu dajcie mi maskę.” Co odpowiesz?",
+      "kicker": "Krok 4 · Głos przy W",
+      "question": "Nakładasz Cuticle Sealer. Najlepsze zdanie:",
       "options": [
         {
           "id": "a",
-          "text": "Najpierw wygładzamy powierzchnię i pH — dopiero potem rekonstrukcja i nawilżenie mają lepszy efekt"
+          "text": "„Teraz wygładzanie — uspokajamy powierzchnię i pH, mniej szorstkości. Zaraz rekonstrukcja włókna.”"
         },
         {
           "id": "b",
-          "text": "OK, pomijamy wszystko i dajemy tylko Intense Hydrator"
+          "text": "Milczysz — „i tak wie, że to regeneracja”"
         },
         {
           "id": "c",
-          "text": "Wygładzanie to tylko marketing, bez sensu"
+          "text": "„To farba, zaraz będzie blond”"
         }
       ],
       "correctOptionId": "a",
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "W ma sens.",
-        "incorrectTitle": "Kolejność.",
-        "explanation": "Szorstka, „otwarta” powierzchnia utrudnia kolejne kroki.",
+        "correctTitle": "Nazwałaś W.",
+        "incorrectTitle": "Standard.",
+        "explanation": "Nie mów na wszystko „nawilżamy”. Nazwij etap, wpływ, następny krok.",
         "funFact": {
-          "text": "Ewa: „Najpierw wygładzimy powierzchnię — potem wzmocnienie i miękkość.”"
+          "text": "Ewa: Klientka leży i nie widzi tubki — Twój głos jest etykietą produktu."
         }
       }
     },

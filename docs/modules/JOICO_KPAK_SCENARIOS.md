@@ -4,6 +4,7 @@
 |----|-------|
 | `joico-kpak-co-to` | Czym jest JOICO K-PAK? |
 | `joico-kpak-owrn` | O-W-R-N: mapa czterech etapów |
+| `joico-kpak-glos-przy-myjce` | Głos przy myjce: informuj klientkę |
 | `joico-kpak-o-cel` | Oczyszczanie: po co ten etap |
 | `joico-kpak-o-dlugosci` | Oczyszczanie: długości vs skóra głowy |
 | `joico-kpak-o-czas` | Oczyszczanie: czas, spłukanie, ręcznik |
@@ -24,6 +25,7 @@ Kolejność w akademii: **JOICO K-PAK → Babilon Intelligent → …** (pozosta
 ## Akcent dydaktyczny
 
 - **Bez wklejonej kartki instrukcji** na ekranie lekcji — kartka była ściągą; uczymy podpunktami.
-- Każdy etap O / W / R / N: najpierw **po co**, potem **jak** (aplikacja, czas, skóra vs długości).
+- **Standard obsługi:** przy każdym etapie choć **jedno zdanie** — co robimy, jaki wpływ na włosy, co zaraz czeka klientkę. Milczenie przy myjce ≠ profesjonalizm.
+- Każdy etap O / W / R / N: najpierw **po co**, potem **jak** (aplikacja, czas, skóra vs długości) + głos.
 - **Kluczowe pytanie klientki (O):** „Nakładasz na całą długość — co w tym niezwykłego?”  
   Odpowiedź: zwykły szampon idzie głównie na **skórę głowy**; Clarifying czyści **długości z osadów**, żeby pielęgnacja weszła równo.

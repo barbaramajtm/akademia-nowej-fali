@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-glos-przy-myjce",
+  "title": "Głos przy myjce: informuj klientkę",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Standard Nowej Fali: przy każdym etapie mówisz choć jedno zdanie. Klientka ma wiedzieć, co właśnie robisz, co zaraz ją czeka i jaki to ma wpływ na włosy. Milczenie przy myjce to nie profesjonalizm.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jkg-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Standard",
+      "question": "Jaki jest minimalny standard głosu przy K-PAK?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Przy każdym etapie mówisz choć jedno zdanie: co robisz, po co / wpływ na włosy, co będzie dalej"
+        },
+        {
+          "id": "b",
+          "text": "Mówisz tylko na końcu, jak już wszystko spłukane"
+        },
+        {
+          "id": "c",
+          "text": "Wystarczy milczeć — klientka i tak nie rozumie"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Jedno zdanie na etap.",
+        "incorrectTitle": "Standard obsługi.",
+        "explanation": "Klientka leży przy myjce i nie widzi tubek. Twój głos buduje zaufanie i sens wizyty.",
+        "funFact": {
+          "text": "Ewa: Nie wykład — jedno spokojne zdanie. Potem możesz dodać „zaraz wygładzanie”."
+        }
+      }
+    },
+    {
+      "id": "jkg-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Po co informować",
+      "question": "Gdy klientka wie, jaki etap idzie i jaki ma wpływ na włosy, łatwiej znosi czas działania i lepiej rozumie wartość zabiegu — to część obsługi, nie „gadanie”.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Informacja = obsługa.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Czas 2–5 albo 5 minut bez słowa sprawia, że klientka myśli „nic się nie dzieje”. Jedno zdanie zmienia odbiór.",
+        "funFact": {
+          "text": "Ewa: „Zostawiamy na kilka minut, żeby zdjąć osady” — i nagle czekanie ma sens."
+        }
+      }
+    },
+    {
+      "id": "jkg-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Co wchodzi w zdanie",
+      "question": "Dopasuj element standardu do przykładu.",
+      "leftTitle": "Element",
+      "rightTitle": "Przykład",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Co teraz"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Wpływ na włosy"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Co zaraz"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "„…żeby włos lepiej przyjął pielęgnację”"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "„Teraz oczyszczanie Clarifying na długościach”"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "„Zaraz wygładzanie powierzchni”"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy klocki, jedno zdanie.",
+        "incorrectTitle": "Standard.",
+        "explanation": "Możesz zmieścić wszystko w jednym zdaniu albo w dwóch krótkich. Ważne: nie pomijaj etapu w ciszy.",
+        "funFact": {
+          "text": "Ewa: Szablon: „Teraz [etap] — [wpływ]. Zaraz [następny].”"
+        }
+      }
+    },
+    {
+      "id": "jkg-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Scena",
+      "question": "Nakładasz Cuticle Sealer i milczysz przez 5 minut. Co jest nie tak?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Brakuje standardu obsługi — klientka nie wie, co się dzieje z jej włosami i po co czekamy"
+        },
+        {
+          "id": "b",
+          "text": "Nic — milczenie jest zawsze bardziej eleganckie"
+        },
+        {
+          "id": "c",
+          "text": "Źle, bo trzeba przez 5 minut czytać ulotkę na głos"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cisza ≠ profesjonalizm.",
+        "incorrectTitle": "Głos przy etapie.",
+        "explanation": "Nie musisz mówić non-stop. Musisz nazwać etap i sens — zanim zostawisz produkt na czas.",
+        "funFact": {
+          "text": "Ewa: Po jednym zdaniu możesz spokojnie odliczać minuty. Klientka już wie, na co czeka."
+        }
+      }
+    },
+    {
+      "id": "jkg-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit obsługi",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Głos przy myjce",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Przy każdym etapie mówisz choć jedno zdanie"
+        },
+        {
+          "id": "s2",
+          "text": "Klientka powinna wiedzieć, co zaraz ją czeka i jaki wpływ ma etap na włosy"
+        },
+        {
+          "id": "s3",
+          "text": "Wystarczy dobrze wykonać produkty w ciszy — informowanie klientki jest zbędne"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Obsługa = głos + ręce.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Dobrze nałożony produkt bez informacji to połowa usługi. Druga połowa to spokojne prowadzenie klientki przez etapy.",
+        "funFact": {
+          "text": "Ewa: W kolejnych lekcjach O/W/R/N ćwiczysz konkretne zdania — ten standard obowiązuje zawsze."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Prowadzisz klientkę głosem",
+    "subtitle": "Jedno zdanie na etap: co, po co, co zaraz.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Oczyszczanie: po co — i jakie zdanie mówisz przy Clarifying."
+    }
+  }
+}

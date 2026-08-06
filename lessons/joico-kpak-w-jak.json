@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Jeden podpunkt z kartki naraz. Dziś: Cuticle Sealer — gdzie, jak, ile minut.",
+    "narratorText": "Cuticle Sealer: gdzie, jak, ile minut — i głos: jedno zdanie zanim zostawisz na 5 min.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -169,19 +169,19 @@
       "type": "findError",
       "kicker": "Krok 5 · Mit",
       "question": "Które stwierdzenie jest błędne?",
-      "cardTitle": "Jak W",
+      "cardTitle": "W + obsługa",
       "rows": [
         {
           "id": "s1",
-          "text": "Cuticle Sealer: ok. 5 minut"
+          "text": "Cuticle Sealer: ok. 5 minut na długościach"
         },
         {
           "id": "s2",
-          "text": "Nakładasz na długości, omijając skórę głowy"
+          "text": "Przed czasem mówisz klientce, że to wygładzanie i po co"
         },
         {
           "id": "s3",
-          "text": "Wystarczy wetrzeć w samą skórę głowy i od razu spłukać"
+          "text": "Wystarczy wetrzeć w skórę w milczeniu i od razu spłukać"
         }
       ],
       "correctOptionIds": [
@@ -192,9 +192,9 @@
       "feedback": {
         "correctTitle": "Nie na skórę jak szampon.",
         "incorrectTitle": "Znajdź mit.",
-        "explanation": "W pracuje na powierzchni włosa na długościach.",
+        "explanation": "Błąd podwójny: zła aplikacja + brak informacji. Etap W wymaga długości, czasu i głosu.",
         "funFact": {
-          "text": "Ewa: Ten sam błąd co przy O: mycie „jak zawsze” zabija zabieg."
+          "text": "Ewa: Ręce robią zabieg. Głos robi obsługę."
         }
       }
     }

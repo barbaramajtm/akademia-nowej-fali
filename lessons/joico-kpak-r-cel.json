@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Podstawy",
   "intro": {
-    "narratorText": "Klientka: „To już regeneracja?”. R to serce odbudowy włókna — składniki proteinowe, keratynowe, aminokwasowe. Osobno od W i N.",
+    "narratorText": "Klientka: „To już regeneracja?”. R to serce odbudowy — i moment, w którym na głos mówisz, że wzmacniacie włókno, nie tylko „coś nakładacie”.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -126,31 +126,31 @@
     {
       "id": "jkr1-z4",
       "type": "singleChoice",
-      "kicker": "Krok 4 · Klientka",
-      "question": "Klientka: „Czy to tylko wygładzenie?”",
+      "kicker": "Krok 4 · Głos przy R",
+      "question": "Start Reconstructor. Które zdanie jest standardem?",
       "options": [
         {
           "id": "a",
-          "text": "Nie tylko — jest też część proteinowo-aminokwasowa, która wspiera osłabione miejsca we włosie"
+          "text": "„Teraz rekonstrukcja — wzmacniamy włókno składnikami proteinowymi tam, gdzie włos jest zmęczony. Potem nawilżenie / ewentualnie kolor.”"
         },
         {
           "id": "b",
-          "text": "Tak, tylko połysk na powierzchni, nic więcej"
+          "text": "Nic nie mówisz — „produkt sam się tłumaczy”"
         },
         {
           "id": "c",
-          "text": "To wyłącznie trwała chemiczna"
+          "text": "„To to samo co mycie”"
         }
       ],
       "correctOptionId": "a",
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Nie tylko wygładzenie.",
-        "incorrectTitle": "Materiał uczennic.",
-        "explanation": "Wygładzanie to W. R idzie głębiej we włókno (fryzjersko).",
+        "correctTitle": "R nazwane wprost.",
+        "incorrectTitle": "Głos.",
+        "explanation": "Klientka ma usłyszeć różnicę: to nie tylko wygładzenie — to wsparcie włókna.",
         "funFact": {
-          "text": "Ewa: Efekt nadal fryzjerski — bez obietnicy „jak nowy włos”."
+          "text": "Ewa: Po R, jeśli jest kolor — też mówisz: „teraz tonacja, potem nawilżenie”."
         }
       }
     },

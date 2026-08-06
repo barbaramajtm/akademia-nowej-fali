@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Ostatni podpunkt z kartki: Intense Hydrator — długości, 5 minut, spłucz, ręcznik, stylizacja.",
+    "narratorText": "Intense Hydrator: 5 min, spłucz, stylizacja — i jedno zdanie przed czasem + krótkie „gotowe, układamy” po.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -148,7 +148,7 @@
       "type": "findError",
       "kicker": "Krok 5 · Mit",
       "question": "Które stwierdzenie jest błędne?",
-      "cardTitle": "Jak N",
+      "cardTitle": "N + obsługa",
       "rows": [
         {
           "id": "s1",
@@ -156,11 +156,11 @@
         },
         {
           "id": "s2",
-          "text": "Po N: ręcznik i stylizacja"
+          "text": "Przed czasem mówisz, że to nawilżenie na finisz i po spłukaniu układacie"
         },
         {
           "id": "s3",
-          "text": "N można pominąć zawsze, bo W już wszystko zrobiło"
+          "text": "N można zawsze pominąć w milczeniu, bo W już wszystko zrobiło"
         }
       ],
       "correctOptionIds": [
@@ -171,9 +171,9 @@
       "feedback": {
         "correctTitle": "N domyka.",
         "incorrectTitle": "Znajdź mit.",
-        "explanation": "W to powierzchnia/pH. N to miękkość i komfort. Oba potrzebne.",
+        "explanation": "N ma swój sens i swój głos. Pomijanie etapu albo cisza = słabsza usługa.",
         "funFact": {
-          "text": "Ewa: Potem: cała kolejność O→W→R→N bez kartki przed nosem."
+          "text": "Ewa: Po N: „Gotowe — teraz układamy.” Koniec rytuału na głos."
         }
       }
     }

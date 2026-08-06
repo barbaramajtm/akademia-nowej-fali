@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Znasz już każdy etap osobno. Dziś składasz całość: O→W→R→N, czasy i zasada długości — bez wklejonej instrukcji na ekranie.",
+    "narratorText": "Składasz O→W→R→N bez kartki. Przy każdym etapie w głowie masz też zdanie dla klientki — ręce i głos idą razem.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -147,34 +147,65 @@
     },
     {
       "id": "jk3-z4",
-      "type": "singleChoice",
-      "kicker": "Krok 4 · Omijanie skóry",
-      "question": "Produkty 2–4 (i aplikacja Clarifying według instrukcji) przede wszystkim:",
-      "options": [
-        {
-          "id": "a",
-          "text": "Pracują na długościach — omijasz skórę głowy"
-        },
-        {
-          "id": "b",
-          "text": "Są wcierane głęboko w skórę jak lek"
-        },
-        {
-          "id": "c",
-          "text": "Idą tylko na suchą grzywkę"
-        }
-      ],
-      "correctOptionId": "a",
+      "type": "matching",
+      "kicker": "Krok 4 · Głos na etapy",
+      "question": "Dopasuj etap do zdania, które mówisz przy nakładaniu.",
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Długości.",
-        "incorrectTitle": "Zasada stanowiska.",
-        "explanation": "Kondycja długości, nie terapia skóry.",
+        "correctTitle": "Cztery zdania = standard.",
+        "incorrectTitle": "Głos OWRN.",
+        "explanation": "Każdy etap ma swoje zdanie. Bez tego klientka słyszy tylko wodę i ciszę.",
         "funFact": {
-          "text": "Ewa: Pokaż ręką: od mid-lengths do końców."
+          "text": "Ewa: Ćwicz łańcuch na głos: O→W→R→N jak ścieżkę, nie jak listę produktów."
         }
-      }
+      },
+      "leftTitle": "Etap",
+      "rightTitle": "Zdanie",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "O"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "W"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "R"
+        },
+        {
+          "id": "l4",
+          "pairId": "d",
+          "text": "N"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "„Wygładzamy powierzchnię — mniej szorstkości; zaraz rekonstrukcja”"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "„Oczyszczanie — zdejmujemy osady; zaraz wygładzanie”"
+        },
+        {
+          "id": "r3",
+          "pairId": "d",
+          "text": "„Nawilżenie na finisz — miękkość; potem układanie”"
+        },
+        {
+          "id": "r4",
+          "pairId": "c",
+          "text": "„Rekonstrukcja — wzmacniamy włókno; potem nawilżenie lub kolor”"
+        }
+      ]
     },
     {
       "id": "jk3-z5",
@@ -189,11 +220,11 @@
         },
         {
           "id": "s2",
-          "text": "Clarifying 2–5 min; kolejne ok. 5 min"
+          "text": "Przy każdym etapie mówisz choć jedno zdanie (co / po co / co zaraz)"
         },
         {
           "id": "s3",
-          "text": "Wystarczy szybko umyć samą skórę jak codziennie i od razu dać tylko maskę"
+          "text": "Wystarczy szybko umyć samą skórę w milczeniu i dać tylko maskę"
         }
       ],
       "correctOptionIds": [
@@ -204,9 +235,9 @@
       "feedback": {
         "correctTitle": "Pełny plan.",
         "incorrectTitle": "Znajdź mit.",
-        "explanation": "Bez OWR na długościach nie ma sensownego K-PAK.",
+        "explanation": "Zły plan to skrót procedury + brak głosu. Pełny K-PAK = OWRN na długościach + informowanie klientki.",
         "funFact": {
-          "text": "Ewa: Kartka była ściągą. Ty masz już etapy w głowie — i zdania dla klientki."
+          "text": "Ewa: Kartka uczyła kolejności. Ty uczysz się kolejności I obsługi."
         }
       }
     }

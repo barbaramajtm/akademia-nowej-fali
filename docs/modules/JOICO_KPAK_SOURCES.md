@@ -11,9 +11,9 @@
 ## Zakres modułu (mikro-lekcje, bez wklejonej kartki)
 
 - Czym jest K-PAK (rekonstrukcja fryzjerska vs „leczenie”)
-- Mapa O-W-R-N, potem każdy etap osobno: **po co** + **jak**
+- Mapa O-W-R-N, **standard głosu przy myjce**, potem każdy etap osobno: **po co** + **jak**
 - Oczyszczanie: osady; **długości vs skóra** (zwykły szampon vs Clarifying); czas 2–5 min
-- Wygładzanie / rekonstrukcja / nawilżenie: cel + aplikacja (5 min, omijaj skórę)
+- Wygładzanie / rekonstrukcja / nawilżenie: cel + aplikacja (5 min, omijaj skórę) + zdanie dla klientki
 - Powtórzenie 2–3; tonacja po kroku 3; składanie całej procedury; scenki; rozmowa / technologie
 
 ## Uwagi

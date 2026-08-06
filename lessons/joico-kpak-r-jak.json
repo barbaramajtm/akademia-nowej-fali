@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Podpunkt z kartki: Reconstructor — równomiernie na wilgotne długości, omijasz skórę, 5 minut, spłukujesz, ręcznik.",
+    "narratorText": "Reconstructor: długości, 5 minut, ręcznik — i zdanie dla klientki zanim odliczysz czas.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -115,31 +115,31 @@
     {
       "id": "jkr2-z4",
       "type": "singleChoice",
-      "kicker": "Krok 4 · Klientka",
-      "question": "Klientka: „Czemu znowu coś na długości, a nie na skórę?”",
+      "kicker": "Krok 4 · Głos + skóra",
+      "question": "Klientka: „Czemu znowu na długość, a nie na skórę?” Co mówisz?",
       "options": [
         {
           "id": "a",
-          "text": "Bo pracujemy nad kondycją włosa na długości — skóra nie jest tu celem zabiegu"
+          "text": "„Pracujemy nad kondycją włosa na długości — skóra nie jest tu celem. Teraz wzmacniamy włókno przez kilka minut.”"
         },
         {
           "id": "b",
-          "text": "Bo skóra nie istnieje"
+          "text": "Wzruszenie ramionami bez słowa"
         },
         {
           "id": "c",
-          "text": "Bo tak każe farba oksydacyjna"
+          "text": "„Bo tak” — i milczenie przez 5 min"
         }
       ],
       "correctOptionId": "a",
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Cel = długości.",
-        "incorrectTitle": "Pytanie klientki.",
-        "explanation": "K-PAK = włókno i powierzchnia długości. Skóra to inna rozmowa.",
+        "correctTitle": "Odpowiedź + etap.",
+        "incorrectTitle": "Obsługa.",
+        "explanation": "Pytanie klientki to szansa: wyjaśniasz cel długości I nazywasz etap R.",
         "funFact": {
-          "text": "Ewa: Spokojnie i krótko — bez wykładu."
+          "text": "Ewa: Pytanie ≠ atak. To zaproszenie do standardu głosu."
         }
       }
     },

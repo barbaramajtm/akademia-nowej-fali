@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Podstawy",
   "intro": {
-    "narratorText": "Nie uczysz się z kartki na raz. Dziś tylko mapa: cztery litery, cztery różne prace. Potem każdy etap osobno — z pytaniami jak od klientki.",
+    "narratorText": "Nie uczysz się z kartki na raz. Dziś mapa: cztery litery, cztery prace. Potem: standard głosu przy myjce i każdy etap osobno — z pytaniami jak od klientki.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -127,9 +127,9 @@
       "feedback": {
         "correctTitle": "Mapa w głowie.",
         "incorrectTitle": "OWRN.",
-        "explanation": "O sprząta, W wygładza, R wzmacnia włókno, N domyka miękkość.",
+        "explanation": "Każdy etap ma inne zdanie. Przy myjce mówisz je na głos — klientka ma usłyszeć, co się dzieje.",
         "funFact": {
-          "text": "Ewa: Jedno zdanie na etap — wystarczy przy myjce."
+          "text": "Ewa: Następna lekcja: to nie „gadanie” — to standard obsługi Nowej Fali."
         }
       }
     },
@@ -206,7 +206,7 @@
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
       "label": "Kolejny temat",
-      "teaser": "Po co jest oczyszczanie — i co zdejmuje z włosa."
+      "teaser": "Standard obsługi: jedno zdanie na etap — co robisz, po co, co zaraz."
     }
   }
 }
