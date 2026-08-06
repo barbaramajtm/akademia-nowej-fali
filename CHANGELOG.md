@@ -2,7 +2,13 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
-## 2026-08-06 — Podsumowanie po lekcji + „Zrób jeszcze raz”
+## 2026-08-06 — Bez „Materiał uczennic” w feedbacku
+
+### Zmieniono
+- Usunięto z lekcji tytuły błędnej odpowiedzi odwołujące się do źródeł wewnętrznych (`Materiał uczennic`, `Fiszka…`, `Instrukcja…`, `Tech./Masz./Mat. …`)
+- Zastąpione łagodnymi tytułami dla uczennicy (np. „Sprawdź jeszcze raz.” / sens pytania)
+
+---
 
 ### Dodano
 - Po każdej lekcji: sekcja **„Co możesz jeszcze dopracować”** (łagodnie, bez wytykania) z kartami: pytanie → prawidłowa odpowiedź → dlaczego

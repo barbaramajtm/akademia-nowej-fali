@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Wybrane pasma.",
-        "incorrectTitle": "Tech. 8.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Definicja mówi o wybranych pasmach — to nie „wszystko naraz bez wyboru”."
       }
     },
@@ -61,7 +61,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Tak — wybór pasemek.",
-        "incorrectTitle": "Tech. 13.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Krok: wybór pasemek (po podziale na pasma)."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Zakres + start procedury.",
-        "incorrectTitle": "Tech. 8 i 13.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Najpierw podział, potem wybór pasemek — dopiero wtedy produkt."
       }
     },
@@ -168,7 +168,7 @@
       "reward": 25,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Podział i wybór są w Tech. 13.",
+        "correctTitle": "Podział i wybór pasm.",
         "incorrectTitle": "Znajdź mit.",
         "explanation": "Sposób wykonania zaczyna się od podziału i wyboru pasemek."
       }

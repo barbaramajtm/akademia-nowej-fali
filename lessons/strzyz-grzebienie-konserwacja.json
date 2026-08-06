@@ -44,7 +44,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Zakazy Masz. 4.",
+        "correctTitle": "Zakazy konserwacji.",
         "incorrectTitle": "Higiena i włosy.",
         "explanation": "Powody higieniczne; zniszczone nie spełniają roli i mogą uszkadzać włosy."
       }
@@ -60,7 +60,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Konserwacja Masz. 10.",
+        "correctTitle": "Zasady konserwacji.",
         "incorrectTitle": "Tak.",
         "explanation": "Czyszczenie, dezynfekcja, ewentualnie olej; futerał chroni ostrza i przed skaleczeniem."
       }
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Linia brzytwy.",
-        "incorrectTitle": "Masz. 17–18.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Brzytwa historycznie; tempera/brzytwa z nakładką bardziej higieniczne; pazury do efilacji."
       }
     },
@@ -143,7 +143,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Czysto → dezynfekcja → olej/futerał.",
-        "incorrectTitle": "Masz. 10.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Po użyciu: czyszczenie i dezynfekcja; olej gdy trzeba; futerał na ostrza."
       }
     },

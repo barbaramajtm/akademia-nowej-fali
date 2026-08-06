@@ -36,9 +36,18 @@
       "kicker": "Krok 1 · Lista",
       "question": "Ile celów zabiegów higienicznych wymieniają materiały (Tech. 11)?",
       "options": [
-        { "id": "a", "text": "Cztery" },
-        { "id": "b", "text": "Jeden — tylko sprzątanie na koniec dnia" },
-        { "id": "c", "text": "Zero — higiena nie jest w programie" }
+        {
+          "id": "a",
+          "text": "Cztery"
+        },
+        {
+          "id": "b",
+          "text": "Jeden — tylko sprzątanie na koniec dnia"
+        },
+        {
+          "id": "c",
+          "text": "Zero — higiena nie jest w programie"
+        }
       ],
       "correctOptionId": "a",
       "reward": 10,
@@ -47,7 +56,9 @@
         "correctTitle": "Cztery cele.",
         "incorrectTitle": "Spójrz na listę sprzed chwili.",
         "explanation": "Tech. 11 wymienia cztery: zakażenia, bezpieczeństwo ludzi, czystość, wymagania sanitarne.",
-        "funFact": { "text": "Ewa: Na głos: „zakażenia, ludzie, czystość, sanepid” — cztery słowa i lista siedzi." }
+        "funFact": {
+          "text": "Ewa: Na głos: „zakażenia, ludzie, czystość, sanepid” — cztery słowa i lista siedzi."
+        }
       }
     },
     {
@@ -64,7 +75,9 @@
         "correctTitle": "Tak — cel nr 3.",
         "incorrectTitle": "Jest na liście.",
         "explanation": "Czystość jest celem samym w sobie. Nie zastępuje jednak zapobiegania zakażeniom ani bezpieczeństwa ludzi.",
-        "funFact": { "text": "Ewa: Czyste lustro ≠ zrobiona higiena. To tylko jeden z czterech punktów." }
+        "funFact": {
+          "text": "Ewa: Czyste lustro ≠ zrobiona higiena. To tylko jeden z czterech punktów."
+        }
       }
     },
     {
@@ -75,16 +88,48 @@
       "leftTitle": "Cel",
       "rightTitle": "Znaczenie",
       "left": [
-        { "id": "l1", "pairId": "a", "text": "Zapobieganie zakażeniom" },
-        { "id": "l2", "pairId": "b", "text": "Bezpieczeństwo klientów i pracowników" },
-        { "id": "l3", "pairId": "c", "text": "Utrzymanie czystości" },
-        { "id": "l4", "pairId": "d", "text": "Wymagania sanitarne" }
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Zapobieganie zakażeniom"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Bezpieczeństwo klientów i pracowników"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Utrzymanie czystości"
+        },
+        {
+          "id": "l4",
+          "pairId": "d",
+          "text": "Wymagania sanitarne"
+        }
       ],
       "right": [
-        { "id": "r1", "pairId": "b", "text": "Ochrona obu stron usługi" },
-        { "id": "r2", "pairId": "a", "text": "Mniejsze ryzyko drobnoustrojów" },
-        { "id": "r3", "pairId": "d", "text": "Obowiązki sanitarne zakładu" },
-        { "id": "r4", "pairId": "c", "text": "Porządek i czystość stanowiska" }
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Ochrona obu stron usługi"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Mniejsze ryzyko drobnoustrojów"
+        },
+        {
+          "id": "r3",
+          "pairId": "d",
+          "text": "Obowiązki sanitarne zakładu"
+        },
+        {
+          "id": "r4",
+          "pairId": "c",
+          "text": "Porządek i czystość stanowiska"
+        }
       ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
@@ -92,7 +137,9 @@
         "correctTitle": "Cztery cele dopasowane.",
         "incorrectTitle": "Wróć do listy 1–2–3–4.",
         "explanation": "1 zakażenia · 2 bezpieczeństwo ludzi · 3 czystość · 4 wymagania sanitarne. Wszystkie cztery są w Tech. 11.",
-        "funFact": { "text": "Ewa: Jak brakuje Ci czwartego — zapomniałaś o czystości albo o sanepidzie." }
+        "funFact": {
+          "text": "Ewa: Jak brakuje Ci czwartego — zapomniałaś o czystości albo o sanepidzie."
+        }
       }
     },
     {
@@ -102,19 +149,38 @@
       "question": "Ułóż cztery cele w tej samej kolejności co w materiale (Tech. 11).",
       "resetLabel": "Od początku",
       "steps": [
-        { "id": "s1", "text": "Zapobieganie zakażeniom" },
-        { "id": "s2", "text": "Bezpieczeństwo klientów i pracowników" },
-        { "id": "s3", "text": "Utrzymanie czystości" },
-        { "id": "s4", "text": "Spełnianie wymagań sanitarnych" }
+        {
+          "id": "s1",
+          "text": "Zapobieganie zakażeniom"
+        },
+        {
+          "id": "s2",
+          "text": "Bezpieczeństwo klientów i pracowników"
+        },
+        {
+          "id": "s3",
+          "text": "Utrzymanie czystości"
+        },
+        {
+          "id": "s4",
+          "text": "Spełnianie wymagań sanitarnych"
+        }
       ],
-      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Kolejność z Tech. 11.",
+        "correctTitle": "Kolejność celów.",
         "incorrectTitle": "Jak na planszy: 1–2–3–4.",
         "explanation": "Najpierw zakażenia, potem ludzie, potem czystość, na końcu wymagania sanitarne — tak stoi w materiale.",
-        "funFact": { "text": "Ewa: Układanie listy = lepsze zapamiętanie niż samo czytanie." }
+        "funFact": {
+          "text": "Ewa: Układanie listy = lepsze zapamiętanie niż samo czytanie."
+        }
       }
     },
     {
@@ -124,18 +190,31 @@
       "question": "Które stwierdzenie jest błędne?",
       "cardTitle": "Po co higiena",
       "rows": [
-        { "id": "s1", "text": "Higiena ma zapobiegać zakażeniom" },
-        { "id": "s2", "text": "Higiena chroni klientów i pracowników" },
-        { "id": "s3", "text": "Jedynym celem higieny jest „ładne lustro” na koniec dnia" }
+        {
+          "id": "s1",
+          "text": "Higiena ma zapobiegać zakażeniom"
+        },
+        {
+          "id": "s2",
+          "text": "Higiena chroni klientów i pracowników"
+        },
+        {
+          "id": "s3",
+          "text": "Jedynym celem higieny jest „ładne lustro” na koniec dnia"
+        }
       ],
-      "correctOptionIds": ["s3"],
+      "correctOptionIds": [
+        "s3"
+      ],
       "reward": 25,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Nie tylko lustro.",
         "incorrectTitle": "Znajdź mit.",
         "explanation": "Czystość jest jednym z czterech celów — obok zakażeń, bezpieczeństwa ludzi i wymagań sanitarnych.",
-        "funFact": { "text": "Ewa: Jak koleżanka mówi „to tylko sprzątanie” — dopowiedz pozostałe trzy cele." }
+        "funFact": {
+          "text": "Ewa: Jak koleżanka mówi „to tylko sprzątanie” — dopowiedz pozostałe trzy cele."
+        }
       }
     }
   ],

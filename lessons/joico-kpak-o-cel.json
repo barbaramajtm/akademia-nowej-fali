@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Przygotowanie włosa.",
-        "incorrectTitle": "Fiszka O.",
+        "incorrectTitle": "Cel oczyszczania.",
         "explanation": "Oczyszczanie = sprzątanie osadów, żeby pielęgnacja mogła wejść.",
         "funFact": {
           "text": "Ewa: Klientce: „Zdejmujemy z włosa to, co przeszkadza pielęgnacji.”"
@@ -116,7 +116,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Osady konkretnie.",
-        "incorrectTitle": "Lista z materiału.",
+        "incorrectTitle": "Co zdejmujemy z włosa.",
         "explanation": "Chlor, minerały, stylizacja — to przykłady tego, co O ma zdjąć.",
         "funFact": {
           "text": "Ewa: Nie musisz wykładać chemii — wystarczy: „osady, które blokują pielęgnację”."

@@ -54,7 +54,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "2–3 min, bez spłukiwania.",
-        "incorrectTitle": "Instrukcja fazy 2.",
+        "incorrectTitle": "Faza 2 — sprawdź jeszcze raz.",
         "explanation": "TREATMENT zostaje na włosie — to baza pod BUILD UP. Spłukanie go psuje logikę sekwencji.",
         "funFact": {
           "text": "Ewa: Powiedz na głos przy myjce: „To zostaje — nie spłukujemy.” Klientka wtedy nie panikuje."
@@ -125,7 +125,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Trzy różne reguły.",
-        "incorrectTitle": "Sprawdź instrukcję.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "II bez spłukiwania, III krótko i spłukać, IV zostaje na włosie. To trzeba umieć powiedzieć i zrobić.",
         "funFact": {
           "text": "Ewa: Zanim odkręcisz wodę — sprawdź, która to faza. Nawyk ratuje zabieg."

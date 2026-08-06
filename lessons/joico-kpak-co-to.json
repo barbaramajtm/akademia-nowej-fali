@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Rekonstrukcja fryzjerska.",
-        "incorrectTitle": "Materiał uczennic.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "K-PAK = zabieg rekonstrukcyjno-pielęgnacyjny w czterech krokach — nie biologiczne leczenie."
       }
     },
@@ -98,7 +98,7 @@
         {
           "id": "r2",
           "pairId": "a",
-          "text": "Tak mówimy — język z materiałów szkoleniowych"
+          "text": "Tak mówimy — język uczciwy — bez cudów"
         },
         {
           "id": "r3",
@@ -138,7 +138,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Typowe wskazania.",
-        "incorrectTitle": "Fiszki / materiał.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Rozjaśnianie, matowość, szorstkość, kruchość, przed koloryzacją — typowe momenty."
       }
     },

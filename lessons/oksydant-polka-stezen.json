@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Dobór pod cel.",
-        "incorrectTitle": "Sprawdź materiały.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "3% / 9% / 12% — tak materiały wiążą stężenie z celem. Zawsze oceniasz stan włosa przed decyzją."
       }
     },
@@ -137,8 +137,8 @@
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Półka + materiały.",
-        "incorrectTitle": "Rozdziel źródła.",
+        "correctTitle": "Półka stężeń.",
+        "incorrectTitle": "Rozdziel pojęcia.",
         "explanation": "Materiały: ~1,8% przy odświeżaniu/repigmentacji. W salonie masz tubkę 1,5% jako najsłabszy gotowy aktywator — nie myl go z 9% czy 12%."
       }
     },

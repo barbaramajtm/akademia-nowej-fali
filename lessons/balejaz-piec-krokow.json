@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Pięć kroków.",
-        "incorrectTitle": "Tech. 13.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Dokładnie ta lista z materiałów."
       }
     },
@@ -60,7 +60,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Folia jest w Tech. 13.",
+        "correctTitle": "Folia w procedurze.",
         "incorrectTitle": "Tak.",
         "explanation": "Po nałożeniu produktu: zawinięcie w folię."
       }
@@ -103,7 +103,7 @@
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Kolejność z Tech. 13.",
+        "correctTitle": "Kolejność kroków.",
         "incorrectTitle": "Przestaw.",
         "explanation": "Podział → wybór → produkt → folia → spłukanie i pielęgnacja."
       }
@@ -153,7 +153,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Logika wizyty.",
-        "incorrectTitle": "Tech. 13.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Bez podziału/wyboru nie ma sensu nakładać; bez spłukania nie domykasz."
       }
     },

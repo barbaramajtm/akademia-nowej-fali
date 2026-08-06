@@ -44,7 +44,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Definicja Tech. 8.",
+        "correctTitle": "Definicja balejażu.",
         "incorrectTitle": "Tak.",
         "explanation": "Balejaż = rozjaśnianie lub farbowanie wybranych pasm → naturalne refleksy."
       }
@@ -61,7 +61,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Naturalne refleksy.",
-        "incorrectTitle": "Tech. 8.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Materiały wprost: w celu uzyskania naturalnych refleksów."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Trzy części definicji.",
-        "incorrectTitle": "Tech. 8.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Produkt (rozjaśniacz lub farba), zakres (pasma), cel (refleksy)."
       }
     },

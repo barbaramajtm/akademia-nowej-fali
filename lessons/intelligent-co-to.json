@@ -19,8 +19,15 @@
     }
   },
   "rewards": {
-    "streakBonus": { "threshold": 3, "amount": 5, "label": "3 poprawne z rzędu" },
-    "perfectBonus": { "amount": 15, "label": "Lekcja bez pomyłek" }
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
   },
   "tasks": [
     {
@@ -29,18 +36,29 @@
       "kicker": "Krok 1 · Definicja",
       "question": "Babilon Intelligent to przede wszystkim:",
       "options": [
-        { "id": "a", "text": "System 4 sekwencyjnych produktów do rekonstrukcji włosów" },
-        { "id": "b", "text": "Lekarstwo, które biologicznie ożywia martwą długość" },
-        { "id": "c", "text": "Wyłącznie farba oksydacyjna" }
+        {
+          "id": "a",
+          "text": "System 4 sekwencyjnych produktów do rekonstrukcji włosów"
+        },
+        {
+          "id": "b",
+          "text": "Lekarstwo, które biologicznie ożywia martwą długość"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie farba oksydacyjna"
+        }
       ],
       "correctOptionId": "a",
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "System czterech faz.",
-        "incorrectTitle": "Instrukcja Intelligent.",
+        "incorrectTitle": "Czym jest Intelligent.",
         "explanation": "Intelligent = połączenie 4 uzupełniających się, sekwencyjnych produktów do rekonstrukcji — nie leczenie żywej tkanki.",
-        "funFact": { "text": "Ewa: Klientce mówisz „system rekonstrukcji w czterech krokach” — prosto i konkretnie." }
+        "funFact": {
+          "text": "Ewa: Klientce mówisz „system rekonstrukcji w czterech krokach” — prosto i konkretnie."
+        }
       }
     },
     {
@@ -57,7 +75,9 @@
         "correctTitle": "Jak przy K-PAK.",
         "incorrectTitle": "Przypomnij budowę.",
         "explanation": "Po module budowy wiesz: łodyga nad skórą nie goi się jak skóra. Regeneracja poprawia kondycję — nie „cofnie czasu”.",
-        "funFact": { "text": "Ewa: To samo uczciwe zdanie co przy K-PAK: wzmacniamy i poprawiamy wygląd, nie obiecujemy włosa jak nowego." }
+        "funFact": {
+          "text": "Ewa: To samo uczciwe zdanie co przy K-PAK: wzmacniamy i poprawiamy wygląd, nie obiecujemy włosa jak nowego."
+        }
       }
     },
     {
@@ -68,22 +88,48 @@
       "leftTitle": "Sytuacja",
       "rightTitle": "Czynnik",
       "left": [
-        { "id": "l1", "pairId": "a", "text": "Smog, słońce, sól" },
-        { "id": "l2", "pairId": "b", "text": "Prostownica, lokówka, suszarka" },
-        { "id": "l3", "pairId": "c", "text": "Pasemka, trwała, prostowanie, rozjaśnianie" }
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Smog, słońce, sól"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Prostownica, lokówka, suszarka"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Pasemka, trwała, prostowanie, rozjaśnianie"
+        }
       ],
       "right": [
-        { "id": "r1", "pairId": "b", "text": "Uszkodzenia wysoką temperaturą" },
-        { "id": "r2", "pairId": "a", "text": "Czynniki zewnętrzne" },
-        { "id": "r3", "pairId": "c", "text": "Zabiegi chemiczne" }
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Uszkodzenia wysoką temperaturą"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Czynniki zewnętrzne"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Zabiegi chemiczne"
+        }
       ],
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Trzy typowe wskazania.",
-        "incorrectTitle": "Instrukcja: „Stworzone dla Ciebie, jeśli…”.",
+        "incorrectTitle": "Kiedy proponujesz.",
         "explanation": "Intelligent proponujesz przy osłabieniu zewnętrznym, cieple stylizacji i po zabiegach chemicznych.",
-        "funFact": { "text": "Ewa: Diagnoza najpierw — potem propozycja. Nie wciskaj systemu „wszystkim po myciu”." }
+        "funFact": {
+          "text": "Ewa: Diagnoza najpierw — potem propozycja. Nie wciskaj systemu „wszystkim po myciu”."
+        }
       }
     },
     {
@@ -92,18 +138,29 @@
       "kicker": "Krok 4 · Kierunek działania",
       "question": "Według instrukcji produkty Intelligent działają:",
       "options": [
-        { "id": "a", "text": "Od wewnętrznej do zewnętrznej strony włosa" },
-        { "id": "b", "text": "Wyłącznie na skórę głowy, nigdy na długości" },
-        { "id": "c", "text": "Tylko jako utleniacz do farby" }
+        {
+          "id": "a",
+          "text": "Od wewnętrznej do zewnętrznej strony włosa"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie na skórę głowy, nigdy na długości"
+        },
+        {
+          "id": "c",
+          "text": "Tylko jako utleniacz do farby"
+        }
       ],
       "correctOptionId": "a",
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Od środka na zewnątrz.",
-        "incorrectTitle": "Instrukcja systemu.",
+        "incorrectTitle": "Sens systemu.",
         "explanation": "System ma działać od wewnątrz na zewnątrz — to łączy się z budową: najpierw wsparcie włókna, potem powierzchnia i domknięcie.",
-        "funFact": { "text": "Ewa: Przy fotelu: „Najpierw wzmacniamy głębiej, potem porządkujemy powierzchnię i zamykamy.”" }
+        "funFact": {
+          "text": "Ewa: Przy fotelu: „Najpierw wzmacniamy głębiej, potem porządkujemy powierzchnię i zamykamy.”"
+        }
       }
     },
     {
@@ -113,18 +170,31 @@
       "question": "Które stwierdzenie jest błędne?",
       "cardTitle": "Intelligent",
       "rows": [
-        { "id": "s1", "text": "Intelligent to cztery sekwencyjne produkty rekonstrukcyjne" },
-        { "id": "s2", "text": "Można proponować po rozjaśnianiu, cieple stylizacji lub słońcu/soli" },
-        { "id": "s3", "text": "Intelligent gwarantuje, że włosy będą jak przed wszelkimi zabiegami" }
+        {
+          "id": "s1",
+          "text": "Intelligent to cztery sekwencyjne produkty rekonstrukcyjne"
+        },
+        {
+          "id": "s2",
+          "text": "Można proponować po rozjaśnianiu, cieple stylizacji lub słońcu/soli"
+        },
+        {
+          "id": "s3",
+          "text": "Intelligent gwarantuje, że włosy będą jak przed wszelkimi zabiegami"
+        }
       ],
-      "correctOptionIds": ["s3"],
+      "correctOptionIds": [
+        "s3"
+      ],
       "reward": 25,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Bez absolutnych obietnic.",
         "incorrectTitle": "Znajdź mit.",
         "explanation": "Instrukcja mówi o przywracaniu kondycji fryzjerskiej (moc, struktura, wygląd, połysk) — nie o cofnięciu wszystkich uszkodzeń „do zera”.",
-        "funFact": { "text": "Ewa: Język jak przy K-PAK: „wspiera”, „wzmacnia”, „poprawia wygląd”." }
+        "funFact": {
+          "text": "Ewa: Język jak przy K-PAK: „wspiera”, „wzmacnia”, „poprawia wygląd”."
+        }
       }
     }
   ],

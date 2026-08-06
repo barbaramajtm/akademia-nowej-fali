@@ -109,7 +109,7 @@
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Lista z materiałów.",
+        "correctTitle": "Lista właściwości.",
         "incorrectTitle": "Sprawdź pary.",
         "explanation": "Do właściwości fizycznych należą też stabilność i trwałość oraz higroskopijność i kapilarność."
       }

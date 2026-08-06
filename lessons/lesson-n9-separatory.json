@@ -120,7 +120,7 @@
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Zgodnie ze źródłem.",
+        "correctTitle": "Dobrze.",
         "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Tak opisuje je materiał egzaminacyjny — bez dodawania innych zasad marek."
       }

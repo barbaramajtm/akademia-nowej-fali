@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Suche / mokre.",
-        "incorrectTitle": "Masz. 9.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Materiały: prostownice do włosów suchych i mokrych."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Checklista ciepła.",
-        "incorrectTitle": "Masz. 9.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Efekt + typ (suche/mokre) + termostat — trzy fakty z jednego źródła."
       }
     },

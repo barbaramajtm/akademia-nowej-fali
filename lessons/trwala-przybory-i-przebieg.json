@@ -53,7 +53,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Checklista Masz. 15.",
+        "correctTitle": "Checklista przyborów.",
         "incorrectTitle": "Inny zestaw.",
         "explanation": "Miseczki, aplikacja płynu/neutralizatora, plastikowe wałki, ochrona, papierki, czasomierz — typowy zestaw do trwałej."
       }
@@ -70,7 +70,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Reduktor.",
-        "incorrectTitle": "Mat. 22.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Bez reduktora nie ma chemicznej zmiany mostków w trwałej."
       }
     },
@@ -152,7 +152,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Inne stanowiska.",
-        "incorrectTitle": "Sprawdź Masz. 12 i 15.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Wodna: wałki, szpilki, suszenie. Trwała: chemia w miseczkach + plastikowe wałki i ochrona."
       }
     },
