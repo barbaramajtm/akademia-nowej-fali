@@ -8,19 +8,19 @@
 | `source-materials/joico-kpak/joico-kpak-instrukcja-wykonania.pdf` | Instrukcja wykonania (grafika): Clarifying → Cuticle Sealer → Reconstructor → Intense Hydrator | **Procedura salonowa** |
 | `source-materials/joico-kpak/joico-kpak-ulotka-salonowa.pdf` | Ulotka salonowa Nowej Fali (1 str., grafika) | Referencja komunikacyjna |
 
-## Zakres modułu (6 lekcji)
+## Zakres modułu (mikro-lekcje, bez wklejonej kartki)
 
-- Czym jest K-PAK (rekonstrukcja fryzjerska vs „leczenie”) — zaraz po budowie włosa
-- Model O-W-R-N: czym etapy się różnią + zdania przy myjce
-- Procedura: Clarifying ≠ zwykły szampon; nakładanie na długości (omijaj skórę głowy); czasy, ręcznik + grafika
-- Powtórzenie kroków 2–3 przy mocno uszkodzonych (np. 1-2-3-2-3-4)
-- Tonacja / koloryzacja zaraz po kroku 3, przed hydratorem
-- Rozmowa z klientką: SmartRelease / Quadramine bez overclaimów; kiedy proponować
+- Czym jest K-PAK (rekonstrukcja fryzjerska vs „leczenie”)
+- Mapa O-W-R-N, potem każdy etap osobno: **po co** + **jak**
+- Oczyszczanie: osady; **długości vs skóra** (zwykły szampon vs Clarifying); czas 2–5 min
+- Wygładzanie / rekonstrukcja / nawilżenie: cel + aplikacja (5 min, omijaj skórę)
+- Powtórzenie 2–3; tonacja po kroku 3; składanie całej procedury; scenki; rozmowa / technologie
 
 ## Uwagi
 
+- Instrukcja PDF/PNG zostaje jako materiał stanowiskowy — **nie** jako ekran „przeczytaj całą kartkę” w lekcji.
 - Włos na długości = martwa struktura — zabieg działa kosmetycznie/fryzjersko.
 - Nie porównywać marketingowo z Olaplexem („tylko lepsze”).
 - Preferować `…ladniejsza-wersja.pdf` przy treściach; procedurę trzymać zgodnie z `…instrukcja-wykonania.pdf`.
-- W `LessonsModuleOrder`: `joico-kpak` → `intelligent-babilon` → `wlos-kolor` → `ph` → `numeracja-farb` → `oksydant-proporcje` → …
-- Odblokowanie: K-PAK start bez wymagań; Intelligent po `joico-kpak-rozmowa`; budowa po `intelligent-rozmowa`; pH po `wlos-budowa-podsumowanie`; numeracja po `ph-podsumowanie-modulu`; oksydant po N20.
+- W `LessonsModuleOrder`: `joico-kpak` → `intelligent-babilon` → …
+- Odblokowanie: K-PAK start; Intelligent po `joico-kpak-rozmowa`; pozostałe moduły na razie zablokowane.

@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-r-cel",
+  "title": "Rekonstrukcja: po co ten etap",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka: „To już regeneracja?”. R to serce odbudowy włókna — składniki proteinowe, keratynowe, aminokwasowe. Osobno od W i N.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jkr1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Cel R",
+      "question": "Po co jest rekonstrukcja?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dostarcza składniki proteinowe, keratynowe i aminokwasowe wspierające osłabione miejsca we włóknie"
+        },
+        {
+          "id": "b",
+          "text": "Tylko myje skórę głowy z sebum"
+        },
+        {
+          "id": "c",
+          "text": "Zastępuje całkowicie oczyszczanie"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Wsparcie włókna.",
+        "incorrectTitle": "Fiszka R.",
+        "explanation": "R = praca we włóknie (fryzjersko), nie „leczenie żywej tkanki”.",
+        "funFact": {
+          "text": "Ewa: Klientce: „Wzmacniamy włos tam, gdzie jest zmęczony zabiegami.”"
+        }
+      }
+    },
+    {
+      "id": "jkr1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Produkt",
+      "question": "Produkt etapu R to K-PAK Deep-Penetrating Reconstructor.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Reconstructor = R.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Nazwa mówi: deep-penetrating = głębiej w osłabione miejsca.",
+        "funFact": {
+          "text": "Ewa: Nie mów „20 rodzajów keratyny”, jeśli nie jesteś pewna — mów o składnikach proteinowych."
+        }
+      }
+    },
+    {
+      "id": "jkr1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Różnice",
+      "question": "Dopasuj etap do zdania.",
+      "leftTitle": "Etap",
+      "rightTitle": "Zdanie",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "O"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "W"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "R"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "„Uspokajamy powierzchnię, mniej szorstkości”"
+        },
+        {
+          "id": "r2",
+          "pairId": "c",
+          "text": "„Wzmacniamy włókno składnikami proteinowymi”"
+        },
+        {
+          "id": "r3",
+          "pairId": "a",
+          "text": "„Zdejmujemy osady, żeby pielęgnacja weszła”"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Trzy zdania.",
+        "incorrectTitle": "Przy myjce.",
+        "explanation": "Każdy etap ma inne zdanie — nie mów na wszystko „regeneracja”.",
+        "funFact": {
+          "text": "Ewa: Ćwicz na głos: O / W / R — trzy różne odpowiedzi."
+        }
+      }
+    },
+    {
+      "id": "jkr1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Klientka",
+      "question": "Klientka: „Czy to tylko wygładzenie?”",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nie tylko — jest też część proteinowo-aminokwasowa, która wspiera osłabione miejsca we włosie"
+        },
+        {
+          "id": "b",
+          "text": "Tak, tylko połysk na powierzchni, nic więcej"
+        },
+        {
+          "id": "c",
+          "text": "To wyłącznie trwała chemiczna"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie tylko wygładzenie.",
+        "incorrectTitle": "Materiał uczennic.",
+        "explanation": "Wygładzanie to W. R idzie głębiej we włókno (fryzjersko).",
+        "funFact": {
+          "text": "Ewa: Efekt nadal fryzjerski — bez obietnicy „jak nowy włos”."
+        }
+      }
+    },
+    {
+      "id": "jkr1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Etap R",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Rekonstrukcja wspiera osłabione miejsca we włóknie"
+        },
+        {
+          "id": "s2",
+          "text": "Reconstructor to produkt etapu R"
+        },
+        {
+          "id": "s3",
+          "text": "Rekonstrukcja biologicznie ożywia martwą długość jak skórę"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Fryzjersko, nie biologicznie.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Martwa długość nie goi się. R poprawia kondycję włókna fryzjersko.",
+        "funFact": {
+          "text": "Ewa: Następna: jak nakładać Reconstructor i kiedy wracać do W+R."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Umiesz nazwać sens R",
+    "subtitle": "Proteinowo-aminokwasowe wsparcie włókna — uczciwie.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Jak nakładać Reconstructor (5 min, długości)."
+    }
+  }
+}

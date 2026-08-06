@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-n-jak",
+  "title": "Nawilżenie: jak nakładać",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Ostatni podpunkt z kartki: Intense Hydrator — długości, 5 minut, spłucz, ręcznik, stylizacja.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jkn2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Aplikacja N",
+      "question": "Intense Hydrator nakładasz:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Równomiernie na wilgotne długości, omijając skórę; rozczesujesz; ok. 5 min; spłukujesz; ręcznik; stylizacja"
+        },
+        {
+          "id": "b",
+          "text": "Tylko na skórę na 30 sekund"
+        },
+        {
+          "id": "c",
+          "text": "Przed Clarifying, na brudne włosy"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Finisz jak w instrukcji.",
+        "incorrectTitle": "Procedura N.",
+        "explanation": "Ten sam rytm: długości → 5 min → spłucz → ręcznik → stylizacja.",
+        "funFact": {
+          "text": "Ewa: Po N wychodzisz do układania — zabieg domknięty."
+        }
+      }
+    },
+    {
+      "id": "jkn2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Po N",
+      "question": "Po spłukaniu Intense Hydrator osuszasz ręcznikiem i przechodzisz do stylizacji według potrzeby.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Koniec rytuału.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Nie ma piątego sekretnego kroku na kartce — jest stylizacja.",
+        "funFact": {
+          "text": "Ewa: Klientce: „Gotowe — teraz układamy.”"
+        }
+      }
+    },
+    {
+      "id": "jkn2-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · Przebieg N",
+      "question": "Ułóż etap nawilżenia.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Nałóż Intense Hydrator na wilgotne długości (omijaj skórę)"
+        },
+        {
+          "id": "s2",
+          "text": "Rozczesz i zostaw ok. 5 minut"
+        },
+        {
+          "id": "s3",
+          "text": "Spłucz dokładnie ciepłą wodą"
+        },
+        {
+          "id": "s4",
+          "text": "Osusz ręcznikiem i przejdź do stylizacji"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "N od A do Z.",
+        "incorrectTitle": "Podpunkt.",
+        "explanation": "Nakładanie → czas → spłukanie → stylizacja.",
+        "funFact": {
+          "text": "Ewa: To ostatni klock z kartki — uczysz się go osobno."
+        }
+      }
+    },
+    {
+      "id": "jkn2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Klientka",
+      "question": "Klientka: „Czemu znowu pięć minut?”",
+      "options": [
+        {
+          "id": "a",
+          "text": "Każdy etap potrzebuje czasu, żeby produkt zdążył zrobić swoją robotę — tu domykamy miękkość"
+        },
+        {
+          "id": "b",
+          "text": "Bo lubię czekać bez powodu"
+        },
+        {
+          "id": "c",
+          "text": "Bo to czas na farbę oksydacyjną"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Czas = efekt.",
+        "incorrectTitle": "Przy myjce.",
+        "explanation": "W, R i N: ok. 5 min. O: 2–5 min.",
+        "funFact": {
+          "text": "Ewa: Jedno zdanie: „Dajemy produktowi chwilę — potem miękkość.”"
+        }
+      }
+    },
+    {
+      "id": "jkn2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Jak N",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Intense Hydrator: ok. 5 minut na długościach"
+        },
+        {
+          "id": "s2",
+          "text": "Po N: ręcznik i stylizacja"
+        },
+        {
+          "id": "s3",
+          "text": "N można pominąć zawsze, bo W już wszystko zrobiło"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "N domyka.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "W to powierzchnia/pH. N to miękkość i komfort. Oba potrzebne.",
+        "funFact": {
+          "text": "Ewa: Potem: cała kolejność O→W→R→N bez kartki przed nosem."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Prowadzisz etap N ręką",
+    "subtitle": "5 min → spłucz → stylizacja.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Cała procedura na stanowisku — bez wklejonej kartki."
+    }
+  }
+}

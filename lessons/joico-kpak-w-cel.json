@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-w-cel",
+  "title": "Wygładzanie: po co ten etap",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Po oczyszczeniu włos jest „posprzątany”. Teraz W: wygładzanie powierzchni i pH. Klientka pyta: „Po co jeszcze coś przed maską?”.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jkw1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Cel W",
+      "question": "Po co jest wygładzanie (Cuticle Sealer)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Porządkuje powierzchnię włosa i wyrównuje pH — mniej szorstkości, lepszy start pod rekonstrukcję"
+        },
+        {
+          "id": "b",
+          "text": "Zastępuje całkowicie rekonstrukcję i nawilżenie"
+        },
+        {
+          "id": "c",
+          "text": "To wyłącznie farba ton w ton"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Powierzchnia i pH.",
+        "incorrectTitle": "Fiszka W.",
+        "explanation": "Wygładzanie ≠ nawilżenie. W porządkuje łuskę/pH; N daje miękkość na finisz.",
+        "funFact": {
+          "text": "Ewa: Klientce: „Uspokajamy powierzchnię włosa, żeby była gładsza.”"
+        }
+      }
+    },
+    {
+      "id": "jkw1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Produkt",
+      "question": "Produkt etapu W to K-PAK Cuticle Sealer.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cuticle Sealer = W.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Cuticle = łuska. Sealer = domknięcie/porządzenie powierzchni.",
+        "funFact": {
+          "text": "Ewa: Nazwa tubki podpowiada sens etapu."
+        }
+      }
+    },
+    {
+      "id": "jkw1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · W vs N",
+      "question": "Dopasuj.",
+      "leftTitle": "Etap",
+      "rightTitle": "Cel",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Wygładzanie"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Nawilżenie"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Oczyszczanie"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Miękkość, blask, komfort na finisz"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Mniej szorstkości, porządek powierzchni i pH"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Zdjęcie osadów przed pielęgnacją"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie myl etapów.",
+        "incorrectTitle": "W ≠ N.",
+        "explanation": "Trzy różne prace — trzy różne zdania dla klientki.",
+        "funFact": {
+          "text": "Ewa: Jeśli mówisz na wszystko „nawilżamy” — klientka nic nie rozumie."
+        }
+      }
+    },
+    {
+      "id": "jkw1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Klientka",
+      "question": "Klientka: „Po oczyszczeniu od razu dajcie mi maskę.” Co odpowiesz?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Najpierw wygładzamy powierzchnię i pH — dopiero potem rekonstrukcja i nawilżenie mają lepszy efekt"
+        },
+        {
+          "id": "b",
+          "text": "OK, pomijamy wszystko i dajemy tylko Intense Hydrator"
+        },
+        {
+          "id": "c",
+          "text": "Wygładzanie to tylko marketing, bez sensu"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "W ma sens.",
+        "incorrectTitle": "Kolejność.",
+        "explanation": "Szorstka, „otwarta” powierzchnia utrudnia kolejne kroki.",
+        "funFact": {
+          "text": "Ewa: „Najpierw wygładzimy powierzchnię — potem wzmocnienie i miękkość.”"
+        }
+      }
+    },
+    {
+      "id": "jkw1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Etap W",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Wygładzanie zmniejsza szorstkość i porządkuje powierzchnię"
+        },
+        {
+          "id": "s2",
+          "text": "Cuticle Sealer to produkt etapu W"
+        },
+        {
+          "id": "s3",
+          "text": "Wygładzanie i nawilżenie to dokładnie to samo — można pominąć jedno"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "W ≠ N.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Powierzchnia/pH to nie to samo co miękkość na finisz.",
+        "funFact": {
+          "text": "Ewa: Następna lekcja: jak nakładać Cuticle Sealer punkt po punkcie."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Umiesz powiedzieć po co jest W",
+    "subtitle": "Powierzchnia i pH — mniej szorstkości.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Jak nakładać Cuticle Sealer (czas, grzebień, skóra)."
+    }
+  }
+}

@@ -204,7 +204,7 @@ window.LessonsCatalog = [
   {
     id: 'joico-kpak-owrn',
     moduleId: 'joico-kpak',
-    title: 'O-W-R-N: cztery etapy',
+    title: 'O-W-R-N: mapa czterech etapów',
     moduleTitle: 'JOICO K-PAK — regeneracja',
     moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
@@ -213,26 +213,81 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Czym jest JOICO K-PAK?'
   },
   {
-    id: 'joico-kpak-procedura',
+    id: 'joico-kpak-o-cel',
     moduleId: 'joico-kpak',
-    title: 'Procedura na stanowisku',
+    title: 'Oczyszczanie: po co ten etap',
     moduleTitle: 'JOICO K-PAK — regeneracja',
-    moduleSubtitle: 'Zabiegi',
+    moduleSubtitle: 'Podstawy',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
     requiresLessonId: 'joico-kpak-owrn',
-    lockedReason: 'Najpierw ukończ: O-W-R-N: cztery etapy'
+    lockedReason: 'Najpierw ukończ: O-W-R-N: mapa czterech etapów'
   },
   {
-    id: 'joico-kpak-clarifying-dlugosci',
+    id: 'joico-kpak-o-dlugosci',
     moduleId: 'joico-kpak',
-    title: 'Clarifying i długości włosa',
+    title: 'Oczyszczanie: długości vs skóra głowy',
     moduleTitle: 'JOICO K-PAK — regeneracja',
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'joico-kpak-procedura',
-    lockedReason: 'Najpierw ukończ: Procedura na stanowisku'
+    requiresLessonId: 'joico-kpak-o-cel',
+    lockedReason: 'Najpierw ukończ: Oczyszczanie: po co ten etap'
+  },
+  {
+    id: 'joico-kpak-o-czas',
+    moduleId: 'joico-kpak',
+    title: 'Oczyszczanie: czas, spłukanie, ręcznik',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-o-dlugosci',
+    lockedReason: 'Najpierw ukończ: Oczyszczanie: długości vs skóra głowy'
+  },
+  {
+    id: 'joico-kpak-w-cel',
+    moduleId: 'joico-kpak',
+    title: 'Wygładzanie: po co ten etap',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-o-czas',
+    lockedReason: 'Najpierw ukończ: Oczyszczanie: czas, spłukanie, ręcznik'
+  },
+  {
+    id: 'joico-kpak-w-jak',
+    moduleId: 'joico-kpak',
+    title: 'Wygładzanie: jak nakładać',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-w-cel',
+    lockedReason: 'Najpierw ukończ: Wygładzanie: po co ten etap'
+  },
+  {
+    id: 'joico-kpak-r-cel',
+    moduleId: 'joico-kpak',
+    title: 'Rekonstrukcja: po co ten etap',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-w-jak',
+    lockedReason: 'Najpierw ukończ: Wygładzanie: jak nakładać'
+  },
+  {
+    id: 'joico-kpak-r-jak',
+    moduleId: 'joico-kpak',
+    title: 'Rekonstrukcja: jak nakładać',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-r-cel',
+    lockedReason: 'Najpierw ukończ: Rekonstrukcja: po co ten etap'
   },
   {
     id: 'joico-kpak-powtorzenie-2-3',
@@ -242,8 +297,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'joico-kpak-clarifying-dlugosci',
-    lockedReason: 'Najpierw ukończ: Clarifying i długości włosa'
+    requiresLessonId: 'joico-kpak-r-jak',
+    lockedReason: 'Najpierw ukończ: Rekonstrukcja: jak nakładać'
   },
   {
     id: 'joico-kpak-tonacja-po-3',
@@ -257,6 +312,39 @@ window.LessonsCatalog = [
     lockedReason: 'Najpierw ukończ: Powtórka kroków 2 i 3'
   },
   {
+    id: 'joico-kpak-n-cel',
+    moduleId: 'joico-kpak',
+    title: 'Nawilżenie: po co ten etap',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Podstawy',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-tonacja-po-3',
+    lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
+  },
+  {
+    id: 'joico-kpak-n-jak',
+    moduleId: 'joico-kpak',
+    title: 'Nawilżenie: jak nakładać',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-n-cel',
+    lockedReason: 'Najpierw ukończ: Nawilżenie: po co ten etap'
+  },
+  {
+    id: 'joico-kpak-procedura',
+    moduleId: 'joico-kpak',
+    title: 'Procedura: cała kolejność bez kartki',
+    moduleTitle: 'JOICO K-PAK — regeneracja',
+    moduleSubtitle: 'Zabiegi',
+    rewardLabel: 'do 75 Kosmyków',
+    locked: false,
+    requiresLessonId: 'joico-kpak-n-jak',
+    lockedReason: 'Najpierw ukończ: Nawilżenie: jak nakładać'
+  },
+  {
     id: 'joico-kpak-scenki-salonu',
     moduleId: 'joico-kpak',
     title: 'Scenki przy fotelu — K-PAK',
@@ -264,8 +352,8 @@ window.LessonsCatalog = [
     moduleSubtitle: 'Zabiegi',
     rewardLabel: 'do 75 Kosmyków',
     locked: false,
-    requiresLessonId: 'joico-kpak-tonacja-po-3',
-    lockedReason: 'Najpierw ukończ: Tonacja po kroku 3'
+    requiresLessonId: 'joico-kpak-procedura',
+    lockedReason: 'Najpierw ukończ: Procedura: cała kolejność bez kartki'
   },
   {
     id: 'joico-kpak-rozmowa',

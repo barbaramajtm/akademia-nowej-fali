@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-n-cel",
+  "title": "Nawilżenie: po co ten etap",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Finisz OWRN. Klientka: „To ta miękkość na koniec?”. N = Intense Hydrator — komfort, blask, układanie. Osobno od W i R.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jkn1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Cel N",
+      "question": "Po co jest nawilżenie?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Poprawia miękkość, blask, elastyczność i łatwość układania — domyka zabieg"
+        },
+        {
+          "id": "b",
+          "text": "Zastępuje oczyszczanie z osadów"
+        },
+        {
+          "id": "c",
+          "text": "To wyłącznie rozjaśnianie"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Miękkość na finisz.",
+        "incorrectTitle": "Fiszka N.",
+        "explanation": "N nie sprząta osadów i nie zastępuje proteinowej R.",
+        "funFact": {
+          "text": "Ewa: Klientce: „Na koniec miękkość i komfort w dotyku.”"
+        }
+      }
+    },
+    {
+      "id": "jkn1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Produkt",
+      "question": "Produkt etapu N to K-PAK Intense Hydrator.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Intense Hydrator = N.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Hydrator = nawilżenie. Intense = intensywne domknięcie.",
+        "funFact": {
+          "text": "Ewa: Po R (i ewentualnej tonacji) dopiero N."
+        }
+      }
+    },
+    {
+      "id": "jkn1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Kiedy N",
+      "question": "Dopasuj.",
+      "leftTitle": "Temat",
+      "rightTitle": "Zasada",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Nawilżenie w planie"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Tonacja / koloryzacja"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Sama „maska zamiast całego K-PAK”"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Po kroku 3 (R), przed nawilżeniem — jeśli planujesz kolor"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Zawsze jako finisz OWRN (po R / po kolorze)"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Za mało — brakuje przygotowania i odbudowy"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "N na swoim miejscu.",
+        "incorrectTitle": "Kolejność.",
+        "explanation": "Kolor po 3., potem N. Sama maska ≠ K-PAK.",
+        "funFact": {
+          "text": "Ewa: Tonację już ćwiczysz w osobnej lekcji — tu tylko miejsce N w planie."
+        }
+      }
+    },
+    {
+      "id": "jkn1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Klientka",
+      "question": "Klientka: „Możemy zrobić tylko tę maskę na koniec?”",
+      "options": [
+        {
+          "id": "a",
+          "text": "Maska to finisz — bez O, W i R nie ma pełnego K-PAK; sama miękkość nie zastąpi przygotowania i odbudowy"
+        },
+        {
+          "id": "b",
+          "text": "Tak, reszta jest zbędna zawsze"
+        },
+        {
+          "id": "c",
+          "text": "Maska to to samo co Clarifying"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "N nie zastępuje całości.",
+        "incorrectTitle": "Uczciwie.",
+        "explanation": "N domyka. OWR robi robotę wcześniej.",
+        "funFact": {
+          "text": "Ewa: „Możemy nawilżyć, ale pełny efekt to cały plan etapów.”"
+        }
+      }
+    },
+    {
+      "id": "jkn1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Etap N",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Nawilżenie poprawia miękkość i komfort"
+        },
+        {
+          "id": "s2",
+          "text": "Intense Hydrator to produkt etapu N"
+        },
+        {
+          "id": "s3",
+          "text": "Nawilżenie usuwa chlor i minerały zamiast oczyszczania"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "N ≠ O.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Osady zdejmuje O. N daje miękkość.",
+        "funFact": {
+          "text": "Ewa: Następna: jak nakładać Intense Hydrator i wyjść do stylizacji."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Umiesz powiedzieć po co jest N",
+    "subtitle": "Finisz: miękkość, blask, układanie.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Jak nakładać Intense Hydrator."
+    }
+  }
+}

@@ -1,12 +1,15 @@
 # Audyt — JOICO K-PAK
 
-Wszystkie 6 lekcji: **GOTOWA** (rozbudowa 2026-07-28: etapy, Clarifying, nakładanie na długości; kolejność po budowie włosa).
+Ścieżka rozbita na mikro-lekcje (2026-08-06): bez wklejania całej instrukcji do jednej lekcji.
 
 | Fragment | Źródło | Status |
 |----------|--------|--------|
-| O-W-R-N: różnice celów etapów + zdania dla klientki | `joico-kpak-uczennice-ladniejsza-wersja.pdf`, `joico-kpak-wersja-do-czytania-uczennice.pdf` | OK |
-| Clarifying: osady / chlor / minerały; czas 2–5 min | Instrukcja wykonania + materiał OWRN | OK |
-| Nakładanie równomiernie na włosy, unikaj skóry głowy | `joico-kpak-instrukcja-wykonania.pdf` / grafika stanowiskowa | OK |
-| Rekonstrukcja fryzjerska vs „leczenie” martwej długości | Materiał uczennic (DOM / granica) | OK |
-
-Świadomie pominięte: porównania marketingowe z Olaplexem, obietnice „wyleczy na zawsze”, dawki spoza instrukcji.
+| Czym jest K-PAK / uczciwy język | `joico-kpak-uczennice-ladniejsza-wersja.pdf` | OK |
+| Mapa O-W-R-N (bez kartki) | materiał OWRN + ulotka | OK |
+| O: cel (osady) | fiszki + OWRN | OK |
+| O: długości vs skóra + pytanie klientki | instrukcja + praktyka salonowa | OK |
+| O: czas 2–5 min, ręcznik | `joico-kpak-instrukcja-wykonania.pdf` | OK |
+| W / R / N: cel + jak (5 min, długości) | instrukcja wykonania | OK |
+| Powtórka 2–3, tonacja po 3 | instrukcja | OK |
+| Procedura zbiorcza bez kartki | instrukcja | OK |
+| Scenki + rozmowa / technologie | materiał uczennic | OK |

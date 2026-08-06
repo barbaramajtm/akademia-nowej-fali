@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-o-dlugosci",
+  "title": "Oczyszczanie: długości vs skóra głowy",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Klientka: „Nakładasz to na całą długość — co w tym niezwykłego?”. Dziś zapamiętasz różnicę: zwykły szampon vs Clarifying w K-PAK.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jko2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Zwykły szampon",
+      "question": "Przy codziennym myciu szampon przede wszystkim nakładasz:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Głównie na skórę głowy — sebum i brud są u nasady; długości myją się przy spływaniu piany"
+        },
+        {
+          "id": "b",
+          "text": "Wyłącznie na końce, nigdy na skórę"
+        },
+        {
+          "id": "c",
+          "text": "Tylko na grzywkę"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Skóra głowy.",
+        "incorrectTitle": "Codzienne mycie.",
+        "explanation": "Zwykły szampon pracuje tam, gdzie jest skóra i sebum. Długości dostają resztkę piany.",
+        "funFact": {
+          "text": "Ewa: To właśnie „jak zawsze” — i dlatego klientka nie widzi różnicy, dopóki nie wyjaśnisz."
+        }
+      }
+    },
+    {
+      "id": "jko2-z2",
+      "type": "singleChoice",
+      "kicker": "Krok 2 · Clarifying w K-PAK",
+      "question": "W etapie O (Clarifying) produkt rozprowadzasz:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Równomiernie na długościach włosa (według instrukcji — z uwzględnieniem omijania skóry głowy przy aplikacji)"
+        },
+        {
+          "id": "b",
+          "text": "Tylko punktowo na skórę, jak codzienny szampon, bez pracy na długościach"
+        },
+        {
+          "id": "c",
+          "text": "Wyłącznie na czyste, suche włosy bez wody"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Praca na długościach.",
+        "incorrectTitle": "Instrukcja K-PAK.",
+        "explanation": "Tu oczyszczasz włos na długości — bo osady siedzą na włóknie, nie tylko na skórze.",
+        "funFact": {
+          "text": "Ewa: Pokaż dłonią długości: „Tu dziś sprzątamy.”"
+        }
+      }
+    },
+    {
+      "id": "jko2-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Porównanie",
+      "question": "Dopasuj mycie do ruchu ręką.",
+      "leftTitle": "Mycie",
+      "rightTitle": "Gdzie pracujesz",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Zwykły szampon codzienny"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Clarifying w K-PAK"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Kolejne produkty W–R–N"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Równomiernie na długościach — głębsze oczyszczenie włosa"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Głównie skóra głowy; długości „przy okazji”"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Też na długościach, omijając skórę głowy"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Inna praca ręką.",
+        "incorrectTitle": "Rozróżnij.",
+        "explanation": "K-PAK to praca na kondycji długości. Codzienne mycie = skóra.",
+        "funFact": {
+          "text": "Ewa: Jeśli robisz Clarifying „jak zawsze tylko skóra” — tracisz sens etapu O."
+        }
+      }
+    },
+    {
+      "id": "jko2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Pytanie klientki",
+      "question": "Klientka: „Nakładasz szampon na całą długość — co w tym niezwykłego?” Najlepsza odpowiedź:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Zwykle szampon idzie głównie na skórę głowy. Tu czyścimy długości z osadów, żeby pielęgnacja mogła wejść równo w cały włos"
+        },
+        {
+          "id": "b",
+          "text": "Bo tak wygląda ładniej na Instagramie"
+        },
+        {
+          "id": "c",
+          "text": "Nie ma różnicy — zawsze tak myję"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "To jest to zdanie.",
+        "incorrectTitle": "Wczorajsza sytuacja.",
+        "explanation": "Niezwykłe = nie myjesz „tylko skóry jak codziennie”. Czyścisz długości, bo tam siedzą osady i tam ma wejść regeneracja.",
+        "funFact": {
+          "text": "Ewa: Zapamiętaj to zdanie na głos. Jutro klientka zapyta znowu."
+        }
+      }
+    },
+    {
+      "id": "jko2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Długości",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Codzienny szampon: nacisk na skórę głowy"
+        },
+        {
+          "id": "s2",
+          "text": "Clarifying w K-PAK: praca na długościach, żeby zdjąć osady z włosa"
+        },
+        {
+          "id": "s3",
+          "text": "Nie ma różnicy między Clarifying a codziennym myciem — zawsze tylko skóra i od razu spłucz"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Jest różnica.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Różnica jest właśnie w tym: gdzie i po co pracujesz ręką.",
+        "funFact": {
+          "text": "Ewa: Jak ktoś powie tylko „nakładam na całą długość” bez „dlaczego” — brakuje drugiej połowy zdania."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Umiesz wyjaśnić „co w tym niezwykłego”",
+    "subtitle": "Zwykły szampon = skóra. Clarifying = długości i osady.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Czas Clarifying 2–5 min, spłukanie i ręcznik."
+    }
+  }
+}

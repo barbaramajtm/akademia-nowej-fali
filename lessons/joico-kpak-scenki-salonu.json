@@ -81,11 +81,11 @@
       "rightTitle": "Odpowiedź",
       "left": [
         { "id": "l1", "pairId": "a", "text": "„Czy to leczy włosy?”" },
-        { "id": "l2", "pairId": "b", "text": "„Czemu cztery kroki?”" },
+        { "id": "l2", "pairId": "b", "text": "„Nakładasz szampon na całą długość — co w tym niezwykłego?”" },
         { "id": "l3", "pairId": "c", "text": "„Czy to jak Olaplex, tylko lepsze?”" }
       ],
       "right": [
-        { "id": "r1", "pairId": "b", "text": "Każdy etap robi co innego: czyści, wygładza, wzmacnia, nawilża" },
+        { "id": "r1", "pairId": "b", "text": "Zwykle szampon idzie głównie na skórę; tu czyścimy długości z osadów pod pielęgnację" },
         { "id": "r2", "pairId": "a", "text": "To rekonstrukcja fryzjerska długości — nie leczenie jak skóry" },
         { "id": "r3", "pairId": "c", "text": "Nie porównujemy tak — mówimy o naszym protokole K-PAK" }
       ],
@@ -94,8 +94,8 @@
       "feedback": {
         "correctTitle": "Gotowe repliki.",
         "incorrectTitle": "Ćwicz na głos.",
-        "explanation": "Krótko, uczciwie, bez cudów i bez „tylko lepsze”.",
-        "funFact": { "text": "Ewa: Te trzy odpowiedzi warto powiedzieć na głos dwa razy w domu." }
+        "explanation": "Szczególnie zdanie o długościach vs skórze — klientka pyta o to przy myjce.",
+        "funFact": { "text": "Ewa: To pytanie padło wczoraj w salonie. Odpowiedź ma wyjść bez myślenia." }
       }
     },
     {

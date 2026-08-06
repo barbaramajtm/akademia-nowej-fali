@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-r-jak",
+  "title": "Rekonstrukcja: jak nakładać",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Zabiegi",
+  "intro": {
+    "narratorText": "Podpunkt z kartki: Reconstructor — równomiernie na wilgotne długości, omijasz skórę, 5 minut, spłukujesz, ręcznik.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jkr2-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Aplikacja",
+      "question": "Reconstructor nakładasz:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Równomiernie na wilgotne długości, omijając skórę głowy; rozczesujesz; zostawiasz ok. 5 min"
+        },
+        {
+          "id": "b",
+          "text": "Tylko na skórę głowy jak szampon"
+        },
+        {
+          "id": "c",
+          "text": "Na suche włosy na 45 minut bez spłukania"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Jak w instrukcji R.",
+        "incorrectTitle": "Procedura R.",
+        "explanation": "Ten sam wzorzec co W: długości → równo → 5 min → spłucz → ręcznik.",
+        "funFact": {
+          "text": "Ewa: Powtarzalność pomaga — uczysz się rytmu, nie ściągi."
+        }
+      }
+    },
+    {
+      "id": "jkr2-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Skóra",
+      "question": "Przy R (i W, N) omijasz skórę głowy — zabieg dotyczy kondycji długości, nie „leczenia” skóry.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Długości, nie skóra.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Jeśli problem skóry — nie udajesz lekarza.",
+        "funFact": {
+          "text": "Ewa: To samo zdanie wraca przy każdym produkcie 2–4."
+        }
+      }
+    },
+    {
+      "id": "jkr2-z3",
+      "type": "ordering",
+      "kicker": "Krok 3 · Przebieg R",
+      "question": "Ułóż etap rekonstrukcji.",
+      "resetLabel": "Od początku",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Nałóż Reconstructor na wilgotne długości (omijaj skórę)"
+        },
+        {
+          "id": "s2",
+          "text": "Rozczesz palcami / szerokim grzebieniem"
+        },
+        {
+          "id": "s3",
+          "text": "Zostaw ok. 5 minut"
+        },
+        {
+          "id": "s4",
+          "text": "Spłucz i osusz ręcznikiem do lekko wilgotnych"
+        }
+      ],
+      "correctOrder": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "R od A do Z.",
+        "incorrectTitle": "Podpunkt.",
+        "explanation": "Identyczny rytm jak przy W — inny produkt, inny cel.",
+        "funFact": {
+          "text": "Ewa: Klientce: „Teraz wzmacniamy włókno — około pięciu minut.”"
+        }
+      }
+    },
+    {
+      "id": "jkr2-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Klientka",
+      "question": "Klientka: „Czemu znowu coś na długości, a nie na skórę?”",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bo pracujemy nad kondycją włosa na długości — skóra nie jest tu celem zabiegu"
+        },
+        {
+          "id": "b",
+          "text": "Bo skóra nie istnieje"
+        },
+        {
+          "id": "c",
+          "text": "Bo tak każe farba oksydacyjna"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Cel = długości.",
+        "incorrectTitle": "Pytanie klientki.",
+        "explanation": "K-PAK = włókno i powierzchnia długości. Skóra to inna rozmowa.",
+        "funFact": {
+          "text": "Ewa: Spokojnie i krótko — bez wykładu."
+        }
+      }
+    },
+    {
+      "id": "jkr2-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Jak R",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Reconstructor: ok. 5 minut na długościach"
+        },
+        {
+          "id": "s2",
+          "text": "Omijasz skórę głowy"
+        },
+        {
+          "id": "s3",
+          "text": "R wystarczy wetrzeć w skórę i od razu spłukać — efekt ten sam"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Nie skracaj R.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "Bez czasu i bez pracy na długościach R nie robi swojej roboty.",
+        "funFact": {
+          "text": "Ewa: Potem: powtórka 2 i 3 przy bardzo zniszczonych."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Prowadzisz etap R ręką",
+    "subtitle": "Wilgotne długości → 5 min → ręcznik.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Powtórka W i R przy bardzo zniszczonych włosach."
+    }
+  }
+}

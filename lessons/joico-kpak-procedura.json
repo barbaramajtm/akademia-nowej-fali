@@ -1,22 +1,13 @@
 {
   "schemaVersion": 1,
   "id": "joico-kpak-procedura",
-  "title": "Procedura na stanowisku",
+  "title": "Procedura: cała kolejność bez kartki",
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Przy myjce liczy się nie tylko kolejność tubek. Clarifying to nie zwykły szampon, a produkty nakładasz na długości włosa — nie jak codzienne mycie skóry głowy.",
+    "narratorText": "Znasz już każdy etap osobno. Dziś składasz całość: O→W→R→N, czasy i zasada długości — bez wklejonej instrukcji na ekranie.",
     "stakeText": "do 75 Kosmyków",
-    "startButtonLabel": "Zacznij lekcję",
-    "hairGuide": {
-      "title": "Clarifying i nakładanie na długości",
-      "text": "K-PAK Clarifying Shampoo zdejmuje osady (minerały, chlor, resztki stylizacji), żeby kolejne kroki mogły zadziałać — to nie codzienne mycie „tylko skóry”. Nakładasz równomiernie na włosy, omijając skórę głowy; Clarifying zostawiasz 2–5 min. Potem Cuticle Sealer → Reconstructor → Intense Hydrator (po ok. 5 min), włosy lekko wilgotne po ręczniku.",
-      "note": "Źródło: instrukcja wykonania JOICO K-PAK (Nowa Fala).",
-      "continueLabel": "Dalej",
-      "imageSrc": "assets/images/joico-kpak-instrukcja.png",
-      "imageAlt": "Instrukcja wykonania JOICO K-PAK: cztery kroki produktowe.",
-      "imageCaption": "Clarifying → Cuticle Sealer → Reconstructor → Intense Hydrator."
-    }
+    "startButtonLabel": "Zacznij lekcję"
   },
   "rewards": {
     "streakBonus": {
@@ -32,116 +23,14 @@
   "tasks": [
     {
       "id": "jk3-z1",
-      "type": "singleChoice",
-      "kicker": "Krok 1 · Clarifying ≠ zwykły szampon",
-      "question": "Klientka: „To zwykłe mycie?” Co odpowiesz o Clarifying?",
-      "options": [
-        {
-          "id": "a",
-          "text": "Szampon oczyszczający: zdejmuje osady (chlor, minerały, stylizacja), żeby pielęgnacja weszła — 2–5 min"
-        },
-        {
-          "id": "b",
-          "text": "To zwykły szampon codzienny — tylko szybko spłukujesz ze skóry głowy"
-        },
-        {
-          "id": "c",
-          "text": "To farba ton w ton, bez czasu działania"
-        }
-      ],
-      "correctOptionId": "a",
-      "reward": 10,
-      "checkButtonLabel": "Sprawdź",
-      "feedback": {
-        "correctTitle": "Głębsze oczyszczenie.",
-        "incorrectTitle": "Nie myć „jak zawsze”.",
-        "explanation": "Clarifying przygotowuje włos pod kolejne kroki. Dlatego ma czas 2–5 min — nie jest szybkim codziennym myciem skóry.",
-        "funFact": {
-          "text": "Ewa: Klientce: „Najpierw zdejmujemy z włosa to, co przeszkadza pielęgnacji.”"
-        }
-      }
-    },
-    {
-      "id": "jk3-z2",
-      "type": "trueFalse",
-      "kicker": "Krok 2 · Nie tylko skóra głowy",
-      "question": "Produkty K-PAK nakładasz równomiernie na włosy (długości), omijając skórę głowy — to nie codzienne masowanie głównie skóry jak przy zwykłym myciu.",
-      "trueLabel": "Prawda",
-      "falseLabel": "Mit",
-      "correctValue": true,
-      "reward": 10,
-      "checkButtonLabel": "Sprawdź",
-      "feedback": {
-        "correctTitle": "Praca na długości.",
-        "incorrectTitle": "Instrukcja.",
-        "explanation": "We wszystkich krokach: równomiernie na włosy, unikaj skóry głowy. Zabieg dotyczy kondycji długości, nie „leczenia” skóry.",
-        "funFact": {
-          "text": "Ewa: Pokaż ręką długości: „Tu pracujemy — nie jak przy zwykłym szamponie na skórę.”"
-        }
-      }
-    },
-    {
-      "id": "jk3-z3",
-      "type": "matching",
-      "kicker": "Krok 3 · Czasy i ręcznik",
-      "question": "Dopasuj.",
-      "leftTitle": "Produkt / etap",
-      "rightTitle": "Czas z instrukcji",
-      "left": [
-        {
-          "id": "l1",
-          "pairId": "a",
-          "text": "Clarifying Shampoo"
-        },
-        {
-          "id": "l2",
-          "pairId": "b",
-          "text": "Cuticle Sealer / Reconstructor / Intense Hydrator"
-        },
-        {
-          "id": "l3",
-          "pairId": "c",
-          "text": "Między krokami"
-        }
-      ],
-      "right": [
-        {
-          "id": "r1",
-          "pairId": "b",
-          "text": "Zostaw na włosach ok. 5 minut, spłucz ciepłą wodą"
-        },
-        {
-          "id": "r2",
-          "pairId": "a",
-          "text": "2–5 minut dla głębszego oczyszczenia, potem spłucz"
-        },
-        {
-          "id": "r3",
-          "pairId": "c",
-          "text": "Osusz ręcznikiem — włosy lekko wilgotne"
-        }
-      ],
-      "reward": 15,
-      "checkButtonLabel": "Sprawdź",
-      "feedback": {
-        "correctTitle": "Czasy i ręcznik.",
-        "incorrectTitle": "Instrukcja.",
-        "explanation": "Clarifying 2–5 min (głębsze oczyszczenie); kolejne etapy ok. 5 min; między krokami lekko wilgotne po ręczniku.",
-        "funFact": {
-          "text": "Ewa: Zegarek na Clarifying — bez czasu to prawie zwykłe spłukanie."
-        }
-      }
-    },
-    {
-      "id": "jk3-z4",
       "type": "ordering",
-      "kicker": "Krok 4 · Przebieg bazowy",
-      "question": "Ułóż bazową kolejność zabiegu (bez powtórek).",
+      "kicker": "Krok 1 · Kolejność produktów",
+      "question": "Ułóż bazową kolejność (bez powtórek 2–3).",
       "resetLabel": "Od początku",
       "steps": [
         {
           "id": "s1",
-          "text": "Clarifying — oczyszczanie na długościach"
+          "text": "Clarifying — oczyszczanie"
         },
         {
           "id": "s2",
@@ -166,31 +55,145 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "1→2→3→4.",
-        "incorrectTitle": "Instrukcja.",
-        "explanation": "Bazowa ścieżka O-W-R-N produktami z instrukcji — zawsze od Clarifying na długościach.",
+        "incorrectTitle": "OWRN produktami.",
+        "explanation": "Clarifying → Cuticle Sealer → Reconstructor → Intense Hydrator.",
         "funFact": {
-          "text": "Ewa: Po Clarifying ręcznik do lekko wilgotnych — nie startuj kolejnego kroku na mocno mokrym kacie."
+          "text": "Ewa: Jeśli utkniesz — wróć do liter O-W-R-N."
+        }
+      }
+    },
+    {
+      "id": "jk3-z2",
+      "type": "matching",
+      "kicker": "Krok 2 · Czasy",
+      "question": "Dopasuj czas.",
+      "leftTitle": "Etap",
+      "rightTitle": "Czas",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Clarifying"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Cuticle Sealer / Reconstructor / Hydrator"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Między krokami"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Ok. 5 minut, potem spłucz"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "2–5 minut, potem spłucz"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Ręcznik — lekko wilgotne"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Czasy w głowie.",
+        "incorrectTitle": "Instrukcja.",
+        "explanation": "O: 2–5. Reszta: ~5. Między: ręcznik.",
+        "funFact": {
+          "text": "Ewa: Bez zegarka etapy stają się „myciem dla mycia”."
+        }
+      }
+    },
+    {
+      "id": "jk3-z3",
+      "type": "singleChoice",
+      "kicker": "Krok 3 · Klientka — długości",
+      "question": "Klientka: „Czemu nie myjesz jak zwykle tylko skóry?”",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bo tu czyścimy i pielęgnujemy długości — zwykły szampon idzie głównie na skórę, a osady i uszkodzenia są na włosie"
+        },
+        {
+          "id": "b",
+          "text": "Bo skóry nie wolno myć w salonie"
+        },
+        {
+          "id": "c",
+          "text": "Bo tak robi się manicure"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Wróciło kluczowe zdanie.",
+        "incorrectTitle": "Powtórka z O.",
+        "explanation": "To pytanie, które wczoraj zatrzymało uczennicę — teraz masz gotową odpowiedź.",
+        "funFact": {
+          "text": "Ewa: Ćwicz to zdanie, aż wyjdzie bez myślenia."
+        }
+      }
+    },
+    {
+      "id": "jk3-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Omijanie skóry",
+      "question": "Produkty 2–4 (i aplikacja Clarifying według instrukcji) przede wszystkim:",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pracują na długościach — omijasz skórę głowy"
+        },
+        {
+          "id": "b",
+          "text": "Są wcierane głęboko w skórę jak lek"
+        },
+        {
+          "id": "c",
+          "text": "Idą tylko na suchą grzywkę"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Długości.",
+        "incorrectTitle": "Zasada stanowiska.",
+        "explanation": "Kondycja długości, nie terapia skóry.",
+        "funFact": {
+          "text": "Ewa: Pokaż ręką: od mid-lengths do końców."
         }
       }
     },
     {
       "id": "jk3-z5",
       "type": "findError",
-      "kicker": "Krok 5 · Mit przy myjce",
+      "kicker": "Krok 5 · Mit",
       "question": "Które stwierdzenie jest błędne?",
       "cardTitle": "Procedura",
       "rows": [
         {
           "id": "s1",
-          "text": "Clarifying zostawiasz 2–5 min, bo to głębsze oczyszczenie z osadów"
+          "text": "Kolejność: Clarifying → Sealer → Reconstructor → Hydrator"
         },
         {
           "id": "s2",
-          "text": "Produkty rozprowadzasz równomiernie na włosach, omijając skórę głowy"
+          "text": "Clarifying 2–5 min; kolejne ok. 5 min"
         },
         {
           "id": "s3",
-          "text": "Wystarczy szybko umyć samą skórę głowy jak codziennym szamponem i od razu spłukać bez czasu"
+          "text": "Wystarczy szybko umyć samą skórę jak codziennie i od razu dać tylko maskę"
         }
       ],
       "correctOptionIds": [
@@ -199,23 +202,23 @@
       "reward": 25,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Nie jak codzienne mycie.",
+        "correctTitle": "Pełny plan.",
         "incorrectTitle": "Znajdź mit.",
-        "explanation": "Clarifying pracuje na włosie i osadach, z czasem działania. To nie szybkie mycie wyłącznie skóry bez przygotowania długości.",
+        "explanation": "Bez OWR na długościach nie ma sensownego K-PAK.",
         "funFact": {
-          "text": "Ewa: Jeśli ktoś myje „tylko skórę i spłucz” — zabieg traci sens już na starcie."
+          "text": "Ewa: Kartka była ściągą. Ty masz już etapy w głowie — i zdania dla klientki."
         }
       }
     }
   ],
   "completion": {
     "solvedLabel": "Lekcja ukończona",
-    "title": "Prowadzisz procedurę i umiesz ją wyjaśnić",
-    "subtitle": "Clarifying ≠ zwykły szampon. Nakładasz na długości, omijasz skórę głowy, trzymasz czasy.",
+    "title": "Składasz całą procedurę",
+    "subtitle": "O→W→R→N, czasy, długości — bez kartki na ekranie.",
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
       "label": "Kolejny temat",
-      "teaser": "Clarifying vs zwykłe mycie — i praca na długościach."
+      "teaser": "Scenki przy fotelu — pytania klientki."
     }
   }
 }
