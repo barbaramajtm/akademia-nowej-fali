@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Nietrwałe.",
-        "incorrectTitle": "Masz. 9.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Prostownica = nietrwałe wyprostowanie i wygładzenie za pomocą nagrzanych płytek."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Różne ligi.",
-        "incorrectTitle": "Masz. 9 + wcześniejsze moduły.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Prostownica nie jest trwałą chemiczną — to ciepłe, nietrwałe prostowanie."
       }
     },

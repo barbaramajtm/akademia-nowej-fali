@@ -44,7 +44,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Lista Masz. 29.",
+        "correctTitle": "Lista miejsc ryzyka.",
         "incorrectTitle": "To kontaktowe miejsca.",
         "explanation": "Narzędzia, armatura, poręcze, zagłówki, klamki, myjnia i obręcz suszarki — typowe miejsca ryzyka."
       }
@@ -61,7 +61,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Najpierw dezynfekcja.",
-        "incorrectTitle": "Masz. 21.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Najpierw dezynfekujesz, potem czyścisz — żeby nie narażać się na mikroorganizmy; dobierz metodę (np. sanityzator)."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Mikroklimat ma znaczenie.",
-        "incorrectTitle": "Masz. 23.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Wentylacja utrzymuje mikroklimat i warunki pracy — przy typowym „koktajlu” wilgoci i chemii."
       }
     },

@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Pięć sposobów.",
-        "incorrectTitle": "Tech. 4.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Lista z materiałów: prostownica, suszenie na szczotce, chemiczne, keratynowe, nanoplastia."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Mapa bez procedur.",
-        "incorrectTitle": "Tech. 4.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Uczymy nazw ze źródeł. Procedur keratyny/nanoplastii lokalnie nie rozwijamy."
       }
     },

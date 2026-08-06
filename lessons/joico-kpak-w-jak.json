@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Lekko wilgotne długości.",
-        "incorrectTitle": "Instrukcja W.",
+        "incorrectTitle": "Jak nakładać wygładzanie.",
         "explanation": "Po O masz lekko wilgotne. Na nie idzie W — nie na skórę.",
         "funFact": {
           "text": "Ewa: Znowu: praca na włosie, nie „leczenie skóry”."
@@ -157,7 +157,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "W od A do Z.",
-        "incorrectTitle": "Podpunkt z kartki.",
+        "incorrectTitle": "Kolejność etapu.",
         "explanation": "Nakładanie → rozprowadzenie → 5 min → spłukanie + ręcznik.",
         "funFact": {
           "text": "Ewa: Klientce w trakcie: „Teraz wygładzamy powierzchnię — około pięciu minut.”"

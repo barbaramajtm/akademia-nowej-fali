@@ -44,7 +44,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Lista Masz. 5.",
+        "correctTitle": "Lista rodzajów.",
         "incorrectTitle": "Rodzaje nożyczek.",
         "explanation": "Klasyczne, degażówki, punktujące, do ślizgu (wygięte końce), gorące."
       }
@@ -61,7 +61,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Cale i dłoń.",
-        "incorrectTitle": "Masz. 35.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "1 cal = 2,54 cm; rozmiar dopasowany do dłoni."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Specjalizacje.",
-        "incorrectTitle": "Masz. 5 i 41.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Ślizg = wygięte końce. Gorące = termiczne strzyżenie z kuracją/uszczelnieniem."
       }
     },
@@ -138,7 +138,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Termiczne uszczelnienie.",
-        "incorrectTitle": "Masz. 41.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "System termicznego strzyżenia: różne techniki + uszczelnianie substancji rogowej."
       }
     },

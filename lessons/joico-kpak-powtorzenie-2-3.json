@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Bardzo zniszczone.",
-        "incorrectTitle": "Instrukcja.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "W przypadku bardzo zniszczonych włosów — powtórz 2 i 3.",
         "funFact": {
           "text": "Ewa: Przy powtórce też mówisz na głos — klientka nie ma myśleć, że „coś poszło nie tak”."
@@ -161,7 +161,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "W+R, potem N.",
-        "incorrectTitle": "Logika instrukcji.",
+        "incorrectTitle": "Logika powtórki.",
         "explanation": "Powtórka bez wyjaśnienia wygląda jak błąd. Głos mówi: to plan, nie pomyłka.",
         "funFact": {
           "text": "Ewa: Klientka ma usłyszeć, że wracacie celowo — dla jej włosów."

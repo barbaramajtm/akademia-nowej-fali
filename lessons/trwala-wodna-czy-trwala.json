@@ -61,7 +61,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Proces S.",
-        "incorrectTitle": "Przypomnij Tech. 10.",
+        "incorrectTitle": "Przypomnij różnicę.",
         "explanation": "Preparat rozrywa wiązania siarkowe, włosy na wałkach, utrwalacz odbudowuje je w nowym kształcie."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Inne wałki.",
-        "incorrectTitle": "Sprawdź Masz. 7.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Do trwałej — plastik i gumki/taśma. Do wodnej — tworzywo lub metal, szpilki, bywają rzepowe. Średnice też się różnią."
       }
     },

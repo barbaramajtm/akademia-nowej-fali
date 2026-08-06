@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Pięć sposobów.",
-        "incorrectTitle": "Tech. 24.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Warstwowe, stopniowanie, pikowanie, ślizg, efilowanie."
       }
     },
@@ -109,7 +109,7 @@
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Nazwy z Tech. 24.",
+        "correctTitle": "Nazwy technik.",
         "incorrectTitle": "Nie wymyślaj procedur.",
         "explanation": "Uczymy nazw ze źródeł — bez kątów projekcji, których nie ma w lokalnych odpowiedziach."
       }

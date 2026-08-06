@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Cel = refleksy.",
-        "incorrectTitle": "Tech. 8.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "To definicja: wybrane pasma → naturalne refleksy."
       }
     },
@@ -60,7 +60,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Checklista Tech. 13.",
+        "correctTitle": "Checklista konsultacji.",
         "incorrectTitle": "Tak.",
         "explanation": "To sposób wykonania z materiałów — dobra mapa rozmowy."
       }
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Nie myl zabiegów.",
-        "incorrectTitle": "Tech. 8, 13, 14.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Balejaż ≠ degażowanie. Finisz balejażu = spłukanie i pielęgnacja."
       }
     },

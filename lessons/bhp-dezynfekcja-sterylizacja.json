@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Chorobotwórcze.",
-        "incorrectTitle": "Tech. 7.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Dezynfekcja niszczy drobnoustroje chorobotwórcze. Sterylizacja idzie dalej — usuwa wszystkie mikroorganizmy i przetrwalniki."
       }
     },
@@ -143,7 +143,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Poziomy ochrony.",
-        "incorrectTitle": "Masz. 22/40 + Tech. 7.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Dezynfekcja chroni przed krwiopochodnymi i innymi patogenami; kulkowy i autoklaw to ścieżki sterylizacji."
       }
     },

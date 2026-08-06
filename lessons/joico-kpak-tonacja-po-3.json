@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Po 3, przed 4.",
-        "incorrectTitle": "Instrukcja.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "„Wykonaj je właśnie teraz” — po rekonstrukcji, przed Intense Hydrator."
       }
     },
@@ -61,7 +61,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Lepsze wnikanie i utrzymanie.",
-        "incorrectTitle": "Uwaga z instrukcji.",
+        "incorrectTitle": "Uwaga przy kolorze.",
         "explanation": "To uzasadnienie z karty wykonania."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Baza → kolor → nawilżenie.",
-        "incorrectTitle": "Instrukcja.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Kolejność z instrukcji + głos: klientka zna plan wizyty.",
         "funFact": {
           "text": "Ewa: Bez zdania przed kolorem klientka nie wie, czy zabieg się skończył, czy dopiero się zaczyna."

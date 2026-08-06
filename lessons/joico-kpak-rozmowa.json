@@ -25,7 +25,7 @@
       "id": "jk6-z1",
       "type": "singleChoice",
       "kicker": "Krok 1 · 15 sekund",
-      "question": "Która wypowiedź jest najbliżej wersji 15 s z materiałów?",
+      "question": "Która wypowiedź jest najbliżej wersji 15 sekund przy fotelu?",
       "options": [
         {
           "id": "a",
@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Wersja 15 s.",
-        "incorrectTitle": "Materiał.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Cztery kroki + efekt miękkości/gładkości/sprężystości — bez absolutów."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Bez naukowego popisu.",
-        "incorrectTitle": "Materiał.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Technologia jest zapleczem; dla klientki liczy się efekt w dotyku."
       }
     },
@@ -138,7 +138,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Przygotowanie do usługi.",
-        "incorrectTitle": "Fiszka / materiał.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Przy problemach skóry — nie udajemy lekarza; K-PAK dotyczy długości."
       }
     },

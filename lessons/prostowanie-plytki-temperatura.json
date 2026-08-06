@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "130–230°C.",
-        "incorrectTitle": "Masz. 9.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Materiały podają zakres od 130°C do 230°C."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Trzy fakty.",
-        "incorrectTitle": "Masz. 9.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Materiał płytek + zakres temperatury + termostat."
       }
     },
@@ -138,7 +138,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Sprawny sprzęt.",
-        "incorrectTitle": "Masz. 6 + 9.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Termostat chroni przed przegrzaniem; uszkodzony sprzęt odstawiasz."
       }
     },

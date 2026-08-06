@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Trwała i prostowanie.",
-        "incorrectTitle": "Mat. 38.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Tioglikolowy: składnik płynów do trwałej i do prostowania."
       }
     },
@@ -61,7 +61,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Redukcja mostków S.",
-        "incorrectTitle": "Mat. 38.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Działanie redukujące: uwodornia mostki siarczkowe w keratynie."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Ciepło ≠ chemia.",
-        "incorrectTitle": "Tech. 4 + Mat. 38 + Masz. 9.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Nie mieszaj prostownicy z chemią mostków; nazw keratyna/nano nie rozbudowuj bez źródeł."
       }
     },

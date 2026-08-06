@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Mniejsze → mocniejszy skręt.",
-        "incorrectTitle": "Sprawdź Masz. 24.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Od średnicy zależy skręt. Im mniejsze wałki, tym większa siła skrętu."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Opcje na długość.",
-        "incorrectTitle": "Sprawdź Masz. 24/33.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Spiralne: od jednego do drugiego końca wałka — loki równomiernie naprężone na długości."
       }
     },

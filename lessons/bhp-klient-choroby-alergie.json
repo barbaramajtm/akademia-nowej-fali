@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Odmowa + lekarz.",
-        "incorrectTitle": "Tech. 27.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Przy chorobach zakaźnych skóry nie wykonujesz usług i kierujesz klienta do lekarza."
       }
     },
@@ -60,8 +60,8 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Lista z Tech. 27.",
-        "incorrectTitle": "Te przykłady są w materiałach.",
+        "correctTitle": "Lista przeciwwskazań.",
+        "incorrectTitle": "Te przykłady warto znać.",
         "explanation": "Grzybica, wszawica, świerzb, ropne stany skóry — przykłady z materiałów."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Klient ≠ fryzjer — te same chemie.",
-        "incorrectTitle": "Mat. 26.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "U klienta pełniejsza lista skórno-oddechowa; u fryzjera często dłonie i aerozole."
       }
     },
@@ -137,7 +137,7 @@
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Pakiet Mat. 47.",
+        "correctTitle": "Pakiet zasad.",
         "incorrectTitle": "Nie samym rozjaśniaczem.",
         "explanation": "Łagodne mycie, ochrona, dezynfekcja, pielęgnacja, rękawiczki — dłonie są narażone na chemię i detergenty."
       }

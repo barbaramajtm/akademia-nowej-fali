@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Objętość w dół.",
-        "incorrectTitle": "Tech. 14.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Degażowanie = przerzedzanie włosów dla zmniejszenia objętości."
       }
     },
@@ -61,7 +61,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Tak — trzy typy.",
-        "incorrectTitle": "Tech. 14.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Jednostronne i dwustronne degażówki oraz efilatory."
       }
     },
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Narzędzia do objętości.",
-        "incorrectTitle": "Lista Tech. 14.",
+        "incorrectTitle": "Lista technik.",
         "explanation": "Trzy pozycje z odpowiedzi: jedno-/dwustronne degażówki i efilatory."
       }
     },

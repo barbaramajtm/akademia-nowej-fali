@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Rozjaśniacz lub farba.",
-        "incorrectTitle": "Tech. 13.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Krok: nałożenie rozjaśniacza lub farby — obie ścieżki są w materiałach."
       }
     },
@@ -60,7 +60,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Spójne z Tech. 8.",
+        "correctTitle": "Zgodne z definicją.",
         "incorrectTitle": "Tak.",
         "explanation": "Tech. 8 i Tech. 13 mówią tym samym językiem: rozjaśnianie lub farbowanie."
       }
@@ -110,7 +110,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Produkt → folia → finisz.",
-        "incorrectTitle": "Tech. 8 i 13.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Nie pomijaj folii ani spłukania z listy wykonania."
       }
     },
@@ -137,8 +137,8 @@
       "reward": 15,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Folia jest w Tech. 13.",
-        "incorrectTitle": "Sprawdź źródło.",
+        "correctTitle": "Folia w procedurze.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Lokalna odpowiedź wymienia zawinięcie w folię — uczymy tego, co jest w materiałach."
       }
     },

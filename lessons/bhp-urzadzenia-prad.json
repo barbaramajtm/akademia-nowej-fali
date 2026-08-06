@@ -45,7 +45,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Cztery ryzyka.",
-        "incorrectTitle": "Masz. 6.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Sprzęt ma być sprawny i używany zgodnie z instrukcją — inaczej grozi porażenie, poparzenie, zniszczenie włosów, skaleczenie."
       }
     },
@@ -60,7 +60,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Checklista Masz. 37.",
+        "correctTitle": "Checklista bezpieczeństwa.",
         "incorrectTitle": "To są zasady.",
         "explanation": "Do tego m.in.: instrukcja, nie przeciążać sieci, nie oddawać urządzeń klientowi do obsługi."
       }
@@ -94,7 +94,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Kontrola → finisz → odłączenie.",
-        "incorrectTitle": "Masz. 37.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "W trakcie: nie zostawiasz włączonego sprzętu bez kontroli. Po pracy: czyścisz i zabezpieczasz. Przed zamknięciem: odłączasz od prądu. Przy porażeniu pierwsze jest odłączenie zasilania."
       }
     },
@@ -143,7 +143,7 @@
       "checkButtonLabel": "Sprawdź",
       "feedback": {
         "correctTitle": "Prąd ≠ woda.",
-        "incorrectTitle": "BHP 67 + Masz. 6.",
+        "incorrectTitle": "Sprawdź jeszcze raz.",
         "explanation": "Pod napięciem: gaśnica proszkowa, nie woda. Uszkodzony sprzęt odstawiasz."
       }
     },

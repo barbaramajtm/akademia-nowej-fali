@@ -44,7 +44,7 @@
       "reward": 10,
       "checkButtonLabel": "Sprawdź",
       "feedback": {
-        "correctTitle": "Lista Masz. 8.",
+        "correctTitle": "Lista obowiązków.",
         "incorrectTitle": "Urządzenia sanitarne.",
         "explanation": "Toaleta z umywalką, myjki, umywalki do rąk, zlewy do narzędzi i przyborów, kosze na odpady."
       }

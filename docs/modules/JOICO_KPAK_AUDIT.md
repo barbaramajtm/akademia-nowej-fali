@@ -13,4 +13,4 @@
 | W / R / N: cel + jak (5 min, długości) | instrukcja wykonania | OK |
 | Powtórka 2–3, tonacja po 3 | instrukcja | OK |
 | Procedura zbiorcza bez kartki | instrukcja | OK |
-| Scenki + rozmowa / technologie | materiał uczennic | OK |
+| Scenki + rozmowa / technologie | materiał szkoleniowy JOICO | OK |
