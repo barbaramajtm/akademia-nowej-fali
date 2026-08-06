@@ -2,6 +2,19 @@
 
 Format oparty na datach. Najnowsze wpisy na górze.
 
+## 2026-08-06 — Podsumowanie po lekcji + „Zrób jeszcze raz”
+
+### Dodano
+- Po każdej lekcji: sekcja **„Co możesz jeszcze dopracować”** (łagodnie, bez wytykania) z kartami: pytanie → prawidłowa odpowiedź → dlaczego
+- Przy czystej lekcji: krótka informacja, że nic nie wymaga dopracowania
+- Przycisk **„Zrób jeszcze raz”** na ekranie końca lekcji (powtórka treningowa)
+- Dopasowania (matching) w podsumowaniu pokazują pełne pary, nie tylko ogólnik
+
+### Zmieniono
+- Powtórka po module: łagodniejszy język („zagadnienia do dopracowania” zamiast „błędy”)
+
+---
+
 ## 2026-08-05 — Tylko regeneracje odblokowane + więcej pytań
 
 ### Zmieniono

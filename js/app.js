@@ -20,7 +20,15 @@ const CONFIG = {
     retryLabel: 'Spróbuj ponownie',
     backHomeLabel: 'Wróć do Akademii',
     lessonUnavailable: 'Ta lekcja nie jest już dostępna w głównej ścieżce.',
-    lessonTasksPending: 'Zadania lekcji są w przygotowaniu.'
+    lessonTasksPending: 'Zadania lekcji są w przygotowaniu.',
+    lessonReviewTitle: 'Co możesz jeszcze dopracować',
+    lessonReviewBodyOne: 'Jedno zagadnienie warte spokojnego powtórzenia — poniżej prawidłowa odpowiedź i dlaczego.',
+    lessonReviewBodyMany: 'Oto zagadnienia warte spokojnego powtórzenia — przy każdym: prawidłowa odpowiedź i dlaczego.',
+    lessonReviewOkTitle: 'Ta lekcja poszła czysto',
+    lessonReviewOkBody: 'Nie ma nic do dopracowania z tej rundy. Możesz iść dalej albo zrobić lekcję jeszcze raz dla treningu.',
+    lessonRetryLabel: 'Zrób jeszcze raz',
+    correctAnswerLabel: 'Prawidłowa odpowiedź',
+    whyLabel: 'Dlaczego tak'
   }
 };
 
@@ -104,8 +112,20 @@ function summarizeCorrectAnswer(task){
       .filter(Boolean)
       .join(' · ');
   }
-  if (task.type === 'matching'){
-    return 'Poprawne dopasowanie wszystkich par.';
+  if (task.type === 'matching' && Array.isArray(task.left) && Array.isArray(task.right)){
+    var rightByPair = {};
+    task.right.forEach(function(r){
+      if (r && r.pairId != null) rightByPair[r.pairId] = richToPlain(r.text);
+    });
+    return task.left
+      .map(function(l){
+        if (!l || l.pairId == null) return '';
+        var rt = rightByPair[l.pairId] || '';
+        var lt = richToPlain(l.text);
+        return lt && rt ? (lt + ' → ' + rt) : (lt || rt);
+      })
+      .filter(Boolean)
+      .join(' · ');
   }
   if (task.type === 'ordering' && Array.isArray(task.correctOrder) && Array.isArray(task.steps)){
     var byId = {};
@@ -164,6 +184,70 @@ function persistLessonMistakesLog(){
   if (window.AppState && window.AppState.appendModuleMistakeReviews){
     window.AppState.appendModuleMistakeReviews(moduleId, state.mistakesLog);
   }
+}
+
+function buildLessonReviewCard(item, idx, total, opts){
+  opts = opts || {};
+  const card = el('div', 'module-review-card lesson-review-card');
+  if (total > 1){
+    card.appendChild(el('div', 'module-review-idx', String(idx + 1) + ' / ' + total));
+  }
+  if (opts.showLessonTitle && item.lessonTitle){
+    card.appendChild(el('div', 'module-review-lesson', item.lessonTitle));
+  }
+  if (item.question){
+    const q = el('div', 'module-review-q');
+    q.textContent = item.question;
+    card.appendChild(q);
+  }
+  if (item.correctSummary){
+    const ans = el('div', 'module-review-answer');
+    ans.appendChild(el('span', 'module-review-label', CONFIG.ui.correctAnswerLabel));
+    ans.appendChild(el('div', 'module-review-answer-text', item.correctSummary));
+    card.appendChild(ans);
+  }
+  if (item.explanation){
+    const why = el('div', 'module-review-why');
+    why.appendChild(el('span', 'module-review-label', CONFIG.ui.whyLabel));
+    why.appendChild(el('div', 'module-review-why-text', item.explanation));
+    card.appendChild(why);
+  }
+  return card;
+}
+
+function buildLessonReviewSection(items){
+  const list = Array.isArray(items) ? items.slice() : [];
+  const section = el('div', 'reveal lesson-review');
+  if (list.length){
+    const note = el('div', 'module-review-note lesson-review-note');
+    note.appendChild(el('div', 'module-review-note-title', CONFIG.ui.lessonReviewTitle));
+    note.appendChild(el('div', 'module-review-note-body',
+      list.length === 1 ? CONFIG.ui.lessonReviewBodyOne : CONFIG.ui.lessonReviewBodyMany
+    ));
+    section.appendChild(note);
+    const wrap = el('div', 'module-review-list lesson-review-list');
+    list.forEach(function(item, idx){
+      wrap.appendChild(buildLessonReviewCard(item, idx, list.length, { showLessonTitle: false }));
+    });
+    section.appendChild(wrap);
+  } else {
+    const note = el('div', 'module-review-note module-review-note--ok lesson-review-note');
+    note.appendChild(el('div', 'module-review-note-title', CONFIG.ui.lessonReviewOkTitle));
+    note.appendChild(el('div', 'module-review-note-body', CONFIG.ui.lessonReviewOkBody));
+    section.appendChild(note);
+  }
+  return section;
+}
+
+function redoCurrentLesson(){
+  const id = state.lessonId || (state.lesson && state.lesson.id);
+  if (!id) return;
+  if (dom.fb) dom.fb.classList.remove('show');
+  if (state.lesson && state.lesson.id === id){
+    restart();
+    return;
+  }
+  startLessonEngine(id);
 }
 
 /* ---------- ikony ----------
@@ -1465,20 +1549,28 @@ function showDone(){
     });
   }
 
+  const lessonReviewItems = Array.isArray(state.mistakesLog) ? state.mistakesLog.slice() : [];
+  const r4 = buildLessonReviewSection(lessonReviewItems);
+
+  const bRetry = el('button', 'btn btn-ghost', CONFIG.ui.lessonRetryLabel);
+  bRetry.type = 'button';
+  bRetry.addEventListener('click', function(){ redoCurrentLesson(); });
+
   if (moduleJustComplete && moduleReviewItems.length){
     const reviewNote = el('div', 'module-review-note');
-    reviewNote.appendChild(el('div', 'module-review-note-title', 'Koniec modułu — powtórz błędy'));
+    reviewNote.appendChild(el('div', 'module-review-note-title', 'Koniec modułu — warto jeszcze przejrzeć'));
     reviewNote.appendChild(el('div', 'module-review-note-body',
       'Masz ' + moduleReviewItems.length + ' ' +
       (moduleReviewItems.length === 1 ? 'zagadnienie' : (moduleReviewItems.length < 5 ? 'zagadnienia' : 'zagadnień')) +
-      ' do szybkiej powtórki z wyjaśnieniem.'
+      ' z całego modułu do spokojnej powtórki z wyjaśnieniem.'
     ));
     r5.appendChild(reviewNote);
-    const bReview = primaryButton('Zobacz swoje błędy (' + moduleReviewItems.length + ')');
+    const bReview = primaryButton('Przejrzyj zagadnienia (' + moduleReviewItems.length + ')');
     bReview.addEventListener('click', function(){
       showModuleMistakeReview(moduleId, moduleReviewItems);
     });
     r5.appendChild(bReview);
+    r5.appendChild(bRetry);
     const bContinue = el('button', 'btn btn-ghost', CONFIG.ui.continueLabel);
     bContinue.type = 'button';
     bContinue.addEventListener('click', function(){
@@ -1488,7 +1580,7 @@ function showDone(){
   } else {
     if (moduleJustComplete){
       const cleanNote = el('div', 'module-review-note module-review-note--ok');
-      cleanNote.appendChild(el('div', 'module-review-note-title', 'Moduł bez błędów do powtórki'));
+      cleanNote.appendChild(el('div', 'module-review-note-title', 'Moduł bez zagadnień do powtórki'));
       cleanNote.appendChild(el('div', 'module-review-note-body', 'Świetna robota — idź dalej albo zajrzyj do Gablotki.'));
       r5.appendChild(cleanNote);
     }
@@ -1501,11 +1593,14 @@ function showDone(){
     bGallery.addEventListener('click', function(){
       if (window.AppShell) window.AppShell.goGablotka();
     });
-    r5.appendChild(bContinue); r5.appendChild(bGallery);
+    r5.appendChild(bContinue);
+    r5.appendChild(bRetry);
+    r5.appendChild(bGallery);
   }
 
   const revealBlocks = [r1, r2];
   if (col || state.isRepeat) revealBlocks.push(r3);
+  revealBlocks.push(r4);
   revealBlocks.push(r5);
   revealBlocks.forEach(r => step.appendChild(r));
   if (revealBlocks[0]) revealBlocks[0].classList.add('in');
@@ -1561,46 +1656,24 @@ function showDone(){
   }
 }
 
-/* ---------- powtórka błędów po module ---------- */
+/* ---------- powtórka zagadnień po module ---------- */
 function showModuleMistakeReview(moduleId, items){
   const list = Array.isArray(items) ? items.slice() : [];
   const step = el('div', 'step done-step module-review-step');
   const meta = (window.LessonsCatalogHelpers && window.LessonsCatalogHelpers.getModuleMeta)
     ? window.LessonsCatalogHelpers.getModuleMeta(moduleId) : { title: 'Moduł' };
 
-  step.appendChild(el('div', 'solved', 'Powtórka błędów'));
+  step.appendChild(el('div', 'solved', 'Powtórka na spokojnie'));
   step.appendChild(el('h1', null, meta.title || 'Twój moduł'));
   step.appendChild(el('div', 'sub',
     list.length
-      ? ('Przejrzyj ' + list.length + ' zagadnień, przy których warto jeszcze raz zobaczyć wyjaśnienie.')
-      : 'Brak zapisanych błędów w tym module.'
+      ? ('Przejrzyj ' + list.length + ' zagadnień, które warto jeszcze dopracować — z prawidłową odpowiedzią i wyjaśnieniem.')
+      : 'Brak zapisanych zagadnień do powtórki w tym module.'
   ));
 
   const wrap = el('div', 'module-review-list');
   list.forEach(function(item, idx){
-    const card = el('div', 'module-review-card');
-    card.appendChild(el('div', 'module-review-idx', String(idx + 1) + ' / ' + list.length));
-    if (item.lessonTitle){
-      card.appendChild(el('div', 'module-review-lesson', item.lessonTitle));
-    }
-    if (item.question){
-      const q = el('div', 'module-review-q');
-      q.textContent = item.question;
-      card.appendChild(q);
-    }
-    if (item.correctSummary){
-      const ans = el('div', 'module-review-answer');
-      ans.appendChild(el('span', 'module-review-label', 'Poprawna odpowiedź'));
-      ans.appendChild(el('div', 'module-review-answer-text', item.correctSummary));
-      card.appendChild(ans);
-    }
-    if (item.explanation){
-      const why = el('div', 'module-review-why');
-      why.appendChild(el('span', 'module-review-label', 'Dlaczego'));
-      why.appendChild(el('div', 'module-review-why-text', item.explanation));
-      card.appendChild(why);
-    }
-    wrap.appendChild(card);
+    wrap.appendChild(buildLessonReviewCard(item, idx, list.length, { showLessonTitle: true }));
   });
   step.appendChild(wrap);
 
