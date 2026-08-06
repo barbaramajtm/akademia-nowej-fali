@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "id": "joico-kpak-o-cel",
+  "title": "Oczyszczanie: po co ten etap",
+  "category": "JOICO K-PAK — regeneracja",
+  "levelLabel": "Podstawy",
+  "intro": {
+    "narratorText": "Klientka pyta: „Po co w ogóle to pierwsze mycie?”. Dziś cel oczyszczania — i zdanie, które mówisz, zanim zostawisz Clarifying na czas.",
+    "stakeText": "do 75 Kosmyków",
+    "startButtonLabel": "Zacznij lekcję"
+  },
+  "rewards": {
+    "streakBonus": {
+      "threshold": 3,
+      "amount": 5,
+      "label": "3 poprawne z rzędu"
+    },
+    "perfectBonus": {
+      "amount": 15,
+      "label": "Lekcja bez pomyłek"
+    }
+  },
+  "tasks": [
+    {
+      "id": "jko1-z1",
+      "type": "singleChoice",
+      "kicker": "Krok 1 · Cel",
+      "question": "Po co jest etap oczyszczania w K-PAK?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Żeby zdjąć osady (chlor, minerały, resztki stylizacji) — włos lepiej przyjmie kolejne produkty"
+        },
+        {
+          "id": "b",
+          "text": "Żeby od razu zabarwić włos na blond"
+        },
+        {
+          "id": "c",
+          "text": "Żeby zastąpić rekonstrukcję i nawilżenie"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Przygotowanie włosa.",
+        "incorrectTitle": "Fiszka O.",
+        "explanation": "Oczyszczanie = sprzątanie osadów, żeby pielęgnacja mogła wejść.",
+        "funFact": {
+          "text": "Ewa: Klientce: „Zdejmujemy z włosa to, co przeszkadza pielęgnacji.”"
+        }
+      }
+    },
+    {
+      "id": "jko1-z2",
+      "type": "trueFalse",
+      "kicker": "Krok 2 · Produkt",
+      "question": "W etapie O używasz K-PAK Clarifying Shampoo — to szampon oczyszczający pod zabieg, nie „byle jakie mycie”.",
+      "trueLabel": "Prawda",
+      "falseLabel": "Mit",
+      "correctValue": true,
+      "reward": 10,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Clarifying = O.",
+        "incorrectTitle": "Tak.",
+        "explanation": "Clarifying to produkt pierwszego etapu OWRN.",
+        "funFact": {
+          "text": "Ewa: Nazwa na tubce pomaga: Clarifying = oczyszczający."
+        }
+      }
+    },
+    {
+      "id": "jko1-z3",
+      "type": "matching",
+      "kicker": "Krok 3 · Co zdejmujemy",
+      "question": "Dopasuj.",
+      "leftTitle": "Osad",
+      "rightTitle": "Sens",
+      "left": [
+        {
+          "id": "l1",
+          "pairId": "a",
+          "text": "Chlor / basen"
+        },
+        {
+          "id": "l2",
+          "pairId": "b",
+          "text": "Minerały z wody"
+        },
+        {
+          "id": "l3",
+          "pairId": "c",
+          "text": "Resztki stylizacji"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "pairId": "b",
+          "text": "Osad, który „zatapia” włos i utrudnia pielęgnację"
+        },
+        {
+          "id": "r2",
+          "pairId": "a",
+          "text": "Częsty powód matowości po wakacjach"
+        },
+        {
+          "id": "r3",
+          "pairId": "c",
+          "text": "Lakier, gumy, silikony z produktów"
+        }
+      ],
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Osady konkretnie.",
+        "incorrectTitle": "Lista z materiału.",
+        "explanation": "Chlor, minerały, stylizacja — to przykłady tego, co O ma zdjąć.",
+        "funFact": {
+          "text": "Ewa: Nie musisz wykładać chemii — wystarczy: „osady, które blokują pielęgnację”."
+        }
+      }
+    },
+    {
+      "id": "jko1-z4",
+      "type": "singleChoice",
+      "kicker": "Krok 4 · Głos przy O",
+      "question": "Zaczynasz Clarifying. Które zdanie spełnia standard obsługi?",
+      "options": [
+        {
+          "id": "a",
+          "text": "„Teraz oczyszczanie — zdejmujemy osady, żeby pielęgnacja mogła wejść. Zaraz wygładzanie.”"
+        },
+        {
+          "id": "b",
+          "text": "Milczysz i myjesz — „i tak nie zrozumie”"
+        },
+        {
+          "id": "c",
+          "text": "„Robimy regenerację” — bez nazwania etapu i wpływu"
+        }
+      ],
+      "correctOptionId": "a",
+      "reward": 15,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "Etap + wpływ + zaraz.",
+        "incorrectTitle": "Standard głosu.",
+        "explanation": "Jedno–dwa zdania: co teraz, po co dla włosów, co zaraz. To nie wykład.",
+        "funFact": {
+          "text": "Ewa: Po tym zdaniu możesz spokojnie odliczać 2–5 min."
+        }
+      }
+    },
+    {
+      "id": "jko1-z5",
+      "type": "findError",
+      "kicker": "Krok 5 · Mit",
+      "question": "Które stwierdzenie jest błędne?",
+      "cardTitle": "Etap O",
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Oczyszczanie usuwa m.in. chlor, minerały i resztki stylizacji"
+        },
+        {
+          "id": "s2",
+          "text": "Po oczyszczeniu włos lepiej przyjmuje kolejne produkty"
+        },
+        {
+          "id": "s3",
+          "text": "Oczyszczanie zastępuje rekonstrukcję — nie trzeba robić R"
+        }
+      ],
+      "correctOptionIds": [
+        "s3"
+      ],
+      "reward": 25,
+      "checkButtonLabel": "Sprawdź",
+      "feedback": {
+        "correctTitle": "O nie zastępuje R.",
+        "incorrectTitle": "Znajdź mit.",
+        "explanation": "O sprząta i przygotowuje. R wzmacnia włókno. To dwa różne etapy.",
+        "funFact": {
+          "text": "Ewa: Następna lekcja: czemu nakładasz Clarifying na długości — i co w tym niezwykłego."
+        }
+      }
+    }
+  ],
+  "completion": {
+    "solvedLabel": "Lekcja ukończona",
+    "title": "Umiesz powiedzieć po co jest O",
+    "subtitle": "Osady zdejmujemy, żeby pielęgnacja weszła.",
+    "kosmykiLabel": "Kosmyków za tę lekcję",
+    "nextLesson": {
+      "label": "Kolejny temat",
+      "teaser": "Zwykły szampon vs Clarifying na długościach — pytanie klientki."
+    }
+  }
+}

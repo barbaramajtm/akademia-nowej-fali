@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Przy bardzo zniszczonych włosach instrukcja każe wracać do 2 i 3. Dziś: dlaczego robisz 1 → 2 → 3 → 2 → 3 → 4 (nawet do trzech powtórzeń pary 2–3).",
+    "narratorText": "Przy bardzo zniszczonych wracasz do 2 i 3. Klientce mówisz wprost: „wracamy do wygładzania i rekonstrukcji, żeby mocniej wesprzeć włókno” — zanim znowu odliczysz 5 min.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -46,7 +46,10 @@
       "feedback": {
         "correctTitle": "Bardzo zniszczone.",
         "incorrectTitle": "Instrukcja.",
-        "explanation": "W przypadku bardzo zniszczonych włosów — powtórz 2 i 3."
+        "explanation": "W przypadku bardzo zniszczonych włosów — powtórz 2 i 3.",
+        "funFact": {
+          "text": "Ewa: Przy powtórce też mówisz na głos — klientka nie ma myśleć, że „coś poszło nie tak”."
+        }
       }
     },
     {
@@ -116,42 +119,42 @@
     {
       "id": "jk4-z4",
       "type": "matching",
-      "kicker": "Krok 4 · Po co powtórka",
-      "question": "Dopasuj.",
+      "kicker": "Krok 4 · Powtórka + głos",
+      "question": "Dopasuj sytuację do właściwego działania (w tym głosu).",
       "leftTitle": "Element",
       "rightTitle": "Sens",
       "left": [
         {
           "id": "l1",
           "pairId": "a",
-          "text": "Powtórka kroku 2 (wygładzanie)"
+          "text": "Wracasz do kroku 2 i 3"
         },
         {
           "id": "l2",
           "pairId": "b",
-          "text": "Powtórka kroku 3 (rekonstrukcja)"
+          "text": "Co mówisz klientce"
         },
         {
           "id": "l3",
           "pairId": "c",
-          "text": "Krok 4 na końcu"
+          "text": "Krok 4"
         }
       ],
       "right": [
         {
           "id": "r1",
           "pairId": "b",
-          "text": "Kolejna dawka składników odbudowujących włókno"
+          "text": "„Wracamy do wygładzania i rekonstrukcji, żeby mocniej wesprzeć włókno”"
         },
         {
           "id": "r2",
           "pairId": "a",
-          "text": "Ponowne uporządkowanie powierzchni / przygotowanie pod rekonstrukcję"
+          "text": "Przy bardzo zniszczonych — wzmacniasz odbudowę"
         },
         {
           "id": "r3",
           "pairId": "c",
-          "text": "Domknięcie miękkością — po wzmocnieniu, nie zamiast niego"
+          "text": "Nawilżenie dopiero na finisz, po powtórkach"
         }
       ],
       "reward": 15,
@@ -159,7 +162,10 @@
       "feedback": {
         "correctTitle": "W+R, potem N.",
         "incorrectTitle": "Logika instrukcji.",
-        "explanation": "Powtarzasz wygładzanie i rekonstrukcję, bo tam jest rdzeń odbudowy; nawilżenie zostaje na finisz."
+        "explanation": "Powtórka bez wyjaśnienia wygląda jak błąd. Głos mówi: to plan, nie pomyłka.",
+        "funFact": {
+          "text": "Ewa: Klientka ma usłyszeć, że wracacie celowo — dla jej włosów."
+        }
       }
     },
     {
@@ -171,15 +177,15 @@
       "rows": [
         {
           "id": "s1",
-          "text": "Przy bardzo zniszczonych włosach można powtórzyć kroki 2 i 3"
+          "text": "Przy bardzo zniszczonych można powtórzyć kroki 2 i 3"
         },
         {
           "id": "s2",
-          "text": "Przykładowa ścieżka to m.in. 1-2-3-2-3-4"
+          "text": "Przy powtórce mówisz klientce, że wracacie do wygładzania i rekonstrukcji"
         },
         {
           "id": "s3",
-          "text": "Przy mocno zniszczonych włosach pomijamy rekonstrukcję i robimy tylko szampon"
+          "text": "Przy mocno zniszczonych pomijamy rekonstrukcję i robimy tylko szampon w ciszy"
         }
       ],
       "correctOptionIds": [
@@ -190,7 +196,10 @@
       "feedback": {
         "correctTitle": "Nie pomijaj 2 i 3.",
         "incorrectTitle": "Znajdź mit.",
-        "explanation": "Właśnie przy mocnych zniszczeniach wzmacniasz odbudowę powtórką 2 i 3 — nie rezygnujesz z niej."
+        "explanation": "Nie skracaj odbudowy i nie milcz. Powtórka W+R + informacja = standard.",
+        "funFact": {
+          "text": "Ewa: Cisza przy powtórce = klientka myśli, że coś poprawiasz po błędzie."
+        }
       }
     }
   ],

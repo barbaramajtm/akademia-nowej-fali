@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Domknięcie: wersja 15 sekund przy fotelu, SmartRelease/Quadramine bez wykładu oraz kiedy proponować. Potem wrócisz do kolejnych tematów akademii — z regeneracją już „w ustach”.",
+    "narratorText": "Domknięcie: wersja 15 sekund przy fotelu, technologie bez wykładu — i przypomnienie: przy myjce prowadzisz klientkę głosem przez O-W-R-N. Potem Intelligent.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -170,7 +170,10 @@
       "feedback": {
         "correctTitle": "Moduł K-PAK domknięty.",
         "incorrectTitle": "Znajdź mit.",
-        "explanation": "Bez „leczenia” i bez porównań „tylko lepsze”. Masz już język salonu: etapy, Clarifying, długości."
+        "explanation": "Bez „leczenia” i bez porównań „tylko lepsze”. Masz już język salonu: etapy, Clarifying, długości.",
+        "funFact": {
+          "text": "Ewa: Formułka 15 s sprzedaje wizytę. Głos przy etapach prowadzi przez wizytę."
+        }
       }
     }
   ],

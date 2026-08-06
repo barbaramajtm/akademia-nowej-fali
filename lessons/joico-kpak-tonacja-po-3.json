@@ -5,7 +5,7 @@
   "category": "JOICO K-PAK — regeneracja",
   "levelLabel": "Zabiegi",
   "intro": {
-    "narratorText": "Uwaga z instrukcji: jeśli planujesz tonowanie lub koloryzację — zrób to teraz, po rekonstrukcji, przed Intense Hydrator. Dlaczego akurat tu.",
+    "narratorText": "Kolor po kroku 3, przed nawilżeniem. Zanim zaczniesz tonację, mówisz: „teraz kolor / tonacja na przygotowany włos — potem nawilżenie”. Klientka ma znać plan wizyty.",
     "stakeText": "do 75 Kosmyków",
     "startButtonLabel": "Zacznij lekcję"
   },
@@ -69,41 +69,41 @@
       "id": "jk5-z3",
       "type": "matching",
       "kicker": "Krok 3 · Kolejność wizyty",
-      "question": "Dopasuj.",
-      "leftTitle": "Etap wizyty",
-      "rightTitle": "Kiedy",
+      "question": "Dopasuj moment do głosu / działania.",
+      "leftTitle": "Moment",
+      "rightTitle": "Co robisz",
       "left": [
         {
           "id": "l1",
           "pairId": "a",
-          "text": "Oczyszczenie + wygładzenie + rekonstrukcja (+ ewentualne powtórki 2–3)"
+          "text": "Zaraz po kroku 3"
         },
         {
           "id": "l2",
           "pairId": "b",
-          "text": "Tonowanie / koloryzacja (jeśli plan)"
+          "text": "Zanim zaczniesz tonację"
         },
         {
           "id": "l3",
           "pairId": "c",
-          "text": "Intense Hydrator"
+          "text": "Po kolorze"
         }
       ],
       "right": [
         {
           "id": "r1",
           "pairId": "b",
-          "text": "Zaraz po kroku 3 — „właśnie teraz”"
+          "text": "Mówisz: „teraz tonacja/kolor na przygotowany włos — potem nawilżenie”"
         },
         {
           "id": "r2",
           "pairId": "a",
-          "text": "Najpierw — baza K-PAK przed kolorem"
+          "text": "Tu wstawiasz kolor (jeśli jest w planie)"
         },
         {
           "id": "r3",
           "pairId": "c",
-          "text": "Na końcu — nawilżenie po kolorze"
+          "text": "Dopiero Intense Hydrator — i nazywasz finisz na głos"
         }
       ],
       "reward": 15,
@@ -111,7 +111,10 @@
       "feedback": {
         "correctTitle": "Baza → kolor → nawilżenie.",
         "incorrectTitle": "Instrukcja.",
-        "explanation": "Nie nawilżaj krokiem 4 przed tonacją, jeśli kolor jest w planie tej wizyty."
+        "explanation": "Kolejność z instrukcji + głos: klientka zna plan wizyty.",
+        "funFact": {
+          "text": "Ewa: Bez zdania przed kolorem klientka nie wie, czy zabieg się skończył, czy dopiero się zaczyna."
+        }
       }
     },
     {
@@ -156,15 +159,15 @@
       "rows": [
         {
           "id": "s1",
-          "text": "Tonację można zaplanować zaraz po kroku 3"
+          "text": "Tonacja/kolor — zaraz po kroku 3, przed nawilżeniem"
         },
         {
           "id": "s2",
-          "text": "Instrukcja łączy ten moment z lepszym wnikaniem i utrzymaniem koloru"
+          "text": "Przed kolorem mówisz klientce, co teraz i że potem będzie nawilżenie"
         },
         {
           "id": "s3",
-          "text": "Tonację zawsze robisz dopiero po Intense Hydrator, nigdy wcześniej"
+          "text": "Kolor dajesz po hydratorze albo wcale nie informujesz o planie wizyty"
         }
       ],
       "correctOptionIds": [
@@ -175,7 +178,10 @@
       "feedback": {
         "correctTitle": "Nie po 4.",
         "incorrectTitle": "Znajdź mit.",
-        "explanation": "Jeśli kolor jest w planie — „właśnie teraz” po 3, przed 4."
+        "explanation": "Zła kolejność albo cisza o planie — obie psują wizytę.",
+        "funFact": {
+          "text": "Ewa: Plan wizyty na głos = spokojniejsza klientka przy fotelu."
+        }
       }
     }
   ],
@@ -186,7 +192,7 @@
     "kosmykiLabel": "Kosmyków za tę lekcję",
     "nextLesson": {
       "label": "Kolejny temat",
-      "teaser": "Scenki przy fotelu: co mówisz i jak układysz wizytę."
+      "teaser": "Nawilżenie: po co Intense Hydrator na finisz."
     }
   }
 }
